@@ -5861,9 +5861,9 @@ public class Aadl2JavaValidator extends AbstractAadl2JavaValidator {
 					Aadl2Package.eINSTANCE.getFlowEnd_Context());
 		} else if (!(flowFeature instanceof DataAccess) && !(flowFeature instanceof AbstractFeature)
 				&& !(flowFeature instanceof FeatureGroup) && !(flowFeature instanceof Parameter)
-				&& !(flowFeature instanceof Port)) {
+				&& !(flowFeature instanceof Port) && !(flowFeature instanceof BusAccess)) {
 			error('\'' + (flowEndContext != null ? flowEndContext.getName() + '.' : "") + flowFeature.getName()
-					+ "' must be a port, parameter, data access, feature group, or abstract feature.", flowEnd,
+					+ "' must be a port, parameter, data access, bus access, feature group, or abstract feature.", flowEnd,
 					Aadl2Package.eINSTANCE.getFlowEnd_Feature());
 		}
 	}
