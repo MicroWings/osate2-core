@@ -58,11 +58,11 @@ import org.osate.aadl2.PrototypeBinding;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ComponentImplementationReferenceImpl#getImplementation <em>Implementation</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ComponentImplementationReferenceImpl#getOwnedPrototypeBindings <em>Owned Prototype Binding</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -117,11 +117,10 @@ public class ComponentImplementationReferenceImpl extends ElementImpl implements
 			InternalEObject oldImplementation = (InternalEObject) implementation;
 			implementation = (ComponentImplementation) eResolveProxy(oldImplementation);
 			if (implementation != oldImplementation) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.COMPONENT_IMPLEMENTATION_REFERENCE__IMPLEMENTATION, oldImplementation,
 							implementation));
-				}
 			}
 		}
 		return implementation;
@@ -145,10 +144,10 @@ public class ComponentImplementationReferenceImpl extends ElementImpl implements
 	public void setImplementation(ComponentImplementation newImplementation) {
 		ComponentImplementation oldImplementation = implementation;
 		implementation = newImplementation;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Aadl2Package.COMPONENT_IMPLEMENTATION_REFERENCE__IMPLEMENTATION, oldImplementation, implementation));
-		}
+					Aadl2Package.COMPONENT_IMPLEMENTATION_REFERENCE__IMPLEMENTATION, oldImplementation,
+					implementation));
 	}
 
 	/**
@@ -200,9 +199,8 @@ public class ComponentImplementationReferenceImpl extends ElementImpl implements
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.COMPONENT_IMPLEMENTATION_REFERENCE__IMPLEMENTATION:
-			if (resolve) {
+			if (resolve)
 				return getImplementation();
-			}
 			return basicGetImplementation();
 		case Aadl2Package.COMPONENT_IMPLEMENTATION_REFERENCE__OWNED_PROTOTYPE_BINDING:
 			return getOwnedPrototypeBindings();

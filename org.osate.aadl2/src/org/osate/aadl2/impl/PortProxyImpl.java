@@ -50,13 +50,13 @@ import org.osate.aadl2.PortProxy;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.PortProxyImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.PortProxyImpl#getDataClassifier <em>Data Classifier</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.PortProxyImpl#isIn <em>In</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.PortProxyImpl#isOut <em>Out</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -170,10 +170,9 @@ public class PortProxyImpl extends ProcessorFeatureImpl implements PortProxy {
 			InternalEObject oldDataClassifier = (InternalEObject) dataClassifier;
 			dataClassifier = (DataClassifier) eResolveProxy(oldDataClassifier);
 			if (dataClassifier != oldDataClassifier) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Aadl2Package.PORT_PROXY__DATA_CLASSIFIER,
 							oldDataClassifier, dataClassifier));
-				}
 			}
 		}
 		return dataClassifier;
@@ -197,10 +196,9 @@ public class PortProxyImpl extends ProcessorFeatureImpl implements PortProxy {
 	public void setDataClassifier(DataClassifier newDataClassifier) {
 		DataClassifier oldDataClassifier = dataClassifier;
 		dataClassifier = newDataClassifier;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.PORT_PROXY__DATA_CLASSIFIER,
 					oldDataClassifier, dataClassifier));
-		}
 	}
 
 	/**
@@ -222,9 +220,8 @@ public class PortProxyImpl extends ProcessorFeatureImpl implements PortProxy {
 	public void setIn(boolean newIn) {
 		boolean oldIn = in;
 		in = newIn;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.PORT_PROXY__IN, oldIn, in));
-		}
 	}
 
 	/**
@@ -246,9 +243,8 @@ public class PortProxyImpl extends ProcessorFeatureImpl implements PortProxy {
 	public void setOut(boolean newOut) {
 		boolean oldOut = out;
 		out = newOut;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.PORT_PROXY__OUT, oldOut, out));
-		}
 	}
 
 	/**
@@ -262,9 +258,8 @@ public class PortProxyImpl extends ProcessorFeatureImpl implements PortProxy {
 		case Aadl2Package.PORT_PROXY__DIRECTION:
 			return getDirection();
 		case Aadl2Package.PORT_PROXY__DATA_CLASSIFIER:
-			if (resolve) {
+			if (resolve)
 				return getDataClassifier();
-			}
 			return basicGetDataClassifier();
 		case Aadl2Package.PORT_PROXY__IN:
 			return isIn();
@@ -343,9 +338,8 @@ public class PortProxyImpl extends ProcessorFeatureImpl implements PortProxy {
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (in: ");

@@ -52,13 +52,13 @@ import org.osate.aadl2.FeaturePrototype;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.FeaturePrototypeImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FeaturePrototypeImpl#getConstrainingClassifier <em>Constraining Classifier</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FeaturePrototypeImpl#isIn <em>In</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FeaturePrototypeImpl#isOut <em>Out</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -176,11 +176,10 @@ public class FeaturePrototypeImpl extends PrototypeImpl implements FeatureProtot
 			InternalEObject oldConstrainingClassifier = (InternalEObject) constrainingClassifier;
 			constrainingClassifier = (ComponentClassifier) eResolveProxy(oldConstrainingClassifier);
 			if (constrainingClassifier != oldConstrainingClassifier) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.FEATURE_PROTOTYPE__CONSTRAINING_CLASSIFIER, oldConstrainingClassifier,
 							constrainingClassifier));
-				}
 			}
 		}
 		return constrainingClassifier;
@@ -204,11 +203,10 @@ public class FeaturePrototypeImpl extends PrototypeImpl implements FeatureProtot
 	public void setConstrainingClassifier(ComponentClassifier newConstrainingClassifier) {
 		ComponentClassifier oldConstrainingClassifier = constrainingClassifier;
 		constrainingClassifier = newConstrainingClassifier;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.FEATURE_PROTOTYPE__CONSTRAINING_CLASSIFIER, oldConstrainingClassifier,
 					constrainingClassifier));
-		}
 	}
 
 	/**
@@ -230,9 +228,8 @@ public class FeaturePrototypeImpl extends PrototypeImpl implements FeatureProtot
 	public void setIn(boolean newIn) {
 		boolean oldIn = in;
 		in = newIn;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FEATURE_PROTOTYPE__IN, oldIn, in));
-		}
 	}
 
 	/**
@@ -254,9 +251,8 @@ public class FeaturePrototypeImpl extends PrototypeImpl implements FeatureProtot
 	public void setOut(boolean newOut) {
 		boolean oldOut = out;
 		out = newOut;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FEATURE_PROTOTYPE__OUT, oldOut, out));
-		}
 	}
 
 	/**
@@ -270,9 +266,8 @@ public class FeaturePrototypeImpl extends PrototypeImpl implements FeatureProtot
 		case Aadl2Package.FEATURE_PROTOTYPE__DIRECTION:
 			return getDirection();
 		case Aadl2Package.FEATURE_PROTOTYPE__CONSTRAINING_CLASSIFIER:
-			if (resolve) {
+			if (resolve)
 				return getConstrainingClassifier();
-			}
 			return basicGetConstrainingClassifier();
 		case Aadl2Package.FEATURE_PROTOTYPE__IN:
 			return isIn();
@@ -351,9 +346,8 @@ public class FeaturePrototypeImpl extends PrototypeImpl implements FeatureProtot
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (in: ");

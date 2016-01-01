@@ -62,11 +62,11 @@ import org.osate.aadl2.properties.InvalidModelException;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.OperationImpl#getOp <em>Op</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.OperationImpl#getOwnedPropertyExpressions <em>Owned Property Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -139,9 +139,8 @@ public class OperationImpl extends PropertyExpressionImpl implements Operation {
 	public void setOp(OperationKind newOp) {
 		OperationKind oldOp = op;
 		op = newOp == null ? OP_EDEFAULT : newOp;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.OPERATION__OP, oldOp, op));
-		}
 	}
 
 	/**
@@ -261,9 +260,8 @@ public class OperationImpl extends PropertyExpressionImpl implements Operation {
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (op: ");

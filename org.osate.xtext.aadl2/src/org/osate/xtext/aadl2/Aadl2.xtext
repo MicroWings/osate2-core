@@ -432,6 +432,7 @@ VirtualProcessorType returns aadl2::VirtualProcessorType:
 	('features' ((noFeatures?='none' ';') |
 	(ownedDataPort+=DataPort| ownedEventPort+=EventPort | ownedEventDataPort+=EventDataPort
 		| ownedFeatureGroup+=FeatureGroup  
+		| ownedBusAccess+=BusAccess
 	| ownedSubprogramAccess+=SubprogramAccess | ownedSubprogramGroupAccess+=SubprogramGroupAccess
 	| ownedAbstractFeature+=AbstractFeature
 	)+ ) )?

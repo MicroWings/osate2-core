@@ -93,12 +93,11 @@ public class FeaturePrototypeReferenceItemProvider extends FeaturePrototypeActua
 	 */
 	protected void addDirectionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FeaturePrototypeReference_direction_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototypeReference_direction_feature",
-						"_UI_FeaturePrototypeReference_type"), Aadl2Package.eINSTANCE
-						.getFeaturePrototypeReference_Direction(), true, false, false,
+						"_UI_FeaturePrototypeReference_type"),
+				Aadl2Package.eINSTANCE.getFeaturePrototypeReference_Direction(), true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -110,12 +109,11 @@ public class FeaturePrototypeReferenceItemProvider extends FeaturePrototypeActua
 	 */
 	protected void addPrototypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FeaturePrototypeReference_prototype_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototypeReference_prototype_feature",
-						"_UI_FeaturePrototypeReference_type"), Aadl2Package.eINSTANCE
-						.getFeaturePrototypeReference_Prototype(), true, false, true, null, null, null));
+						"_UI_FeaturePrototypeReference_type"),
+				Aadl2Package.eINSTANCE.getFeaturePrototypeReference_Prototype(), true, false, true, null, null, null));
 	}
 
 	/**
@@ -126,8 +124,7 @@ public class FeaturePrototypeReferenceItemProvider extends FeaturePrototypeActua
 	 */
 	protected void addInPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FeaturePrototypeReference_in_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototypeReference_in_feature",
 						"_UI_FeaturePrototypeReference_type"),
@@ -142,13 +139,12 @@ public class FeaturePrototypeReferenceItemProvider extends FeaturePrototypeActua
 	 * @generated
 	 */
 	protected void addOutPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_FeaturePrototypeReference_out_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototypeReference_out_feature",
-						"_UI_FeaturePrototypeReference_type"), Aadl2Package.eINSTANCE
-						.getFeaturePrototypeReference_Out(), true, false, false,
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FeaturePrototypeReference_out_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototypeReference_out_feature",
+								"_UI_FeaturePrototypeReference_type"),
+				Aadl2Package.eINSTANCE.getFeaturePrototypeReference_Out(), true, false, false,
 				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 

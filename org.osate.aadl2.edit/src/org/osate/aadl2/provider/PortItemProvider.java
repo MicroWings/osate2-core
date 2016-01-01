@@ -88,12 +88,12 @@ public class PortItemProvider extends DirectedFeatureItemProvider {
 	 * @generated
 	 */
 	protected void addCategoryPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_Port_category_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Port_category_feature", "_UI_Port_type"),
-				Aadl2Package.eINSTANCE.getPort_Category(), false, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Port_category_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Port_category_feature", "_UI_Port_type"),
+						Aadl2Package.eINSTANCE.getPort_Category(), false, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -105,8 +105,8 @@ public class PortItemProvider extends DirectedFeatureItemProvider {
 	@Override
 	public String getText(Object object) {
 		String label = ((Port) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Port_type") : getString("_UI_Port_type") + " "
-				+ label;
+		return label == null || label.length() == 0 ? getString("_UI_Port_type")
+				: getString("_UI_Port_type") + " " + label;
 	}
 
 	/**

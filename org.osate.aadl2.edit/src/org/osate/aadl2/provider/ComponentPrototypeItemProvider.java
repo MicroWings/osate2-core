@@ -89,13 +89,13 @@ public class ComponentPrototypeItemProvider extends PrototypeItemProvider {
 	 * @generated
 	 */
 	protected void addArrayPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ComponentPrototype_array_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ComponentPrototype_array_feature",
-						"_UI_ComponentPrototype_type"), Aadl2Package.eINSTANCE.getComponentPrototype_Array(), true,
-				false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ComponentPrototype_array_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ComponentPrototype_array_feature",
+								"_UI_ComponentPrototype_type"),
+						Aadl2Package.eINSTANCE.getComponentPrototype_Array(), true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -105,12 +105,11 @@ public class ComponentPrototypeItemProvider extends PrototypeItemProvider {
 	 * @generated
 	 */
 	protected void addConstrainingClassifierPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ComponentPrototype_constrainingClassifier_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ComponentPrototype_constrainingClassifier_feature", "_UI_ComponentPrototype_type"),
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ComponentPrototype_constrainingClassifier_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_ComponentPrototype_constrainingClassifier_feature", "_UI_ComponentPrototype_type"),
 				Aadl2Package.eINSTANCE.getComponentPrototype_ConstrainingClassifier(), true, false, true, null, null,
 				null));
 	}

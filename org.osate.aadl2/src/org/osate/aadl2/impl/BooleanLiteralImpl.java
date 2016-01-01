@@ -48,10 +48,10 @@ import org.osate.aadl2.PropertyValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.BooleanLiteralImpl#isValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -119,9 +119,9 @@ public class BooleanLiteralImpl extends PropertyValueImpl implements BooleanLite
 	public void setValue(boolean newValue) {
 		boolean oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
-			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.BOOLEAN_LITERAL__VALUE, oldValue, value));
-		}
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.BOOLEAN_LITERAL__VALUE, oldValue,
+					value));
 	}
 
 	/**
@@ -189,9 +189,8 @@ public class BooleanLiteralImpl extends PropertyValueImpl implements BooleanLite
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");

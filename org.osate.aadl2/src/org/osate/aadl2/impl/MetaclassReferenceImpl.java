@@ -56,11 +56,11 @@ import org.osate.aadl2.parsesupport.ParseUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.MetaclassReferenceImpl#getAnnexName <em>Annex Name</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.MetaclassReferenceImpl#getMetaclassNames <em>Metaclass Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -136,10 +136,9 @@ public class MetaclassReferenceImpl extends PropertyOwnerImpl implements Metacla
 	public void setAnnexName(String newAnnexName) {
 		String oldAnnexName = annexName;
 		annexName = newAnnexName;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.METACLASS_REFERENCE__ANNEX_NAME,
 					oldAnnexName, annexName));
-		}
 	}
 
 	/**
@@ -233,9 +232,8 @@ public class MetaclassReferenceImpl extends PropertyOwnerImpl implements Metacla
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (annexName: ");

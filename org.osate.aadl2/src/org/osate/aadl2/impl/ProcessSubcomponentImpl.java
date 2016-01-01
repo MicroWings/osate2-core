@@ -52,11 +52,11 @@ import org.osate.aadl2.SubcomponentType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ProcessSubcomponentImpl#getSubcomponentType <em>Subcomponent Type</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ProcessSubcomponentImpl#getProcessSubcomponentType <em>Process Subcomponent Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,8 +98,8 @@ public class ProcessSubcomponentImpl extends SubcomponentImpl implements Process
 	@Override
 	public SubcomponentType getSubcomponentType() {
 		SubcomponentType subcomponentType = basicGetSubcomponentType();
-		return subcomponentType != null && ((EObject) subcomponentType).eIsProxy() ? (SubcomponentType) eResolveProxy((InternalEObject) subcomponentType)
-				: subcomponentType;
+		return subcomponentType != null && ((EObject) subcomponentType).eIsProxy()
+				? (SubcomponentType) eResolveProxy((InternalEObject) subcomponentType) : subcomponentType;
 	}
 
 	/**
@@ -126,11 +126,10 @@ public class ProcessSubcomponentImpl extends SubcomponentImpl implements Process
 			InternalEObject oldProcessSubcomponentType = (InternalEObject) processSubcomponentType;
 			processSubcomponentType = (ProcessSubcomponentType) eResolveProxy(oldProcessSubcomponentType);
 			if (processSubcomponentType != oldProcessSubcomponentType) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.PROCESS_SUBCOMPONENT__PROCESS_SUBCOMPONENT_TYPE, oldProcessSubcomponentType,
 							processSubcomponentType));
-				}
 			}
 		}
 		return processSubcomponentType;
@@ -154,11 +153,10 @@ public class ProcessSubcomponentImpl extends SubcomponentImpl implements Process
 	public void setProcessSubcomponentType(ProcessSubcomponentType newProcessSubcomponentType) {
 		ProcessSubcomponentType oldProcessSubcomponentType = processSubcomponentType;
 		processSubcomponentType = newProcessSubcomponentType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.PROCESS_SUBCOMPONENT__PROCESS_SUBCOMPONENT_TYPE, oldProcessSubcomponentType,
 					processSubcomponentType));
-		}
 	}
 
 	/**
@@ -170,9 +168,8 @@ public class ProcessSubcomponentImpl extends SubcomponentImpl implements Process
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.PROCESS_SUBCOMPONENT__PROCESS_SUBCOMPONENT_TYPE:
-			if (resolve) {
+			if (resolve)
 				return getProcessSubcomponentType();
-			}
 			return basicGetProcessSubcomponentType();
 		}
 		return super.eGet(featureID, resolve, coreType);

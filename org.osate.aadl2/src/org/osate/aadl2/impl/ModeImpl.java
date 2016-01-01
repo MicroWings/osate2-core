@@ -53,11 +53,11 @@ import org.osate.aadl2.properties.PropertyAcc;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ModeImpl#isInitial <em>Initial</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ModeImpl#isDerived <em>Derived</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -130,9 +130,8 @@ public class ModeImpl extends ModeFeatureImpl implements Mode {
 	public void setInitial(boolean newInitial) {
 		boolean oldInitial = initial;
 		initial = newInitial;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.MODE__INITIAL, oldInitial, initial));
-		}
 	}
 
 	/**
@@ -215,9 +214,8 @@ public class ModeImpl extends ModeFeatureImpl implements Mode {
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (initial: ");
@@ -228,8 +226,8 @@ public class ModeImpl extends ModeFeatureImpl implements Mode {
 
 	// Cannot make this final because I need to override in SystemOperationMode
 	@Override
-	public void getPropertyValueInternal(final Property prop, final PropertyAcc pas, final boolean fromInstanceSlaveCall)
-			throws InvalidModelException {
+	public void getPropertyValueInternal(final Property prop, final PropertyAcc pas,
+			final boolean fromInstanceSlaveCall) throws InvalidModelException {
 		final Classifier owner = getContainingClassifier();
 		final boolean inType = (owner instanceof ComponentType);
 

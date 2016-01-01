@@ -85,8 +85,8 @@ public class FlowItemProvider extends NamedElementItemProvider {
 	@Override
 	public String getText(Object object) {
 		String label = ((Flow) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Flow_type") : getString("_UI_Flow_type") + " "
-				+ label;
+		return label == null || label.length() == 0 ? getString("_UI_Flow_type")
+				: getString("_UI_Flow_type") + " " + label;
 	}
 
 	/**

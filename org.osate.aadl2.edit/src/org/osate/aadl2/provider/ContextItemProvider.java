@@ -85,8 +85,8 @@ public class ContextItemProvider extends NamedElementItemProvider {
 	@Override
 	public String getText(Object object) {
 		String label = ((Context) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Context_type") : getString("_UI_Context_type")
-				+ " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_Context_type")
+				: getString("_UI_Context_type") + " " + label;
 	}
 
 	/**

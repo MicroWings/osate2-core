@@ -8027,16 +8027,35 @@ ruleVirtualProcessorType returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessSubprogramAccessParserRuleCall_5_1_1_4_0()); 
+	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedBusAccessBusAccessParserRuleCall_5_1_1_4_0()); 
 	    }
-		lv_ownedSubprogramAccess_20_0=ruleSubprogramAccess		{
+		lv_ownedBusAccess_20_0=ruleBusAccess		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getVirtualProcessorTypeRule());
+	        }
+       		add(
+       			$current, 
+       			"ownedBusAccess",
+        		lv_ownedBusAccess_20_0, 
+        		"BusAccess");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+    |(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessSubprogramAccessParserRuleCall_5_1_1_5_0()); 
+	    }
+		lv_ownedSubprogramAccess_21_0=ruleSubprogramAccess		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getVirtualProcessorTypeRule());
 	        }
        		add(
        			$current, 
        			"ownedSubprogramAccess",
-        		lv_ownedSubprogramAccess_20_0, 
+        		lv_ownedSubprogramAccess_21_0, 
         		"SubprogramAccess");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -8046,16 +8065,16 @@ ruleVirtualProcessorType returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessSubprogramGroupAccessParserRuleCall_5_1_1_5_0()); 
+	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessSubprogramGroupAccessParserRuleCall_5_1_1_6_0()); 
 	    }
-		lv_ownedSubprogramGroupAccess_21_0=ruleSubprogramGroupAccess		{
+		lv_ownedSubprogramGroupAccess_22_0=ruleSubprogramGroupAccess		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getVirtualProcessorTypeRule());
 	        }
        		add(
        			$current, 
        			"ownedSubprogramGroupAccess",
-        		lv_ownedSubprogramGroupAccess_21_0, 
+        		lv_ownedSubprogramGroupAccess_22_0, 
         		"SubprogramGroupAccess");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -8065,39 +8084,39 @@ ruleVirtualProcessorType returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAbstractFeatureParserRuleCall_5_1_1_6_0()); 
+	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAbstractFeatureParserRuleCall_5_1_1_7_0()); 
 	    }
-		lv_ownedAbstractFeature_22_0=ruleAbstractFeature		{
+		lv_ownedAbstractFeature_23_0=ruleAbstractFeature		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getVirtualProcessorTypeRule());
 	        }
        		add(
        			$current, 
        			"ownedAbstractFeature",
-        		lv_ownedAbstractFeature_22_0, 
+        		lv_ownedAbstractFeature_23_0, 
         		"AbstractFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
 ))+))?(
-	otherlv_23=Flows
+	otherlv_24=Flows
     {
-    	newLeafNode(otherlv_23, grammarAccess.getVirtualProcessorTypeAccess().getFlowsKeyword_6_0());
+    	newLeafNode(otherlv_24, grammarAccess.getVirtualProcessorTypeAccess().getFlowsKeyword_6_0());
     }
 ((
 (
 		{ 
 	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedFlowSpecificationFlowSpecificationParserRuleCall_6_1_0_0()); 
 	    }
-		lv_ownedFlowSpecification_24_0=ruleFlowSpecification		{
+		lv_ownedFlowSpecification_25_0=ruleFlowSpecification		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getVirtualProcessorTypeRule());
 	        }
        		add(
        			$current, 
        			"ownedFlowSpecification",
-        		lv_ownedFlowSpecification_24_0, 
+        		lv_ownedFlowSpecification_25_0, 
         		"FlowSpecification");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -8106,10 +8125,10 @@ ruleVirtualProcessorType returns [EObject current=null]
 )+
     |((
 (
-		lv_noFlows_25_0=
+		lv_noFlows_26_0=
 	None
     {
-        newLeafNode(lv_noFlows_25_0, grammarAccess.getVirtualProcessorTypeAccess().getNoFlowsNoneKeyword_6_1_1_0_0());
+        newLeafNode(lv_noFlows_26_0, grammarAccess.getVirtualProcessorTypeAccess().getNoFlowsNoneKeyword_6_1_1_0_0());
     }
 
 	    {
@@ -8121,16 +8140,16 @@ ruleVirtualProcessorType returns [EObject current=null]
 
 )
 )
-	otherlv_26=Semicolon
+	otherlv_27=Semicolon
     {
-    	newLeafNode(otherlv_26, grammarAccess.getVirtualProcessorTypeAccess().getSemicolonKeyword_6_1_1_1());
+    	newLeafNode(otherlv_27, grammarAccess.getVirtualProcessorTypeAccess().getSemicolonKeyword_6_1_1_1());
     }
 )))?(((
 (
-		lv_derivedModes_27_0=
+		lv_derivedModes_28_0=
 	Requires
     {
-        newLeafNode(lv_derivedModes_27_0, grammarAccess.getVirtualProcessorTypeAccess().getDerivedModesRequiresKeyword_7_0_0_0());
+        newLeafNode(lv_derivedModes_28_0, grammarAccess.getVirtualProcessorTypeAccess().getDerivedModesRequiresKeyword_7_0_0_0());
     }
 
 	    {
@@ -8142,23 +8161,23 @@ ruleVirtualProcessorType returns [EObject current=null]
 
 )
 )
-	otherlv_28=Modes
+	otherlv_29=Modes
     {
-    	newLeafNode(otherlv_28, grammarAccess.getVirtualProcessorTypeAccess().getModesKeyword_7_0_1());
+    	newLeafNode(otherlv_29, grammarAccess.getVirtualProcessorTypeAccess().getModesKeyword_7_0_1());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedModeModeParserRuleCall_7_0_2_0()); 
 	    }
-		lv_ownedMode_29_0=ruleMode		{
+		lv_ownedMode_30_0=ruleMode		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getVirtualProcessorTypeRule());
 	        }
        		add(
        			$current, 
        			"ownedMode",
-        		lv_ownedMode_29_0, 
+        		lv_ownedMode_30_0, 
         		"Mode");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -8166,23 +8185,23 @@ ruleVirtualProcessorType returns [EObject current=null]
 )
 )+)
     |(
-	otherlv_30=Modes
+	otherlv_31=Modes
     {
-    	newLeafNode(otherlv_30, grammarAccess.getVirtualProcessorTypeAccess().getModesKeyword_7_1_0());
+    	newLeafNode(otherlv_31, grammarAccess.getVirtualProcessorTypeAccess().getModesKeyword_7_1_0());
     }
 (((
 (
 		{ 
 	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedModeModeParserRuleCall_7_1_1_0_0_0()); 
 	    }
-		lv_ownedMode_31_0=ruleMode		{
+		lv_ownedMode_32_0=ruleMode		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getVirtualProcessorTypeRule());
 	        }
        		add(
        			$current, 
        			"ownedMode",
-        		lv_ownedMode_31_0, 
+        		lv_ownedMode_32_0, 
         		"Mode");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -8194,14 +8213,14 @@ ruleVirtualProcessorType returns [EObject current=null]
 		{ 
 	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedModeTransitionModeTransitionParserRuleCall_7_1_1_0_1_0()); 
 	    }
-		lv_ownedModeTransition_32_0=ruleModeTransition		{
+		lv_ownedModeTransition_33_0=ruleModeTransition		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getVirtualProcessorTypeRule());
 	        }
        		add(
        			$current, 
        			"ownedModeTransition",
-        		lv_ownedModeTransition_32_0, 
+        		lv_ownedModeTransition_33_0, 
         		"ModeTransition");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -8210,10 +8229,10 @@ ruleVirtualProcessorType returns [EObject current=null]
 ))+
     |((
 (
-		lv_noModes_33_0=
+		lv_noModes_34_0=
 	None
     {
-        newLeafNode(lv_noModes_33_0, grammarAccess.getVirtualProcessorTypeAccess().getNoModesNoneKeyword_7_1_1_1_0_0());
+        newLeafNode(lv_noModes_34_0, grammarAccess.getVirtualProcessorTypeAccess().getNoModesNoneKeyword_7_1_1_1_0_0());
     }
 
 	    {
@@ -8225,28 +8244,28 @@ ruleVirtualProcessorType returns [EObject current=null]
 
 )
 )
-	otherlv_34=Semicolon
+	otherlv_35=Semicolon
     {
-    	newLeafNode(otherlv_34, grammarAccess.getVirtualProcessorTypeAccess().getSemicolonKeyword_7_1_1_1_1());
+    	newLeafNode(otherlv_35, grammarAccess.getVirtualProcessorTypeAccess().getSemicolonKeyword_7_1_1_1_1());
     }
 ))))?(
-	otherlv_35=Properties
+	otherlv_36=Properties
     {
-    	newLeafNode(otherlv_35, grammarAccess.getVirtualProcessorTypeAccess().getPropertiesKeyword_8_0());
+    	newLeafNode(otherlv_36, grammarAccess.getVirtualProcessorTypeAccess().getPropertiesKeyword_8_0());
     }
 ((
 (
 		{ 
 	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedPropertyAssociationContainedPropertyAssociationParserRuleCall_8_1_0_0()); 
 	    }
-		lv_ownedPropertyAssociation_36_0=ruleContainedPropertyAssociation		{
+		lv_ownedPropertyAssociation_37_0=ruleContainedPropertyAssociation		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getVirtualProcessorTypeRule());
 	        }
        		add(
        			$current, 
        			"ownedPropertyAssociation",
-        		lv_ownedPropertyAssociation_36_0, 
+        		lv_ownedPropertyAssociation_37_0, 
         		"ContainedPropertyAssociation");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -8255,10 +8274,10 @@ ruleVirtualProcessorType returns [EObject current=null]
 )+
     |((
 (
-		lv_noProperties_37_0=
+		lv_noProperties_38_0=
 	None
     {
-        newLeafNode(lv_noProperties_37_0, grammarAccess.getVirtualProcessorTypeAccess().getNoPropertiesNoneKeyword_8_1_1_0_0());
+        newLeafNode(lv_noProperties_38_0, grammarAccess.getVirtualProcessorTypeAccess().getNoPropertiesNoneKeyword_8_1_1_0_0());
     }
 
 	    {
@@ -8270,41 +8289,41 @@ ruleVirtualProcessorType returns [EObject current=null]
 
 )
 )
-	otherlv_38=Semicolon
+	otherlv_39=Semicolon
     {
-    	newLeafNode(otherlv_38, grammarAccess.getVirtualProcessorTypeAccess().getSemicolonKeyword_8_1_1_1());
+    	newLeafNode(otherlv_39, grammarAccess.getVirtualProcessorTypeAccess().getSemicolonKeyword_8_1_1_1());
     }
 )))?(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAnnexSubclauseAnnexSubclauseParserRuleCall_9_0()); 
 	    }
-		lv_ownedAnnexSubclause_39_0=ruleAnnexSubclause		{
+		lv_ownedAnnexSubclause_40_0=ruleAnnexSubclause		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getVirtualProcessorTypeRule());
 	        }
        		add(
        			$current, 
        			"ownedAnnexSubclause",
-        		lv_ownedAnnexSubclause_39_0, 
+        		lv_ownedAnnexSubclause_40_0, 
         		"AnnexSubclause");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
 )*
-	otherlv_40=End
+	otherlv_41=End
     {
-    	newLeafNode(otherlv_40, grammarAccess.getVirtualProcessorTypeAccess().getEndKeyword_10());
+    	newLeafNode(otherlv_41, grammarAccess.getVirtualProcessorTypeAccess().getEndKeyword_10());
     }
-this_ID_41=RULE_ID
+this_ID_42=RULE_ID
     { 
-    newLeafNode(this_ID_41, grammarAccess.getVirtualProcessorTypeAccess().getIDTerminalRuleCall_11()); 
+    newLeafNode(this_ID_42, grammarAccess.getVirtualProcessorTypeAccess().getIDTerminalRuleCall_11()); 
     }
 
-	otherlv_42=Semicolon
+	otherlv_43=Semicolon
     {
-    	newLeafNode(otherlv_42, grammarAccess.getVirtualProcessorTypeAccess().getSemicolonKeyword_12());
+    	newLeafNode(otherlv_43, grammarAccess.getVirtualProcessorTypeAccess().getSemicolonKeyword_12());
     }
 )
 ;

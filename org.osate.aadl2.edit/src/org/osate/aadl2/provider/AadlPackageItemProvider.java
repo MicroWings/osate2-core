@@ -94,13 +94,12 @@ public class AadlPackageItemProvider extends ModelUnitItemProvider {
 	 * @generated
 	 */
 	protected void addPublicSectionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_AadlPackage_publicSection_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_AadlPackage_publicSection_feature",
-						"_UI_AadlPackage_type"), Aadl2Package.eINSTANCE.getAadlPackage_PublicSection(), true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_AadlPackage_publicSection_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_AadlPackage_publicSection_feature",
+								"_UI_AadlPackage_type"),
+						Aadl2Package.eINSTANCE.getAadlPackage_PublicSection(), true, false, true, null, null, null));
 	}
 
 	/**
@@ -110,13 +109,12 @@ public class AadlPackageItemProvider extends ModelUnitItemProvider {
 	 * @generated
 	 */
 	protected void addPrivateSectionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_AadlPackage_privateSection_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_AadlPackage_privateSection_feature",
-						"_UI_AadlPackage_type"), Aadl2Package.eINSTANCE.getAadlPackage_PrivateSection(), true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_AadlPackage_privateSection_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_AadlPackage_privateSection_feature",
+								"_UI_AadlPackage_type"),
+						Aadl2Package.eINSTANCE.getAadlPackage_PrivateSection(), true, false, true, null, null, null));
 	}
 
 	/**

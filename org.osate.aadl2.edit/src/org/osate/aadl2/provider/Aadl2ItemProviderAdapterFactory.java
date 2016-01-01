@@ -62,8 +62,8 @@ import org.osate.aadl2.util.Aadl2AdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Aadl2ItemProviderAdapterFactory extends Aadl2AdapterFactory implements ComposeableAdapterFactory,
-		IChangeNotifier, IDisposable {
+public class Aadl2ItemProviderAdapterFactory extends Aadl2AdapterFactory
+		implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -3673,6 +3673,7 @@ public class Aadl2ItemProviderAdapterFactory extends Aadl2AdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComposeableAdapterFactory getRootAdapterFactory() {
 		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
@@ -3683,6 +3684,7 @@ public class Aadl2ItemProviderAdapterFactory extends Aadl2AdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
@@ -3731,6 +3733,7 @@ public class Aadl2ItemProviderAdapterFactory extends Aadl2AdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void addListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.addListener(notifyChangedListener);
 	}
@@ -3741,6 +3744,7 @@ public class Aadl2ItemProviderAdapterFactory extends Aadl2AdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void removeListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.removeListener(notifyChangedListener);
 	}
@@ -3751,6 +3755,7 @@ public class Aadl2ItemProviderAdapterFactory extends Aadl2AdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void fireNotifyChanged(Notification notification) {
 		changeNotifier.fireNotifyChanged(notification);
 
@@ -3765,6 +3770,7 @@ public class Aadl2ItemProviderAdapterFactory extends Aadl2AdapterFactory impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void dispose() {
 		if (commentItemProvider != null)
 			commentItemProvider.dispose();

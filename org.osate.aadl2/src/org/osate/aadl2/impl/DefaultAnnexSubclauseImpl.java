@@ -50,11 +50,11 @@ import org.osate.aadl2.DefaultAnnexSubclause;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.DefaultAnnexSubclauseImpl#getSourceText <em>Source Text</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.DefaultAnnexSubclauseImpl#getParsedAnnexSubclause <em>Parsed Annex Subclause</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -127,10 +127,9 @@ public class DefaultAnnexSubclauseImpl extends AnnexSubclauseImpl implements Def
 	public void setSourceText(String newSourceText) {
 		String oldSourceText = sourceText;
 		sourceText = newSourceText;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.DEFAULT_ANNEX_SUBCLAUSE__SOURCE_TEXT,
 					oldSourceText, sourceText));
-		}
 	}
 
 	/**
@@ -148,18 +147,18 @@ public class DefaultAnnexSubclauseImpl extends AnnexSubclauseImpl implements Def
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParsedAnnexSubclause(AnnexSubclause newParsedAnnexSubclause, NotificationChain msgs) {
+	public NotificationChain basicSetParsedAnnexSubclause(AnnexSubclause newParsedAnnexSubclause,
+			NotificationChain msgs) {
 		AnnexSubclause oldParsedAnnexSubclause = parsedAnnexSubclause;
 		parsedAnnexSubclause = newParsedAnnexSubclause;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.DEFAULT_ANNEX_SUBCLAUSE__PARSED_ANNEX_SUBCLAUSE, oldParsedAnnexSubclause,
 					newParsedAnnexSubclause);
-			if (msgs == null) {
+			if (msgs == null)
 				msgs = notification;
-			} else {
+			else
 				msgs.add(notification);
-			}
 		}
 		return msgs;
 	}
@@ -173,23 +172,21 @@ public class DefaultAnnexSubclauseImpl extends AnnexSubclauseImpl implements Def
 	public void setParsedAnnexSubclause(AnnexSubclause newParsedAnnexSubclause) {
 		if (newParsedAnnexSubclause != parsedAnnexSubclause) {
 			NotificationChain msgs = null;
-			if (parsedAnnexSubclause != null) {
-				msgs = ((InternalEObject) parsedAnnexSubclause).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.DEFAULT_ANNEX_SUBCLAUSE__PARSED_ANNEX_SUBCLAUSE, null, msgs);
-			}
-			if (newParsedAnnexSubclause != null) {
-				msgs = ((InternalEObject) newParsedAnnexSubclause).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.DEFAULT_ANNEX_SUBCLAUSE__PARSED_ANNEX_SUBCLAUSE, null, msgs);
-			}
+			if (parsedAnnexSubclause != null)
+				msgs = ((InternalEObject) parsedAnnexSubclause).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.DEFAULT_ANNEX_SUBCLAUSE__PARSED_ANNEX_SUBCLAUSE, null,
+						msgs);
+			if (newParsedAnnexSubclause != null)
+				msgs = ((InternalEObject) newParsedAnnexSubclause).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.DEFAULT_ANNEX_SUBCLAUSE__PARSED_ANNEX_SUBCLAUSE, null,
+						msgs);
 			msgs = basicSetParsedAnnexSubclause(newParsedAnnexSubclause, msgs);
-			if (msgs != null) {
+			if (msgs != null)
 				msgs.dispatch();
-			}
-		} else if (eNotificationRequired()) {
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.DEFAULT_ANNEX_SUBCLAUSE__PARSED_ANNEX_SUBCLAUSE, newParsedAnnexSubclause,
 					newParsedAnnexSubclause));
-		}
 	}
 
 	/**
@@ -303,9 +300,8 @@ public class DefaultAnnexSubclauseImpl extends AnnexSubclauseImpl implements Def
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (sourceText: ");

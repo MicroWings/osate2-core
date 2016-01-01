@@ -70,6 +70,7 @@ import org.osate.aadl2.properties.PropertyAcc;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.EndToEndFlowImpl#getInModes <em>In Mode</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.EndToEndFlowImpl#getInModeOrTransitions <em>In Mode Or Transition</em>}</li>
@@ -77,7 +78,6 @@ import org.osate.aadl2.properties.PropertyAcc;
  *   <li>{@link org.osate.aadl2.impl.EndToEndFlowImpl#getRefined <em>Refined</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.EndToEndFlowImpl#getOwnedEndToEndFlowSegments <em>Owned End To End Flow Segment</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -183,8 +183,8 @@ public class EndToEndFlowImpl extends FlowFeatureImpl implements EndToEndFlow {
 	@Override
 	public RefinableElement getRefinedElement() {
 		RefinableElement refinedElement = basicGetRefinedElement();
-		return refinedElement != null && ((EObject) refinedElement).eIsProxy() ? (RefinableElement) eResolveProxy((InternalEObject) refinedElement)
-				: refinedElement;
+		return refinedElement != null && ((EObject) refinedElement).eIsProxy()
+				? (RefinableElement) eResolveProxy((InternalEObject) refinedElement) : refinedElement;
 	}
 
 	/**
@@ -221,10 +221,9 @@ public class EndToEndFlowImpl extends FlowFeatureImpl implements EndToEndFlow {
 			InternalEObject oldRefined = (InternalEObject) refined;
 			refined = (EndToEndFlow) eResolveProxy(oldRefined);
 			if (refined != oldRefined) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Aadl2Package.END_TO_END_FLOW__REFINED,
 							oldRefined, refined));
-				}
 			}
 		}
 		return refined;
@@ -248,10 +247,9 @@ public class EndToEndFlowImpl extends FlowFeatureImpl implements EndToEndFlow {
 	public void setRefined(EndToEndFlow newRefined) {
 		EndToEndFlow oldRefined = refined;
 		refined = newRefined;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.END_TO_END_FLOW__REFINED, oldRefined,
 					refined));
-		}
 	}
 
 	/**
@@ -275,8 +273,8 @@ public class EndToEndFlowImpl extends FlowFeatureImpl implements EndToEndFlow {
 	 */
 	@Override
 	public EndToEndFlowSegment createOwnedEndToEndFlowSegment() {
-		EndToEndFlowSegment newOwnedEndToEndFlowSegment = (EndToEndFlowSegment) create(Aadl2Package.eINSTANCE
-				.getEndToEndFlowSegment());
+		EndToEndFlowSegment newOwnedEndToEndFlowSegment = (EndToEndFlowSegment) create(
+				Aadl2Package.eINSTANCE.getEndToEndFlowSegment());
 		getOwnedEndToEndFlowSegments().add(newOwnedEndToEndFlowSegment);
 		return newOwnedEndToEndFlowSegment;
 	}
@@ -338,9 +336,8 @@ public class EndToEndFlowImpl extends FlowFeatureImpl implements EndToEndFlow {
 		case Aadl2Package.END_TO_END_FLOW__IN_MODE_OR_TRANSITION:
 			return getInModeOrTransitions();
 		case Aadl2Package.END_TO_END_FLOW__REFINED:
-			if (resolve) {
+			if (resolve)
 				return getRefined();
-			}
 			return basicGetRefined();
 		case Aadl2Package.END_TO_END_FLOW__OWNED_END_TO_END_FLOW_SEGMENT:
 			return getOwnedEndToEndFlowSegments();

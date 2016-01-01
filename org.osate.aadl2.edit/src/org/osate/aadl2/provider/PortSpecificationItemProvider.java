@@ -94,13 +94,13 @@ public class PortSpecificationItemProvider extends FeaturePrototypeActualItemPro
 	 * @generated
 	 */
 	protected void addDirectionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PortSpecification_direction_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_direction_feature",
-						"_UI_PortSpecification_type"), Aadl2Package.eINSTANCE.getPortSpecification_Direction(), true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PortSpecification_direction_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_direction_feature",
+								"_UI_PortSpecification_type"),
+						Aadl2Package.eINSTANCE.getPortSpecification_Direction(), true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -110,13 +110,13 @@ public class PortSpecificationItemProvider extends FeaturePrototypeActualItemPro
 	 * @generated
 	 */
 	protected void addCategoryPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PortSpecification_category_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_category_feature",
-						"_UI_PortSpecification_type"), Aadl2Package.eINSTANCE.getPortSpecification_Category(), true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PortSpecification_category_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_category_feature",
+								"_UI_PortSpecification_type"),
+						Aadl2Package.eINSTANCE.getPortSpecification_Category(), true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -126,13 +126,12 @@ public class PortSpecificationItemProvider extends FeaturePrototypeActualItemPro
 	 * @generated
 	 */
 	protected void addClassifierPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PortSpecification_classifier_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_classifier_feature",
-						"_UI_PortSpecification_type"), Aadl2Package.eINSTANCE.getPortSpecification_Classifier(), true,
-				false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PortSpecification_classifier_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_classifier_feature",
+								"_UI_PortSpecification_type"),
+						Aadl2Package.eINSTANCE.getPortSpecification_Classifier(), true, false, true, null, null, null));
 	}
 
 	/**
@@ -142,12 +141,11 @@ public class PortSpecificationItemProvider extends FeaturePrototypeActualItemPro
 	 * @generated
 	 */
 	protected void addComponentPrototypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PortSpecification_componentPrototype_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_componentPrototype_feature",
-						"_UI_PortSpecification_type"),
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PortSpecification_componentPrototype_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_PortSpecification_componentPrototype_feature", "_UI_PortSpecification_type"),
 				Aadl2Package.eINSTANCE.getPortSpecification_ComponentPrototype(), true, false, true, null, null, null));
 	}
 
@@ -158,13 +156,13 @@ public class PortSpecificationItemProvider extends FeaturePrototypeActualItemPro
 	 * @generated
 	 */
 	protected void addInPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PortSpecification_in_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_in_feature",
-						"_UI_PortSpecification_type"), Aadl2Package.eINSTANCE.getPortSpecification_In(), true, false,
-				false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PortSpecification_in_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_in_feature",
+								"_UI_PortSpecification_type"),
+						Aadl2Package.eINSTANCE.getPortSpecification_In(), true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -174,13 +172,13 @@ public class PortSpecificationItemProvider extends FeaturePrototypeActualItemPro
 	 * @generated
 	 */
 	protected void addOutPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PortSpecification_out_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_out_feature",
-						"_UI_PortSpecification_type"), Aadl2Package.eINSTANCE.getPortSpecification_Out(), true, false,
-				false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PortSpecification_out_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PortSpecification_out_feature",
+								"_UI_PortSpecification_type"),
+						Aadl2Package.eINSTANCE.getPortSpecification_Out(), true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**

@@ -48,10 +48,10 @@ import org.osate.aadl2.StringLiteral;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.StringLiteralImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -114,9 +114,8 @@ public class StringLiteralImpl extends PropertyValueImpl implements StringLitera
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.STRING_LITERAL__VALUE, oldValue, value));
-		}
 	}
 
 	/**
@@ -184,9 +183,8 @@ public class StringLiteralImpl extends PropertyValueImpl implements StringLitera
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");

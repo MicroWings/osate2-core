@@ -86,13 +86,12 @@ public class ModalPathItemProvider extends ModalElementItemProvider {
 	 * @generated
 	 */
 	protected void addInModeOrTransitionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ModalPath_inModeOrTransition_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ModalPath_inModeOrTransition_feature",
-						"_UI_ModalPath_type"), Aadl2Package.eINSTANCE.getModalPath_InModeOrTransition(), true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ModalPath_inModeOrTransition_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ModalPath_inModeOrTransition_feature",
+								"_UI_ModalPath_type"),
+						Aadl2Package.eINSTANCE.getModalPath_InModeOrTransition(), true, false, true, null, null, null));
 	}
 
 	/**
@@ -104,8 +103,8 @@ public class ModalPathItemProvider extends ModalElementItemProvider {
 	@Override
 	public String getText(Object object) {
 		String label = ((ModalPath) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_ModalPath_type") : getString("_UI_ModalPath_type")
-				+ " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_ModalPath_type")
+				: getString("_UI_ModalPath_type") + " " + label;
 	}
 
 	/**

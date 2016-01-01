@@ -54,11 +54,11 @@ import org.osate.aadl2.Prototype;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.FeaturePrototypeBindingImpl#getActual <em>Actual</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FeaturePrototypeBindingImpl#getFormal <em>Formal</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -113,11 +113,10 @@ public class FeaturePrototypeBindingImpl extends PrototypeBindingImpl implements
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.FEATURE_PROTOTYPE_BINDING__ACTUAL, oldActual, newActual);
-			if (msgs == null) {
+			if (msgs == null)
 				msgs = notification;
-			} else {
+			else
 				msgs.add(notification);
-			}
 		}
 		return msgs;
 	}
@@ -131,22 +130,18 @@ public class FeaturePrototypeBindingImpl extends PrototypeBindingImpl implements
 	public void setActual(FeaturePrototypeActual newActual) {
 		if (newActual != actual) {
 			NotificationChain msgs = null;
-			if (actual != null) {
-				msgs = ((InternalEObject) actual).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.FEATURE_PROTOTYPE_BINDING__ACTUAL, null, msgs);
-			}
-			if (newActual != null) {
-				msgs = ((InternalEObject) newActual).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.FEATURE_PROTOTYPE_BINDING__ACTUAL, null, msgs);
-			}
+			if (actual != null)
+				msgs = ((InternalEObject) actual).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.FEATURE_PROTOTYPE_BINDING__ACTUAL, null, msgs);
+			if (newActual != null)
+				msgs = ((InternalEObject) newActual).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.FEATURE_PROTOTYPE_BINDING__ACTUAL, null, msgs);
 			msgs = basicSetActual(newActual, msgs);
-			if (msgs != null) {
+			if (msgs != null)
 				msgs.dispatch();
-			}
-		} else if (eNotificationRequired()) {
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FEATURE_PROTOTYPE_BINDING__ACTUAL,
 					newActual, newActual));
-		}
 	}
 
 	/**
@@ -172,10 +167,9 @@ public class FeaturePrototypeBindingImpl extends PrototypeBindingImpl implements
 			InternalEObject oldFormal = (InternalEObject) formal;
 			formal = (Prototype) eResolveProxy(oldFormal);
 			if (formal != oldFormal) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.FEATURE_PROTOTYPE_BINDING__FORMAL, oldFormal, formal));
-				}
 			}
 		}
 		return formal;

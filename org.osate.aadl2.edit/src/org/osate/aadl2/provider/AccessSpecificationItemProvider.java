@@ -92,13 +92,13 @@ public class AccessSpecificationItemProvider extends FeaturePrototypeActualItemP
 	 * @generated
 	 */
 	protected void addKindPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_AccessSpecification_kind_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_AccessSpecification_kind_feature",
-						"_UI_AccessSpecification_type"), Aadl2Package.eINSTANCE.getAccessSpecification_Kind(), true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_AccessSpecification_kind_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_AccessSpecification_kind_feature",
+								"_UI_AccessSpecification_type"),
+						Aadl2Package.eINSTANCE.getAccessSpecification_Kind(), true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -109,12 +109,12 @@ public class AccessSpecificationItemProvider extends FeaturePrototypeActualItemP
 	 */
 	protected void addCategoryPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_AccessSpecification_category_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_AccessSpecification_category_feature",
-						"_UI_AccessSpecification_type"), Aadl2Package.eINSTANCE.getAccessSpecification_Category(),
-				true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						"_UI_AccessSpecification_type"),
+				Aadl2Package.eINSTANCE.getAccessSpecification_Category(), true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -124,13 +124,12 @@ public class AccessSpecificationItemProvider extends FeaturePrototypeActualItemP
 	 * @generated
 	 */
 	protected void addClassifierPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_AccessSpecification_classifier_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_AccessSpecification_classifier_feature",
-						"_UI_AccessSpecification_type"), Aadl2Package.eINSTANCE.getAccessSpecification_Classifier(),
-				true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_AccessSpecification_classifier_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_AccessSpecification_classifier_feature",
+								"_UI_AccessSpecification_type"),
+				Aadl2Package.eINSTANCE.getAccessSpecification_Classifier(), true, false, true, null, null, null));
 	}
 
 	/**
@@ -140,13 +139,13 @@ public class AccessSpecificationItemProvider extends FeaturePrototypeActualItemP
 	 * @generated
 	 */
 	protected void addComponentPrototypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_AccessSpecification_componentPrototype_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_AccessSpecification_componentPrototype_feature",
-						"_UI_AccessSpecification_type"), Aadl2Package.eINSTANCE
-						.getAccessSpecification_ComponentPrototype(), true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_AccessSpecification_componentPrototype_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_AccessSpecification_componentPrototype_feature", "_UI_AccessSpecification_type"),
+				Aadl2Package.eINSTANCE.getAccessSpecification_ComponentPrototype(), true, false, true, null, null,
+				null));
 	}
 
 	/**

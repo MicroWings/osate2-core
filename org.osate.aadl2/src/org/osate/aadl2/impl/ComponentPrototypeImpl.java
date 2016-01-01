@@ -53,11 +53,11 @@ import org.osate.aadl2.operations.TypeOperations;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ComponentPrototypeImpl#isArray <em>Array</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ComponentPrototypeImpl#getConstrainingClassifier <em>Constraining Classifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -130,10 +130,9 @@ public abstract class ComponentPrototypeImpl extends PrototypeImpl implements Co
 	public void setArray(boolean newArray) {
 		boolean oldArray = array;
 		array = newArray;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.COMPONENT_PROTOTYPE__ARRAY, oldArray,
 					array));
-		}
 	}
 
 	/**
@@ -147,11 +146,10 @@ public abstract class ComponentPrototypeImpl extends PrototypeImpl implements Co
 			InternalEObject oldConstrainingClassifier = (InternalEObject) constrainingClassifier;
 			constrainingClassifier = (ComponentClassifier) eResolveProxy(oldConstrainingClassifier);
 			if (constrainingClassifier != oldConstrainingClassifier) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.COMPONENT_PROTOTYPE__CONSTRAINING_CLASSIFIER, oldConstrainingClassifier,
 							constrainingClassifier));
-				}
 			}
 		}
 		return constrainingClassifier;
@@ -175,11 +173,10 @@ public abstract class ComponentPrototypeImpl extends PrototypeImpl implements Co
 	public void setConstrainingClassifier(ComponentClassifier newConstrainingClassifier) {
 		ComponentClassifier oldConstrainingClassifier = constrainingClassifier;
 		constrainingClassifier = newConstrainingClassifier;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.COMPONENT_PROTOTYPE__CONSTRAINING_CLASSIFIER, oldConstrainingClassifier,
 					constrainingClassifier));
-		}
 	}
 
 	/**
@@ -203,9 +200,8 @@ public abstract class ComponentPrototypeImpl extends PrototypeImpl implements Co
 		case Aadl2Package.COMPONENT_PROTOTYPE__ARRAY:
 			return isArray();
 		case Aadl2Package.COMPONENT_PROTOTYPE__CONSTRAINING_CLASSIFIER:
-			if (resolve) {
+			if (resolve)
 				return getConstrainingClassifier();
-			}
 			return basicGetConstrainingClassifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -270,9 +266,8 @@ public abstract class ComponentPrototypeImpl extends PrototypeImpl implements Co
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (array: ");

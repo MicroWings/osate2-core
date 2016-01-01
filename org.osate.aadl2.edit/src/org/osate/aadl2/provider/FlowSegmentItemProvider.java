@@ -84,13 +84,12 @@ public class FlowSegmentItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addFlowElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_FlowSegment_flowElement_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_FlowSegment_flowElement_feature",
-						"_UI_FlowSegment_type"), Aadl2Package.eINSTANCE.getFlowSegment_FlowElement(), true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FlowSegment_flowElement_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FlowSegment_flowElement_feature",
+								"_UI_FlowSegment_type"),
+						Aadl2Package.eINSTANCE.getFlowSegment_FlowElement(), true, false, true, null, null, null));
 	}
 
 	/**
@@ -100,13 +99,12 @@ public class FlowSegmentItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addContextPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_FlowSegment_context_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_FlowSegment_context_feature",
-						"_UI_FlowSegment_type"), Aadl2Package.eINSTANCE.getFlowSegment_Context(), true, false, true,
-				null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FlowSegment_context_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FlowSegment_context_feature",
+								"_UI_FlowSegment_type"),
+						Aadl2Package.eINSTANCE.getFlowSegment_Context(), true, false, true, null, null, null));
 	}
 
 	/**

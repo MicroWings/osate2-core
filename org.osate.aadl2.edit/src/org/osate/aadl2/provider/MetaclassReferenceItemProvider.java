@@ -90,12 +90,12 @@ public class MetaclassReferenceItemProvider extends PropertyOwnerItemProvider {
 	 */
 	protected void addAnnexNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_MetaclassReference_annexName_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_MetaclassReference_annexName_feature",
-						"_UI_MetaclassReference_type"), Aadl2Package.eINSTANCE.getMetaclassReference_AnnexName(), true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						"_UI_MetaclassReference_type"),
+				Aadl2Package.eINSTANCE.getMetaclassReference_AnnexName(), true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -106,12 +106,12 @@ public class MetaclassReferenceItemProvider extends PropertyOwnerItemProvider {
 	 */
 	protected void addMetaclassNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_MetaclassReference_metaclassName_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_MetaclassReference_metaclassName_feature",
-						"_UI_MetaclassReference_type"), Aadl2Package.eINSTANCE.getMetaclassReference_MetaclassName(),
-				true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						"_UI_MetaclassReference_type"),
+				Aadl2Package.eINSTANCE.getMetaclassReference_MetaclassName(), true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**

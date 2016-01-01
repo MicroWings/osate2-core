@@ -83,8 +83,8 @@ public class ModelUnitItemProvider extends NamedElementItemProvider {
 	@Override
 	public String getText(Object object) {
 		String label = ((ModelUnit) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_ModelUnit_type") : getString("_UI_ModelUnit_type")
-				+ " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_ModelUnit_type")
+				: getString("_UI_ModelUnit_type") + " " + label;
 	}
 
 	/**

@@ -50,11 +50,11 @@ import org.osate.aadl2.FlowSegment;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.FlowSegmentImpl#getFlowElement <em>Flow Element</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FlowSegmentImpl#getContext <em>Context</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -109,10 +109,9 @@ public class FlowSegmentImpl extends ElementImpl implements FlowSegment {
 			InternalEObject oldFlowElement = (InternalEObject) flowElement;
 			flowElement = (FlowElement) eResolveProxy(oldFlowElement);
 			if (flowElement != oldFlowElement) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Aadl2Package.FLOW_SEGMENT__FLOW_ELEMENT,
 							oldFlowElement, flowElement));
-				}
 			}
 		}
 		return flowElement;
@@ -136,10 +135,9 @@ public class FlowSegmentImpl extends ElementImpl implements FlowSegment {
 	public void setFlowElement(FlowElement newFlowElement) {
 		FlowElement oldFlowElement = flowElement;
 		flowElement = newFlowElement;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FLOW_SEGMENT__FLOW_ELEMENT,
 					oldFlowElement, flowElement));
-		}
 	}
 
 	/**
@@ -153,10 +151,9 @@ public class FlowSegmentImpl extends ElementImpl implements FlowSegment {
 			InternalEObject oldContext = (InternalEObject) context;
 			context = (Context) eResolveProxy(oldContext);
 			if (context != oldContext) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Aadl2Package.FLOW_SEGMENT__CONTEXT,
 							oldContext, context));
-				}
 			}
 		}
 		return context;
@@ -180,10 +177,9 @@ public class FlowSegmentImpl extends ElementImpl implements FlowSegment {
 	public void setContext(Context newContext) {
 		Context oldContext = context;
 		context = newContext;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FLOW_SEGMENT__CONTEXT, oldContext,
 					context));
-		}
 	}
 
 	/**
@@ -195,14 +191,12 @@ public class FlowSegmentImpl extends ElementImpl implements FlowSegment {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.FLOW_SEGMENT__FLOW_ELEMENT:
-			if (resolve) {
+			if (resolve)
 				return getFlowElement();
-			}
 			return basicGetFlowElement();
 		case Aadl2Package.FLOW_SEGMENT__CONTEXT:
-			if (resolve) {
+			if (resolve)
 				return getContext();
-			}
 			return basicGetContext();
 		}
 		return super.eGet(featureID, resolve, coreType);

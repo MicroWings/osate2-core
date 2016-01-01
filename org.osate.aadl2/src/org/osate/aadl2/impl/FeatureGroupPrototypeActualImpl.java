@@ -58,11 +58,11 @@ import org.osate.aadl2.PrototypeBinding;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.FeatureGroupPrototypeActualImpl#getBindings <em>Binding</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FeatureGroupPrototypeActualImpl#getFeatureType <em>Feature Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -142,10 +142,9 @@ public class FeatureGroupPrototypeActualImpl extends FeaturePrototypeActualImpl 
 			InternalEObject oldFeatureType = (InternalEObject) featureType;
 			featureType = (FeatureType) eResolveProxy(oldFeatureType);
 			if (featureType != oldFeatureType) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.FEATURE_GROUP_PROTOTYPE_ACTUAL__FEATURE_TYPE, oldFeatureType, featureType));
-				}
 			}
 		}
 		return featureType;
@@ -169,10 +168,9 @@ public class FeatureGroupPrototypeActualImpl extends FeaturePrototypeActualImpl 
 	public void setFeatureType(FeatureType newFeatureType) {
 		FeatureType oldFeatureType = featureType;
 		featureType = newFeatureType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.FEATURE_GROUP_PROTOTYPE_ACTUAL__FEATURE_TYPE, oldFeatureType, featureType));
-		}
 	}
 
 	/**
@@ -200,9 +198,8 @@ public class FeatureGroupPrototypeActualImpl extends FeaturePrototypeActualImpl 
 		case Aadl2Package.FEATURE_GROUP_PROTOTYPE_ACTUAL__BINDING:
 			return getBindings();
 		case Aadl2Package.FEATURE_GROUP_PROTOTYPE_ACTUAL__FEATURE_TYPE:
-			if (resolve) {
+			if (resolve)
 				return getFeatureType();
-			}
 			return basicGetFeatureType();
 		}
 		return super.eGet(featureID, resolve, coreType);

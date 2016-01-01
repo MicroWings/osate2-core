@@ -54,11 +54,11 @@ import org.osate.aadl2.SubprogramGroupAccess;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.AccessImpl#getKind <em>Kind</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.AccessImpl#getCategory <em>Category</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -131,9 +131,8 @@ public abstract class AccessImpl extends FeatureImpl implements Access {
 	public void setKind(AccessType newKind) {
 		AccessType oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.ACCESS__KIND, oldKind, kind));
-		}
 	}
 
 	/**
@@ -227,9 +226,8 @@ public abstract class AccessImpl extends FeatureImpl implements Access {
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (kind: ");

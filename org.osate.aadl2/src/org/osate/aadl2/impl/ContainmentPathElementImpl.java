@@ -58,13 +58,13 @@ import org.osate.aadl2.NamedElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ContainmentPathElementImpl#getArrayRanges <em>Array Range</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ContainmentPathElementImpl#getNamedElement <em>Named Element</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ContainmentPathElementImpl#getAnnexName <em>Annex Name</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ContainmentPathElementImpl#getPath <em>Path</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -175,10 +175,9 @@ public class ContainmentPathElementImpl extends ElementImpl implements Containme
 			InternalEObject oldNamedElement = (InternalEObject) namedElement;
 			namedElement = (NamedElement) eResolveProxy(oldNamedElement);
 			if (namedElement != oldNamedElement) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.CONTAINMENT_PATH_ELEMENT__NAMED_ELEMENT, oldNamedElement, namedElement));
-				}
 			}
 		}
 		return namedElement;
@@ -202,10 +201,9 @@ public class ContainmentPathElementImpl extends ElementImpl implements Containme
 	public void setNamedElement(NamedElement newNamedElement) {
 		NamedElement oldNamedElement = namedElement;
 		namedElement = newNamedElement;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CONTAINMENT_PATH_ELEMENT__NAMED_ELEMENT,
 					oldNamedElement, namedElement));
-		}
 	}
 
 	/**
@@ -227,10 +225,9 @@ public class ContainmentPathElementImpl extends ElementImpl implements Containme
 	public void setAnnexName(String newAnnexName) {
 		String oldAnnexName = annexName;
 		annexName = newAnnexName;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CONTAINMENT_PATH_ELEMENT__ANNEX_NAME,
 					oldAnnexName, annexName));
-		}
 	}
 
 	/**
@@ -254,11 +251,10 @@ public class ContainmentPathElementImpl extends ElementImpl implements Containme
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.CONTAINMENT_PATH_ELEMENT__PATH, oldPath, newPath);
-			if (msgs == null) {
+			if (msgs == null)
 				msgs = notification;
-			} else {
+			else
 				msgs.add(notification);
-			}
 		}
 		return msgs;
 	}
@@ -272,22 +268,18 @@ public class ContainmentPathElementImpl extends ElementImpl implements Containme
 	public void setPath(ContainmentPathElement newPath) {
 		if (newPath != path) {
 			NotificationChain msgs = null;
-			if (path != null) {
-				msgs = ((InternalEObject) path).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.CONTAINMENT_PATH_ELEMENT__PATH, null, msgs);
-			}
-			if (newPath != null) {
-				msgs = ((InternalEObject) newPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.CONTAINMENT_PATH_ELEMENT__PATH, null, msgs);
-			}
+			if (path != null)
+				msgs = ((InternalEObject) path).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.CONTAINMENT_PATH_ELEMENT__PATH, null, msgs);
+			if (newPath != null)
+				msgs = ((InternalEObject) newPath).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.CONTAINMENT_PATH_ELEMENT__PATH, null, msgs);
 			msgs = basicSetPath(newPath, msgs);
-			if (msgs != null) {
+			if (msgs != null)
 				msgs.dispatch();
-			}
-		} else if (eNotificationRequired()) {
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CONTAINMENT_PATH_ELEMENT__PATH, newPath,
 					newPath));
-		}
 	}
 
 	/**
@@ -297,8 +289,8 @@ public class ContainmentPathElementImpl extends ElementImpl implements Containme
 	 */
 	@Override
 	public ContainmentPathElement createPath() {
-		ContainmentPathElement newPath = (ContainmentPathElement) create(Aadl2Package.eINSTANCE
-				.getContainmentPathElement());
+		ContainmentPathElement newPath = (ContainmentPathElement) create(
+				Aadl2Package.eINSTANCE.getContainmentPathElement());
 		setPath(newPath);
 		return newPath;
 	}
@@ -330,9 +322,8 @@ public class ContainmentPathElementImpl extends ElementImpl implements Containme
 		case Aadl2Package.CONTAINMENT_PATH_ELEMENT__ARRAY_RANGE:
 			return getArrayRanges();
 		case Aadl2Package.CONTAINMENT_PATH_ELEMENT__NAMED_ELEMENT:
-			if (resolve) {
+			if (resolve)
 				return getNamedElement();
-			}
 			return basicGetNamedElement();
 		case Aadl2Package.CONTAINMENT_PATH_ELEMENT__ANNEX_NAME:
 			return getAnnexName();
@@ -419,9 +410,8 @@ public class ContainmentPathElementImpl extends ElementImpl implements Containme
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (annexName: ");

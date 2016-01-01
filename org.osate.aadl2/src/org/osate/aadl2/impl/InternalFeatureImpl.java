@@ -47,12 +47,12 @@ import org.osate.aadl2.InternalFeature;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.InternalFeatureImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.InternalFeatureImpl#isIn <em>In</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.InternalFeatureImpl#isOut <em>Out</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -164,9 +164,8 @@ public abstract class InternalFeatureImpl extends StructuralFeatureImpl implemen
 	public void setIn(boolean newIn) {
 		boolean oldIn = in;
 		in = newIn;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.INTERNAL_FEATURE__IN, oldIn, in));
-		}
 	}
 
 	/**
@@ -188,9 +187,8 @@ public abstract class InternalFeatureImpl extends StructuralFeatureImpl implemen
 	public void setOut(boolean newOut) {
 		boolean oldOut = out;
 		out = newOut;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.INTERNAL_FEATURE__OUT, oldOut, out));
-		}
 	}
 
 	/**
@@ -273,9 +271,8 @@ public abstract class InternalFeatureImpl extends StructuralFeatureImpl implemen
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (in: ");

@@ -84,11 +84,12 @@ public class FlowEndItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addContextPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_FlowEnd_context_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_FlowEnd_context_feature", "_UI_FlowEnd_type"),
-				Aadl2Package.eINSTANCE.getFlowEnd_Context(), true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FlowEnd_context_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FlowEnd_context_feature",
+								"_UI_FlowEnd_type"),
+						Aadl2Package.eINSTANCE.getFlowEnd_Context(), true, false, true, null, null, null));
 	}
 
 	/**
@@ -98,11 +99,12 @@ public class FlowEndItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addFeaturePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_FlowEnd_feature_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_FlowEnd_feature_feature", "_UI_FlowEnd_type"),
-				Aadl2Package.eINSTANCE.getFlowEnd_Feature(), true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FlowEnd_feature_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FlowEnd_feature_feature",
+								"_UI_FlowEnd_type"),
+						Aadl2Package.eINSTANCE.getFlowEnd_Feature(), true, false, true, null, null, null));
 	}
 
 	/**

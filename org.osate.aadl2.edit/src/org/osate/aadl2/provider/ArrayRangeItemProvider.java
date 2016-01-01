@@ -89,13 +89,13 @@ public class ArrayRangeItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addLowerBoundPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ArrayRange_lowerBound_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ArrayRange_lowerBound_feature",
-						"_UI_ArrayRange_type"), Aadl2Package.eINSTANCE.getArrayRange_LowerBound(), true, false, false,
-				ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ArrayRange_lowerBound_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ArrayRange_lowerBound_feature",
+								"_UI_ArrayRange_type"),
+						Aadl2Package.eINSTANCE.getArrayRange_LowerBound(), true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -105,13 +105,13 @@ public class ArrayRangeItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addUpperBoundPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ArrayRange_upperBound_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ArrayRange_upperBound_feature",
-						"_UI_ArrayRange_type"), Aadl2Package.eINSTANCE.getArrayRange_UpperBound(), true, false, false,
-				ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ArrayRange_upperBound_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ArrayRange_upperBound_feature",
+								"_UI_ArrayRange_type"),
+						Aadl2Package.eINSTANCE.getArrayRange_UpperBound(), true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**

@@ -47,10 +47,10 @@ import org.osate.aadl2.Comment;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.CommentImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -113,9 +113,8 @@ public class CommentImpl extends ElementImpl implements Comment {
 	public void setBody(String newBody) {
 		String oldBody = body;
 		body = newBody;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.COMMENT__BODY, oldBody, body));
-		}
 	}
 
 	/**
@@ -183,9 +182,8 @@ public class CommentImpl extends ElementImpl implements Comment {
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (body: ");

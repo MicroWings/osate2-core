@@ -49,12 +49,12 @@ import org.osate.aadl2.DirectionType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.DirectedFeatureImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.DirectedFeatureImpl#isIn <em>In</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.DirectedFeatureImpl#isOut <em>Out</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -194,9 +194,8 @@ public abstract class DirectedFeatureImpl extends FeatureImpl implements Directe
 	public void setIn(boolean newIn) {
 		boolean oldIn = in;
 		in = newIn;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.DIRECTED_FEATURE__IN, oldIn, in));
-		}
 	}
 
 	/**
@@ -218,9 +217,8 @@ public abstract class DirectedFeatureImpl extends FeatureImpl implements Directe
 	public void setOut(boolean newOut) {
 		boolean oldOut = out;
 		out = newOut;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.DIRECTED_FEATURE__OUT, oldOut, out));
-		}
 	}
 
 	/**
@@ -308,9 +306,8 @@ public abstract class DirectedFeatureImpl extends FeatureImpl implements Directe
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (in: ");

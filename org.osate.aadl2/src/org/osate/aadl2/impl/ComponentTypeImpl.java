@@ -76,6 +76,7 @@ import org.osate.aadl2.properties.PropertyAcc;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ComponentTypeImpl#getOwnedFeatures <em>Owned Feature</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ComponentTypeImpl#getClassifierFeatures <em>Classifier Feature</em>}</li>
@@ -89,7 +90,6 @@ import org.osate.aadl2.properties.PropertyAcc;
  *   <li>{@link org.osate.aadl2.impl.ComponentTypeImpl#getOwnedAbstractFeatures <em>Owned Abstract Feature</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ComponentTypeImpl#isNoFeatures <em>No Features</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -275,10 +275,10 @@ public abstract class ComponentTypeImpl extends ComponentClassifierImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int[] OWNED_MEMBER_ESUBSETS = new int[] {
-			Aadl2Package.COMPONENT_TYPE__OWNED_ANNEX_SUBCLAUSE, Aadl2Package.COMPONENT_TYPE__OWNED_PROTOTYPE,
-			Aadl2Package.COMPONENT_TYPE__OWNED_MODE, Aadl2Package.COMPONENT_TYPE__OWNED_MODE_TRANSITION,
-			Aadl2Package.COMPONENT_TYPE__OWNED_FEATURE, Aadl2Package.COMPONENT_TYPE__OWNED_FLOW_SPECIFICATION };
+	protected static final int[] OWNED_MEMBER_ESUBSETS = new int[] { Aadl2Package.COMPONENT_TYPE__OWNED_ANNEX_SUBCLAUSE,
+			Aadl2Package.COMPONENT_TYPE__OWNED_PROTOTYPE, Aadl2Package.COMPONENT_TYPE__OWNED_MODE,
+			Aadl2Package.COMPONENT_TYPE__OWNED_MODE_TRANSITION, Aadl2Package.COMPONENT_TYPE__OWNED_FEATURE,
+			Aadl2Package.COMPONENT_TYPE__OWNED_FLOW_SPECIFICATION };
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -367,10 +367,9 @@ public abstract class ComponentTypeImpl extends ComponentClassifierImpl implemen
 	public void setNoFeatures(boolean newNoFeatures) {
 		boolean oldNoFeatures = noFeatures;
 		noFeatures = newNoFeatures;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.COMPONENT_TYPE__NO_FEATURES,
 					oldNoFeatures, noFeatures));
-		}
 	}
 
 	/**
@@ -381,8 +380,8 @@ public abstract class ComponentTypeImpl extends ComponentClassifierImpl implemen
 	@Override
 	public ComponentType getExtended() {
 		ComponentType extended = basicGetExtended();
-		return extended != null && ((EObject) extended).eIsProxy() ? (ComponentType) eResolveProxy((InternalEObject) extended)
-				: extended;
+		return extended != null && ((EObject) extended).eIsProxy()
+				? (ComponentType) eResolveProxy((InternalEObject) extended) : extended;
 	}
 
 	/**
@@ -437,8 +436,8 @@ public abstract class ComponentTypeImpl extends ComponentClassifierImpl implemen
 	 */
 	@Override
 	public FlowSpecification createOwnedFlowSpecification() {
-		FlowSpecification newOwnedFlowSpecification = (FlowSpecification) create(Aadl2Package.eINSTANCE
-				.getFlowSpecification());
+		FlowSpecification newOwnedFlowSpecification = (FlowSpecification) create(
+				Aadl2Package.eINSTANCE.getFlowSpecification());
 		getOwnedFlowSpecifications().add(newOwnedFlowSpecification);
 		return newOwnedFlowSpecification;
 	}
@@ -464,11 +463,10 @@ public abstract class ComponentTypeImpl extends ComponentClassifierImpl implemen
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.COMPONENT_TYPE__OWNED_EXTENSION, oldOwnedExtension, newOwnedExtension);
-			if (msgs == null) {
+			if (msgs == null)
 				msgs = notification;
-			} else {
+			else
 				msgs.add(notification);
-			}
 		}
 		return msgs;
 	}
@@ -482,22 +480,18 @@ public abstract class ComponentTypeImpl extends ComponentClassifierImpl implemen
 	public void setOwnedExtension(TypeExtension newOwnedExtension) {
 		if (newOwnedExtension != ownedExtension) {
 			NotificationChain msgs = null;
-			if (ownedExtension != null) {
-				msgs = ((InternalEObject) ownedExtension).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.COMPONENT_TYPE__OWNED_EXTENSION, null, msgs);
-			}
-			if (newOwnedExtension != null) {
-				msgs = ((InternalEObject) newOwnedExtension).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.COMPONENT_TYPE__OWNED_EXTENSION, null, msgs);
-			}
+			if (ownedExtension != null)
+				msgs = ((InternalEObject) ownedExtension).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.COMPONENT_TYPE__OWNED_EXTENSION, null, msgs);
+			if (newOwnedExtension != null)
+				msgs = ((InternalEObject) newOwnedExtension).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.COMPONENT_TYPE__OWNED_EXTENSION, null, msgs);
 			msgs = basicSetOwnedExtension(newOwnedExtension, msgs);
-			if (msgs != null) {
+			if (msgs != null)
 				msgs.dispatch();
-			}
-		} else if (eNotificationRequired()) {
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.COMPONENT_TYPE__OWNED_EXTENSION,
 					newOwnedExtension, newOwnedExtension));
-		}
 	}
 
 	/**
@@ -595,9 +589,8 @@ public abstract class ComponentTypeImpl extends ComponentClassifierImpl implemen
 		case Aadl2Package.COMPONENT_TYPE__OWNED_FEATURE:
 			return getOwnedFeatures();
 		case Aadl2Package.COMPONENT_TYPE__EXTENDED:
-			if (resolve) {
+			if (resolve)
 				return getExtended();
-			}
 			return basicGetExtended();
 		case Aadl2Package.COMPONENT_TYPE__OWNED_FLOW_SPECIFICATION:
 			return getOwnedFlowSpecifications();
@@ -718,9 +711,8 @@ public abstract class ComponentTypeImpl extends ComponentClassifierImpl implemen
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (noFeatures: ");

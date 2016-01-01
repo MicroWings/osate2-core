@@ -49,10 +49,10 @@ import org.osate.aadl2.EventDataSource;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.EventDataSourceImpl#getDataClassifier <em>Data Classifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -97,10 +97,9 @@ public class EventDataSourceImpl extends InternalFeatureImpl implements EventDat
 			InternalEObject oldDataClassifier = (InternalEObject) dataClassifier;
 			dataClassifier = (DataClassifier) eResolveProxy(oldDataClassifier);
 			if (dataClassifier != oldDataClassifier) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.EVENT_DATA_SOURCE__DATA_CLASSIFIER, oldDataClassifier, dataClassifier));
-				}
 			}
 		}
 		return dataClassifier;
@@ -124,10 +123,9 @@ public class EventDataSourceImpl extends InternalFeatureImpl implements EventDat
 	public void setDataClassifier(DataClassifier newDataClassifier) {
 		DataClassifier oldDataClassifier = dataClassifier;
 		dataClassifier = newDataClassifier;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.EVENT_DATA_SOURCE__DATA_CLASSIFIER,
 					oldDataClassifier, dataClassifier));
-		}
 	}
 
 	/**
@@ -139,9 +137,8 @@ public class EventDataSourceImpl extends InternalFeatureImpl implements EventDat
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.EVENT_DATA_SOURCE__DATA_CLASSIFIER:
-			if (resolve) {
+			if (resolve)
 				return getDataClassifier();
-			}
 			return basicGetDataClassifier();
 		}
 		return super.eGet(featureID, resolve, coreType);

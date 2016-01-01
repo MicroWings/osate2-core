@@ -83,13 +83,12 @@ public class NamedValueItemProvider extends PropertyValueItemProvider {
 	 * @generated
 	 */
 	protected void addNamedValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_NamedValue_namedValue_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_NamedValue_namedValue_feature",
-						"_UI_NamedValue_type"), Aadl2Package.eINSTANCE.getNamedValue_NamedValue(), true, false, true,
-				null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_NamedValue_namedValue_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_NamedValue_namedValue_feature",
+								"_UI_NamedValue_type"),
+						Aadl2Package.eINSTANCE.getNamedValue_NamedValue(), true, false, true, null, null, null));
 	}
 
 	/**

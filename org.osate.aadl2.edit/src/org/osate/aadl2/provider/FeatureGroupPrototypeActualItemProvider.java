@@ -90,12 +90,12 @@ public class FeatureGroupPrototypeActualItemProvider extends FeaturePrototypeAct
 	 */
 	protected void addFeatureTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FeatureGroupPrototypeActual_featureType_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_FeatureGroupPrototypeActual_featureType_feature",
-						"_UI_FeatureGroupPrototypeActual_type"), Aadl2Package.eINSTANCE
-						.getFeatureGroupPrototypeActual_FeatureType(), true, false, true, null, null, null));
+						"_UI_FeatureGroupPrototypeActual_type"),
+				Aadl2Package.eINSTANCE.getFeatureGroupPrototypeActual_FeatureType(), true, false, true, null, null,
+				null));
 	}
 
 	/**

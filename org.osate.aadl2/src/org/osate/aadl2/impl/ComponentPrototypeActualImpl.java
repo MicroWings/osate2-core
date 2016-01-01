@@ -59,12 +59,12 @@ import org.osate.aadl2.SubcomponentType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ComponentPrototypeActualImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ComponentPrototypeActualImpl#getBindings <em>Binding</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ComponentPrototypeActualImpl#getSubcomponentType <em>Subcomponent Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -147,10 +147,9 @@ public class ComponentPrototypeActualImpl extends ArrayableElementImpl implement
 	public void setCategory(ComponentCategory newCategory) {
 		ComponentCategory oldCategory = category;
 		category = newCategory == null ? CATEGORY_EDEFAULT : newCategory;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.COMPONENT_PROTOTYPE_ACTUAL__CATEGORY,
 					oldCategory, category));
-		}
 	}
 
 	/**
@@ -218,10 +217,9 @@ public class ComponentPrototypeActualImpl extends ArrayableElementImpl implement
 	public void setSubcomponentType(SubcomponentType newSubcomponentType) {
 		SubcomponentType oldSubcomponentType = subcomponentType;
 		subcomponentType = newSubcomponentType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.COMPONENT_PROTOTYPE_ACTUAL__SUBCOMPONENT_TYPE, oldSubcomponentType, subcomponentType));
-		}
 	}
 
 	/**
@@ -251,9 +249,8 @@ public class ComponentPrototypeActualImpl extends ArrayableElementImpl implement
 		case Aadl2Package.COMPONENT_PROTOTYPE_ACTUAL__BINDING:
 			return getBindings();
 		case Aadl2Package.COMPONENT_PROTOTYPE_ACTUAL__SUBCOMPONENT_TYPE:
-			if (resolve) {
+			if (resolve)
 				return getSubcomponentType();
-			}
 			return basicGetSubcomponentType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -328,9 +325,8 @@ public class ComponentPrototypeActualImpl extends ArrayableElementImpl implement
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (category: ");

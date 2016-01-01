@@ -53,12 +53,12 @@ import org.osate.aadl2.Type;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.BasicPropertyImpl#getReferencedPropertyType <em>Referenced Property Type</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.BasicPropertyImpl#getOwnedPropertyType <em>Owned Property Type</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.BasicPropertyImpl#getPropertyType <em>Property Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -112,11 +112,10 @@ public class BasicPropertyImpl extends TypedElementImpl implements BasicProperty
 			InternalEObject oldReferencedPropertyType = (InternalEObject) referencedPropertyType;
 			referencedPropertyType = (PropertyType) eResolveProxy(oldReferencedPropertyType);
 			if (referencedPropertyType != oldReferencedPropertyType) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.BASIC_PROPERTY__REFERENCED_PROPERTY_TYPE, oldReferencedPropertyType,
 							referencedPropertyType));
-				}
 			}
 		}
 		return referencedPropertyType;
@@ -140,11 +139,9 @@ public class BasicPropertyImpl extends TypedElementImpl implements BasicProperty
 	public void setReferencedPropertyType(PropertyType newReferencedPropertyType) {
 		PropertyType oldReferencedPropertyType = referencedPropertyType;
 		referencedPropertyType = newReferencedPropertyType;
-		if (eNotificationRequired()) {
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Aadl2Package.BASIC_PROPERTY__REFERENCED_PROPERTY_TYPE, oldReferencedPropertyType,
-					referencedPropertyType));
-		}
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.BASIC_PROPERTY__REFERENCED_PROPERTY_TYPE,
+					oldReferencedPropertyType, referencedPropertyType));
 	}
 
 	/**
@@ -155,8 +152,8 @@ public class BasicPropertyImpl extends TypedElementImpl implements BasicProperty
 	@Override
 	public PropertyType getPropertyType() {
 		PropertyType propertyType = basicGetPropertyType();
-		return propertyType != null && ((EObject) propertyType).eIsProxy() ? (PropertyType) eResolveProxy((InternalEObject) propertyType)
-				: propertyType;
+		return propertyType != null && ((EObject) propertyType).eIsProxy()
+				? (PropertyType) eResolveProxy((InternalEObject) propertyType) : propertyType;
 	}
 
 	/**
@@ -203,11 +200,10 @@ public class BasicPropertyImpl extends TypedElementImpl implements BasicProperty
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.BASIC_PROPERTY__OWNED_PROPERTY_TYPE, oldOwnedPropertyType, newOwnedPropertyType);
-			if (msgs == null) {
+			if (msgs == null)
 				msgs = notification;
-			} else {
+			else
 				msgs.add(notification);
-			}
 		}
 		return msgs;
 	}
@@ -221,22 +217,18 @@ public class BasicPropertyImpl extends TypedElementImpl implements BasicProperty
 	public void setOwnedPropertyType(PropertyType newOwnedPropertyType) {
 		if (newOwnedPropertyType != ownedPropertyType) {
 			NotificationChain msgs = null;
-			if (ownedPropertyType != null) {
-				msgs = ((InternalEObject) ownedPropertyType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.BASIC_PROPERTY__OWNED_PROPERTY_TYPE, null, msgs);
-			}
-			if (newOwnedPropertyType != null) {
-				msgs = ((InternalEObject) newOwnedPropertyType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.BASIC_PROPERTY__OWNED_PROPERTY_TYPE, null, msgs);
-			}
+			if (ownedPropertyType != null)
+				msgs = ((InternalEObject) ownedPropertyType).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.BASIC_PROPERTY__OWNED_PROPERTY_TYPE, null, msgs);
+			if (newOwnedPropertyType != null)
+				msgs = ((InternalEObject) newOwnedPropertyType).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.BASIC_PROPERTY__OWNED_PROPERTY_TYPE, null, msgs);
 			msgs = basicSetOwnedPropertyType(newOwnedPropertyType, msgs);
-			if (msgs != null) {
+			if (msgs != null)
 				msgs.dispatch();
-			}
-		} else if (eNotificationRequired()) {
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.BASIC_PROPERTY__OWNED_PROPERTY_TYPE,
 					newOwnedPropertyType, newOwnedPropertyType));
-		}
 	}
 
 	/**
@@ -313,16 +305,14 @@ public class BasicPropertyImpl extends TypedElementImpl implements BasicProperty
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.BASIC_PROPERTY__REFERENCED_PROPERTY_TYPE:
-			if (resolve) {
+			if (resolve)
 				return getReferencedPropertyType();
-			}
 			return basicGetReferencedPropertyType();
 		case Aadl2Package.BASIC_PROPERTY__OWNED_PROPERTY_TYPE:
 			return getOwnedPropertyType();
 		case Aadl2Package.BASIC_PROPERTY__PROPERTY_TYPE:
-			if (resolve) {
+			if (resolve)
 				return getPropertyType();
-			}
 			return basicGetPropertyType();
 		}
 		return super.eGet(featureID, resolve, coreType);

@@ -86,13 +86,12 @@ public class ModeBindingItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addParentModePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ModeBinding_parentMode_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ModeBinding_parentMode_feature",
-						"_UI_ModeBinding_type"), Aadl2Package.eINSTANCE.getModeBinding_ParentMode(), true, false, true,
-				null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ModeBinding_parentMode_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ModeBinding_parentMode_feature",
+								"_UI_ModeBinding_type"),
+						Aadl2Package.eINSTANCE.getModeBinding_ParentMode(), true, false, true, null, null, null));
 	}
 
 	/**
@@ -102,13 +101,12 @@ public class ModeBindingItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addDerivedModePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ModeBinding_derivedMode_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ModeBinding_derivedMode_feature",
-						"_UI_ModeBinding_type"), Aadl2Package.eINSTANCE.getModeBinding_DerivedMode(), true, false,
-				true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ModeBinding_derivedMode_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ModeBinding_derivedMode_feature",
+								"_UI_ModeBinding_type"),
+						Aadl2Package.eINSTANCE.getModeBinding_DerivedMode(), true, false, true, null, null, null));
 	}
 
 	/**

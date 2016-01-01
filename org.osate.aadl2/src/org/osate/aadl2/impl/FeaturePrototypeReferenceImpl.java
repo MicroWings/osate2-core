@@ -52,13 +52,13 @@ import org.osate.aadl2.FeaturePrototypeReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.FeaturePrototypeReferenceImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FeaturePrototypeReferenceImpl#getPrototype <em>Prototype</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FeaturePrototypeReferenceImpl#isIn <em>In</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FeaturePrototypeReferenceImpl#isOut <em>Out</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -176,10 +176,9 @@ public class FeaturePrototypeReferenceImpl extends FeaturePrototypeActualImpl im
 			InternalEObject oldPrototype = (InternalEObject) prototype;
 			prototype = (FeaturePrototype) eResolveProxy(oldPrototype);
 			if (prototype != oldPrototype) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.FEATURE_PROTOTYPE_REFERENCE__PROTOTYPE, oldPrototype, prototype));
-				}
 			}
 		}
 		return prototype;
@@ -203,10 +202,9 @@ public class FeaturePrototypeReferenceImpl extends FeaturePrototypeActualImpl im
 	public void setPrototype(FeaturePrototype newPrototype) {
 		FeaturePrototype oldPrototype = prototype;
 		prototype = newPrototype;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FEATURE_PROTOTYPE_REFERENCE__PROTOTYPE,
 					oldPrototype, prototype));
-		}
 	}
 
 	/**
@@ -228,10 +226,9 @@ public class FeaturePrototypeReferenceImpl extends FeaturePrototypeActualImpl im
 	public void setIn(boolean newIn) {
 		boolean oldIn = in;
 		in = newIn;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FEATURE_PROTOTYPE_REFERENCE__IN, oldIn,
 					in));
-		}
 	}
 
 	/**
@@ -253,10 +250,9 @@ public class FeaturePrototypeReferenceImpl extends FeaturePrototypeActualImpl im
 	public void setOut(boolean newOut) {
 		boolean oldOut = out;
 		out = newOut;
-		if (eNotificationRequired()) {
-			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FEATURE_PROTOTYPE_REFERENCE__OUT,
-					oldOut, out));
-		}
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FEATURE_PROTOTYPE_REFERENCE__OUT, oldOut,
+					out));
 	}
 
 	/**
@@ -270,9 +266,8 @@ public class FeaturePrototypeReferenceImpl extends FeaturePrototypeActualImpl im
 		case Aadl2Package.FEATURE_PROTOTYPE_REFERENCE__DIRECTION:
 			return getDirection();
 		case Aadl2Package.FEATURE_PROTOTYPE_REFERENCE__PROTOTYPE:
-			if (resolve) {
+			if (resolve)
 				return getPrototype();
-			}
 			return basicGetPrototype();
 		case Aadl2Package.FEATURE_PROTOTYPE_REFERENCE__IN:
 			return isIn();
@@ -351,9 +346,8 @@ public class FeaturePrototypeReferenceImpl extends FeaturePrototypeActualImpl im
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (in: ");

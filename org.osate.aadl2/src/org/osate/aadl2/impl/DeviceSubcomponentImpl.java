@@ -52,11 +52,11 @@ import org.osate.aadl2.SubcomponentType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.DeviceSubcomponentImpl#getSubcomponentType <em>Subcomponent Type</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.DeviceSubcomponentImpl#getDeviceSubcomponentType <em>Device Subcomponent Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,8 +98,8 @@ public class DeviceSubcomponentImpl extends SubcomponentImpl implements DeviceSu
 	@Override
 	public SubcomponentType getSubcomponentType() {
 		SubcomponentType subcomponentType = basicGetSubcomponentType();
-		return subcomponentType != null && ((EObject) subcomponentType).eIsProxy() ? (SubcomponentType) eResolveProxy((InternalEObject) subcomponentType)
-				: subcomponentType;
+		return subcomponentType != null && ((EObject) subcomponentType).eIsProxy()
+				? (SubcomponentType) eResolveProxy((InternalEObject) subcomponentType) : subcomponentType;
 	}
 
 	/**
@@ -126,11 +126,10 @@ public class DeviceSubcomponentImpl extends SubcomponentImpl implements DeviceSu
 			InternalEObject oldDeviceSubcomponentType = (InternalEObject) deviceSubcomponentType;
 			deviceSubcomponentType = (DeviceSubcomponentType) eResolveProxy(oldDeviceSubcomponentType);
 			if (deviceSubcomponentType != oldDeviceSubcomponentType) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.DEVICE_SUBCOMPONENT__DEVICE_SUBCOMPONENT_TYPE, oldDeviceSubcomponentType,
 							deviceSubcomponentType));
-				}
 			}
 		}
 		return deviceSubcomponentType;
@@ -154,11 +153,10 @@ public class DeviceSubcomponentImpl extends SubcomponentImpl implements DeviceSu
 	public void setDeviceSubcomponentType(DeviceSubcomponentType newDeviceSubcomponentType) {
 		DeviceSubcomponentType oldDeviceSubcomponentType = deviceSubcomponentType;
 		deviceSubcomponentType = newDeviceSubcomponentType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.DEVICE_SUBCOMPONENT__DEVICE_SUBCOMPONENT_TYPE, oldDeviceSubcomponentType,
 					deviceSubcomponentType));
-		}
 	}
 
 	/**
@@ -170,9 +168,8 @@ public class DeviceSubcomponentImpl extends SubcomponentImpl implements DeviceSu
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.DEVICE_SUBCOMPONENT__DEVICE_SUBCOMPONENT_TYPE:
-			if (resolve) {
+			if (resolve)
 				return getDeviceSubcomponentType();
-			}
 			return basicGetDeviceSubcomponentType();
 		}
 		return super.eGet(featureID, resolve, coreType);
