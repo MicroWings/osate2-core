@@ -1,0 +1,11 @@
+AADL v3 improvements branch
+===========================
+
+This branch started to support improvements for the AASPE project but
+it is also used to prototype new AADL v3 features. You will
+see a list of changes/new features brought into this branch.
+
+= Hardware Flows
+
+
+= Buses access on virtual processors
