@@ -54,10 +54,10 @@ import org.osate.aadl2.properties.InvalidModelException;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ModalPropertyValueImpl#getOwnedValue <em>Owned Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -112,11 +112,10 @@ public class ModalPropertyValueImpl extends ModalElementImpl implements ModalPro
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.MODAL_PROPERTY_VALUE__OWNED_VALUE, oldOwnedValue, newOwnedValue);
-			if (msgs == null) {
+			if (msgs == null)
 				msgs = notification;
-			} else {
+			else
 				msgs.add(notification);
-			}
 		}
 		return msgs;
 	}
@@ -130,22 +129,18 @@ public class ModalPropertyValueImpl extends ModalElementImpl implements ModalPro
 	public void setOwnedValue(PropertyExpression newOwnedValue) {
 		if (newOwnedValue != ownedValue) {
 			NotificationChain msgs = null;
-			if (ownedValue != null) {
-				msgs = ((InternalEObject) ownedValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.MODAL_PROPERTY_VALUE__OWNED_VALUE, null, msgs);
-			}
-			if (newOwnedValue != null) {
-				msgs = ((InternalEObject) newOwnedValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.MODAL_PROPERTY_VALUE__OWNED_VALUE, null, msgs);
-			}
+			if (ownedValue != null)
+				msgs = ((InternalEObject) ownedValue).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.MODAL_PROPERTY_VALUE__OWNED_VALUE, null, msgs);
+			if (newOwnedValue != null)
+				msgs = ((InternalEObject) newOwnedValue).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.MODAL_PROPERTY_VALUE__OWNED_VALUE, null, msgs);
 			msgs = basicSetOwnedValue(newOwnedValue, msgs);
-			if (msgs != null) {
+			if (msgs != null)
 				msgs.dispatch();
-			}
-		} else if (eNotificationRequired()) {
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.MODAL_PROPERTY_VALUE__OWNED_VALUE,
 					newOwnedValue, newOwnedValue));
-		}
 	}
 
 	/**

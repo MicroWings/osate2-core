@@ -51,11 +51,11 @@ import org.osate.aadl2.parsesupport.ParseUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.IntegerLiteralImpl#getBase <em>Base</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.IntegerLiteralImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -138,9 +138,8 @@ public class IntegerLiteralImpl extends NumberValueImpl implements IntegerLitera
 	public void setBase(long newBase) {
 		long oldBase = base;
 		base = newBase;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.INTEGER_LITERAL__BASE, oldBase, base));
-		}
 	}
 
 	/**
@@ -162,9 +161,9 @@ public class IntegerLiteralImpl extends NumberValueImpl implements IntegerLitera
 	public void setValue(long newValue) {
 		long oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
-			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.INTEGER_LITERAL__VALUE, oldValue, value));
-		}
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.INTEGER_LITERAL__VALUE, oldValue,
+					value));
 	}
 
 	/**
@@ -242,9 +241,8 @@ public class IntegerLiteralImpl extends NumberValueImpl implements IntegerLitera
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (base: ");

@@ -89,14 +89,14 @@ public class ComponentImplementationReferenceItemProvider extends ElementItemPro
 	 * @generated
 	 */
 	protected void addImplementationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ComponentImplementationReference_implementation_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ComponentImplementationReference_implementation_feature",
-						"_UI_ComponentImplementationReference_type"), Aadl2Package.eINSTANCE
-						.getComponentImplementationReference_Implementation(), true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ComponentImplementationReference_implementation_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_ComponentImplementationReference_implementation_feature",
+								"_UI_ComponentImplementationReference_type"),
+				Aadl2Package.eINSTANCE.getComponentImplementationReference_Implementation(), true, false, true, null,
+				null, null));
 	}
 
 	/**
@@ -181,17 +181,17 @@ public class ComponentImplementationReferenceItemProvider extends ElementItemPro
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				Aadl2Package.eINSTANCE.getComponentImplementationReference_OwnedPrototypeBinding(),
-				Aadl2Factory.eINSTANCE.createComponentPrototypeBinding()));
+		newChildDescriptors.add(
+				createChildParameter(Aadl2Package.eINSTANCE.getComponentImplementationReference_OwnedPrototypeBinding(),
+						Aadl2Factory.eINSTANCE.createComponentPrototypeBinding()));
 
-		newChildDescriptors.add(createChildParameter(
-				Aadl2Package.eINSTANCE.getComponentImplementationReference_OwnedPrototypeBinding(),
-				Aadl2Factory.eINSTANCE.createFeatureGroupPrototypeBinding()));
+		newChildDescriptors.add(
+				createChildParameter(Aadl2Package.eINSTANCE.getComponentImplementationReference_OwnedPrototypeBinding(),
+						Aadl2Factory.eINSTANCE.createFeatureGroupPrototypeBinding()));
 
-		newChildDescriptors.add(createChildParameter(
-				Aadl2Package.eINSTANCE.getComponentImplementationReference_OwnedPrototypeBinding(),
-				Aadl2Factory.eINSTANCE.createFeaturePrototypeBinding()));
+		newChildDescriptors.add(
+				createChildParameter(Aadl2Package.eINSTANCE.getComponentImplementationReference_OwnedPrototypeBinding(),
+						Aadl2Factory.eINSTANCE.createFeaturePrototypeBinding()));
 	}
 
 }

@@ -65,6 +65,7 @@ import org.osate.aadl2.properties.InvalidModelException;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.PropertyAssociationImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.PropertyAssociationImpl#getAppliesTos <em>Applies To</em>}</li>
@@ -73,7 +74,6 @@ import org.osate.aadl2.properties.InvalidModelException;
  *   <li>{@link org.osate.aadl2.impl.PropertyAssociationImpl#isConstant <em>Constant</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.PropertyAssociationImpl#getOwnedValues <em>Owned Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -246,10 +246,9 @@ public class PropertyAssociationImpl extends ElementImpl implements PropertyAsso
 	public void setAppend(boolean newAppend) {
 		boolean oldAppend = append;
 		append = newAppend;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.PROPERTY_ASSOCIATION__APPEND, oldAppend,
 					append));
-		}
 	}
 
 	/**
@@ -271,10 +270,9 @@ public class PropertyAssociationImpl extends ElementImpl implements PropertyAsso
 	public void setConstant(boolean newConstant) {
 		boolean oldConstant = constant;
 		constant = newConstant;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.PROPERTY_ASSOCIATION__CONSTANT,
 					oldConstant, constant));
-		}
 	}
 
 	/**
@@ -314,10 +312,9 @@ public class PropertyAssociationImpl extends ElementImpl implements PropertyAsso
 			InternalEObject oldProperty = (InternalEObject) property;
 			property = (Property) eResolveProxy(oldProperty);
 			if (property != oldProperty) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.PROPERTY_ASSOCIATION__PROPERTY, oldProperty, property));
-				}
 			}
 		}
 		return property;
@@ -341,10 +338,9 @@ public class PropertyAssociationImpl extends ElementImpl implements PropertyAsso
 	public void setProperty(Property newProperty) {
 		Property oldProperty = property;
 		property = newProperty;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.PROPERTY_ASSOCIATION__PROPERTY,
 					oldProperty, property));
-		}
 	}
 
 	/**
@@ -372,9 +368,8 @@ public class PropertyAssociationImpl extends ElementImpl implements PropertyAsso
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.PROPERTY_ASSOCIATION__PROPERTY:
-			if (resolve) {
+			if (resolve)
 				return getProperty();
-			}
 			return basicGetProperty();
 		case Aadl2Package.PROPERTY_ASSOCIATION__APPLIES_TO:
 			return getAppliesTos();
@@ -485,9 +480,8 @@ public class PropertyAssociationImpl extends ElementImpl implements PropertyAsso
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (append: ");

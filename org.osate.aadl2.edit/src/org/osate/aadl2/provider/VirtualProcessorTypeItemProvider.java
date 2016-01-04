@@ -96,6 +96,7 @@ public class VirtualProcessorTypeItemProvider extends ComponentTypeItemProvider 
 			childrenFeatures.add(Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedEventPort());
 			childrenFeatures.add(Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedSubprogramAccess());
 			childrenFeatures.add(Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedSubprogramGroupAccess());
+			childrenFeatures.add(Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedBusAccess());
 		}
 		return childrenFeatures;
 	}
@@ -154,6 +155,7 @@ public class VirtualProcessorTypeItemProvider extends ComponentTypeItemProvider 
 		case Aadl2Package.VIRTUAL_PROCESSOR_TYPE__OWNED_EVENT_PORT:
 		case Aadl2Package.VIRTUAL_PROCESSOR_TYPE__OWNED_SUBPROGRAM_ACCESS:
 		case Aadl2Package.VIRTUAL_PROCESSOR_TYPE__OWNED_SUBPROGRAM_GROUP_ACCESS:
+		case Aadl2Package.VIRTUAL_PROCESSOR_TYPE__OWNED_BUS_ACCESS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -174,20 +176,23 @@ public class VirtualProcessorTypeItemProvider extends ComponentTypeItemProvider 
 		newChildDescriptors.add(createChildParameter(Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedDataPort(),
 				Aadl2Factory.eINSTANCE.createDataPort()));
 
-		newChildDescriptors.add(createChildParameter(
-				Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedEventDataPort(),
-				Aadl2Factory.eINSTANCE.createEventDataPort()));
+		newChildDescriptors
+				.add(createChildParameter(Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedEventDataPort(),
+						Aadl2Factory.eINSTANCE.createEventDataPort()));
 
 		newChildDescriptors.add(createChildParameter(Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedEventPort(),
 				Aadl2Factory.eINSTANCE.createEventPort()));
 
-		newChildDescriptors.add(createChildParameter(
-				Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedSubprogramAccess(),
-				Aadl2Factory.eINSTANCE.createSubprogramAccess()));
+		newChildDescriptors
+				.add(createChildParameter(Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedSubprogramAccess(),
+						Aadl2Factory.eINSTANCE.createSubprogramAccess()));
 
-		newChildDescriptors.add(createChildParameter(
-				Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedSubprogramGroupAccess(),
-				Aadl2Factory.eINSTANCE.createSubprogramGroupAccess()));
+		newChildDescriptors
+				.add(createChildParameter(Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedSubprogramGroupAccess(),
+						Aadl2Factory.eINSTANCE.createSubprogramGroupAccess()));
+
+		newChildDescriptors.add(createChildParameter(Aadl2Package.eINSTANCE.getVirtualProcessorType_OwnedBusAccess(),
+				Aadl2Factory.eINSTANCE.createBusAccess()));
 	}
 
 }

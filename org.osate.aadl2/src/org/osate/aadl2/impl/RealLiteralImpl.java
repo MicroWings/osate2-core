@@ -51,10 +51,10 @@ import org.osate.aadl2.parsesupport.ParseUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.RealLiteralImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -117,9 +117,8 @@ public class RealLiteralImpl extends NumberValueImpl implements RealLiteral {
 	public void setValue(double newValue) {
 		double oldValue = value;
 		value = newValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.REAL_LITERAL__VALUE, oldValue, value));
-		}
 	}
 
 	/**
@@ -187,9 +186,8 @@ public class RealLiteralImpl extends NumberValueImpl implements RealLiteral {
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");

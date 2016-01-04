@@ -48,11 +48,11 @@ import org.osate.aadl2.ArrayRange;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ArrayRangeImpl#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ArrayRangeImpl#getUpperBound <em>Upper Bound</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -135,10 +135,9 @@ public class ArrayRangeImpl extends ElementImpl implements ArrayRange {
 	public void setLowerBound(long newLowerBound) {
 		long oldLowerBound = lowerBound;
 		lowerBound = newLowerBound;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.ARRAY_RANGE__LOWER_BOUND, oldLowerBound,
 					lowerBound));
-		}
 	}
 
 	/**
@@ -160,10 +159,9 @@ public class ArrayRangeImpl extends ElementImpl implements ArrayRange {
 	public void setUpperBound(long newUpperBound) {
 		long oldUpperBound = upperBound;
 		upperBound = newUpperBound;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.ARRAY_RANGE__UPPER_BOUND, oldUpperBound,
 					upperBound));
-		}
 	}
 
 	/**
@@ -241,9 +239,8 @@ public class ArrayRangeImpl extends ElementImpl implements ArrayRange {
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (lowerBound: ");

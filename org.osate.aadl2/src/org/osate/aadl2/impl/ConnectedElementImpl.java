@@ -50,11 +50,11 @@ import org.osate.aadl2.Context;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ConnectedElementImpl#getContext <em>Context</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ConnectedElementImpl#getConnectionEnd <em>Connection End</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -109,10 +109,9 @@ public class ConnectedElementImpl extends ElementImpl implements ConnectedElemen
 			InternalEObject oldContext = (InternalEObject) context;
 			context = (Context) eResolveProxy(oldContext);
 			if (context != oldContext) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Aadl2Package.CONNECTED_ELEMENT__CONTEXT,
 							oldContext, context));
-				}
 			}
 		}
 		return context;
@@ -136,10 +135,9 @@ public class ConnectedElementImpl extends ElementImpl implements ConnectedElemen
 	public void setContext(Context newContext) {
 		Context oldContext = context;
 		context = newContext;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CONNECTED_ELEMENT__CONTEXT, oldContext,
 					context));
-		}
 	}
 
 	/**
@@ -153,10 +151,9 @@ public class ConnectedElementImpl extends ElementImpl implements ConnectedElemen
 			InternalEObject oldConnectionEnd = (InternalEObject) connectionEnd;
 			connectionEnd = (ConnectionEnd) eResolveProxy(oldConnectionEnd);
 			if (connectionEnd != oldConnectionEnd) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.CONNECTED_ELEMENT__CONNECTION_END, oldConnectionEnd, connectionEnd));
-				}
 			}
 		}
 		return connectionEnd;
@@ -180,10 +177,9 @@ public class ConnectedElementImpl extends ElementImpl implements ConnectedElemen
 	public void setConnectionEnd(ConnectionEnd newConnectionEnd) {
 		ConnectionEnd oldConnectionEnd = connectionEnd;
 		connectionEnd = newConnectionEnd;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CONNECTED_ELEMENT__CONNECTION_END,
 					oldConnectionEnd, connectionEnd));
-		}
 	}
 
 	/**
@@ -195,14 +191,12 @@ public class ConnectedElementImpl extends ElementImpl implements ConnectedElemen
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.CONNECTED_ELEMENT__CONTEXT:
-			if (resolve) {
+			if (resolve)
 				return getContext();
-			}
 			return basicGetContext();
 		case Aadl2Package.CONNECTED_ELEMENT__CONNECTION_END:
-			if (resolve) {
+			if (resolve)
 				return getConnectionEnd();
-			}
 			return basicGetConnectionEnd();
 		}
 		return super.eGet(featureID, resolve, coreType);

@@ -44,8 +44,6 @@ import org.osate.aadl2.PortCategory;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Event Port</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

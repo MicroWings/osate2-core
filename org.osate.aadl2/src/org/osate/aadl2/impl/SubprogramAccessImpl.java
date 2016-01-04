@@ -51,11 +51,11 @@ import org.osate.aadl2.SubprogramSubcomponentType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.SubprogramAccessImpl#getFeatureClassifier <em>Feature Classifier</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.SubprogramAccessImpl#getSubprogramFeatureClassifier <em>Subprogram Feature Classifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -97,8 +97,8 @@ public class SubprogramAccessImpl extends AccessImpl implements SubprogramAccess
 	@Override
 	public FeatureClassifier getFeatureClassifier() {
 		FeatureClassifier featureClassifier = basicGetFeatureClassifier();
-		return featureClassifier != null && ((EObject) featureClassifier).eIsProxy() ? (FeatureClassifier) eResolveProxy((InternalEObject) featureClassifier)
-				: featureClassifier;
+		return featureClassifier != null && ((EObject) featureClassifier).eIsProxy()
+				? (FeatureClassifier) eResolveProxy((InternalEObject) featureClassifier) : featureClassifier;
 	}
 
 	/**
@@ -125,11 +125,10 @@ public class SubprogramAccessImpl extends AccessImpl implements SubprogramAccess
 			InternalEObject oldSubprogramFeatureClassifier = (InternalEObject) subprogramFeatureClassifier;
 			subprogramFeatureClassifier = (SubprogramSubcomponentType) eResolveProxy(oldSubprogramFeatureClassifier);
 			if (subprogramFeatureClassifier != oldSubprogramFeatureClassifier) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.SUBPROGRAM_ACCESS__SUBPROGRAM_FEATURE_CLASSIFIER,
 							oldSubprogramFeatureClassifier, subprogramFeatureClassifier));
-				}
 			}
 		}
 		return subprogramFeatureClassifier;
@@ -153,11 +152,10 @@ public class SubprogramAccessImpl extends AccessImpl implements SubprogramAccess
 	public void setSubprogramFeatureClassifier(SubprogramSubcomponentType newSubprogramFeatureClassifier) {
 		SubprogramSubcomponentType oldSubprogramFeatureClassifier = subprogramFeatureClassifier;
 		subprogramFeatureClassifier = newSubprogramFeatureClassifier;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.SUBPROGRAM_ACCESS__SUBPROGRAM_FEATURE_CLASSIFIER, oldSubprogramFeatureClassifier,
 					subprogramFeatureClassifier));
-		}
 	}
 
 	/**
@@ -169,9 +167,8 @@ public class SubprogramAccessImpl extends AccessImpl implements SubprogramAccess
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.SUBPROGRAM_ACCESS__SUBPROGRAM_FEATURE_CLASSIFIER:
-			if (resolve) {
+			if (resolve)
 				return getSubprogramFeatureClassifier();
-			}
 			return basicGetSubprogramFeatureClassifier();
 		}
 		return super.eGet(featureID, resolve, coreType);

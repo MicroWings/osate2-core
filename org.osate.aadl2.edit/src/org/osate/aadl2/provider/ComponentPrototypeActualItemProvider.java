@@ -92,13 +92,12 @@ public class ComponentPrototypeActualItemProvider extends ArrayableElementItemPr
 	 * @generated
 	 */
 	protected void addCategoryPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ComponentPrototypeActual_category_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ComponentPrototypeActual_category_feature",
-						"_UI_ComponentPrototypeActual_type"), Aadl2Package.eINSTANCE
-						.getComponentPrototypeActual_Category(), true, false, false,
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ComponentPrototypeActual_category_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ComponentPrototypeActual_category_feature",
+								"_UI_ComponentPrototypeActual_type"),
+				Aadl2Package.eINSTANCE.getComponentPrototypeActual_Category(), true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -110,11 +109,10 @@ public class ComponentPrototypeActualItemProvider extends ArrayableElementItemPr
 	 */
 	protected void addSubcomponentTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_ComponentPrototypeActual_subcomponentType_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ComponentPrototypeActual_subcomponentType_feature", "_UI_ComponentPrototypeActual_type"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ComponentPrototypeActual_subcomponentType_feature",
+						"_UI_ComponentPrototypeActual_type"),
 				Aadl2Package.eINSTANCE.getComponentPrototypeActual_SubcomponentType(), true, false, true, null, null,
 				null));
 	}

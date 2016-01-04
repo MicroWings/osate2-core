@@ -3703,6 +3703,7 @@ public abstract class AbstractAadl2SemanticSequencer extends PropertiesSemanticS
 	 *                 ownedEventPort+=EventPort | 
 	 *                 ownedEventDataPort+=EventDataPort | 
 	 *                 ownedFeatureGroup+=FeatureGroup | 
+	 *                 ownedBusAccess+=BusAccess | 
 	 *                 ownedSubprogramAccess+=SubprogramAccess | 
 	 *                 ownedSubprogramGroupAccess+=SubprogramGroupAccess | 
 	 *                 ownedAbstractFeature+=AbstractFeature

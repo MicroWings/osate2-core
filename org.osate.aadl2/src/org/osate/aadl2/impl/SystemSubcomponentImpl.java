@@ -52,11 +52,11 @@ import org.osate.aadl2.SystemSubcomponentType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.SystemSubcomponentImpl#getSubcomponentType <em>Subcomponent Type</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.SystemSubcomponentImpl#getSystemSubcomponentType <em>System Subcomponent Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,8 +98,8 @@ public class SystemSubcomponentImpl extends SubcomponentImpl implements SystemSu
 	@Override
 	public SubcomponentType getSubcomponentType() {
 		SubcomponentType subcomponentType = basicGetSubcomponentType();
-		return subcomponentType != null && ((EObject) subcomponentType).eIsProxy() ? (SubcomponentType) eResolveProxy((InternalEObject) subcomponentType)
-				: subcomponentType;
+		return subcomponentType != null && ((EObject) subcomponentType).eIsProxy()
+				? (SubcomponentType) eResolveProxy((InternalEObject) subcomponentType) : subcomponentType;
 	}
 
 	/**
@@ -126,11 +126,10 @@ public class SystemSubcomponentImpl extends SubcomponentImpl implements SystemSu
 			InternalEObject oldSystemSubcomponentType = (InternalEObject) systemSubcomponentType;
 			systemSubcomponentType = (SystemSubcomponentType) eResolveProxy(oldSystemSubcomponentType);
 			if (systemSubcomponentType != oldSystemSubcomponentType) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.SYSTEM_SUBCOMPONENT__SYSTEM_SUBCOMPONENT_TYPE, oldSystemSubcomponentType,
 							systemSubcomponentType));
-				}
 			}
 		}
 		return systemSubcomponentType;
@@ -154,11 +153,10 @@ public class SystemSubcomponentImpl extends SubcomponentImpl implements SystemSu
 	public void setSystemSubcomponentType(SystemSubcomponentType newSystemSubcomponentType) {
 		SystemSubcomponentType oldSystemSubcomponentType = systemSubcomponentType;
 		systemSubcomponentType = newSystemSubcomponentType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.SYSTEM_SUBCOMPONENT__SYSTEM_SUBCOMPONENT_TYPE, oldSystemSubcomponentType,
 					systemSubcomponentType));
-		}
 	}
 
 	/**
@@ -170,9 +168,8 @@ public class SystemSubcomponentImpl extends SubcomponentImpl implements SystemSu
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.SYSTEM_SUBCOMPONENT__SYSTEM_SUBCOMPONENT_TYPE:
-			if (resolve) {
+			if (resolve)
 				return getSystemSubcomponentType();
-			}
 			return basicGetSystemSubcomponentType();
 		}
 		return super.eGet(featureID, resolve, coreType);

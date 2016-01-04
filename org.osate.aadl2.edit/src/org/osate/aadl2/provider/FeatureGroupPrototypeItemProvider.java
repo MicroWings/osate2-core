@@ -87,13 +87,13 @@ public class FeatureGroupPrototypeItemProvider extends PrototypeItemProvider {
 	 */
 	protected void addConstrainingFeatureGroupTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
 				getString("_UI_FeatureGroupPrototype_constrainingFeatureGroupType_feature"),
 				getString("_UI_PropertyDescriptor_description",
 						"_UI_FeatureGroupPrototype_constrainingFeatureGroupType_feature",
-						"_UI_FeatureGroupPrototype_type"), Aadl2Package.eINSTANCE
-						.getFeatureGroupPrototype_ConstrainingFeatureGroupType(), true, false, true, null, null, null));
+						"_UI_FeatureGroupPrototype_type"),
+				Aadl2Package.eINSTANCE.getFeatureGroupPrototype_ConstrainingFeatureGroupType(), true, false, true, null,
+				null, null));
 	}
 
 	/**

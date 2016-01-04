@@ -90,13 +90,12 @@ public class PortProxyItemProvider extends ProcessorFeatureItemProvider {
 	 */
 	protected void addDirectionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PortProxy_direction_feature"),
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PortProxy_direction_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_PortProxy_direction_feature",
-								"_UI_PortProxy_type"), Aadl2Package.eINSTANCE.getPortProxy_Direction(), true, false,
-						false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+								"_UI_PortProxy_type"),
+						Aadl2Package.eINSTANCE.getPortProxy_Direction(), true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -106,13 +105,12 @@ public class PortProxyItemProvider extends ProcessorFeatureItemProvider {
 	 * @generated
 	 */
 	protected void addDataClassifierPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_PortProxy_dataClassifier_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PortProxy_dataClassifier_feature",
-						"_UI_PortProxy_type"), Aadl2Package.eINSTANCE.getPortProxy_DataClassifier(), true, false, true,
-				null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PortProxy_dataClassifier_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PortProxy_dataClassifier_feature",
+								"_UI_PortProxy_type"),
+						Aadl2Package.eINSTANCE.getPortProxy_DataClassifier(), true, false, true, null, null, null));
 	}
 
 	/**
@@ -122,12 +120,13 @@ public class PortProxyItemProvider extends ProcessorFeatureItemProvider {
 	 * @generated
 	 */
 	protected void addInPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_PortProxy_in_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PortProxy_in_feature", "_UI_PortProxy_type"),
-				Aadl2Package.eINSTANCE.getPortProxy_In(), true, false, false,
-				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PortProxy_in_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PortProxy_in_feature",
+								"_UI_PortProxy_type"),
+						Aadl2Package.eINSTANCE.getPortProxy_In(), true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -137,12 +136,13 @@ public class PortProxyItemProvider extends ProcessorFeatureItemProvider {
 	 * @generated
 	 */
 	protected void addOutPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_PortProxy_out_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PortProxy_out_feature", "_UI_PortProxy_type"),
-				Aadl2Package.eINSTANCE.getPortProxy_Out(), true, false, false,
-				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PortProxy_out_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PortProxy_out_feature",
+								"_UI_PortProxy_type"),
+						Aadl2Package.eINSTANCE.getPortProxy_Out(), true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -165,8 +165,8 @@ public class PortProxyItemProvider extends ProcessorFeatureItemProvider {
 	@Override
 	public String getText(Object object) {
 		String label = ((PortProxy) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_PortProxy_type") : getString("_UI_PortProxy_type")
-				+ " " + label;
+		return label == null || label.length() == 0 ? getString("_UI_PortProxy_type")
+				: getString("_UI_PortProxy_type") + " " + label;
 	}
 
 	/**

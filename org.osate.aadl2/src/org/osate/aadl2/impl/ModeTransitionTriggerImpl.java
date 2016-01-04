@@ -51,11 +51,11 @@ import org.osate.aadl2.TriggerPort;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ModeTransitionTriggerImpl#getContext <em>Context</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ModeTransitionTriggerImpl#getTriggerPort <em>Trigger Port</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -109,10 +109,9 @@ public class ModeTransitionTriggerImpl extends ElementImpl implements ModeTransi
 			InternalEObject oldContext = (InternalEObject) context;
 			context = (Context) eResolveProxy(oldContext);
 			if (context != oldContext) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.MODE_TRANSITION_TRIGGER__CONTEXT, oldContext, context));
-				}
 			}
 		}
 		return context;
@@ -136,10 +135,9 @@ public class ModeTransitionTriggerImpl extends ElementImpl implements ModeTransi
 	public void setContext(Context newContext) {
 		Context oldContext = context;
 		context = newContext;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.MODE_TRANSITION_TRIGGER__CONTEXT,
 					oldContext, context));
-		}
 	}
 
 	/**
@@ -153,10 +151,9 @@ public class ModeTransitionTriggerImpl extends ElementImpl implements ModeTransi
 			InternalEObject oldTriggerPort = (InternalEObject) triggerPort;
 			triggerPort = (TriggerPort) eResolveProxy(oldTriggerPort);
 			if (triggerPort != oldTriggerPort) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.MODE_TRANSITION_TRIGGER__TRIGGER_PORT, oldTriggerPort, triggerPort));
-				}
 			}
 		}
 		return triggerPort;
@@ -180,10 +177,9 @@ public class ModeTransitionTriggerImpl extends ElementImpl implements ModeTransi
 	public void setTriggerPort(TriggerPort newTriggerPort) {
 		TriggerPort oldTriggerPort = triggerPort;
 		triggerPort = newTriggerPort;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.MODE_TRANSITION_TRIGGER__TRIGGER_PORT,
 					oldTriggerPort, triggerPort));
-		}
 	}
 
 	/**
@@ -195,14 +191,12 @@ public class ModeTransitionTriggerImpl extends ElementImpl implements ModeTransi
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.MODE_TRANSITION_TRIGGER__CONTEXT:
-			if (resolve) {
+			if (resolve)
 				return getContext();
-			}
 			return basicGetContext();
 		case Aadl2Package.MODE_TRANSITION_TRIGGER__TRIGGER_PORT:
-			if (resolve) {
+			if (resolve)
 				return getTriggerPort();
-			}
 			return basicGetTriggerPort();
 		}
 		return super.eGet(featureID, resolve, coreType);

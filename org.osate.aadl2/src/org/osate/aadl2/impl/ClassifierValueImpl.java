@@ -55,10 +55,10 @@ import org.osate.aadl2.properties.EvaluationContext;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ClassifierValueImpl#getClassifier <em>Classifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -103,10 +103,9 @@ public class ClassifierValueImpl extends PropertyOwnerImpl implements Classifier
 			InternalEObject oldClassifier = (InternalEObject) classifier;
 			classifier = (Classifier) eResolveProxy(oldClassifier);
 			if (classifier != oldClassifier) {
-				if (eNotificationRequired()) {
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Aadl2Package.CLASSIFIER_VALUE__CLASSIFIER, oldClassifier, classifier));
-				}
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Aadl2Package.CLASSIFIER_VALUE__CLASSIFIER,
+							oldClassifier, classifier));
 			}
 		}
 		return classifier;
@@ -130,10 +129,9 @@ public class ClassifierValueImpl extends PropertyOwnerImpl implements Classifier
 	public void setClassifier(Classifier newClassifier) {
 		Classifier oldClassifier = classifier;
 		classifier = newClassifier;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CLASSIFIER_VALUE__CLASSIFIER,
 					oldClassifier, classifier));
-		}
 	}
 
 	/**
@@ -145,9 +143,8 @@ public class ClassifierValueImpl extends PropertyOwnerImpl implements Classifier
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.CLASSIFIER_VALUE__CLASSIFIER:
-			if (resolve) {
+			if (resolve)
 				return getClassifier();
-			}
 			return basicGetClassifier();
 		}
 		return super.eGet(featureID, resolve, coreType);

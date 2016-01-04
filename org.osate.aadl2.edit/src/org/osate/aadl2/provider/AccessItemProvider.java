@@ -89,12 +89,12 @@ public class AccessItemProvider extends FeatureItemProvider {
 	 * @generated
 	 */
 	protected void addKindPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_Access_kind_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Access_kind_feature", "_UI_Access_type"),
-				Aadl2Package.eINSTANCE.getAccess_Kind(), true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Access_kind_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Access_kind_feature", "_UI_Access_type"),
+						Aadl2Package.eINSTANCE.getAccess_Kind(), true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -104,12 +104,13 @@ public class AccessItemProvider extends FeatureItemProvider {
 	 * @generated
 	 */
 	protected void addCategoryPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_Access_category_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Access_category_feature", "_UI_Access_type"),
-				Aadl2Package.eINSTANCE.getAccess_Category(), false, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Access_category_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Access_category_feature",
+								"_UI_Access_type"),
+						Aadl2Package.eINSTANCE.getAccess_Category(), false, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -121,8 +122,8 @@ public class AccessItemProvider extends FeatureItemProvider {
 	@Override
 	public String getText(Object object) {
 		String label = ((Access) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Access_type") : getString("_UI_Access_type") + " "
-				+ label;
+		return label == null || label.length() == 0 ? getString("_UI_Access_type")
+				: getString("_UI_Access_type") + " " + label;
 	}
 
 	/**

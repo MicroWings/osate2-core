@@ -55,11 +55,11 @@ import org.osate.aadl2.ContainmentPathElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ContainedNamedElementImpl#getPath <em>Path</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ContainedNamedElementImpl#getContainmentPathElements <em>Containment Path Element</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -114,11 +114,10 @@ public class ContainedNamedElementImpl extends ElementImpl implements ContainedN
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.CONTAINED_NAMED_ELEMENT__PATH, oldPath, newPath);
-			if (msgs == null) {
+			if (msgs == null)
 				msgs = notification;
-			} else {
+			else
 				msgs.add(notification);
-			}
 		}
 		return msgs;
 	}
@@ -132,22 +131,18 @@ public class ContainedNamedElementImpl extends ElementImpl implements ContainedN
 	public void setPath(ContainmentPathElement newPath) {
 		if (newPath != path) {
 			NotificationChain msgs = null;
-			if (path != null) {
-				msgs = ((InternalEObject) path).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.CONTAINED_NAMED_ELEMENT__PATH, null, msgs);
-			}
-			if (newPath != null) {
-				msgs = ((InternalEObject) newPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.CONTAINED_NAMED_ELEMENT__PATH, null, msgs);
-			}
+			if (path != null)
+				msgs = ((InternalEObject) path).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.CONTAINED_NAMED_ELEMENT__PATH, null, msgs);
+			if (newPath != null)
+				msgs = ((InternalEObject) newPath).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.CONTAINED_NAMED_ELEMENT__PATH, null, msgs);
 			msgs = basicSetPath(newPath, msgs);
-			if (msgs != null) {
+			if (msgs != null)
 				msgs.dispatch();
-			}
-		} else if (eNotificationRequired()) {
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CONTAINED_NAMED_ELEMENT__PATH, newPath,
 					newPath));
-		}
 	}
 
 	/**
@@ -157,8 +152,8 @@ public class ContainedNamedElementImpl extends ElementImpl implements ContainedN
 	 */
 	@Override
 	public ContainmentPathElement createPath() {
-		ContainmentPathElement newPath = (ContainmentPathElement) create(Aadl2Package.eINSTANCE
-				.getContainmentPathElement());
+		ContainmentPathElement newPath = (ContainmentPathElement) create(
+				Aadl2Package.eINSTANCE.getContainmentPathElement());
 		setPath(newPath);
 		return newPath;
 	}

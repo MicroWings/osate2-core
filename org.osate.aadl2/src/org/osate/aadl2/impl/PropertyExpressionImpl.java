@@ -45,8 +45,6 @@ import org.osate.aadl2.properties.EvaluationContext;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Property Expression</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

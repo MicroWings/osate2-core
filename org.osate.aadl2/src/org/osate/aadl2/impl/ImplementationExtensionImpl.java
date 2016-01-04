@@ -51,11 +51,11 @@ import org.osate.aadl2.ImplementationExtension;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ImplementationExtensionImpl#getGeneral <em>General</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ImplementationExtensionImpl#getExtended <em>Extended</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -125,10 +125,9 @@ public class ImplementationExtensionImpl extends GeneralizationImpl implements I
 			InternalEObject oldExtended = (InternalEObject) extended;
 			extended = (ComponentImplementation) eResolveProxy(oldExtended);
 			if (extended != oldExtended) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.IMPLEMENTATION_EXTENSION__EXTENDED, oldExtended, extended));
-				}
 			}
 		}
 		return extended;
@@ -152,10 +151,9 @@ public class ImplementationExtensionImpl extends GeneralizationImpl implements I
 	public void setExtended(ComponentImplementation newExtended) {
 		ComponentImplementation oldExtended = extended;
 		extended = newExtended;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.IMPLEMENTATION_EXTENSION__EXTENDED,
 					oldExtended, extended));
-		}
 	}
 
 	/**
@@ -167,9 +165,8 @@ public class ImplementationExtensionImpl extends GeneralizationImpl implements I
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.IMPLEMENTATION_EXTENSION__EXTENDED:
-			if (resolve) {
+			if (resolve)
 				return getExtended();
-			}
 			return basicGetExtended();
 		}
 		return super.eGet(featureID, resolve, coreType);

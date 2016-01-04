@@ -54,11 +54,11 @@ import org.osate.aadl2.operations.PrototypeOperations;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.PrototypeImpl#getRefinedElement <em>Refined Element</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.PrototypeImpl#getRefined <em>Refined</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -104,10 +104,9 @@ public abstract class PrototypeImpl extends StructuralFeatureImpl implements Pro
 			InternalEObject oldRefined = (InternalEObject) refined;
 			refined = (Prototype) eResolveProxy(oldRefined);
 			if (refined != oldRefined) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Aadl2Package.PROTOTYPE__REFINED,
 							oldRefined, refined));
-				}
 			}
 		}
 		return refined;
@@ -131,9 +130,9 @@ public abstract class PrototypeImpl extends StructuralFeatureImpl implements Pro
 	public void setRefined(Prototype newRefined) {
 		Prototype oldRefined = refined;
 		refined = newRefined;
-		if (eNotificationRequired()) {
-			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.PROTOTYPE__REFINED, oldRefined, refined));
-		}
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.PROTOTYPE__REFINED, oldRefined,
+					refined));
 	}
 
 	/**
@@ -155,9 +154,8 @@ public abstract class PrototypeImpl extends StructuralFeatureImpl implements Pro
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.PROTOTYPE__REFINED:
-			if (resolve) {
+			if (resolve)
 				return getRefined();
-			}
 			return basicGetRefined();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -217,8 +215,8 @@ public abstract class PrototypeImpl extends StructuralFeatureImpl implements Pro
 	@Override
 	public RefinableElement getRefinedElement() {
 		RefinableElement refinedElement = basicGetRefinedElement();
-		return refinedElement != null && ((EObject) refinedElement).eIsProxy() ? (RefinableElement) eResolveProxy((InternalEObject) refinedElement)
-				: refinedElement;
+		return refinedElement != null && ((EObject) refinedElement).eIsProxy()
+				? (RefinableElement) eResolveProxy((InternalEObject) refinedElement) : refinedElement;
 	}
 
 	/**

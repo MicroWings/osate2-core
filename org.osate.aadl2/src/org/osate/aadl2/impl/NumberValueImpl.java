@@ -53,10 +53,10 @@ import org.osate.aadl2.util.Aadl2Util;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.NumberValueImpl#getUnit <em>Unit</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -101,10 +101,9 @@ public abstract class NumberValueImpl extends PropertyValueImpl implements Numbe
 			InternalEObject oldUnit = (InternalEObject) unit;
 			unit = (UnitLiteral) eResolveProxy(oldUnit);
 			if (unit != oldUnit) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Aadl2Package.NUMBER_VALUE__UNIT, oldUnit,
 							unit));
-				}
 			}
 		}
 		return unit;
@@ -128,9 +127,8 @@ public abstract class NumberValueImpl extends PropertyValueImpl implements Numbe
 	public void setUnit(UnitLiteral newUnit) {
 		UnitLiteral oldUnit = unit;
 		unit = newUnit;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.NUMBER_VALUE__UNIT, oldUnit, unit));
-		}
 	}
 
 	/**
@@ -162,9 +160,8 @@ public abstract class NumberValueImpl extends PropertyValueImpl implements Numbe
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.NUMBER_VALUE__UNIT:
-			if (resolve) {
+			if (resolve)
 				return getUnit();
-			}
 			return basicGetUnit();
 		}
 		return super.eGet(featureID, resolve, coreType);

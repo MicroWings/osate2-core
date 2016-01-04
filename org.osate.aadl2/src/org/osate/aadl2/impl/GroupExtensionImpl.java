@@ -51,11 +51,11 @@ import org.osate.aadl2.GroupExtension;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.GroupExtensionImpl#getGeneral <em>General</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.GroupExtensionImpl#getExtended <em>Extended</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -126,10 +126,9 @@ public class GroupExtensionImpl extends GeneralizationImpl implements GroupExten
 			InternalEObject oldExtended = (InternalEObject) extended;
 			extended = (FeatureGroupType) eResolveProxy(oldExtended);
 			if (extended != oldExtended) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Aadl2Package.GROUP_EXTENSION__EXTENDED,
 							oldExtended, extended));
-				}
 			}
 		}
 		return extended;
@@ -153,10 +152,9 @@ public class GroupExtensionImpl extends GeneralizationImpl implements GroupExten
 	public void setExtended(FeatureGroupType newExtended) {
 		FeatureGroupType oldExtended = extended;
 		extended = newExtended;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.GROUP_EXTENSION__EXTENDED, oldExtended,
 					extended));
-		}
 	}
 
 	/**
@@ -168,9 +166,8 @@ public class GroupExtensionImpl extends GeneralizationImpl implements GroupExten
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.GROUP_EXTENSION__EXTENDED:
-			if (resolve) {
+			if (resolve)
 				return getExtended();
-			}
 			return basicGetExtended();
 		}
 		return super.eGet(featureID, resolve, coreType);

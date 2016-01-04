@@ -90,13 +90,13 @@ public class DirectedFeatureItemProvider extends FeatureItemProvider {
 	 * @generated
 	 */
 	protected void addDirectionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_DirectedFeature_direction_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_DirectedFeature_direction_feature",
-						"_UI_DirectedFeature_type"), Aadl2Package.eINSTANCE.getDirectedFeature_Direction(), true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DirectedFeature_direction_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DirectedFeature_direction_feature",
+								"_UI_DirectedFeature_type"),
+						Aadl2Package.eINSTANCE.getDirectedFeature_Direction(), true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -106,13 +106,13 @@ public class DirectedFeatureItemProvider extends FeatureItemProvider {
 	 * @generated
 	 */
 	protected void addInPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_DirectedFeature_in_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_DirectedFeature_in_feature",
-						"_UI_DirectedFeature_type"), Aadl2Package.eINSTANCE.getDirectedFeature_In(), true, false,
-				false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DirectedFeature_in_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DirectedFeature_in_feature",
+								"_UI_DirectedFeature_type"),
+						Aadl2Package.eINSTANCE.getDirectedFeature_In(), true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -122,13 +122,13 @@ public class DirectedFeatureItemProvider extends FeatureItemProvider {
 	 * @generated
 	 */
 	protected void addOutPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_DirectedFeature_out_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_DirectedFeature_out_feature",
-						"_UI_DirectedFeature_type"), Aadl2Package.eINSTANCE.getDirectedFeature_Out(), true, false,
-				false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DirectedFeature_out_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DirectedFeature_out_feature",
+								"_UI_DirectedFeature_type"),
+						Aadl2Package.eINSTANCE.getDirectedFeature_Out(), true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**

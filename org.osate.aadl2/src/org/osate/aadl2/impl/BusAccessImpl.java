@@ -51,11 +51,11 @@ import org.osate.aadl2.FeatureClassifier;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.BusAccessImpl#getFeatureClassifier <em>Feature Classifier</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.BusAccessImpl#getBusFeatureClassifier <em>Bus Feature Classifier</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -97,8 +97,8 @@ public class BusAccessImpl extends AccessImpl implements BusAccess {
 	@Override
 	public FeatureClassifier getFeatureClassifier() {
 		FeatureClassifier featureClassifier = basicGetFeatureClassifier();
-		return featureClassifier != null && ((EObject) featureClassifier).eIsProxy() ? (FeatureClassifier) eResolveProxy((InternalEObject) featureClassifier)
-				: featureClassifier;
+		return featureClassifier != null && ((EObject) featureClassifier).eIsProxy()
+				? (FeatureClassifier) eResolveProxy((InternalEObject) featureClassifier) : featureClassifier;
 	}
 
 	/**
@@ -125,11 +125,10 @@ public class BusAccessImpl extends AccessImpl implements BusAccess {
 			InternalEObject oldBusFeatureClassifier = (InternalEObject) busFeatureClassifier;
 			busFeatureClassifier = (BusSubcomponentType) eResolveProxy(oldBusFeatureClassifier);
 			if (busFeatureClassifier != oldBusFeatureClassifier) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.BUS_ACCESS__BUS_FEATURE_CLASSIFIER, oldBusFeatureClassifier,
 							busFeatureClassifier));
-				}
 			}
 		}
 		return busFeatureClassifier;
@@ -153,10 +152,9 @@ public class BusAccessImpl extends AccessImpl implements BusAccess {
 	public void setBusFeatureClassifier(BusSubcomponentType newBusFeatureClassifier) {
 		BusSubcomponentType oldBusFeatureClassifier = busFeatureClassifier;
 		busFeatureClassifier = newBusFeatureClassifier;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.BUS_ACCESS__BUS_FEATURE_CLASSIFIER,
 					oldBusFeatureClassifier, busFeatureClassifier));
-		}
 	}
 
 	/**
@@ -168,9 +166,8 @@ public class BusAccessImpl extends AccessImpl implements BusAccess {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.BUS_ACCESS__BUS_FEATURE_CLASSIFIER:
-			if (resolve) {
+			if (resolve)
 				return getBusFeatureClassifier();
-			}
 			return basicGetBusFeatureClassifier();
 		}
 		return super.eGet(featureID, resolve, coreType);

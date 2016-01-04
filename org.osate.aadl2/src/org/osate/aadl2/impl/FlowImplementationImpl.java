@@ -62,13 +62,13 @@ import org.osate.aadl2.util.NonNotifyingEObjectEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.FlowImplementationImpl#getFeaturingClassifiers <em>Featuring Classifier</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FlowImplementationImpl#getKind <em>Kind</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FlowImplementationImpl#getSpecification <em>Specification</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.FlowImplementationImpl#getOwnedFlowSegments <em>Owned Flow Segment</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -158,10 +158,9 @@ public class FlowImplementationImpl extends ModalPathImpl implements FlowImpleme
 			InternalEObject oldSpecification = (InternalEObject) specification;
 			specification = (FlowSpecification) eResolveProxy(oldSpecification);
 			if (specification != oldSpecification) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.FLOW_IMPLEMENTATION__SPECIFICATION, oldSpecification, specification));
-				}
 			}
 		}
 		return specification;
@@ -185,10 +184,9 @@ public class FlowImplementationImpl extends ModalPathImpl implements FlowImpleme
 	public void setSpecification(FlowSpecification newSpecification) {
 		FlowSpecification oldSpecification = specification;
 		specification = newSpecification;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FLOW_IMPLEMENTATION__SPECIFICATION,
 					oldSpecification, specification));
-		}
 	}
 
 	/**
@@ -250,9 +248,9 @@ public class FlowImplementationImpl extends ModalPathImpl implements FlowImpleme
 	public void setKind(FlowKind newKind) {
 		FlowKind oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
-		if (eNotificationRequired()) {
-			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FLOW_IMPLEMENTATION__KIND, oldKind, kind));
-		}
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.FLOW_IMPLEMENTATION__KIND, oldKind,
+					kind));
 	}
 
 	/**
@@ -268,9 +266,8 @@ public class FlowImplementationImpl extends ModalPathImpl implements FlowImpleme
 		case Aadl2Package.FLOW_IMPLEMENTATION__KIND:
 			return getKind();
 		case Aadl2Package.FLOW_IMPLEMENTATION__SPECIFICATION:
-			if (resolve) {
+			if (resolve)
 				return getSpecification();
-			}
 			return basicGetSpecification();
 		case Aadl2Package.FLOW_IMPLEMENTATION__OWNED_FLOW_SEGMENT:
 			return getOwnedFlowSegments();
@@ -397,9 +394,8 @@ public class FlowImplementationImpl extends ModalPathImpl implements FlowImpleme
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (kind: ");

@@ -9832,21 +9832,27 @@ rule__VirtualProcessorType__Alternatives_5_1_1
 )
 
     |(
-{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessAssignment_5_1_1_4()); }
-(rule__VirtualProcessorType__OwnedSubprogramAccessAssignment_5_1_1_4)
-{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessAssignment_5_1_1_4()); }
+{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedBusAccessAssignment_5_1_1_4()); }
+(rule__VirtualProcessorType__OwnedBusAccessAssignment_5_1_1_4)
+{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedBusAccessAssignment_5_1_1_4()); }
 )
 
     |(
-{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessAssignment_5_1_1_5()); }
-(rule__VirtualProcessorType__OwnedSubprogramGroupAccessAssignment_5_1_1_5)
-{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessAssignment_5_1_1_5()); }
+{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessAssignment_5_1_1_5()); }
+(rule__VirtualProcessorType__OwnedSubprogramAccessAssignment_5_1_1_5)
+{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessAssignment_5_1_1_5()); }
 )
 
     |(
-{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAssignment_5_1_1_6()); }
-(rule__VirtualProcessorType__OwnedAbstractFeatureAssignment_5_1_1_6)
-{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAssignment_5_1_1_6()); }
+{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessAssignment_5_1_1_6()); }
+(rule__VirtualProcessorType__OwnedSubprogramGroupAccessAssignment_5_1_1_6)
+{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessAssignment_5_1_1_6()); }
+)
+
+    |(
+{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAssignment_5_1_1_7()); }
+(rule__VirtualProcessorType__OwnedAbstractFeatureAssignment_5_1_1_7)
+{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAssignment_5_1_1_7()); }
 )
 
 ;
@@ -124204,14 +124210,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VirtualProcessorType__OwnedSubprogramAccessAssignment_5_1_1_4
+rule__VirtualProcessorType__OwnedBusAccessAssignment_5_1_1_4
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessSubprogramAccessParserRuleCall_5_1_1_4_0()); }
-	ruleSubprogramAccess{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessSubprogramAccessParserRuleCall_5_1_1_4_0()); }
+{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedBusAccessBusAccessParserRuleCall_5_1_1_4_0()); }
+	ruleBusAccess{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedBusAccessBusAccessParserRuleCall_5_1_1_4_0()); }
 )
 
 ;
@@ -124219,14 +124225,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VirtualProcessorType__OwnedSubprogramGroupAccessAssignment_5_1_1_5
+rule__VirtualProcessorType__OwnedSubprogramAccessAssignment_5_1_1_5
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessSubprogramGroupAccessParserRuleCall_5_1_1_5_0()); }
-	ruleSubprogramGroupAccess{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessSubprogramGroupAccessParserRuleCall_5_1_1_5_0()); }
+{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessSubprogramAccessParserRuleCall_5_1_1_5_0()); }
+	ruleSubprogramAccess{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessSubprogramAccessParserRuleCall_5_1_1_5_0()); }
 )
 
 ;
@@ -124234,14 +124240,29 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VirtualProcessorType__OwnedAbstractFeatureAssignment_5_1_1_6
+rule__VirtualProcessorType__OwnedSubprogramGroupAccessAssignment_5_1_1_6
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAbstractFeatureParserRuleCall_5_1_1_6_0()); }
-	ruleAbstractFeature{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAbstractFeatureParserRuleCall_5_1_1_6_0()); }
+{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessSubprogramGroupAccessParserRuleCall_5_1_1_6_0()); }
+	ruleSubprogramGroupAccess{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessSubprogramGroupAccessParserRuleCall_5_1_1_6_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VirtualProcessorType__OwnedAbstractFeatureAssignment_5_1_1_7
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAbstractFeatureParserRuleCall_5_1_1_7_0()); }
+	ruleAbstractFeature{ after(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAbstractFeatureParserRuleCall_5_1_1_7_0()); }
 )
 
 ;

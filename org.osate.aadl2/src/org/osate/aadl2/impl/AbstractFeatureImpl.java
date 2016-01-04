@@ -51,10 +51,10 @@ import org.osate.aadl2.FeaturePrototype;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.AbstractFeatureImpl#getFeaturePrototype <em>Feature Prototype</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -99,10 +99,9 @@ public class AbstractFeatureImpl extends DirectedFeatureImpl implements Abstract
 			InternalEObject oldFeaturePrototype = (InternalEObject) featurePrototype;
 			featurePrototype = (FeaturePrototype) eResolveProxy(oldFeaturePrototype);
 			if (featurePrototype != oldFeaturePrototype) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.ABSTRACT_FEATURE__FEATURE_PROTOTYPE, oldFeaturePrototype, featurePrototype));
-				}
 			}
 		}
 		return featurePrototype;
@@ -126,10 +125,9 @@ public class AbstractFeatureImpl extends DirectedFeatureImpl implements Abstract
 	public void setFeaturePrototype(FeaturePrototype newFeaturePrototype) {
 		FeaturePrototype oldFeaturePrototype = featurePrototype;
 		featurePrototype = newFeaturePrototype;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.ABSTRACT_FEATURE__FEATURE_PROTOTYPE,
 					oldFeaturePrototype, featurePrototype));
-		}
 	}
 
 	/**
@@ -141,9 +139,8 @@ public class AbstractFeatureImpl extends DirectedFeatureImpl implements Abstract
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.ABSTRACT_FEATURE__FEATURE_PROTOTYPE:
-			if (resolve) {
+			if (resolve)
 				return getFeaturePrototype();
-			}
 			return basicGetFeaturePrototype();
 		}
 		return super.eGet(featureID, resolve, coreType);

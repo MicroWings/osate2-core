@@ -51,10 +51,10 @@ import org.osate.aadl2.FeatureGroupType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.FeatureGroupPrototypeImpl#getConstrainingFeatureGroupType <em>Constraining Feature Group Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -99,11 +99,10 @@ public class FeatureGroupPrototypeImpl extends PrototypeImpl implements FeatureG
 			InternalEObject oldConstrainingFeatureGroupType = (InternalEObject) constrainingFeatureGroupType;
 			constrainingFeatureGroupType = (FeatureGroupType) eResolveProxy(oldConstrainingFeatureGroupType);
 			if (constrainingFeatureGroupType != oldConstrainingFeatureGroupType) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.FEATURE_GROUP_PROTOTYPE__CONSTRAINING_FEATURE_GROUP_TYPE,
 							oldConstrainingFeatureGroupType, constrainingFeatureGroupType));
-				}
 			}
 		}
 		return constrainingFeatureGroupType;
@@ -127,11 +126,10 @@ public class FeatureGroupPrototypeImpl extends PrototypeImpl implements FeatureG
 	public void setConstrainingFeatureGroupType(FeatureGroupType newConstrainingFeatureGroupType) {
 		FeatureGroupType oldConstrainingFeatureGroupType = constrainingFeatureGroupType;
 		constrainingFeatureGroupType = newConstrainingFeatureGroupType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.FEATURE_GROUP_PROTOTYPE__CONSTRAINING_FEATURE_GROUP_TYPE,
 					oldConstrainingFeatureGroupType, constrainingFeatureGroupType));
-		}
 	}
 
 	/**
@@ -143,9 +141,8 @@ public class FeatureGroupPrototypeImpl extends PrototypeImpl implements FeatureG
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.FEATURE_GROUP_PROTOTYPE__CONSTRAINING_FEATURE_GROUP_TYPE:
-			if (resolve) {
+			if (resolve)
 				return getConstrainingFeatureGroupType();
-			}
 			return basicGetConstrainingFeatureGroupType();
 		}
 		return super.eGet(featureID, resolve, coreType);

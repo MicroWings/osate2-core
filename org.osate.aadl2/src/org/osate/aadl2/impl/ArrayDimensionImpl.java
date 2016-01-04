@@ -49,10 +49,10 @@ import org.osate.aadl2.ArraySize;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ArrayDimensionImpl#getSize <em>Size</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -107,11 +107,10 @@ public class ArrayDimensionImpl extends ElementImpl implements ArrayDimension {
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.ARRAY_DIMENSION__SIZE, oldSize, newSize);
-			if (msgs == null) {
+			if (msgs == null)
 				msgs = notification;
-			} else {
+			else
 				msgs.add(notification);
-			}
 		}
 		return msgs;
 	}
@@ -125,21 +124,18 @@ public class ArrayDimensionImpl extends ElementImpl implements ArrayDimension {
 	public void setSize(ArraySize newSize) {
 		if (newSize != size) {
 			NotificationChain msgs = null;
-			if (size != null) {
-				msgs = ((InternalEObject) size).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.ARRAY_DIMENSION__SIZE, null, msgs);
-			}
-			if (newSize != null) {
-				msgs = ((InternalEObject) newSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-						- Aadl2Package.ARRAY_DIMENSION__SIZE, null, msgs);
-			}
+			if (size != null)
+				msgs = ((InternalEObject) size).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.ARRAY_DIMENSION__SIZE, null, msgs);
+			if (newSize != null)
+				msgs = ((InternalEObject) newSize).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Aadl2Package.ARRAY_DIMENSION__SIZE, null, msgs);
 			msgs = basicSetSize(newSize, msgs);
-			if (msgs != null) {
+			if (msgs != null)
 				msgs.dispatch();
-			}
-		} else if (eNotificationRequired()) {
-			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.ARRAY_DIMENSION__SIZE, newSize, newSize));
-		}
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.ARRAY_DIMENSION__SIZE, newSize,
+					newSize));
 	}
 
 	/**

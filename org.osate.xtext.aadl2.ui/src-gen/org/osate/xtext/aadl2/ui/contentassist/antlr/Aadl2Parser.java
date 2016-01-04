@@ -1726,9 +1726,10 @@ public class Aadl2Parser extends AbstractContentAssistParser {
 					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedEventPortAssignment_5_1_1_1(), "rule__VirtualProcessorType__OwnedEventPortAssignment_5_1_1_1");
 					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedEventDataPortAssignment_5_1_1_2(), "rule__VirtualProcessorType__OwnedEventDataPortAssignment_5_1_1_2");
 					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedFeatureGroupAssignment_5_1_1_3(), "rule__VirtualProcessorType__OwnedFeatureGroupAssignment_5_1_1_3");
-					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessAssignment_5_1_1_4(), "rule__VirtualProcessorType__OwnedSubprogramAccessAssignment_5_1_1_4");
-					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessAssignment_5_1_1_5(), "rule__VirtualProcessorType__OwnedSubprogramGroupAccessAssignment_5_1_1_5");
-					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAssignment_5_1_1_6(), "rule__VirtualProcessorType__OwnedAbstractFeatureAssignment_5_1_1_6");
+					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedBusAccessAssignment_5_1_1_4(), "rule__VirtualProcessorType__OwnedBusAccessAssignment_5_1_1_4");
+					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramAccessAssignment_5_1_1_5(), "rule__VirtualProcessorType__OwnedSubprogramAccessAssignment_5_1_1_5");
+					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedSubprogramGroupAccessAssignment_5_1_1_6(), "rule__VirtualProcessorType__OwnedSubprogramGroupAccessAssignment_5_1_1_6");
+					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedAbstractFeatureAssignment_5_1_1_7(), "rule__VirtualProcessorType__OwnedAbstractFeatureAssignment_5_1_1_7");
 					put(grammarAccess.getVirtualProcessorTypeAccess().getOwnedFlowSpecificationAssignment_6_1_0(), "rule__VirtualProcessorType__OwnedFlowSpecificationAssignment_6_1_0");
 					put(grammarAccess.getVirtualProcessorTypeAccess().getNoFlowsAssignment_6_1_1_0(), "rule__VirtualProcessorType__NoFlowsAssignment_6_1_1_0");
 					put(grammarAccess.getVirtualProcessorTypeAccess().getDerivedModesAssignment_7_0_0(), "rule__VirtualProcessorType__DerivedModesAssignment_7_0_0");

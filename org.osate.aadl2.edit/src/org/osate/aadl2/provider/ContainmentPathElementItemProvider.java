@@ -91,13 +91,12 @@ public class ContainmentPathElementItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addNamedElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ContainmentPathElement_namedElement_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ContainmentPathElement_namedElement_feature",
-						"_UI_ContainmentPathElement_type"), Aadl2Package.eINSTANCE
-						.getContainmentPathElement_NamedElement(), true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ContainmentPathElement_namedElement_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_ContainmentPathElement_namedElement_feature", "_UI_ContainmentPathElement_type"),
+				Aadl2Package.eINSTANCE.getContainmentPathElement_NamedElement(), true, false, true, null, null, null));
 	}
 
 	/**
@@ -107,13 +106,12 @@ public class ContainmentPathElementItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addAnnexNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ContainmentPathElement_annexName_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ContainmentPathElement_annexName_feature",
-						"_UI_ContainmentPathElement_type"), Aadl2Package.eINSTANCE
-						.getContainmentPathElement_AnnexName(), true, false, false,
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ContainmentPathElement_annexName_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ContainmentPathElement_annexName_feature",
+								"_UI_ContainmentPathElement_type"),
+				Aadl2Package.eINSTANCE.getContainmentPathElement_AnnexName(), true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 

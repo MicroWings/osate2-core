@@ -1974,7 +1974,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 *
+	 * 
 	 * <p>This method is used to initialize {@link Aadl2Package#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -1985,13 +1985,13 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 	 * @generated
 	 */
 	public static Aadl2Package init() {
-		if (isInited) {
+		if (isInited)
 			return (Aadl2Package) EPackage.Registry.INSTANCE.getEPackage(Aadl2Package.eNS_URI);
-		}
 
 		// Obtain or create and register package
-		Aadl2PackageImpl theAadl2Package = (Aadl2PackageImpl) (EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Aadl2PackageImpl ? EPackage.Registry.INSTANCE
-				.get(eNS_URI) : new Aadl2PackageImpl());
+		Aadl2PackageImpl theAadl2Package = (Aadl2PackageImpl) (EPackage.Registry.INSTANCE
+				.get(eNS_URI) instanceof Aadl2PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI)
+						: new Aadl2PackageImpl());
 
 		isInited = true;
 
@@ -7646,6 +7646,16 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 	 * @generated
 	 */
 	@Override
+	public EReference getVirtualProcessorType_OwnedBusAccess() {
+		return (EReference) virtualProcessorTypeEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getVirtualProcessorImplementation() {
 		return virtualProcessorImplementationEClass;
 	}
@@ -9065,9 +9075,8 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 	 * @generated
 	 */
 	public void createPackageContents() {
-		if (isCreated) {
+		if (isCreated)
 			return;
-		}
 		isCreated = true;
 
 		// Create classes and their features
@@ -9903,6 +9912,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		createEReference(virtualProcessorTypeEClass, VIRTUAL_PROCESSOR_TYPE__OWNED_EVENT_PORT);
 		createEReference(virtualProcessorTypeEClass, VIRTUAL_PROCESSOR_TYPE__OWNED_SUBPROGRAM_ACCESS);
 		createEReference(virtualProcessorTypeEClass, VIRTUAL_PROCESSOR_TYPE__OWNED_SUBPROGRAM_GROUP_ACCESS);
+		createEReference(virtualProcessorTypeEClass, VIRTUAL_PROCESSOR_TYPE__OWNED_BUS_ACCESS);
 
 		virtualProcessorImplementationEClass = createEClass(VIRTUAL_PROCESSOR_IMPLEMENTATION);
 		createEReference(virtualProcessorImplementationEClass,
@@ -10060,9 +10070,8 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 	 * @generated
 	 */
 	public void initializePackageContents() {
-		if (isInitialized) {
+		if (isInitialized)
 			return;
-		}
 		isInitialized = true;
 
 		// Initialize package
@@ -10075,467 +10084,467 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		commentEClass.getESuperTypes().add(getElement());
-		typeEClass.getESuperTypes().add(getNamedElement());
-		namedElementEClass.getESuperTypes().add(getElement());
-		propertyAssociationEClass.getESuperTypes().add(getElement());
-		propertyEClass.getESuperTypes().add(getBasicProperty());
-		propertyEClass.getESuperTypes().add(getAbstractNamedValue());
-		propertyEClass.getESuperTypes().add(getArraySizeProperty());
-		basicPropertyEClass.getESuperTypes().add(getTypedElement());
-		typedElementEClass.getESuperTypes().add(getNamedElement());
-		propertyTypeEClass.getESuperTypes().add(getType());
-		propertyExpressionEClass.getESuperTypes().add(getElement());
-		metaclassReferenceEClass.getESuperTypes().add(getPropertyOwner());
-		propertyOwnerEClass.getESuperTypes().add(getElement());
-		classifierEClass.getESuperTypes().add(getNamespace());
-		classifierEClass.getESuperTypes().add(getType());
-		namespaceEClass.getESuperTypes().add(getNamedElement());
-		classifierFeatureEClass.getESuperTypes().add(getNamedElement());
-		generalizationEClass.getESuperTypes().add(getDirectedRelationship());
-		directedRelationshipEClass.getESuperTypes().add(getRelationship());
-		relationshipEClass.getESuperTypes().add(getElement());
-		annexSubclauseEClass.getESuperTypes().add(getModalElement());
-		modalElementEClass.getESuperTypes().add(getNamedElement());
-		modeEClass.getESuperTypes().add(getModeFeature());
-		modeFeatureEClass.getESuperTypes().add(getClassifierFeature());
-		prototypeEClass.getESuperTypes().add(getStructuralFeature());
-		prototypeEClass.getESuperTypes().add(getCalledSubprogram());
-		structuralFeatureEClass.getESuperTypes().add(getRefinableElement());
-		structuralFeatureEClass.getESuperTypes().add(getClassifierFeature());
-		refinableElementEClass.getESuperTypes().add(getNamedElement());
-		prototypeBindingEClass.getESuperTypes().add(getElement());
-		containedNamedElementEClass.getESuperTypes().add(getElement());
-		containmentPathElementEClass.getESuperTypes().add(getElement());
-		arrayRangeEClass.getESuperTypes().add(getElement());
-		modalPropertyValueEClass.getESuperTypes().add(getModalElement());
-		behavioralFeatureEClass.getESuperTypes().add(getClassifierFeature());
-		arrayDimensionEClass.getESuperTypes().add(getElement());
-		arraySizeEClass.getESuperTypes().add(getElement());
-		arrayableElementEClass.getESuperTypes().add(getElement());
-		componentImplementationReferenceEClass.getESuperTypes().add(getElement());
-		componentImplementationEClass.getESuperTypes().add(getComponentClassifier());
-		componentClassifierEClass.getESuperTypes().add(getClassifier());
-		componentClassifierEClass.getESuperTypes().add(getSubcomponentType());
-		componentClassifierEClass.getESuperTypes().add(getFeatureClassifier());
-		subcomponentTypeEClass.getESuperTypes().add(getType());
-		modeTransitionEClass.getESuperTypes().add(getModeFeature());
-		modeTransitionTriggerEClass.getESuperTypes().add(getElement());
-		contextEClass.getESuperTypes().add(getNamedElement());
-		triggerPortEClass.getESuperTypes().add(getNamedElement());
-		componentTypeEClass.getESuperTypes().add(getComponentClassifier());
-		featureEClass.getESuperTypes().add(getStructuralFeature());
-		featureEClass.getESuperTypes().add(getFeatureConnectionEnd());
-		featureEClass.getESuperTypes().add(getArrayableElement());
-		featureConnectionEndEClass.getESuperTypes().add(getConnectionEnd());
-		connectionEndEClass.getESuperTypes().add(getNamedElement());
-		componentPrototypeEClass.getESuperTypes().add(getPrototype());
-		componentPrototypeEClass.getESuperTypes().add(getSubcomponentType());
-		componentPrototypeEClass.getESuperTypes().add(getFeatureClassifier());
-		flowSpecificationEClass.getESuperTypes().add(getFlowFeature());
-		flowSpecificationEClass.getESuperTypes().add(getModalPath());
-		flowSpecificationEClass.getESuperTypes().add(getFlowElement());
-		flowFeatureEClass.getESuperTypes().add(getStructuralFeature());
-		flowFeatureEClass.getESuperTypes().add(getFlow());
-		flowEClass.getESuperTypes().add(getNamedElement());
-		modalPathEClass.getESuperTypes().add(getModalElement());
-		flowElementEClass.getESuperTypes().add(getEndToEndFlowElement());
-		endToEndFlowElementEClass.getESuperTypes().add(getNamedElement());
-		flowEndEClass.getESuperTypes().add(getElement());
-		typeExtensionEClass.getESuperTypes().add(getGeneralization());
-		featureGroupEClass.getESuperTypes().add(getDirectedFeature());
-		featureGroupEClass.getESuperTypes().add(getContext());
-		featureGroupEClass.getESuperTypes().add(getFeatureGroupConnectionEnd());
-		featureGroupEClass.getESuperTypes().add(getCallContext());
-		directedFeatureEClass.getESuperTypes().add(getFeature());
-		featureGroupConnectionEndEClass.getESuperTypes().add(getConnectionEnd());
-		featureGroupTypeEClass.getESuperTypes().add(getClassifier());
-		featureGroupTypeEClass.getESuperTypes().add(getFeatureType());
-		groupExtensionEClass.getESuperTypes().add(getGeneralization());
-		busAccessEClass.getESuperTypes().add(getAccess());
-		accessEClass.getESuperTypes().add(getFeature());
-		accessEClass.getESuperTypes().add(getAccessConnectionEnd());
-		accessConnectionEndEClass.getESuperTypes().add(getConnectionEnd());
-		busSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		busSubcomponentTypeEClass.getESuperTypes().add(getFeatureClassifier());
-		dataAccessEClass.getESuperTypes().add(getAccess());
-		dataAccessEClass.getESuperTypes().add(getFlowElement());
-		dataAccessEClass.getESuperTypes().add(getParameterConnectionEnd());
-		dataAccessEClass.getESuperTypes().add(getPortConnectionEnd());
-		parameterConnectionEndEClass.getESuperTypes().add(getConnectionEnd());
-		portConnectionEndEClass.getESuperTypes().add(getConnectionEnd());
-		dataSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		dataSubcomponentTypeEClass.getESuperTypes().add(getFeatureClassifier());
-		dataPortEClass.getESuperTypes().add(getPort());
-		dataPortEClass.getESuperTypes().add(getContext());
-		dataPortEClass.getESuperTypes().add(getParameterConnectionEnd());
-		portEClass.getESuperTypes().add(getDirectedFeature());
-		portEClass.getESuperTypes().add(getPortConnectionEnd());
-		portEClass.getESuperTypes().add(getTriggerPort());
-		eventDataPortEClass.getESuperTypes().add(getPort());
-		eventDataPortEClass.getESuperTypes().add(getContext());
-		eventDataPortEClass.getESuperTypes().add(getParameterConnectionEnd());
-		eventPortEClass.getESuperTypes().add(getPort());
-		parameterEClass.getESuperTypes().add(getDirectedFeature());
-		parameterEClass.getESuperTypes().add(getContext());
-		parameterEClass.getESuperTypes().add(getParameterConnectionEnd());
-		subprogramAccessEClass.getESuperTypes().add(getAccess());
-		subprogramAccessEClass.getESuperTypes().add(getCalledSubprogram());
-		subprogramSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		subprogramSubcomponentTypeEClass.getESuperTypes().add(getFeatureClassifier());
-		subprogramGroupAccessEClass.getESuperTypes().add(getAccess());
-		subprogramGroupAccessEClass.getESuperTypes().add(getCallContext());
-		subprogramGroupSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		subprogramGroupSubcomponentTypeEClass.getESuperTypes().add(getFeatureClassifier());
-		abstractFeatureEClass.getESuperTypes().add(getDirectedFeature());
-		abstractFeatureEClass.getESuperTypes().add(getTriggerPort());
-		featurePrototypeEClass.getESuperTypes().add(getPrototype());
-		featureGroupPrototypeEClass.getESuperTypes().add(getPrototype());
-		featureGroupPrototypeEClass.getESuperTypes().add(getFeatureType());
-		subcomponentEClass.getESuperTypes().add(getStructuralFeature());
-		subcomponentEClass.getESuperTypes().add(getModalElement());
-		subcomponentEClass.getESuperTypes().add(getContext());
-		subcomponentEClass.getESuperTypes().add(getFlowElement());
-		subcomponentEClass.getESuperTypes().add(getArrayableElement());
-		modeBindingEClass.getESuperTypes().add(getElement());
-		flowImplementationEClass.getESuperTypes().add(getModalPath());
-		flowImplementationEClass.getESuperTypes().add(getClassifierFeature());
-		flowImplementationEClass.getESuperTypes().add(getFlow());
-		flowSegmentEClass.getESuperTypes().add(getElement());
-		connectionEClass.getESuperTypes().add(getStructuralFeature());
-		connectionEClass.getESuperTypes().add(getModalPath());
-		connectionEClass.getESuperTypes().add(getFlowElement());
-		connectedElementEClass.getESuperTypes().add(getElement());
-		implementationExtensionEClass.getESuperTypes().add(getGeneralization());
-		realizationEClass.getESuperTypes().add(getGeneralization());
-		endToEndFlowEClass.getESuperTypes().add(getFlowFeature());
-		endToEndFlowEClass.getESuperTypes().add(getModalPath());
-		endToEndFlowEClass.getESuperTypes().add(getEndToEndFlowElement());
-		endToEndFlowSegmentEClass.getESuperTypes().add(getElement());
-		abstractSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		abstractSubcomponentEClass.getESuperTypes().add(getAbstract());
-		abstractEClass.getESuperTypes().add(getNamedElement());
-		abstractSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		accessConnectionEClass.getESuperTypes().add(getConnection());
-		parameterConnectionEClass.getESuperTypes().add(getConnection());
-		portConnectionEClass.getESuperTypes().add(getConnection());
-		featureConnectionEClass.getESuperTypes().add(getConnection());
-		featureGroupConnectionEClass.getESuperTypes().add(getConnection());
-		processorFeatureEClass.getESuperTypes().add(getStructuralFeature());
-		internalFeatureEClass.getESuperTypes().add(getStructuralFeature());
-		internalFeatureEClass.getESuperTypes().add(getFeatureConnectionEnd());
-		internalFeatureEClass.getESuperTypes().add(getPortConnectionEnd());
-		internalFeatureEClass.getESuperTypes().add(getTriggerPort());
-		eventSourceEClass.getESuperTypes().add(getInternalFeature());
-		eventDataSourceEClass.getESuperTypes().add(getInternalFeature());
-		dataClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		dataClassifierEClass.getESuperTypes().add(getData());
-		dataClassifierEClass.getESuperTypes().add(getDataSubcomponentType());
-		dataEClass.getESuperTypes().add(getNamedElement());
-		portProxyEClass.getESuperTypes().add(getProcessorFeature());
-		portProxyEClass.getESuperTypes().add(getFeatureConnectionEnd());
-		portProxyEClass.getESuperTypes().add(getPortConnectionEnd());
-		portProxyEClass.getESuperTypes().add(getTriggerPort());
-		subprogramProxyEClass.getESuperTypes().add(getProcessorFeature());
-		subprogramProxyEClass.getESuperTypes().add(getAccessConnectionEnd());
-		subprogramProxyEClass.getESuperTypes().add(getCalledSubprogram());
-		subprogramClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		subprogramClassifierEClass.getESuperTypes().add(getSubprogram());
-		subprogramClassifierEClass.getESuperTypes().add(getSubprogramSubcomponentType());
-		subprogramEClass.getESuperTypes().add(getNamedElement());
-		subprogramEClass.getESuperTypes().add(getCalledSubprogram());
-		annexLibraryEClass.getESuperTypes().add(getNamedElement());
-		defaultAnnexLibraryEClass.getESuperTypes().add(getAnnexLibrary());
-		defaultAnnexSubclauseEClass.getESuperTypes().add(getAnnexSubclause());
-		publicPackageSectionEClass.getESuperTypes().add(getPackageSection());
-		packageSectionEClass.getESuperTypes().add(getNamespace());
-		packageRenameEClass.getESuperTypes().add(getNamedElement());
-		aadlPackageEClass.getESuperTypes().add(getModelUnit());
-		modelUnitEClass.getESuperTypes().add(getNamedElement());
-		privatePackageSectionEClass.getESuperTypes().add(getPackageSection());
-		componentTypeRenameEClass.getESuperTypes().add(getNamedElement());
-		featureGroupTypeRenameEClass.getESuperTypes().add(getNamedElement());
-		componentPrototypeBindingEClass.getESuperTypes().add(getPrototypeBinding());
-		componentPrototypeActualEClass.getESuperTypes().add(getArrayableElement());
-		featureGroupPrototypeBindingEClass.getESuperTypes().add(getPrototypeBinding());
-		featureGroupPrototypeActualEClass.getESuperTypes().add(getFeaturePrototypeActual());
-		featurePrototypeActualEClass.getESuperTypes().add(getArrayableElement());
-		featurePrototypeBindingEClass.getESuperTypes().add(getPrototypeBinding());
-		accessSpecificationEClass.getESuperTypes().add(getFeaturePrototypeActual());
-		portSpecificationEClass.getESuperTypes().add(getFeaturePrototypeActual());
-		featurePrototypeReferenceEClass.getESuperTypes().add(getFeaturePrototypeActual());
-		subprogramCallSequenceEClass.getESuperTypes().add(getBehavioralFeature());
-		subprogramCallSequenceEClass.getESuperTypes().add(getModalElement());
-		subprogramCallEClass.getESuperTypes().add(getBehavioralFeature());
-		subprogramCallEClass.getESuperTypes().add(getContext());
-		behavioredImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		abstractTypeEClass.getESuperTypes().add(getComponentType());
-		abstractTypeEClass.getESuperTypes().add(getAbstractClassifier());
-		abstractTypeEClass.getESuperTypes().add(getCallContext());
-		abstractClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		abstractClassifierEClass.getESuperTypes().add(getAbstract());
-		abstractClassifierEClass.getESuperTypes().add(getAbstractSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getBusSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getDataSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getDeviceSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getMemorySubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getProcessorSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getProcessSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getSubprogramGroupSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getSubprogramSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getSystemSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getThreadGroupSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getThreadSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getVirtualBusSubcomponentType());
-		abstractClassifierEClass.getESuperTypes().add(getVirtualProcessorSubcomponentType());
-		virtualProcessorSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		virtualBusSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		threadGroupSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		threadSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		systemSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		processSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		memorySubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		deviceSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		processorSubcomponentTypeEClass.getESuperTypes().add(getSubcomponentType());
-		abstractImplementationEClass.getESuperTypes().add(getBehavioredImplementation());
-		abstractImplementationEClass.getESuperTypes().add(getAbstractClassifier());
-		busSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		busSubcomponentEClass.getESuperTypes().add(getAccessConnectionEnd());
-		busSubcomponentEClass.getESuperTypes().add(getBus());
-		busEClass.getESuperTypes().add(getNamedElement());
-		dataSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		dataSubcomponentEClass.getESuperTypes().add(getAccessConnectionEnd());
-		dataSubcomponentEClass.getESuperTypes().add(getData());
-		dataSubcomponentEClass.getESuperTypes().add(getParameterConnectionEnd());
-		dataSubcomponentEClass.getESuperTypes().add(getPortConnectionEnd());
-		deviceSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		deviceSubcomponentEClass.getESuperTypes().add(getDevice());
-		deviceEClass.getESuperTypes().add(getNamedElement());
-		memorySubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		memorySubcomponentEClass.getESuperTypes().add(getMemory());
-		memoryEClass.getESuperTypes().add(getNamedElement());
-		processSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		processSubcomponentEClass.getESuperTypes().add(getProcess());
-		processEClass.getESuperTypes().add(getNamedElement());
-		processorSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		processorSubcomponentEClass.getESuperTypes().add(getProcessor());
-		processorEClass.getESuperTypes().add(getNamedElement());
-		systemSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		systemSubcomponentEClass.getESuperTypes().add(getSystem());
-		systemEClass.getESuperTypes().add(getNamedElement());
-		subprogramSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		subprogramSubcomponentEClass.getESuperTypes().add(getAccessConnectionEnd());
-		subprogramSubcomponentEClass.getESuperTypes().add(getSubprogram());
-		subprogramGroupSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		subprogramGroupSubcomponentEClass.getESuperTypes().add(getAccessConnectionEnd());
-		subprogramGroupSubcomponentEClass.getESuperTypes().add(getSubprogramGroup());
-		subprogramGroupSubcomponentEClass.getESuperTypes().add(getCallContext());
-		subprogramGroupEClass.getESuperTypes().add(getNamedElement());
-		threadSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		threadSubcomponentEClass.getESuperTypes().add(getThread());
-		threadEClass.getESuperTypes().add(getNamedElement());
-		threadGroupSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		threadGroupSubcomponentEClass.getESuperTypes().add(getThreadGroup());
-		threadGroupEClass.getESuperTypes().add(getNamedElement());
-		virtualBusSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		virtualBusSubcomponentEClass.getESuperTypes().add(getVirtualBus());
-		virtualBusEClass.getESuperTypes().add(getNamedElement());
-		virtualProcessorSubcomponentEClass.getESuperTypes().add(getSubcomponent());
-		virtualProcessorSubcomponentEClass.getESuperTypes().add(getVirtualProcessor());
-		virtualProcessorEClass.getESuperTypes().add(getNamedElement());
-		abstractPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		abstractPrototypeEClass.getESuperTypes().add(getAbstract());
-		abstractPrototypeEClass.getESuperTypes().add(getAbstractSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getBusSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getDataSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getDeviceSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getMemorySubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getProcessorSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getProcessSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getSubprogramGroupSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getSubprogramSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getSystemSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getThreadGroupSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getThreadSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getVirtualBusSubcomponentType());
-		abstractPrototypeEClass.getESuperTypes().add(getVirtualProcessorSubcomponentType());
-		busClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		busClassifierEClass.getESuperTypes().add(getBus());
-		busClassifierEClass.getESuperTypes().add(getBusSubcomponentType());
-		busTypeEClass.getESuperTypes().add(getComponentType());
-		busTypeEClass.getESuperTypes().add(getBusClassifier());
-		busImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		busImplementationEClass.getESuperTypes().add(getBusClassifier());
-		busPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		busPrototypeEClass.getESuperTypes().add(getBus());
-		busPrototypeEClass.getESuperTypes().add(getBusSubcomponentType());
-		dataTypeEClass.getESuperTypes().add(getComponentType());
-		dataTypeEClass.getESuperTypes().add(getDataClassifier());
-		dataTypeEClass.getESuperTypes().add(getCallContext());
-		dataImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		dataImplementationEClass.getESuperTypes().add(getDataClassifier());
-		dataPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		dataPrototypeEClass.getESuperTypes().add(getData());
-		dataPrototypeEClass.getESuperTypes().add(getDataSubcomponentType());
-		deviceClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		deviceClassifierEClass.getESuperTypes().add(getDevice());
-		deviceClassifierEClass.getESuperTypes().add(getDeviceSubcomponentType());
-		deviceTypeEClass.getESuperTypes().add(getComponentType());
-		deviceTypeEClass.getESuperTypes().add(getDeviceClassifier());
-		deviceImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		deviceImplementationEClass.getESuperTypes().add(getDeviceClassifier());
-		devicePrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		devicePrototypeEClass.getESuperTypes().add(getDevice());
-		devicePrototypeEClass.getESuperTypes().add(getDeviceSubcomponentType());
-		memoryClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		memoryClassifierEClass.getESuperTypes().add(getMemory());
-		memoryClassifierEClass.getESuperTypes().add(getMemorySubcomponentType());
-		memoryTypeEClass.getESuperTypes().add(getComponentType());
-		memoryTypeEClass.getESuperTypes().add(getMemoryClassifier());
-		memoryImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		memoryImplementationEClass.getESuperTypes().add(getMemoryClassifier());
-		memoryPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		memoryPrototypeEClass.getESuperTypes().add(getMemory());
-		memoryPrototypeEClass.getESuperTypes().add(getMemorySubcomponentType());
-		subprogramTypeEClass.getESuperTypes().add(getComponentType());
-		subprogramTypeEClass.getESuperTypes().add(getSubprogramClassifier());
-		subprogramTypeEClass.getESuperTypes().add(getCallContext());
-		subprogramImplementationEClass.getESuperTypes().add(getBehavioredImplementation());
-		subprogramImplementationEClass.getESuperTypes().add(getSubprogramClassifier());
-		subprogramPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		subprogramPrototypeEClass.getESuperTypes().add(getSubprogram());
-		subprogramPrototypeEClass.getESuperTypes().add(getSubprogramSubcomponentType());
-		subprogramGroupClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		subprogramGroupClassifierEClass.getESuperTypes().add(getSubprogramGroup());
-		subprogramGroupClassifierEClass.getESuperTypes().add(getSubprogramGroupSubcomponentType());
-		subprogramGroupTypeEClass.getESuperTypes().add(getComponentType());
-		subprogramGroupTypeEClass.getESuperTypes().add(getSubprogramGroupClassifier());
-		subprogramGroupTypeEClass.getESuperTypes().add(getCallContext());
-		subprogramGroupImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		subprogramGroupImplementationEClass.getESuperTypes().add(getSubprogramGroupClassifier());
-		subprogramGroupPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		subprogramGroupPrototypeEClass.getESuperTypes().add(getSubprogramGroup());
-		subprogramGroupPrototypeEClass.getESuperTypes().add(getSubprogramGroupSubcomponentType());
-		systemClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		systemClassifierEClass.getESuperTypes().add(getSystem());
-		systemClassifierEClass.getESuperTypes().add(getSystemSubcomponentType());
-		systemTypeEClass.getESuperTypes().add(getComponentType());
-		systemTypeEClass.getESuperTypes().add(getSystemClassifier());
-		systemImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		systemImplementationEClass.getESuperTypes().add(getSystemClassifier());
-		systemPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		systemPrototypeEClass.getESuperTypes().add(getSystem());
-		systemPrototypeEClass.getESuperTypes().add(getSystemSubcomponentType());
-		processorClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		processorClassifierEClass.getESuperTypes().add(getProcessor());
-		processorClassifierEClass.getESuperTypes().add(getProcessorSubcomponentType());
-		processorTypeEClass.getESuperTypes().add(getComponentType());
-		processorTypeEClass.getESuperTypes().add(getProcessorClassifier());
-		processorImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		processorImplementationEClass.getESuperTypes().add(getProcessorClassifier());
-		processorPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		processorPrototypeEClass.getESuperTypes().add(getProcessor());
-		processorPrototypeEClass.getESuperTypes().add(getProcessorSubcomponentType());
-		processClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		processClassifierEClass.getESuperTypes().add(getProcess());
-		processClassifierEClass.getESuperTypes().add(getProcessSubcomponentType());
-		processTypeEClass.getESuperTypes().add(getComponentType());
-		processTypeEClass.getESuperTypes().add(getProcessClassifier());
-		processImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		processImplementationEClass.getESuperTypes().add(getProcessClassifier());
-		processPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		processPrototypeEClass.getESuperTypes().add(getProcess());
-		processPrototypeEClass.getESuperTypes().add(getProcessSubcomponentType());
-		threadClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		threadClassifierEClass.getESuperTypes().add(getThread());
-		threadClassifierEClass.getESuperTypes().add(getThreadSubcomponentType());
-		threadTypeEClass.getESuperTypes().add(getComponentType());
-		threadTypeEClass.getESuperTypes().add(getThreadClassifier());
-		threadImplementationEClass.getESuperTypes().add(getBehavioredImplementation());
-		threadImplementationEClass.getESuperTypes().add(getThreadClassifier());
-		threadPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		threadPrototypeEClass.getESuperTypes().add(getThread());
-		threadPrototypeEClass.getESuperTypes().add(getThreadSubcomponentType());
-		threadGroupClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		threadGroupClassifierEClass.getESuperTypes().add(getThreadGroup());
-		threadGroupClassifierEClass.getESuperTypes().add(getThreadGroupSubcomponentType());
-		threadGroupTypeEClass.getESuperTypes().add(getComponentType());
-		threadGroupTypeEClass.getESuperTypes().add(getThreadGroupClassifier());
-		threadGroupImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		threadGroupImplementationEClass.getESuperTypes().add(getThreadGroupClassifier());
-		threadGroupPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		threadGroupPrototypeEClass.getESuperTypes().add(getThreadGroup());
-		threadGroupPrototypeEClass.getESuperTypes().add(getThreadGroupSubcomponentType());
-		virtualBusClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		virtualBusClassifierEClass.getESuperTypes().add(getVirtualBus());
-		virtualBusClassifierEClass.getESuperTypes().add(getVirtualBusSubcomponentType());
-		virtualBusTypeEClass.getESuperTypes().add(getComponentType());
-		virtualBusTypeEClass.getESuperTypes().add(getVirtualBusClassifier());
-		virtualBusImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		virtualBusImplementationEClass.getESuperTypes().add(getVirtualBusClassifier());
-		virtualBusPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		virtualBusPrototypeEClass.getESuperTypes().add(getVirtualBus());
-		virtualBusPrototypeEClass.getESuperTypes().add(getVirtualBusSubcomponentType());
-		virtualProcessorClassifierEClass.getESuperTypes().add(getComponentClassifier());
-		virtualProcessorClassifierEClass.getESuperTypes().add(getVirtualProcessor());
-		virtualProcessorClassifierEClass.getESuperTypes().add(getVirtualProcessorSubcomponentType());
-		virtualProcessorTypeEClass.getESuperTypes().add(getComponentType());
-		virtualProcessorTypeEClass.getESuperTypes().add(getVirtualProcessorClassifier());
-		virtualProcessorImplementationEClass.getESuperTypes().add(getComponentImplementation());
-		virtualProcessorImplementationEClass.getESuperTypes().add(getVirtualProcessorClassifier());
-		virtualProcessorPrototypeEClass.getESuperTypes().add(getComponentPrototype());
-		virtualProcessorPrototypeEClass.getESuperTypes().add(getVirtualProcessor());
-		virtualProcessorPrototypeEClass.getESuperTypes().add(getVirtualProcessorSubcomponentType());
-		basicPropertyAssociationEClass.getESuperTypes().add(getElement());
-		propertyConstantEClass.getESuperTypes().add(getTypedElement());
-		propertyConstantEClass.getESuperTypes().add(getAbstractNamedValue());
-		propertyConstantEClass.getESuperTypes().add(getArraySizeProperty());
-		stringLiteralEClass.getESuperTypes().add(getPropertyValue());
-		propertyValueEClass.getESuperTypes().add(getPropertyExpression());
-		numberValueEClass.getESuperTypes().add(getPropertyValue());
-		unitLiteralEClass.getESuperTypes().add(getEnumerationLiteral());
-		enumerationLiteralEClass.getESuperTypes().add(getNamedElement());
-		enumerationLiteralEClass.getESuperTypes().add(getAbstractNamedValue());
-		classifierValueEClass.getESuperTypes().add(getPropertyOwner());
-		classifierValueEClass.getESuperTypes().add(getPropertyValue());
-		referenceValueEClass.getESuperTypes().add(getContainedNamedElement());
-		referenceValueEClass.getESuperTypes().add(getPropertyValue());
-		booleanLiteralEClass.getESuperTypes().add(getPropertyValue());
-		rangeValueEClass.getESuperTypes().add(getPropertyValue());
-		integerLiteralEClass.getESuperTypes().add(getNumberValue());
-		realLiteralEClass.getESuperTypes().add(getNumberValue());
-		operationEClass.getESuperTypes().add(getPropertyExpression());
-		recordValueEClass.getESuperTypes().add(getPropertyValue());
-		computedValueEClass.getESuperTypes().add(getPropertyValue());
-		listValueEClass.getESuperTypes().add(getPropertyExpression());
-		namedValueEClass.getESuperTypes().add(getPropertyValue());
-		propertySetEClass.getESuperTypes().add(getNamespace());
-		propertySetEClass.getESuperTypes().add(getModelUnit());
-		globalNamespaceEClass.getESuperTypes().add(getNamespace());
-		nonListTypeEClass.getESuperTypes().add(getPropertyType());
-		aadlBooleanEClass.getESuperTypes().add(getNonListType());
-		aadlStringEClass.getESuperTypes().add(getNonListType());
-		aadlIntegerEClass.getESuperTypes().add(getNumberType());
-		numberTypeEClass.getESuperTypes().add(getNonListType());
-		unitsTypeEClass.getESuperTypes().add(getEnumerationType());
-		enumerationTypeEClass.getESuperTypes().add(getNamespace());
-		enumerationTypeEClass.getESuperTypes().add(getNonListType());
-		numericRangeEClass.getESuperTypes().add(getElement());
-		aadlRealEClass.getESuperTypes().add(getNumberType());
-		classifierTypeEClass.getESuperTypes().add(getNonListType());
-		rangeTypeEClass.getESuperTypes().add(getNonListType());
-		recordTypeEClass.getESuperTypes().add(getNamespace());
-		recordTypeEClass.getESuperTypes().add(getNonListType());
-		recordFieldEClass.getESuperTypes().add(getBasicProperty());
-		referenceTypeEClass.getESuperTypes().add(getNonListType());
-		listTypeEClass.getESuperTypes().add(getPropertyType());
+		commentEClass.getESuperTypes().add(this.getElement());
+		typeEClass.getESuperTypes().add(this.getNamedElement());
+		namedElementEClass.getESuperTypes().add(this.getElement());
+		propertyAssociationEClass.getESuperTypes().add(this.getElement());
+		propertyEClass.getESuperTypes().add(this.getBasicProperty());
+		propertyEClass.getESuperTypes().add(this.getAbstractNamedValue());
+		propertyEClass.getESuperTypes().add(this.getArraySizeProperty());
+		basicPropertyEClass.getESuperTypes().add(this.getTypedElement());
+		typedElementEClass.getESuperTypes().add(this.getNamedElement());
+		propertyTypeEClass.getESuperTypes().add(this.getType());
+		propertyExpressionEClass.getESuperTypes().add(this.getElement());
+		metaclassReferenceEClass.getESuperTypes().add(this.getPropertyOwner());
+		propertyOwnerEClass.getESuperTypes().add(this.getElement());
+		classifierEClass.getESuperTypes().add(this.getNamespace());
+		classifierEClass.getESuperTypes().add(this.getType());
+		namespaceEClass.getESuperTypes().add(this.getNamedElement());
+		classifierFeatureEClass.getESuperTypes().add(this.getNamedElement());
+		generalizationEClass.getESuperTypes().add(this.getDirectedRelationship());
+		directedRelationshipEClass.getESuperTypes().add(this.getRelationship());
+		relationshipEClass.getESuperTypes().add(this.getElement());
+		annexSubclauseEClass.getESuperTypes().add(this.getModalElement());
+		modalElementEClass.getESuperTypes().add(this.getNamedElement());
+		modeEClass.getESuperTypes().add(this.getModeFeature());
+		modeFeatureEClass.getESuperTypes().add(this.getClassifierFeature());
+		prototypeEClass.getESuperTypes().add(this.getStructuralFeature());
+		prototypeEClass.getESuperTypes().add(this.getCalledSubprogram());
+		structuralFeatureEClass.getESuperTypes().add(this.getRefinableElement());
+		structuralFeatureEClass.getESuperTypes().add(this.getClassifierFeature());
+		refinableElementEClass.getESuperTypes().add(this.getNamedElement());
+		prototypeBindingEClass.getESuperTypes().add(this.getElement());
+		containedNamedElementEClass.getESuperTypes().add(this.getElement());
+		containmentPathElementEClass.getESuperTypes().add(this.getElement());
+		arrayRangeEClass.getESuperTypes().add(this.getElement());
+		modalPropertyValueEClass.getESuperTypes().add(this.getModalElement());
+		behavioralFeatureEClass.getESuperTypes().add(this.getClassifierFeature());
+		arrayDimensionEClass.getESuperTypes().add(this.getElement());
+		arraySizeEClass.getESuperTypes().add(this.getElement());
+		arrayableElementEClass.getESuperTypes().add(this.getElement());
+		componentImplementationReferenceEClass.getESuperTypes().add(this.getElement());
+		componentImplementationEClass.getESuperTypes().add(this.getComponentClassifier());
+		componentClassifierEClass.getESuperTypes().add(this.getClassifier());
+		componentClassifierEClass.getESuperTypes().add(this.getSubcomponentType());
+		componentClassifierEClass.getESuperTypes().add(this.getFeatureClassifier());
+		subcomponentTypeEClass.getESuperTypes().add(this.getType());
+		modeTransitionEClass.getESuperTypes().add(this.getModeFeature());
+		modeTransitionTriggerEClass.getESuperTypes().add(this.getElement());
+		contextEClass.getESuperTypes().add(this.getNamedElement());
+		triggerPortEClass.getESuperTypes().add(this.getNamedElement());
+		componentTypeEClass.getESuperTypes().add(this.getComponentClassifier());
+		featureEClass.getESuperTypes().add(this.getStructuralFeature());
+		featureEClass.getESuperTypes().add(this.getFeatureConnectionEnd());
+		featureEClass.getESuperTypes().add(this.getArrayableElement());
+		featureConnectionEndEClass.getESuperTypes().add(this.getConnectionEnd());
+		connectionEndEClass.getESuperTypes().add(this.getNamedElement());
+		componentPrototypeEClass.getESuperTypes().add(this.getPrototype());
+		componentPrototypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		componentPrototypeEClass.getESuperTypes().add(this.getFeatureClassifier());
+		flowSpecificationEClass.getESuperTypes().add(this.getFlowFeature());
+		flowSpecificationEClass.getESuperTypes().add(this.getModalPath());
+		flowSpecificationEClass.getESuperTypes().add(this.getFlowElement());
+		flowFeatureEClass.getESuperTypes().add(this.getStructuralFeature());
+		flowFeatureEClass.getESuperTypes().add(this.getFlow());
+		flowEClass.getESuperTypes().add(this.getNamedElement());
+		modalPathEClass.getESuperTypes().add(this.getModalElement());
+		flowElementEClass.getESuperTypes().add(this.getEndToEndFlowElement());
+		endToEndFlowElementEClass.getESuperTypes().add(this.getNamedElement());
+		flowEndEClass.getESuperTypes().add(this.getElement());
+		typeExtensionEClass.getESuperTypes().add(this.getGeneralization());
+		featureGroupEClass.getESuperTypes().add(this.getDirectedFeature());
+		featureGroupEClass.getESuperTypes().add(this.getContext());
+		featureGroupEClass.getESuperTypes().add(this.getFeatureGroupConnectionEnd());
+		featureGroupEClass.getESuperTypes().add(this.getCallContext());
+		directedFeatureEClass.getESuperTypes().add(this.getFeature());
+		featureGroupConnectionEndEClass.getESuperTypes().add(this.getConnectionEnd());
+		featureGroupTypeEClass.getESuperTypes().add(this.getClassifier());
+		featureGroupTypeEClass.getESuperTypes().add(this.getFeatureType());
+		groupExtensionEClass.getESuperTypes().add(this.getGeneralization());
+		busAccessEClass.getESuperTypes().add(this.getAccess());
+		accessEClass.getESuperTypes().add(this.getFeature());
+		accessEClass.getESuperTypes().add(this.getAccessConnectionEnd());
+		accessConnectionEndEClass.getESuperTypes().add(this.getConnectionEnd());
+		busSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		busSubcomponentTypeEClass.getESuperTypes().add(this.getFeatureClassifier());
+		dataAccessEClass.getESuperTypes().add(this.getAccess());
+		dataAccessEClass.getESuperTypes().add(this.getFlowElement());
+		dataAccessEClass.getESuperTypes().add(this.getParameterConnectionEnd());
+		dataAccessEClass.getESuperTypes().add(this.getPortConnectionEnd());
+		parameterConnectionEndEClass.getESuperTypes().add(this.getConnectionEnd());
+		portConnectionEndEClass.getESuperTypes().add(this.getConnectionEnd());
+		dataSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		dataSubcomponentTypeEClass.getESuperTypes().add(this.getFeatureClassifier());
+		dataPortEClass.getESuperTypes().add(this.getPort());
+		dataPortEClass.getESuperTypes().add(this.getContext());
+		dataPortEClass.getESuperTypes().add(this.getParameterConnectionEnd());
+		portEClass.getESuperTypes().add(this.getDirectedFeature());
+		portEClass.getESuperTypes().add(this.getPortConnectionEnd());
+		portEClass.getESuperTypes().add(this.getTriggerPort());
+		eventDataPortEClass.getESuperTypes().add(this.getPort());
+		eventDataPortEClass.getESuperTypes().add(this.getContext());
+		eventDataPortEClass.getESuperTypes().add(this.getParameterConnectionEnd());
+		eventPortEClass.getESuperTypes().add(this.getPort());
+		parameterEClass.getESuperTypes().add(this.getDirectedFeature());
+		parameterEClass.getESuperTypes().add(this.getContext());
+		parameterEClass.getESuperTypes().add(this.getParameterConnectionEnd());
+		subprogramAccessEClass.getESuperTypes().add(this.getAccess());
+		subprogramAccessEClass.getESuperTypes().add(this.getCalledSubprogram());
+		subprogramSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		subprogramSubcomponentTypeEClass.getESuperTypes().add(this.getFeatureClassifier());
+		subprogramGroupAccessEClass.getESuperTypes().add(this.getAccess());
+		subprogramGroupAccessEClass.getESuperTypes().add(this.getCallContext());
+		subprogramGroupSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		subprogramGroupSubcomponentTypeEClass.getESuperTypes().add(this.getFeatureClassifier());
+		abstractFeatureEClass.getESuperTypes().add(this.getDirectedFeature());
+		abstractFeatureEClass.getESuperTypes().add(this.getTriggerPort());
+		featurePrototypeEClass.getESuperTypes().add(this.getPrototype());
+		featureGroupPrototypeEClass.getESuperTypes().add(this.getPrototype());
+		featureGroupPrototypeEClass.getESuperTypes().add(this.getFeatureType());
+		subcomponentEClass.getESuperTypes().add(this.getStructuralFeature());
+		subcomponentEClass.getESuperTypes().add(this.getModalElement());
+		subcomponentEClass.getESuperTypes().add(this.getContext());
+		subcomponentEClass.getESuperTypes().add(this.getFlowElement());
+		subcomponentEClass.getESuperTypes().add(this.getArrayableElement());
+		modeBindingEClass.getESuperTypes().add(this.getElement());
+		flowImplementationEClass.getESuperTypes().add(this.getModalPath());
+		flowImplementationEClass.getESuperTypes().add(this.getClassifierFeature());
+		flowImplementationEClass.getESuperTypes().add(this.getFlow());
+		flowSegmentEClass.getESuperTypes().add(this.getElement());
+		connectionEClass.getESuperTypes().add(this.getStructuralFeature());
+		connectionEClass.getESuperTypes().add(this.getModalPath());
+		connectionEClass.getESuperTypes().add(this.getFlowElement());
+		connectedElementEClass.getESuperTypes().add(this.getElement());
+		implementationExtensionEClass.getESuperTypes().add(this.getGeneralization());
+		realizationEClass.getESuperTypes().add(this.getGeneralization());
+		endToEndFlowEClass.getESuperTypes().add(this.getFlowFeature());
+		endToEndFlowEClass.getESuperTypes().add(this.getModalPath());
+		endToEndFlowEClass.getESuperTypes().add(this.getEndToEndFlowElement());
+		endToEndFlowSegmentEClass.getESuperTypes().add(this.getElement());
+		abstractSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		abstractSubcomponentEClass.getESuperTypes().add(this.getAbstract());
+		abstractEClass.getESuperTypes().add(this.getNamedElement());
+		abstractSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		accessConnectionEClass.getESuperTypes().add(this.getConnection());
+		parameterConnectionEClass.getESuperTypes().add(this.getConnection());
+		portConnectionEClass.getESuperTypes().add(this.getConnection());
+		featureConnectionEClass.getESuperTypes().add(this.getConnection());
+		featureGroupConnectionEClass.getESuperTypes().add(this.getConnection());
+		processorFeatureEClass.getESuperTypes().add(this.getStructuralFeature());
+		internalFeatureEClass.getESuperTypes().add(this.getStructuralFeature());
+		internalFeatureEClass.getESuperTypes().add(this.getFeatureConnectionEnd());
+		internalFeatureEClass.getESuperTypes().add(this.getPortConnectionEnd());
+		internalFeatureEClass.getESuperTypes().add(this.getTriggerPort());
+		eventSourceEClass.getESuperTypes().add(this.getInternalFeature());
+		eventDataSourceEClass.getESuperTypes().add(this.getInternalFeature());
+		dataClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		dataClassifierEClass.getESuperTypes().add(this.getData());
+		dataClassifierEClass.getESuperTypes().add(this.getDataSubcomponentType());
+		dataEClass.getESuperTypes().add(this.getNamedElement());
+		portProxyEClass.getESuperTypes().add(this.getProcessorFeature());
+		portProxyEClass.getESuperTypes().add(this.getFeatureConnectionEnd());
+		portProxyEClass.getESuperTypes().add(this.getPortConnectionEnd());
+		portProxyEClass.getESuperTypes().add(this.getTriggerPort());
+		subprogramProxyEClass.getESuperTypes().add(this.getProcessorFeature());
+		subprogramProxyEClass.getESuperTypes().add(this.getAccessConnectionEnd());
+		subprogramProxyEClass.getESuperTypes().add(this.getCalledSubprogram());
+		subprogramClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		subprogramClassifierEClass.getESuperTypes().add(this.getSubprogram());
+		subprogramClassifierEClass.getESuperTypes().add(this.getSubprogramSubcomponentType());
+		subprogramEClass.getESuperTypes().add(this.getNamedElement());
+		subprogramEClass.getESuperTypes().add(this.getCalledSubprogram());
+		annexLibraryEClass.getESuperTypes().add(this.getNamedElement());
+		defaultAnnexLibraryEClass.getESuperTypes().add(this.getAnnexLibrary());
+		defaultAnnexSubclauseEClass.getESuperTypes().add(this.getAnnexSubclause());
+		publicPackageSectionEClass.getESuperTypes().add(this.getPackageSection());
+		packageSectionEClass.getESuperTypes().add(this.getNamespace());
+		packageRenameEClass.getESuperTypes().add(this.getNamedElement());
+		aadlPackageEClass.getESuperTypes().add(this.getModelUnit());
+		modelUnitEClass.getESuperTypes().add(this.getNamedElement());
+		privatePackageSectionEClass.getESuperTypes().add(this.getPackageSection());
+		componentTypeRenameEClass.getESuperTypes().add(this.getNamedElement());
+		featureGroupTypeRenameEClass.getESuperTypes().add(this.getNamedElement());
+		componentPrototypeBindingEClass.getESuperTypes().add(this.getPrototypeBinding());
+		componentPrototypeActualEClass.getESuperTypes().add(this.getArrayableElement());
+		featureGroupPrototypeBindingEClass.getESuperTypes().add(this.getPrototypeBinding());
+		featureGroupPrototypeActualEClass.getESuperTypes().add(this.getFeaturePrototypeActual());
+		featurePrototypeActualEClass.getESuperTypes().add(this.getArrayableElement());
+		featurePrototypeBindingEClass.getESuperTypes().add(this.getPrototypeBinding());
+		accessSpecificationEClass.getESuperTypes().add(this.getFeaturePrototypeActual());
+		portSpecificationEClass.getESuperTypes().add(this.getFeaturePrototypeActual());
+		featurePrototypeReferenceEClass.getESuperTypes().add(this.getFeaturePrototypeActual());
+		subprogramCallSequenceEClass.getESuperTypes().add(this.getBehavioralFeature());
+		subprogramCallSequenceEClass.getESuperTypes().add(this.getModalElement());
+		subprogramCallEClass.getESuperTypes().add(this.getBehavioralFeature());
+		subprogramCallEClass.getESuperTypes().add(this.getContext());
+		behavioredImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		abstractTypeEClass.getESuperTypes().add(this.getComponentType());
+		abstractTypeEClass.getESuperTypes().add(this.getAbstractClassifier());
+		abstractTypeEClass.getESuperTypes().add(this.getCallContext());
+		abstractClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		abstractClassifierEClass.getESuperTypes().add(this.getAbstract());
+		abstractClassifierEClass.getESuperTypes().add(this.getAbstractSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getBusSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getDataSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getDeviceSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getMemorySubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getProcessorSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getProcessSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getSubprogramGroupSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getSubprogramSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getSystemSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getThreadGroupSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getThreadSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getVirtualBusSubcomponentType());
+		abstractClassifierEClass.getESuperTypes().add(this.getVirtualProcessorSubcomponentType());
+		virtualProcessorSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		virtualBusSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		threadGroupSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		threadSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		systemSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		processSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		memorySubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		deviceSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		processorSubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
+		abstractImplementationEClass.getESuperTypes().add(this.getBehavioredImplementation());
+		abstractImplementationEClass.getESuperTypes().add(this.getAbstractClassifier());
+		busSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		busSubcomponentEClass.getESuperTypes().add(this.getAccessConnectionEnd());
+		busSubcomponentEClass.getESuperTypes().add(this.getBus());
+		busEClass.getESuperTypes().add(this.getNamedElement());
+		dataSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		dataSubcomponentEClass.getESuperTypes().add(this.getAccessConnectionEnd());
+		dataSubcomponentEClass.getESuperTypes().add(this.getData());
+		dataSubcomponentEClass.getESuperTypes().add(this.getParameterConnectionEnd());
+		dataSubcomponentEClass.getESuperTypes().add(this.getPortConnectionEnd());
+		deviceSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		deviceSubcomponentEClass.getESuperTypes().add(this.getDevice());
+		deviceEClass.getESuperTypes().add(this.getNamedElement());
+		memorySubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		memorySubcomponentEClass.getESuperTypes().add(this.getMemory());
+		memoryEClass.getESuperTypes().add(this.getNamedElement());
+		processSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		processSubcomponentEClass.getESuperTypes().add(this.getProcess());
+		processEClass.getESuperTypes().add(this.getNamedElement());
+		processorSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		processorSubcomponentEClass.getESuperTypes().add(this.getProcessor());
+		processorEClass.getESuperTypes().add(this.getNamedElement());
+		systemSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		systemSubcomponentEClass.getESuperTypes().add(this.getSystem());
+		systemEClass.getESuperTypes().add(this.getNamedElement());
+		subprogramSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		subprogramSubcomponentEClass.getESuperTypes().add(this.getAccessConnectionEnd());
+		subprogramSubcomponentEClass.getESuperTypes().add(this.getSubprogram());
+		subprogramGroupSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		subprogramGroupSubcomponentEClass.getESuperTypes().add(this.getAccessConnectionEnd());
+		subprogramGroupSubcomponentEClass.getESuperTypes().add(this.getSubprogramGroup());
+		subprogramGroupSubcomponentEClass.getESuperTypes().add(this.getCallContext());
+		subprogramGroupEClass.getESuperTypes().add(this.getNamedElement());
+		threadSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		threadSubcomponentEClass.getESuperTypes().add(this.getThread());
+		threadEClass.getESuperTypes().add(this.getNamedElement());
+		threadGroupSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		threadGroupSubcomponentEClass.getESuperTypes().add(this.getThreadGroup());
+		threadGroupEClass.getESuperTypes().add(this.getNamedElement());
+		virtualBusSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		virtualBusSubcomponentEClass.getESuperTypes().add(this.getVirtualBus());
+		virtualBusEClass.getESuperTypes().add(this.getNamedElement());
+		virtualProcessorSubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		virtualProcessorSubcomponentEClass.getESuperTypes().add(this.getVirtualProcessor());
+		virtualProcessorEClass.getESuperTypes().add(this.getNamedElement());
+		abstractPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		abstractPrototypeEClass.getESuperTypes().add(this.getAbstract());
+		abstractPrototypeEClass.getESuperTypes().add(this.getAbstractSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getBusSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getDataSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getDeviceSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getMemorySubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getProcessorSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getProcessSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getSubprogramGroupSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getSubprogramSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getSystemSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getThreadGroupSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getThreadSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getVirtualBusSubcomponentType());
+		abstractPrototypeEClass.getESuperTypes().add(this.getVirtualProcessorSubcomponentType());
+		busClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		busClassifierEClass.getESuperTypes().add(this.getBus());
+		busClassifierEClass.getESuperTypes().add(this.getBusSubcomponentType());
+		busTypeEClass.getESuperTypes().add(this.getComponentType());
+		busTypeEClass.getESuperTypes().add(this.getBusClassifier());
+		busImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		busImplementationEClass.getESuperTypes().add(this.getBusClassifier());
+		busPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		busPrototypeEClass.getESuperTypes().add(this.getBus());
+		busPrototypeEClass.getESuperTypes().add(this.getBusSubcomponentType());
+		dataTypeEClass.getESuperTypes().add(this.getComponentType());
+		dataTypeEClass.getESuperTypes().add(this.getDataClassifier());
+		dataTypeEClass.getESuperTypes().add(this.getCallContext());
+		dataImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		dataImplementationEClass.getESuperTypes().add(this.getDataClassifier());
+		dataPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		dataPrototypeEClass.getESuperTypes().add(this.getData());
+		dataPrototypeEClass.getESuperTypes().add(this.getDataSubcomponentType());
+		deviceClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		deviceClassifierEClass.getESuperTypes().add(this.getDevice());
+		deviceClassifierEClass.getESuperTypes().add(this.getDeviceSubcomponentType());
+		deviceTypeEClass.getESuperTypes().add(this.getComponentType());
+		deviceTypeEClass.getESuperTypes().add(this.getDeviceClassifier());
+		deviceImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		deviceImplementationEClass.getESuperTypes().add(this.getDeviceClassifier());
+		devicePrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		devicePrototypeEClass.getESuperTypes().add(this.getDevice());
+		devicePrototypeEClass.getESuperTypes().add(this.getDeviceSubcomponentType());
+		memoryClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		memoryClassifierEClass.getESuperTypes().add(this.getMemory());
+		memoryClassifierEClass.getESuperTypes().add(this.getMemorySubcomponentType());
+		memoryTypeEClass.getESuperTypes().add(this.getComponentType());
+		memoryTypeEClass.getESuperTypes().add(this.getMemoryClassifier());
+		memoryImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		memoryImplementationEClass.getESuperTypes().add(this.getMemoryClassifier());
+		memoryPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		memoryPrototypeEClass.getESuperTypes().add(this.getMemory());
+		memoryPrototypeEClass.getESuperTypes().add(this.getMemorySubcomponentType());
+		subprogramTypeEClass.getESuperTypes().add(this.getComponentType());
+		subprogramTypeEClass.getESuperTypes().add(this.getSubprogramClassifier());
+		subprogramTypeEClass.getESuperTypes().add(this.getCallContext());
+		subprogramImplementationEClass.getESuperTypes().add(this.getBehavioredImplementation());
+		subprogramImplementationEClass.getESuperTypes().add(this.getSubprogramClassifier());
+		subprogramPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		subprogramPrototypeEClass.getESuperTypes().add(this.getSubprogram());
+		subprogramPrototypeEClass.getESuperTypes().add(this.getSubprogramSubcomponentType());
+		subprogramGroupClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		subprogramGroupClassifierEClass.getESuperTypes().add(this.getSubprogramGroup());
+		subprogramGroupClassifierEClass.getESuperTypes().add(this.getSubprogramGroupSubcomponentType());
+		subprogramGroupTypeEClass.getESuperTypes().add(this.getComponentType());
+		subprogramGroupTypeEClass.getESuperTypes().add(this.getSubprogramGroupClassifier());
+		subprogramGroupTypeEClass.getESuperTypes().add(this.getCallContext());
+		subprogramGroupImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		subprogramGroupImplementationEClass.getESuperTypes().add(this.getSubprogramGroupClassifier());
+		subprogramGroupPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		subprogramGroupPrototypeEClass.getESuperTypes().add(this.getSubprogramGroup());
+		subprogramGroupPrototypeEClass.getESuperTypes().add(this.getSubprogramGroupSubcomponentType());
+		systemClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		systemClassifierEClass.getESuperTypes().add(this.getSystem());
+		systemClassifierEClass.getESuperTypes().add(this.getSystemSubcomponentType());
+		systemTypeEClass.getESuperTypes().add(this.getComponentType());
+		systemTypeEClass.getESuperTypes().add(this.getSystemClassifier());
+		systemImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		systemImplementationEClass.getESuperTypes().add(this.getSystemClassifier());
+		systemPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		systemPrototypeEClass.getESuperTypes().add(this.getSystem());
+		systemPrototypeEClass.getESuperTypes().add(this.getSystemSubcomponentType());
+		processorClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		processorClassifierEClass.getESuperTypes().add(this.getProcessor());
+		processorClassifierEClass.getESuperTypes().add(this.getProcessorSubcomponentType());
+		processorTypeEClass.getESuperTypes().add(this.getComponentType());
+		processorTypeEClass.getESuperTypes().add(this.getProcessorClassifier());
+		processorImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		processorImplementationEClass.getESuperTypes().add(this.getProcessorClassifier());
+		processorPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		processorPrototypeEClass.getESuperTypes().add(this.getProcessor());
+		processorPrototypeEClass.getESuperTypes().add(this.getProcessorSubcomponentType());
+		processClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		processClassifierEClass.getESuperTypes().add(this.getProcess());
+		processClassifierEClass.getESuperTypes().add(this.getProcessSubcomponentType());
+		processTypeEClass.getESuperTypes().add(this.getComponentType());
+		processTypeEClass.getESuperTypes().add(this.getProcessClassifier());
+		processImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		processImplementationEClass.getESuperTypes().add(this.getProcessClassifier());
+		processPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		processPrototypeEClass.getESuperTypes().add(this.getProcess());
+		processPrototypeEClass.getESuperTypes().add(this.getProcessSubcomponentType());
+		threadClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		threadClassifierEClass.getESuperTypes().add(this.getThread());
+		threadClassifierEClass.getESuperTypes().add(this.getThreadSubcomponentType());
+		threadTypeEClass.getESuperTypes().add(this.getComponentType());
+		threadTypeEClass.getESuperTypes().add(this.getThreadClassifier());
+		threadImplementationEClass.getESuperTypes().add(this.getBehavioredImplementation());
+		threadImplementationEClass.getESuperTypes().add(this.getThreadClassifier());
+		threadPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		threadPrototypeEClass.getESuperTypes().add(this.getThread());
+		threadPrototypeEClass.getESuperTypes().add(this.getThreadSubcomponentType());
+		threadGroupClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		threadGroupClassifierEClass.getESuperTypes().add(this.getThreadGroup());
+		threadGroupClassifierEClass.getESuperTypes().add(this.getThreadGroupSubcomponentType());
+		threadGroupTypeEClass.getESuperTypes().add(this.getComponentType());
+		threadGroupTypeEClass.getESuperTypes().add(this.getThreadGroupClassifier());
+		threadGroupImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		threadGroupImplementationEClass.getESuperTypes().add(this.getThreadGroupClassifier());
+		threadGroupPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		threadGroupPrototypeEClass.getESuperTypes().add(this.getThreadGroup());
+		threadGroupPrototypeEClass.getESuperTypes().add(this.getThreadGroupSubcomponentType());
+		virtualBusClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		virtualBusClassifierEClass.getESuperTypes().add(this.getVirtualBus());
+		virtualBusClassifierEClass.getESuperTypes().add(this.getVirtualBusSubcomponentType());
+		virtualBusTypeEClass.getESuperTypes().add(this.getComponentType());
+		virtualBusTypeEClass.getESuperTypes().add(this.getVirtualBusClassifier());
+		virtualBusImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		virtualBusImplementationEClass.getESuperTypes().add(this.getVirtualBusClassifier());
+		virtualBusPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		virtualBusPrototypeEClass.getESuperTypes().add(this.getVirtualBus());
+		virtualBusPrototypeEClass.getESuperTypes().add(this.getVirtualBusSubcomponentType());
+		virtualProcessorClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		virtualProcessorClassifierEClass.getESuperTypes().add(this.getVirtualProcessor());
+		virtualProcessorClassifierEClass.getESuperTypes().add(this.getVirtualProcessorSubcomponentType());
+		virtualProcessorTypeEClass.getESuperTypes().add(this.getComponentType());
+		virtualProcessorTypeEClass.getESuperTypes().add(this.getVirtualProcessorClassifier());
+		virtualProcessorImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		virtualProcessorImplementationEClass.getESuperTypes().add(this.getVirtualProcessorClassifier());
+		virtualProcessorPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		virtualProcessorPrototypeEClass.getESuperTypes().add(this.getVirtualProcessor());
+		virtualProcessorPrototypeEClass.getESuperTypes().add(this.getVirtualProcessorSubcomponentType());
+		basicPropertyAssociationEClass.getESuperTypes().add(this.getElement());
+		propertyConstantEClass.getESuperTypes().add(this.getTypedElement());
+		propertyConstantEClass.getESuperTypes().add(this.getAbstractNamedValue());
+		propertyConstantEClass.getESuperTypes().add(this.getArraySizeProperty());
+		stringLiteralEClass.getESuperTypes().add(this.getPropertyValue());
+		propertyValueEClass.getESuperTypes().add(this.getPropertyExpression());
+		numberValueEClass.getESuperTypes().add(this.getPropertyValue());
+		unitLiteralEClass.getESuperTypes().add(this.getEnumerationLiteral());
+		enumerationLiteralEClass.getESuperTypes().add(this.getNamedElement());
+		enumerationLiteralEClass.getESuperTypes().add(this.getAbstractNamedValue());
+		classifierValueEClass.getESuperTypes().add(this.getPropertyOwner());
+		classifierValueEClass.getESuperTypes().add(this.getPropertyValue());
+		referenceValueEClass.getESuperTypes().add(this.getContainedNamedElement());
+		referenceValueEClass.getESuperTypes().add(this.getPropertyValue());
+		booleanLiteralEClass.getESuperTypes().add(this.getPropertyValue());
+		rangeValueEClass.getESuperTypes().add(this.getPropertyValue());
+		integerLiteralEClass.getESuperTypes().add(this.getNumberValue());
+		realLiteralEClass.getESuperTypes().add(this.getNumberValue());
+		operationEClass.getESuperTypes().add(this.getPropertyExpression());
+		recordValueEClass.getESuperTypes().add(this.getPropertyValue());
+		computedValueEClass.getESuperTypes().add(this.getPropertyValue());
+		listValueEClass.getESuperTypes().add(this.getPropertyExpression());
+		namedValueEClass.getESuperTypes().add(this.getPropertyValue());
+		propertySetEClass.getESuperTypes().add(this.getNamespace());
+		propertySetEClass.getESuperTypes().add(this.getModelUnit());
+		globalNamespaceEClass.getESuperTypes().add(this.getNamespace());
+		nonListTypeEClass.getESuperTypes().add(this.getPropertyType());
+		aadlBooleanEClass.getESuperTypes().add(this.getNonListType());
+		aadlStringEClass.getESuperTypes().add(this.getNonListType());
+		aadlIntegerEClass.getESuperTypes().add(this.getNumberType());
+		numberTypeEClass.getESuperTypes().add(this.getNonListType());
+		unitsTypeEClass.getESuperTypes().add(this.getEnumerationType());
+		enumerationTypeEClass.getESuperTypes().add(this.getNamespace());
+		enumerationTypeEClass.getESuperTypes().add(this.getNonListType());
+		numericRangeEClass.getESuperTypes().add(this.getElement());
+		aadlRealEClass.getESuperTypes().add(this.getNumberType());
+		classifierTypeEClass.getESuperTypes().add(this.getNonListType());
+		rangeTypeEClass.getESuperTypes().add(this.getNonListType());
+		recordTypeEClass.getESuperTypes().add(this.getNamespace());
+		recordTypeEClass.getESuperTypes().add(this.getNonListType());
+		recordFieldEClass.getESuperTypes().add(this.getBasicProperty());
+		referenceTypeEClass.getESuperTypes().add(this.getNonListType());
+		listTypeEClass.getESuperTypes().add(this.getPropertyType());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getElement_OwnedElement(), getElement(), null, "ownedElement", null, 0, -1, Element.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getElement_OwnedComment(), getComment(), null, "ownedComment", null, 0, -1, Element.class,
+		initEReference(getElement_OwnedElement(), this.getElement(), null, "ownedElement", null, 0, -1, Element.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				IS_DERIVED, !IS_ORDERED);
+		initEReference(getElement_OwnedComment(), this.getComment(), null, "ownedComment", null, 0, -1, Element.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -10558,30 +10567,31 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(elementEClass, getElement(), "getOwner", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(elementEClass, this.getElement(), "getOwner", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		addEOperation(elementEClass, getElement(), "allOwnedElements", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(elementEClass, this.getElement(), "allOwnedElements", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		addEOperation(elementEClass, getBoolean(), "mustBeOwned", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(elementEClass, this.getBoolean(), "mustBeOwned", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(commentEClass, Comment.class, "Comment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getComment_Body(), getString(), "body", null, 0, 1, Comment.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getComment_Body(), this.getString(), "body", null, 0, 1, Comment.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = addEOperation(typeEClass, getBoolean(), "conformsTo", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getType(), "other", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = addEOperation(typeEClass, this.getBoolean(), "conformsTo", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getType(), "other", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNamedElement_Name(), getString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT,
+		initEAttribute(getNamedElement_Name(), this.getString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getNamedElement_QualifiedName(), getString(), "qualifiedName", null, 0, 1, NamedElement.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getNamedElement_OwnedPropertyAssociation(), getPropertyAssociation(), null,
-				"ownedPropertyAssociation", null, 0, -1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getNamedElement_QualifiedName(), this.getString(), "qualifiedName", null, 0, 1,
+				NamedElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				IS_DERIVED, !IS_ORDERED);
+		initEReference(getNamedElement_OwnedPropertyAssociation(), this.getPropertyAssociation(), null,
+				"ownedPropertyAssociation", null, 0, -1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = addEOperation(namedElementEClass, ecorePackage.getEBoolean(), "has_no_qualified_name", 0, 1, IS_UNIQUE,
 				IS_ORDERED);
@@ -10603,97 +10613,101 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(namedElementEClass, getNamespace(), "getNamespace", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(namedElementEClass, this.getNamespace(), "getNamespace", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		addEOperation(namedElementEClass, getNamespace(), "allNamespaces", 0, -1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(namedElementEClass, this.getNamespace(), "allNamespaces", 0, -1, IS_UNIQUE, IS_ORDERED);
 
-		op = addEOperation(namedElementEClass, getBoolean(), "isDistinguishableFrom", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getNamedElement(), "n", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getNamespace(), "ns", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		addEOperation(namedElementEClass, getString(), "separator", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		addEOperation(namedElementEClass, getString(), "qualifiedName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = addEOperation(namedElementEClass, getPropertyExpression(), "getPropertyValues", 0, -1, IS_UNIQUE,
+		op = addEOperation(namedElementEClass, this.getBoolean(), "isDistinguishableFrom", 1, 1, IS_UNIQUE,
 				!IS_ORDERED);
-		addEParameter(op, getString(), "propertySetName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getString(), "propertyName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getNamedElement(), "n", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getNamespace(), "ns", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		addEOperation(namedElementEClass, this.getString(), "separator", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		addEOperation(namedElementEClass, this.getString(), "qualifiedName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = addEOperation(namedElementEClass, this.getPropertyExpression(), "getPropertyValues", 0, -1, IS_UNIQUE,
+				!IS_ORDERED);
+		addEParameter(op, this.getString(), "propertySetName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getString(), "propertyName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(propertyAssociationEClass, PropertyAssociation.class, "PropertyAssociation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPropertyAssociation_Property(), getProperty(), null, "property", null, 1, 1,
+		initEReference(getPropertyAssociation_Property(), this.getProperty(), null, "property", null, 1, 1,
 				PropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPropertyAssociation_AppliesTo(), getContainedNamedElement(), null, "appliesTo", null, 0, -1,
-				PropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getPropertyAssociation_AppliesTo(), this.getContainedNamedElement(), null, "appliesTo", null, 0,
+				-1, PropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPropertyAssociation_InBinding(), getClassifier(), null, "inBinding", null, 0, -1,
+		initEReference(getPropertyAssociation_InBinding(), this.getClassifier(), null, "inBinding", null, 0, -1,
 				PropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPropertyAssociation_Append(), getBoolean(), "append", null, 1, 1, PropertyAssociation.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPropertyAssociation_Constant(), getBoolean(), "constant", null, 1, 1,
+		initEAttribute(getPropertyAssociation_Append(), this.getBoolean(), "append", null, 1, 1,
 				PropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPropertyAssociation_OwnedValue(), getModalPropertyValue(), null, "ownedValue", null, 1, -1,
-				PropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEAttribute(getPropertyAssociation_Constant(), this.getBoolean(), "constant", null, 1, 1,
+				PropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPropertyAssociation_OwnedValue(), this.getModalPropertyValue(), null, "ownedValue", null, 1,
+				-1, PropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProperty_Inherit(), getBoolean(), "inherit", null, 1, 1, Property.class, !IS_TRANSIENT,
+		initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProperty_Inherit(), this.getBoolean(), "inherit", null, 1, 1, Property.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProperty_DefaultValue(), getPropertyExpression(), null, "defaultValue", null, 0, 1,
+		initEReference(getProperty_DefaultValue(), this.getPropertyExpression(), null, "defaultValue", null, 0, 1,
 				Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProperty_AppliesToMetaclass(), getMetaclassReference(), null, "appliesToMetaclass", null, 0,
+		initEReference(getProperty_AppliesToMetaclass(), this.getMetaclassReference(), null, "appliesToMetaclass", null,
+				0, -1, Property.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getProperty_AppliesToClassifier(), this.getClassifier(), null, "appliesToClassifier", null, 0,
 				-1, Property.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getProperty_AppliesToClassifier(), getClassifier(), null, "appliesToClassifier", null, 0, -1,
-				Property.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getProperty_AppliesTo(), getPropertyOwner(), null, "appliesTo", null, 0, -1, Property.class,
+		initEReference(getProperty_AppliesTo(), this.getPropertyOwner(), null, "appliesTo", null, 0, -1, Property.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getProperty_EmptyListDefault(), getBoolean(), "emptyListDefault", null, 1, 1, Property.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProperty_EmptyListDefault(), this.getBoolean(), "emptyListDefault", null, 1, 1,
+				Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, !IS_ORDERED);
 
 		initEClass(basicPropertyEClass, BasicProperty.class, "BasicProperty", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBasicProperty_ReferencedPropertyType(), getPropertyType(), null, "referencedPropertyType",
-				null, 0, 1, BasicProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBasicProperty_OwnedPropertyType(), getPropertyType(), null, "ownedPropertyType", null, 0, 1,
-				BasicProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getBasicProperty_ReferencedPropertyType(), this.getPropertyType(), null,
+				"referencedPropertyType", null, 0, 1, BasicProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBasicProperty_OwnedPropertyType(), this.getPropertyType(), null, "ownedPropertyType", null, 0,
+				1, BasicProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBasicProperty_PropertyType(), getPropertyType(), null, "propertyType", null, 1, 1,
+		initEReference(getBasicProperty_PropertyType(), this.getPropertyType(), null, "propertyType", null, 1, 1,
 				BasicProperty.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, !IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(typedElementEClass, TypedElement.class, "TypedElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTypedElement_Type(), getType(), null, "type", null, 0, 1, TypedElement.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
+		initEReference(getTypedElement_Type(), this.getType(), null, "type", null, 0, 1, TypedElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(propertyTypeEClass, PropertyType.class, "PropertyType", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(abstractNamedValueEClass, AbstractNamedValue.class, "AbstractNamedValue", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(abstractNamedValueEClass, AbstractNamedValue.class, "AbstractNamedValue", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(arraySizePropertyEClass, ArraySizeProperty.class, "ArraySizeProperty", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(propertyExpressionEClass, PropertyExpression.class, "PropertyExpression", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(propertyExpressionEClass, PropertyExpression.class, "PropertyExpression", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(metaclassReferenceEClass, MetaclassReference.class, "MetaclassReference", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMetaclassReference_AnnexName(), getString(), "annexName", null, 0, 1,
-				MetaclassReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getMetaclassReference_MetaclassName(), getString(), "metaclassName", null, 1, -1,
+		initEAttribute(getMetaclassReference_AnnexName(), this.getString(), "annexName", null, 0, 1,
+				MetaclassReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getMetaclassReference_MetaclassName(), this.getString(), "metaclassName", null, 1, -1,
 				MetaclassReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				!IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -10702,37 +10716,40 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(classifierEClass, Classifier.class, "Classifier", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getClassifier_ClassifierFeature(), getClassifierFeature(),
-				getClassifierFeature_FeaturingClassifier(), "classifierFeature", null, 0, -1, Classifier.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getClassifier_InheritedMember(), getNamedElement(), null, "inheritedMember", null, 0, -1,
+		initEReference(getClassifier_ClassifierFeature(), this.getClassifierFeature(),
+				this.getClassifierFeature_FeaturingClassifier(), "classifierFeature", null, 0, -1, Classifier.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				IS_DERIVED, !IS_ORDERED);
+		initEReference(getClassifier_InheritedMember(), this.getNamedElement(), null, "inheritedMember", null, 0, -1,
 				Classifier.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getClassifier_Generalization(), getGeneralization(), getGeneralization_Specific(),
+		initEReference(getClassifier_Generalization(), this.getGeneralization(), this.getGeneralization_Specific(),
 				"generalization", null, 0, -1, Classifier.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getClassifier_General(), getClassifier(), null, "general", null, 0, -1, Classifier.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getClassifier_OwnedAnnexSubclause(), getAnnexSubclause(), null, "ownedAnnexSubclause", null, 0,
-				-1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getClassifier_General(), this.getClassifier(), null, "general", null, 0, -1, Classifier.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				IS_DERIVED, !IS_ORDERED);
+		initEReference(getClassifier_OwnedAnnexSubclause(), this.getAnnexSubclause(), null, "ownedAnnexSubclause", null,
+				0, -1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getClassifier_OwnedPrototype(), getPrototype(), null, "ownedPrototype", null, 0, -1,
+		initEReference(getClassifier_OwnedPrototype(), this.getPrototype(), null, "ownedPrototype", null, 0, -1,
 				Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getClassifier_OwnedPrototypeBinding(), getPrototypeBinding(), null, "ownedPrototypeBinding",
+		initEReference(getClassifier_OwnedPrototypeBinding(), this.getPrototypeBinding(), null, "ownedPrototypeBinding",
 				null, 0, -1, Classifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getClassifier_NoPrototypes(), getBoolean(), "noPrototypes", null, 1, 1, Classifier.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getClassifier_NoAnnexes(), getBoolean(), "noAnnexes", null, 1, 1, Classifier.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getClassifier_NoProperties(), getBoolean(), "noProperties", null, 1, 1, Classifier.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getClassifier_NoPrototypes(), this.getBoolean(), "noPrototypes", null, 1, 1, Classifier.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getClassifier_NoAnnexes(), this.getBoolean(), "noAnnexes", null, 1, 1, Classifier.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getClassifier_NoProperties(), this.getBoolean(), "noProperties", null, 1, 1, Classifier.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
-		op = addEOperation(classifierEClass, ecorePackage.getEBoolean(), "no_cycles_in_generalization", 0, 1,
-				IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(classifierEClass, ecorePackage.getEBoolean(), "no_cycles_in_generalization", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -10741,7 +10758,8 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = addEOperation(classifierEClass, ecorePackage.getEBoolean(), "specialize_type", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(classifierEClass, ecorePackage.getEBoolean(), "specialize_type", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -10750,34 +10768,35 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(classifierEClass, getClassifierFeature(), "allFeatures", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(classifierEClass, this.getClassifierFeature(), "allFeatures", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		addEOperation(classifierEClass, getNamedElement(), "inheritedMember", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(classifierEClass, this.getNamedElement(), "inheritedMember", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		addEOperation(classifierEClass, getClassifier(), "parents", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(classifierEClass, this.getClassifier(), "parents", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		addEOperation(classifierEClass, getClassifier(), "allParents", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(classifierEClass, this.getClassifier(), "allParents", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = addEOperation(classifierEClass, getNamedElement(), "inheritableMembers", 0, -1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getClassifier(), "c", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = addEOperation(classifierEClass, this.getNamedElement(), "inheritableMembers", 0, -1, IS_UNIQUE,
+				!IS_ORDERED);
+		addEParameter(op, this.getClassifier(), "c", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = addEOperation(classifierEClass, getBoolean(), "hasVisibilityOf", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getNamedElement(), "n", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = addEOperation(classifierEClass, this.getBoolean(), "hasVisibilityOf", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getNamedElement(), "n", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = addEOperation(classifierEClass, getNamedElement(), "inherit", 0, -1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getNamedElement(), "inhs", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		op = addEOperation(classifierEClass, this.getNamedElement(), "inherit", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getNamedElement(), "inhs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = addEOperation(classifierEClass, getBoolean(), "maySpecializeType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getClassifier(), "c", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = addEOperation(classifierEClass, this.getBoolean(), "maySpecializeType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getClassifier(), "c", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(namespaceEClass, Namespace.class, "Namespace", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNamespace_OwnedMember(), getNamedElement(), null, "ownedMember", null, 0, -1,
+		initEReference(getNamespace_OwnedMember(), this.getNamedElement(), null, "ownedMember", null, 0, -1,
 				Namespace.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getNamespace_Member(), getNamedElement(), null, "member", null, 0, -1, Namespace.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getNamespace_Member(), this.getNamedElement(), null, "member", null, 0, -1, Namespace.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				IS_DERIVED, !IS_ORDERED);
 
 		op = addEOperation(namespaceEClass, ecorePackage.getEBoolean(), "members_distinguishable", 0, 1, IS_UNIQUE,
 				IS_ORDERED);
@@ -10789,38 +10808,39 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = addEOperation(namespaceEClass, getString(), "getNamesOfMember", 0, -1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getNamedElement(), "element", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = addEOperation(namespaceEClass, this.getString(), "getNamesOfMember", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getNamedElement(), "element", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		addEOperation(namespaceEClass, getBoolean(), "membersAreDistinguishable", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(namespaceEClass, this.getBoolean(), "membersAreDistinguishable", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(classifierFeatureEClass, ClassifierFeature.class, "ClassifierFeature", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getClassifierFeature_FeaturingClassifier(), getClassifier(), getClassifier_ClassifierFeature(),
-				"featuringClassifier", null, 0, -1, ClassifierFeature.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE,
-				!IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getClassifierFeature_FeaturingClassifier(), this.getClassifier(),
+				this.getClassifier_ClassifierFeature(), "featuringClassifier", null, 0, -1, ClassifierFeature.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(generalizationEClass, Generalization.class, "Generalization", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGeneralization_General(), getClassifier(), null, "general", null, 1, 1, Generalization.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getGeneralization_Specific(), getClassifier(), getClassifier_Generalization(), "specific", null,
-				1, 1, Generalization.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getGeneralization_General(), this.getClassifier(), null, "general", null, 1, 1,
+				Generalization.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getGeneralization_Specific(), this.getClassifier(), this.getClassifier_Generalization(),
+				"specific", null, 1, 1, Generalization.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(directedRelationshipEClass, DirectedRelationship.class, "DirectedRelationship", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDirectedRelationship_Source(), getElement(), null, "source", null, 1, -1,
+		initEReference(getDirectedRelationship_Source(), this.getElement(), null, "source", null, 1, -1,
 				DirectedRelationship.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getDirectedRelationship_Target(), getElement(), null, "target", null, 1, -1,
+		initEReference(getDirectedRelationship_Target(), this.getElement(), null, "target", null, 1, -1,
 				DirectedRelationship.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(relationshipEClass, Relationship.class, "Relationship", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRelationship_RelatedElement(), getElement(), null, "relatedElement", null, 1, -1,
+		initEReference(getRelationship_RelatedElement(), this.getElement(), null, "relatedElement", null, 1, -1,
 				Relationship.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
@@ -10829,16 +10849,16 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(modalElementEClass, ModalElement.class, "ModalElement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModalElement_InMode(), getMode(), null, "inMode", null, 0, -1, ModalElement.class,
+		initEReference(getModalElement_InMode(), this.getMode(), null, "inMode", null, 0, -1, ModalElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		addEOperation(modalElementEClass, getMode(), "getAllInModes", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(modalElementEClass, this.getMode(), "getAllInModes", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(modeEClass, Mode.class, "Mode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMode_Initial(), getBoolean(), "initial", "false", 1, 1, Mode.class, !IS_TRANSIENT,
+		initEAttribute(getMode_Initial(), this.getBoolean(), "initial", "false", 1, 1, Mode.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getMode_Derived(), getBoolean(), "derived", "false", 1, 1, Mode.class, IS_TRANSIENT,
+		initEAttribute(getMode_Derived(), this.getBoolean(), "derived", "false", 1, 1, Mode.class, IS_TRANSIENT,
 				IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(modeFeatureEClass, ModeFeature.class, "ModeFeature", IS_ABSTRACT, !IS_INTERFACE,
@@ -10846,7 +10866,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(prototypeEClass, Prototype.class, "Prototype", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPrototype_Refined(), getPrototype(), null, "refined", null, 0, 1, Prototype.class,
+		initEReference(getPrototype_Refined(), this.getPrototype(), null, "refined", null, 0, 1, Prototype.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -10865,182 +10885,184 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(refinableElementEClass, RefinableElement.class, "RefinableElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRefinableElement_RefinementContext(), getClassifier(), null, "refinementContext", null, 0, 1,
-				RefinableElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getRefinableElement_RefinedElement(), getRefinableElement(), null, "refinedElement", null, 0, 1,
-				RefinableElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getRefinableElement_RefinementContext(), this.getClassifier(), null, "refinementContext", null,
+				0, 1, RefinableElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getRefinableElement_RefinedElement(), this.getRefinableElement(), null, "refinedElement", null,
+				0, 1, RefinableElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(calledSubprogramEClass, CalledSubprogram.class, "CalledSubprogram", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(prototypeBindingEClass, PrototypeBinding.class, "PrototypeBinding", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPrototypeBinding_Formal(), getPrototype(), null, "formal", null, 1, 1,
+		initEReference(getPrototypeBinding_Formal(), this.getPrototype(), null, "formal", null, 1, 1,
 				PrototypeBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(containedNamedElementEClass, ContainedNamedElement.class, "ContainedNamedElement", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContainedNamedElement_Path(), getContainmentPathElement(), null, "path", null, 1, 1,
+		initEReference(getContainedNamedElement_Path(), this.getContainmentPathElement(), null, "path", null, 1, 1,
 				ContainedNamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainedNamedElement_ContainmentPathElement(), getContainmentPathElement(), null,
+		initEReference(getContainedNamedElement_ContainmentPathElement(), this.getContainmentPathElement(), null,
 				"containmentPathElement", null, 0, -1, ContainedNamedElement.class, IS_TRANSIENT, IS_VOLATILE,
 				!IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(containmentPathElementEClass, ContainmentPathElement.class, "ContainmentPathElement", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContainmentPathElement_ArrayRange(), getArrayRange(), null, "arrayRange", null, 0, -1,
+		initEReference(getContainmentPathElement_ArrayRange(), this.getArrayRange(), null, "arrayRange", null, 0, -1,
 				ContainmentPathElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainmentPathElement_NamedElement(), getNamedElement(), null, "namedElement", null, 1, 1,
-				ContainmentPathElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getContainmentPathElement_NamedElement(), this.getNamedElement(), null, "namedElement", null, 1,
+				1, ContainmentPathElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getContainmentPathElement_AnnexName(), getString(), "annexName", null, 0, 1,
+		initEAttribute(getContainmentPathElement_AnnexName(), this.getString(), "annexName", null, 0, 1,
 				ContainmentPathElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getContainmentPathElement_Path(), getContainmentPathElement(), null, "path", null, 0, 1,
+		initEReference(getContainmentPathElement_Path(), this.getContainmentPathElement(), null, "path", null, 0, 1,
 				ContainmentPathElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(arrayRangeEClass, ArrayRange.class, "ArrayRange", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getArrayRange_LowerBound(), getInteger(), "lowerBound", null, 1, 1, ArrayRange.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getArrayRange_UpperBound(), getInteger(), "upperBound", null, 1, 1, ArrayRange.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getArrayRange_LowerBound(), this.getInteger(), "lowerBound", null, 1, 1, ArrayRange.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getArrayRange_UpperBound(), this.getInteger(), "upperBound", null, 1, 1, ArrayRange.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(modalPropertyValueEClass, ModalPropertyValue.class, "ModalPropertyValue", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModalPropertyValue_OwnedValue(), getPropertyExpression(), null, "ownedValue", null, 1, 1,
-				ModalPropertyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getModalPropertyValue_OwnedValue(), this.getPropertyExpression(), null, "ownedValue", null, 1, 1,
+				ModalPropertyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(behavioralFeatureEClass, BehavioralFeature.class, "BehavioralFeature", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(arrayDimensionEClass, ArrayDimension.class, "ArrayDimension", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArrayDimension_Size(), getArraySize(), null, "size", null, 0, 1, ArrayDimension.class,
+		initEReference(getArrayDimension_Size(), this.getArraySize(), null, "size", null, 0, 1, ArrayDimension.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arraySizeEClass, ArraySize.class, "ArraySize", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getArraySize_Size(), getInteger(), "size", null, 1, 1, ArraySize.class, !IS_TRANSIENT,
+		initEAttribute(getArraySize_Size(), this.getInteger(), "size", null, 1, 1, ArraySize.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getArraySize_SizeProperty(), getArraySizeProperty(), null, "sizeProperty", null, 0, 1,
+		initEReference(getArraySize_SizeProperty(), this.getArraySizeProperty(), null, "sizeProperty", null, 0, 1,
 				ArraySize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(arrayableElementEClass, ArrayableElement.class, "ArrayableElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArrayableElement_ArrayDimension(), getArrayDimension(), null, "arrayDimension", null, 0, -1,
-				ArrayableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArrayableElement_ArrayDimension(), this.getArrayDimension(), null, "arrayDimension", null, 0,
+				-1, ArrayableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentImplementationReferenceEClass, ComponentImplementationReference.class,
 				"ComponentImplementationReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComponentImplementationReference_Implementation(), getComponentImplementation(), null,
+		initEReference(getComponentImplementationReference_Implementation(), this.getComponentImplementation(), null,
 				"implementation", null, 1, 1, ComponentImplementationReference.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementationReference_OwnedPrototypeBinding(), getPrototypeBinding(), null,
+		initEReference(getComponentImplementationReference_OwnedPrototypeBinding(), this.getPrototypeBinding(), null,
 				"ownedPrototypeBinding", null, 0, -1, ComponentImplementationReference.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
 
-		initEClass(componentImplementationEClass, ComponentImplementation.class, "ComponentImplementation",
-				IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComponentImplementation_Type(), getComponentType(), null, "type", null, 1, 1,
+		initEClass(componentImplementationEClass, ComponentImplementation.class, "ComponentImplementation", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponentImplementation_Type(), this.getComponentType(), null, "type", null, 1, 1,
 				ComponentImplementation.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedSubcomponent(), getSubcomponent(), null, "ownedSubcomponent",
-				null, 0, -1, ComponentImplementation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getComponentImplementation_OwnedSubcomponent(), this.getSubcomponent(), null,
+				"ownedSubcomponent", null, 0, -1, ComponentImplementation.class, IS_TRANSIENT, IS_VOLATILE,
+				!IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getComponentImplementation_Extended(), this.getComponentImplementation(), null, "extended", null,
+				0, 1, ComponentImplementation.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_Extended(), getComponentImplementation(), null, "extended", null, 0,
-				1, ComponentImplementation.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedFlowImplementation(), getFlowImplementation(), null,
+		initEReference(getComponentImplementation_OwnedFlowImplementation(), this.getFlowImplementation(), null,
 				"ownedFlowImplementation", null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedConnection(), getConnection(), null, "ownedConnection", null, 0,
-				-1, ComponentImplementation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getComponentImplementation_OwnedConnection(), this.getConnection(), null, "ownedConnection",
+				null, 0, -1, ComponentImplementation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedExtension(), getImplementationExtension(), null,
-				"ownedExtension", null, 0, 1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getComponentImplementation_OwnedExtension(), this.getImplementationExtension(), null,
+				"ownedExtension", null, 0, 1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getComponentImplementation_OwnedRealization(), this.getRealization(), null, "ownedRealization",
+				null, 1, 1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getComponentImplementation_OwnedEndToEndFlow(), this.getEndToEndFlow(), null,
+				"ownedEndToEndFlow", null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedRealization(), getRealization(), null, "ownedRealization", null,
-				1, 1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedEndToEndFlow(), getEndToEndFlow(), null, "ownedEndToEndFlow",
-				null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedAbstractSubcomponent(), getAbstractSubcomponent(), null,
+		initEReference(getComponentImplementation_OwnedAbstractSubcomponent(), this.getAbstractSubcomponent(), null,
 				"ownedAbstractSubcomponent", null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedAccessConnection(), getAccessConnection(), null,
+		initEReference(getComponentImplementation_OwnedAccessConnection(), this.getAccessConnection(), null,
 				"ownedAccessConnection", null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedParameterConnection(), getParameterConnection(), null,
+		initEReference(getComponentImplementation_OwnedParameterConnection(), this.getParameterConnection(), null,
 				"ownedParameterConnection", null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedPortConnection(), getPortConnection(), null,
+		initEReference(getComponentImplementation_OwnedPortConnection(), this.getPortConnection(), null,
 				"ownedPortConnection", null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedFeatureConnection(), getFeatureConnection(), null,
+		initEReference(getComponentImplementation_OwnedFeatureConnection(), this.getFeatureConnection(), null,
 				"ownedFeatureConnection", null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedFeatureGroupConnection(), getFeatureGroupConnection(), null,
+		initEReference(getComponentImplementation_OwnedFeatureGroupConnection(), this.getFeatureGroupConnection(), null,
 				"ownedFeatureGroupConnection", null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getComponentImplementation_NoSubcomponents(), getBoolean(), "noSubcomponents", null, 1, 1,
+		initEAttribute(getComponentImplementation_NoSubcomponents(), this.getBoolean(), "noSubcomponents", null, 1, 1,
 				ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getComponentImplementation_NoConnections(), getBoolean(), "noConnections", null, 1, 1,
+		initEAttribute(getComponentImplementation_NoConnections(), this.getBoolean(), "noConnections", null, 1, 1,
 				ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getComponentImplementation_NoCalls(), getBoolean(), "noCalls", null, 1, 1,
+		initEAttribute(getComponentImplementation_NoCalls(), this.getBoolean(), "noCalls", null, 1, 1,
 				ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedProcessorFeature(), getProcessorFeature(), null,
+		initEReference(getComponentImplementation_OwnedProcessorFeature(), this.getProcessorFeature(), null,
 				"ownedProcessorFeature", null, 0, -1, ComponentImplementation.class, IS_TRANSIENT, IS_VOLATILE,
 				!IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedInternalFeature(), getInternalFeature(), null,
+		initEReference(getComponentImplementation_OwnedInternalFeature(), this.getInternalFeature(), null,
 				"ownedInternalFeature", null, 0, -1, ComponentImplementation.class, IS_TRANSIENT, IS_VOLATILE,
 				!IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedEventSource(), getEventSource(), null, "ownedEventSource", null,
-				0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getComponentImplementation_OwnedEventSource(), this.getEventSource(), null, "ownedEventSource",
+				null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedEventDataSource(), getEventDataSource(), null,
+		initEReference(getComponentImplementation_OwnedEventDataSource(), this.getEventDataSource(), null,
 				"ownedEventDataSource", null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedPortProxy(), getPortProxy(), null, "ownedPortProxy", null, 0,
-				-1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getComponentImplementation_OwnedPortProxy(), this.getPortProxy(), null, "ownedPortProxy", null,
+				0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentImplementation_OwnedSubprogramProxy(), getSubprogramProxy(), null,
+		initEReference(getComponentImplementation_OwnedSubprogramProxy(), this.getSubprogramProxy(), null,
 				"ownedSubprogramProxy", null, 0, -1, ComponentImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		addEOperation(componentImplementationEClass, getSubcomponent(), "getAllSubcomponents", 0, -1, IS_UNIQUE,
+		addEOperation(componentImplementationEClass, this.getSubcomponent(), "getAllSubcomponents", 0, -1, IS_UNIQUE,
 				!IS_ORDERED);
 
 		initEClass(componentClassifierEClass, ComponentClassifier.class, "ComponentClassifier", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComponentClassifier_OwnedMode(), getMode(), null, "ownedMode", null, 0, -1,
+		initEReference(getComponentClassifier_OwnedMode(), this.getMode(), null, "ownedMode", null, 0, -1,
 				ComponentClassifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentClassifier_OwnedModeTransition(), getModeTransition(), null, "ownedModeTransition",
-				null, 0, -1, ComponentClassifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getComponentClassifier_DerivedModes(), getBoolean(), "derivedModes", null, 1, 1,
+		initEReference(getComponentClassifier_OwnedModeTransition(), this.getModeTransition(), null,
+				"ownedModeTransition", null, 0, -1, ComponentClassifier.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getComponentClassifier_DerivedModes(), this.getBoolean(), "derivedModes", null, 1, 1,
 				ComponentClassifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getComponentClassifier_NoFlows(), getBoolean(), "noFlows", null, 1, 1,
+		initEAttribute(getComponentClassifier_NoFlows(), this.getBoolean(), "noFlows", null, 1, 1,
 				ComponentClassifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getComponentClassifier_NoModes(), getBoolean(), "noModes", null, 1, 1,
+		initEAttribute(getComponentClassifier_NoModes(), this.getBoolean(), "noModes", null, 1, 1,
 				ComponentClassifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11052,22 +11074,22 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(modeTransitionEClass, ModeTransition.class, "ModeTransition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModeTransition_Source(), getMode(), null, "source", null, 1, 1, ModeTransition.class,
+		initEReference(getModeTransition_Source(), this.getMode(), null, "source", null, 1, 1, ModeTransition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getModeTransition_Destination(), getMode(), null, "destination", null, 1, 1,
+		initEReference(getModeTransition_Destination(), this.getMode(), null, "destination", null, 1, 1,
 				ModeTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getModeTransition_OwnedTrigger(), getModeTransitionTrigger(), null, "ownedTrigger", null, 1, -1,
-				ModeTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getModeTransition_OwnedTrigger(), this.getModeTransitionTrigger(), null, "ownedTrigger", null, 1,
+				-1, ModeTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(modeTransitionTriggerEClass, ModeTransitionTrigger.class, "ModeTransitionTrigger", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModeTransitionTrigger_Context(), getContext(), null, "context", null, 0, 1,
+		initEReference(getModeTransitionTrigger_Context(), this.getContext(), null, "context", null, 0, 1,
 				ModeTransitionTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getModeTransitionTrigger_TriggerPort(), getTriggerPort(), null, "triggerPort", null, 1, 1,
+		initEReference(getModeTransitionTrigger_TriggerPort(), this.getTriggerPort(), null, "triggerPort", null, 1, 1,
 				ModeTransitionTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11078,40 +11100,41 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(componentTypeEClass, ComponentType.class, "ComponentType", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComponentType_OwnedFeature(), getFeature(), null, "ownedFeature", null, 0, -1,
+		initEReference(getComponentType_OwnedFeature(), this.getFeature(), null, "ownedFeature", null, 0, -1,
 				ComponentType.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentType_Extended(), getComponentType(), null, "extended", null, 0, 1,
+		initEReference(getComponentType_Extended(), this.getComponentType(), null, "extended", null, 0, 1,
 				ComponentType.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentType_OwnedFlowSpecification(), getFlowSpecification(), null,
+		initEReference(getComponentType_OwnedFlowSpecification(), this.getFlowSpecification(), null,
 				"ownedFlowSpecification", null, 0, -1, ComponentType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponentType_OwnedExtension(), getTypeExtension(), null, "ownedExtension", null, 0, 1,
+		initEReference(getComponentType_OwnedExtension(), this.getTypeExtension(), null, "ownedExtension", null, 0, 1,
 				ComponentType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentType_OwnedFeatureGroup(), getFeatureGroup(), null, "ownedFeatureGroup", null, 0, -1,
-				ComponentType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getComponentType_OwnedFeatureGroup(), this.getFeatureGroup(), null, "ownedFeatureGroup", null, 0,
+				-1, ComponentType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentType_OwnedAbstractFeature(), getAbstractFeature(), null, "ownedAbstractFeature",
+		initEReference(getComponentType_OwnedAbstractFeature(), this.getAbstractFeature(), null, "ownedAbstractFeature",
 				null, 0, -1, ComponentType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getComponentType_NoFeatures(), getBoolean(), "noFeatures", null, 1, 1, ComponentType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getComponentType_NoFeatures(), this.getBoolean(), "noFeatures", null, 1, 1, ComponentType.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(featureEClass, Feature.class, "Feature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeature_Prototype(), getComponentPrototype(), null, "prototype", null, 0, 1, Feature.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeature_FeatureClassifier(), getFeatureClassifier(), null, "featureClassifier", null, 0, 1,
+		initEReference(getFeature_Prototype(), this.getComponentPrototype(), null, "prototype", null, 0, 1,
 				Feature.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeature_Refined(), getFeature(), null, "refined", null, 0, 1, Feature.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
-		initEReference(getFeature_Classifier(), getClassifier(), null, "classifier", null, 0, 1, Feature.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getFeature_FeatureClassifier(), this.getFeatureClassifier(), null, "featureClassifier", null, 0,
+				1, Feature.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getFeature_Refined(), this.getFeature(), null, "refined", null, 0, 1, Feature.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFeature_Classifier(), this.getClassifier(), null, "classifier", null, 0, 1, Feature.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				IS_DERIVED, !IS_ORDERED);
 
 		initEClass(featureConnectionEndEClass, FeatureConnectionEnd.class, "FeatureConnectionEnd", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -11119,27 +11142,29 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		initEClass(connectionEndEClass, ConnectionEnd.class, "ConnectionEnd", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(componentPrototypeEClass, ComponentPrototype.class, "ComponentPrototype", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getComponentPrototype_Array(), getBoolean(), "array", null, 1, 1, ComponentPrototype.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentPrototype_ConstrainingClassifier(), getComponentClassifier(), null,
+		initEClass(componentPrototypeEClass, ComponentPrototype.class, "ComponentPrototype", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getComponentPrototype_Array(), this.getBoolean(), "array", null, 1, 1, ComponentPrototype.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEReference(getComponentPrototype_ConstrainingClassifier(), this.getComponentClassifier(), null,
 				"constrainingClassifier", null, 0, 1, ComponentPrototype.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(flowSpecificationEClass, FlowSpecification.class, "FlowSpecification", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFlowSpecification_Refined(), getFlowSpecification(), null, "refined", null, 0, 1,
+		initEReference(getFlowSpecification_Refined(), this.getFlowSpecification(), null, "refined", null, 0, 1,
 				FlowSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFlowSpecification_Kind(), getFlowKind(), "kind", null, 1, 1, FlowSpecification.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFlowSpecification_OutEnd(), getFlowEnd(), null, "outEnd", null, 0, 1,
+		initEAttribute(getFlowSpecification_Kind(), this.getFlowKind(), "kind", null, 1, 1, FlowSpecification.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEReference(getFlowSpecification_OutEnd(), this.getFlowEnd(), null, "outEnd", null, 0, 1,
 				FlowSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFlowSpecification_InEnd(), getFlowEnd(), null, "InEnd", null, 0, 1, FlowSpecification.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFlowSpecification_InEnd(), this.getFlowEnd(), null, "InEnd", null, 0, 1,
+				FlowSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(flowFeatureEClass, FlowFeature.class, "FlowFeature", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -11148,15 +11173,16 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(modalPathEClass, ModalPath.class, "ModalPath", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModalPath_InModeOrTransition(), getModeFeature(), null, "inModeOrTransition", null, 0, -1,
-				ModalPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getModalPath_InModeOrTransition(), this.getModeFeature(), null, "inModeOrTransition", null, 0,
+				-1, ModalPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		addEOperation(modalPathEClass, getMode(), "getInModes", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(modalPathEClass, this.getMode(), "getInModes", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		addEOperation(modalPathEClass, getModeTransition(), "getInModeTransitions", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(modalPathEClass, this.getModeTransition(), "getInModeTransitions", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		addEOperation(modalPathEClass, getModeTransition(), "getAllInModeTransitions", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(modalPathEClass, this.getModeTransition(), "getAllInModeTransitions", 0, -1, IS_UNIQUE,
+				!IS_ORDERED);
 
 		initEClass(flowElementEClass, FlowElement.class, "FlowElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -11165,30 +11191,31 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(flowEndEClass, FlowEnd.class, "FlowEnd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFlowEnd_Context(), getContext(), null, "context", null, 0, 1, FlowEnd.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
-		initEReference(getFlowEnd_Feature(), getFeature(), null, "feature", null, 1, 1, FlowEnd.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
+		initEReference(getFlowEnd_Context(), this.getContext(), null, "context", null, 0, 1, FlowEnd.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFlowEnd_Feature(), this.getFeature(), null, "feature", null, 1, 1, FlowEnd.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(typeExtensionEClass, TypeExtension.class, "TypeExtension", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTypeExtension_Extended(), getComponentType(), null, "extended", null, 1, 1,
+		initEReference(getTypeExtension_Extended(), this.getComponentType(), null, "extended", null, 1, 1,
 				TypeExtension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(featureGroupEClass, FeatureGroup.class, "FeatureGroup", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFeatureGroup_Inverse(), getBoolean(), "inverse", null, 1, 1, FeatureGroup.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroup_FeatureType(), getFeatureType(), null, "featureType", null, 0, 1,
+		initEAttribute(getFeatureGroup_Inverse(), this.getBoolean(), "inverse", null, 1, 1, FeatureGroup.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEReference(getFeatureGroup_FeatureType(), this.getFeatureType(), null, "featureType", null, 0, 1,
 				FeatureGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroup_FeatureGroupType(), getFeatureGroupType(), null, "featureGroupType", null, 0, 1,
-				FeatureGroup.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getFeatureGroup_FeatureGroupType(), this.getFeatureGroupType(), null, "featureGroupType", null,
+				0, 1, FeatureGroup.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroup_FeatureGroupPrototype(), getFeatureGroupPrototype(), null,
+		initEReference(getFeatureGroup_FeatureGroupPrototype(), this.getFeatureGroupPrototype(), null,
 				"featureGroupPrototype", null, 0, 1, FeatureGroup.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
@@ -11197,13 +11224,15 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(directedFeatureEClass, DirectedFeature.class, "DirectedFeature", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDirectedFeature_Direction(), getDirectionType(), "direction", null, 1, 1,
+		initEAttribute(getDirectedFeature_Direction(), this.getDirectionType(), "direction", null, 1, 1,
 				DirectedFeature.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDirectedFeature_In(), getBoolean(), "in", null, 1, 1, DirectedFeature.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDirectedFeature_Out(), getBoolean(), "out", null, 1, 1, DirectedFeature.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDirectedFeature_In(), this.getBoolean(), "in", null, 1, 1, DirectedFeature.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getDirectedFeature_Out(), this.getBoolean(), "out", null, 1, 1, DirectedFeature.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(featureGroupConnectionEndEClass, FeatureGroupConnectionEnd.class, "FeatureGroupConnectionEnd",
 				IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -11213,66 +11242,66 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(featureGroupTypeEClass, FeatureGroupType.class, "FeatureGroupType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeatureGroupType_OwnedFeature(), getFeature(), null, "ownedFeature", null, 0, -1,
+		initEReference(getFeatureGroupType_OwnedFeature(), this.getFeature(), null, "ownedFeature", null, 0, -1,
 				FeatureGroupType.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getFeatureGroupType_Extended(), getFeatureGroupType(), null, "extended", null, 0, 1,
+		initEReference(getFeatureGroupType_Extended(), this.getFeatureGroupType(), null, "extended", null, 0, 1,
 				FeatureGroupType.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_Inverse(), getFeatureGroupType(), null, "inverse", null, 0, 1,
+		initEReference(getFeatureGroupType_Inverse(), this.getFeatureGroupType(), null, "inverse", null, 0, 1,
 				FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedExtension(), getGroupExtension(), null, "ownedExtension", null, 0, 1,
-				FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedBusAccess(), getBusAccess(), null, "ownedBusAccess", null, 0, -1,
-				FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedDataAccess(), getDataAccess(), null, "ownedDataAccess", null, 0, -1,
-				FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
-				FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null,
-				0, -1, FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getFeatureGroupType_OwnedExtension(), this.getGroupExtension(), null, "ownedExtension", null, 0,
+				1, FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
+		initEReference(getFeatureGroupType_OwnedBusAccess(), this.getBusAccess(), null, "ownedBusAccess", null, 0, -1,
 				FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedFeatureGroup(), getFeatureGroup(), null, "ownedFeatureGroup", null, 0,
+		initEReference(getFeatureGroupType_OwnedDataAccess(), this.getDataAccess(), null, "ownedDataAccess", null, 0,
 				-1, FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedParameter(), getParameter(), null, "ownedParameter", null, 0, -1,
+		initEReference(getFeatureGroupType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
 				FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedSubprogramAccess(), getSubprogramAccess(), null,
-				"ownedSubprogramAccess", null, 0, -1, FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
-				"ownedSubprogramGroupAccess", null, 0, -1, FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupType_OwnedAbstractFeature(), getAbstractFeature(), null, "ownedAbstractFeature",
+		initEReference(getFeatureGroupType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort",
 				null, 0, -1, FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFeatureGroupType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
+				FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFeatureGroupType_OwnedFeatureGroup(), this.getFeatureGroup(), null, "ownedFeatureGroup", null,
+				0, -1, FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFeatureGroupType_OwnedParameter(), this.getParameter(), null, "ownedParameter", null, 0, -1,
+				FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFeatureGroupType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null,
+				"ownedSubprogramAccess", null, 0, -1, FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFeatureGroupType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
+				"ownedSubprogramGroupAccess", null, 0, -1, FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFeatureGroupType_OwnedAbstractFeature(), this.getAbstractFeature(), null,
+				"ownedAbstractFeature", null, 0, -1, FeatureGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(groupExtensionEClass, GroupExtension.class, "GroupExtension", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGroupExtension_Extended(), getFeatureGroupType(), null, "extended", null, 1, 1,
+		initEReference(getGroupExtension_Extended(), this.getFeatureGroupType(), null, "extended", null, 1, 1,
 				GroupExtension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(busAccessEClass, BusAccess.class, "BusAccess", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBusAccess_BusFeatureClassifier(), getBusSubcomponentType(), null, "busFeatureClassifier",
+		initEReference(getBusAccess_BusFeatureClassifier(), this.getBusSubcomponentType(), null, "busFeatureClassifier",
 				null, 0, 1, BusAccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(accessEClass, Access.class, "Access", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAccess_Kind(), getAccessType(), "kind", null, 1, 1, Access.class, !IS_TRANSIENT,
+		initEAttribute(getAccess_Kind(), this.getAccessType(), "kind", null, 1, 1, Access.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAccess_Category(), getAccessCategory(), "category", null, 1, 1, Access.class, IS_TRANSIENT,
-				IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAccess_Category(), this.getAccessCategory(), "category", null, 1, 1, Access.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(accessConnectionEndEClass, AccessConnectionEnd.class, "AccessConnectionEnd", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -11282,9 +11311,9 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(dataAccessEClass, DataAccess.class, "DataAccess", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDataAccess_DataFeatureClassifier(), getDataSubcomponentType(), null, "dataFeatureClassifier",
-				null, 0, 1, DataAccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDataAccess_DataFeatureClassifier(), this.getDataSubcomponentType(), null,
+				"dataFeatureClassifier", null, 0, 1, DataAccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(parameterConnectionEndEClass, ParameterConnectionEnd.class, "ParameterConnectionEnd", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -11295,18 +11324,19 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		initEClass(dataSubcomponentTypeEClass, DataSubcomponentType.class, "DataSubcomponentType", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(dataPortEClass, DataPort.class, "DataPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDataPort_DataFeatureClassifier(), getDataSubcomponentType(), null, "dataFeatureClassifier",
-				null, 0, 1, DataPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(dataPortEClass, DataPort.class, "DataPort", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDataPort_DataFeatureClassifier(), this.getDataSubcomponentType(), null,
+				"dataFeatureClassifier", null, 0, 1, DataPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(portEClass, Port.class, "Port", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPort_Category(), getPortCategory(), "category", null, 1, 1, Port.class, IS_TRANSIENT,
+		initEAttribute(getPort_Category(), this.getPortCategory(), "category", null, 1, 1, Port.class, IS_TRANSIENT,
 				IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(eventDataPortEClass, EventDataPort.class, "EventDataPort", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEventDataPort_DataFeatureClassifier(), getDataSubcomponentType(), null,
+		initEReference(getEventDataPort_DataFeatureClassifier(), this.getDataSubcomponentType(), null,
 				"dataFeatureClassifier", null, 0, 1, EventDataPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11315,13 +11345,13 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getParameter_DataFeatureClassifier(), getDataSubcomponentType(), null, "dataFeatureClassifier",
-				null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getParameter_DataFeatureClassifier(), this.getDataSubcomponentType(), null,
+				"dataFeatureClassifier", null, 0, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(subprogramAccessEClass, SubprogramAccess.class, "SubprogramAccess", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubprogramAccess_SubprogramFeatureClassifier(), getSubprogramSubcomponentType(), null,
+		initEReference(getSubprogramAccess_SubprogramFeatureClassifier(), this.getSubprogramSubcomponentType(), null,
 				"subprogramFeatureClassifier", null, 0, 1, SubprogramAccess.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11331,7 +11361,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		initEClass(subprogramGroupAccessEClass, SubprogramGroupAccess.class, "SubprogramGroupAccess", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSubprogramGroupAccess_SubprogramGroupFeatureClassifier(),
-				getSubprogramGroupSubcomponentType(), null, "subprogramGroupFeatureClassifier", null, 0, 1,
+				this.getSubprogramGroupSubcomponentType(), null, "subprogramGroupFeatureClassifier", null, 0, 1,
 				SubprogramGroupAccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11340,140 +11370,145 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(abstractFeatureEClass, AbstractFeature.class, "AbstractFeature", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractFeature_FeaturePrototype(), getFeaturePrototype(), null, "featurePrototype", null, 0,
-				1, AbstractFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getAbstractFeature_FeaturePrototype(), this.getFeaturePrototype(), null, "featurePrototype",
+				null, 0, 1, AbstractFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(featurePrototypeEClass, FeaturePrototype.class, "FeaturePrototype", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFeaturePrototype_Direction(), getDirectionType(), "direction", null, 1, 1,
+		initEAttribute(getFeaturePrototype_Direction(), this.getDirectionType(), "direction", null, 1, 1,
 				FeaturePrototype.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeaturePrototype_ConstrainingClassifier(), getComponentClassifier(), null,
+		initEReference(getFeaturePrototype_ConstrainingClassifier(), this.getComponentClassifier(), null,
 				"constrainingClassifier", null, 0, 1, FeaturePrototype.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFeaturePrototype_In(), getBoolean(), "in", null, 1, 1, FeaturePrototype.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFeaturePrototype_Out(), getBoolean(), "out", null, 1, 1, FeaturePrototype.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFeaturePrototype_In(), this.getBoolean(), "in", null, 1, 1, FeaturePrototype.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getFeaturePrototype_Out(), this.getBoolean(), "out", null, 1, 1, FeaturePrototype.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(featureGroupPrototypeEClass, FeatureGroupPrototype.class, "FeatureGroupPrototype", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeatureGroupPrototype_ConstrainingFeatureGroupType(), getFeatureGroupType(), null,
+		initEReference(getFeatureGroupPrototype_ConstrainingFeatureGroupType(), this.getFeatureGroupType(), null,
 				"constrainingFeatureGroupType", null, 0, 1, FeatureGroupPrototype.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(subcomponentEClass, Subcomponent.class, "Subcomponent", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubcomponent_SubcomponentType(), getSubcomponentType(), null, "subcomponentType", null, 0, 1,
-				Subcomponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getSubcomponent_SubcomponentType(), this.getSubcomponentType(), null, "subcomponentType", null,
+				0, 1, Subcomponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, !IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubcomponent_OwnedPrototypeBinding(), getPrototypeBinding(), null, "ownedPrototypeBinding",
-				null, 0, -1, Subcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubcomponent_Prototype(), getComponentPrototype(), null, "prototype", null, 0, 1,
+		initEReference(getSubcomponent_OwnedPrototypeBinding(), this.getPrototypeBinding(), null,
+				"ownedPrototypeBinding", null, 0, -1, Subcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSubcomponent_Prototype(), this.getComponentPrototype(), null, "prototype", null, 0, 1,
 				Subcomponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubcomponent_OwnedModeBinding(), getModeBinding(), null, "ownedModeBinding", null, 0, -1,
+		initEReference(getSubcomponent_OwnedModeBinding(), this.getModeBinding(), null, "ownedModeBinding", null, 0, -1,
 				Subcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSubcomponent_AllModes(), getBoolean(), "allModes", null, 1, 1, Subcomponent.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubcomponent_ImplementationReference(), getComponentImplementationReference(), null,
+		initEAttribute(getSubcomponent_AllModes(), this.getBoolean(), "allModes", null, 1, 1, Subcomponent.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEReference(getSubcomponent_ImplementationReference(), this.getComponentImplementationReference(), null,
 				"implementationReference", null, 0, -1, Subcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubcomponent_Refined(), getSubcomponent(), null, "refined", null, 0, 1, Subcomponent.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubcomponent_Classifier(), getComponentClassifier(), null, "classifier", null, 0, 1,
+		initEReference(getSubcomponent_Refined(), this.getSubcomponent(), null, "refined", null, 0, 1,
+				Subcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSubcomponent_Classifier(), this.getComponentClassifier(), null, "classifier", null, 0, 1,
 				Subcomponent.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(modeBindingEClass, ModeBinding.class, "ModeBinding", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModeBinding_ParentMode(), getMode(), null, "parentMode", null, 1, 1, ModeBinding.class,
+		initEReference(getModeBinding_ParentMode(), this.getMode(), null, "parentMode", null, 1, 1, ModeBinding.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getModeBinding_DerivedMode(), getMode(), null, "derivedMode", null, 0, 1, ModeBinding.class,
+		initEReference(getModeBinding_DerivedMode(), this.getMode(), null, "derivedMode", null, 0, 1, ModeBinding.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(flowImplementationEClass, FlowImplementation.class, "FlowImplementation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFlowImplementation_Kind(), getFlowKind(), "kind", null, 1, 1, FlowImplementation.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFlowImplementation_Specification(), getFlowSpecification(), null, "specification", null, 1,
-				1, FlowImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEAttribute(getFlowImplementation_Kind(), this.getFlowKind(), "kind", null, 1, 1, FlowImplementation.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEReference(getFlowImplementation_Specification(), this.getFlowSpecification(), null, "specification", null,
+				1, 1, FlowImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFlowImplementation_OwnedFlowSegment(), getFlowSegment(), null, "ownedFlowSegment", null, 0,
-				-1, FlowImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getFlowImplementation_OwnedFlowSegment(), this.getFlowSegment(), null, "ownedFlowSegment", null,
+				0, -1, FlowImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(flowSegmentEClass, FlowSegment.class, "FlowSegment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFlowSegment_FlowElement(), getFlowElement(), null, "flowElement", null, 1, 1,
+		initEReference(getFlowSegment_FlowElement(), this.getFlowElement(), null, "flowElement", null, 1, 1,
 				FlowSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFlowSegment_Context(), getContext(), null, "context", null, 0, 1, FlowSegment.class,
+		initEReference(getFlowSegment_Context(), this.getContext(), null, "context", null, 0, 1, FlowSegment.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(connectionEClass, Connection.class, "Connection", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConnection_Destination(), getConnectedElement(), null, "destination", null, 0, 1,
+		initEReference(getConnection_Destination(), this.getConnectedElement(), null, "destination", null, 0, 1,
 				Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getConnection_Source(), getConnectedElement(), null, "source", null, 0, 1, Connection.class,
+		initEReference(getConnection_Source(), this.getConnectedElement(), null, "source", null, 0, 1, Connection.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getConnection_Bidirectional(), getBoolean(), "bidirectional", null, 1, 1, Connection.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getConnection_Refined(), getConnection(), null, "refined", null, 0, 1, Connection.class,
+		initEAttribute(getConnection_Bidirectional(), this.getBoolean(), "bidirectional", null, 1, 1, Connection.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEReference(getConnection_Refined(), this.getConnection(), null, "refined", null, 0, 1, Connection.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(connectedElementEClass, ConnectedElement.class, "ConnectedElement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConnectedElement_Context(), getContext(), null, "context", null, 0, 1,
+		initEReference(getConnectedElement_Context(), this.getContext(), null, "context", null, 0, 1,
 				ConnectedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getConnectedElement_ConnectionEnd(), getConnectionEnd(), null, "connectionEnd", null, 1, 1,
+		initEReference(getConnectedElement_ConnectionEnd(), this.getConnectionEnd(), null, "connectionEnd", null, 1, 1,
 				ConnectedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(implementationExtensionEClass, ImplementationExtension.class, "ImplementationExtension",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getImplementationExtension_Extended(), getComponentImplementation(), null, "extended", null, 1,
-				1, ImplementationExtension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getImplementationExtension_Extended(), this.getComponentImplementation(), null, "extended", null,
+				1, 1, ImplementationExtension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(realizationEClass, Realization.class, "Realization", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRealization_Implemented(), getComponentType(), null, "implemented", null, 1, 1,
+		initEReference(getRealization_Implemented(), this.getComponentType(), null, "implemented", null, 1, 1,
 				Realization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(endToEndFlowEClass, EndToEndFlow.class, "EndToEndFlow", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEndToEndFlow_Refined(), getEndToEndFlow(), null, "refined", null, 0, 1, EndToEndFlow.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getEndToEndFlow_OwnedEndToEndFlowSegment(), getEndToEndFlowSegment(), null,
-				"ownedEndToEndFlowSegment", null, 0, -1, EndToEndFlow.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEndToEndFlow_Refined(), this.getEndToEndFlow(), null, "refined", null, 0, 1,
+				EndToEndFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEndToEndFlow_OwnedEndToEndFlowSegment(), this.getEndToEndFlowSegment(), null,
+				"ownedEndToEndFlowSegment", null, 0, -1, EndToEndFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(endToEndFlowSegmentEClass, EndToEndFlowSegment.class, "EndToEndFlowSegment", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEndToEndFlowSegment_FlowElement(), getEndToEndFlowElement(), null, "flowElement", null, 1, 1,
-				EndToEndFlowSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getEndToEndFlowSegment_FlowElement(), this.getEndToEndFlowElement(), null, "flowElement", null,
+				1, 1, EndToEndFlowSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEndToEndFlowSegment_Context(), getContext(), null, "context", null, 0, 1,
+		initEReference(getEndToEndFlowSegment_Context(), this.getContext(), null, "context", null, 0, 1,
 				EndToEndFlowSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(abstractSubcomponentEClass, AbstractSubcomponent.class, "AbstractSubcomponent", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractSubcomponent_AbstractSubcomponentType(), getAbstractSubcomponentType(), null,
+		initEReference(getAbstractSubcomponent_AbstractSubcomponentType(), this.getAbstractSubcomponentType(), null,
 				"abstractSubcomponentType", null, 0, 1, AbstractSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11484,7 +11519,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(accessConnectionEClass, AccessConnection.class, "AccessConnection", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAccessConnection_AccessCategory(), getAccessCategory(), "accessCategory", null, 1, 1,
+		initEAttribute(getAccessConnection_AccessCategory(), this.getAccessCategory(), "accessCategory", null, 1, 1,
 				AccessConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, !IS_ORDERED);
 
@@ -11505,21 +11540,23 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(internalFeatureEClass, InternalFeature.class, "InternalFeature", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInternalFeature_Direction(), getDirectionType(), "direction", null, 1, 1,
+		initEAttribute(getInternalFeature_Direction(), this.getDirectionType(), "direction", null, 1, 1,
 				InternalFeature.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getInternalFeature_In(), getBoolean(), "in", null, 1, 1, InternalFeature.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getInternalFeature_Out(), getBoolean(), "out", null, 1, 1, InternalFeature.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getInternalFeature_In(), this.getBoolean(), "in", null, 1, 1, InternalFeature.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getInternalFeature_Out(), this.getBoolean(), "out", null, 1, 1, InternalFeature.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(eventSourceEClass, EventSource.class, "EventSource", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(eventDataSourceEClass, EventDataSource.class, "EventDataSource", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEventDataSource_DataClassifier(), getDataClassifier(), null, "dataClassifier", null, 0, 1,
-				EventDataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getEventDataSource_DataClassifier(), this.getDataClassifier(), null, "dataClassifier", null, 0,
+				1, EventDataSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(dataClassifierEClass, DataClassifier.class, "DataClassifier", IS_ABSTRACT, !IS_INTERFACE,
@@ -11529,19 +11566,19 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(portProxyEClass, PortProxy.class, "PortProxy", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPortProxy_Direction(), getDirectionType(), "direction", null, 1, 1, PortProxy.class,
+		initEAttribute(getPortProxy_Direction(), this.getDirectionType(), "direction", null, 1, 1, PortProxy.class,
 				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getPortProxy_DataClassifier(), getDataClassifier(), null, "dataClassifier", null, 0, 1,
+		initEReference(getPortProxy_DataClassifier(), this.getDataClassifier(), null, "dataClassifier", null, 0, 1,
 				PortProxy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPortProxy_In(), getBoolean(), "in", null, 1, 1, PortProxy.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPortProxy_Out(), getBoolean(), "out", null, 1, 1, PortProxy.class, !IS_TRANSIENT,
+		initEAttribute(getPortProxy_In(), this.getBoolean(), "in", null, 1, 1, PortProxy.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPortProxy_Out(), this.getBoolean(), "out", null, 1, 1, PortProxy.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(subprogramProxyEClass, SubprogramProxy.class, "SubprogramProxy", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubprogramProxy_SubprogramClassifier(), getSubprogramClassifier(), null,
+		initEReference(getSubprogramProxy_SubprogramClassifier(), this.getSubprogramClassifier(), null,
 				"subprogramClassifier", null, 0, 1, SubprogramProxy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11556,76 +11593,78 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(defaultAnnexLibraryEClass, DefaultAnnexLibrary.class, "DefaultAnnexLibrary", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDefaultAnnexLibrary_SourceText(), getString(), "sourceText", null, 1, 1,
+		initEAttribute(getDefaultAnnexLibrary_SourceText(), this.getString(), "sourceText", null, 1, 1,
 				DefaultAnnexLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDefaultAnnexLibrary_ParsedAnnexLibrary(), getAnnexLibrary(), null, "parsedAnnexLibrary",
+		initEReference(getDefaultAnnexLibrary_ParsedAnnexLibrary(), this.getAnnexLibrary(), null, "parsedAnnexLibrary",
 				null, 0, 1, DefaultAnnexLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(defaultAnnexSubclauseEClass, DefaultAnnexSubclause.class, "DefaultAnnexSubclause", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDefaultAnnexSubclause_SourceText(), getString(), "sourceText", null, 1, 1,
+		initEAttribute(getDefaultAnnexSubclause_SourceText(), this.getString(), "sourceText", null, 1, 1,
 				DefaultAnnexSubclause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDefaultAnnexSubclause_ParsedAnnexSubclause(), getAnnexSubclause(), null,
+		initEReference(getDefaultAnnexSubclause_ParsedAnnexSubclause(), this.getAnnexSubclause(), null,
 				"parsedAnnexSubclause", null, 0, 1, DefaultAnnexSubclause.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(publicPackageSectionEClass, PublicPackageSection.class, "PublicPackageSection", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPublicPackageSection_PrivateSection(), getPrivatePackageSection(),
-				getPrivatePackageSection_PublicSection(), "privateSection", null, 0, 1, PublicPackageSection.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getPublicPackageSection_PrivateSection(), this.getPrivatePackageSection(),
+				this.getPrivatePackageSection_PublicSection(), "privateSection", null, 0, 1, PublicPackageSection.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				IS_DERIVED, !IS_ORDERED);
 
 		initEClass(packageSectionEClass, PackageSection.class, "PackageSection", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPackageSection_OwnedPackageRename(), getPackageRename(), null, "ownedPackageRename", null, 0,
-				-1, PackageSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getPackageSection_OwnedPackageRename(), this.getPackageRename(), null, "ownedPackageRename",
+				null, 0, -1, PackageSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPackageSection_OwnedComponentTypeRename(), getComponentTypeRename(), null,
+		initEReference(getPackageSection_OwnedComponentTypeRename(), this.getComponentTypeRename(), null,
 				"ownedComponentTypeRename", null, 0, -1, PackageSection.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPackageSection_OwnedClassifier(), getClassifier(), null, "ownedClassifier", null, 0, -1,
+		initEReference(getPackageSection_OwnedClassifier(), this.getClassifier(), null, "ownedClassifier", null, 0, -1,
 				PackageSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPackageSection_OwnedFeatureGroupTypeRename(), getFeatureGroupTypeRename(), null,
+		initEReference(getPackageSection_OwnedFeatureGroupTypeRename(), this.getFeatureGroupTypeRename(), null,
 				"ownedFeatureGroupTypeRename", null, 0, -1, PackageSection.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPackageSection_OwnedAnnexLibrary(), getAnnexLibrary(), null, "ownedAnnexLibrary", null, 0,
-				-1, PackageSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getPackageSection_OwnedAnnexLibrary(), this.getAnnexLibrary(), null, "ownedAnnexLibrary", null,
+				0, -1, PackageSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPackageSection_ImportedUnit(), getModelUnit(), null, "importedUnit", null, 0, -1,
+		initEReference(getPackageSection_ImportedUnit(), this.getModelUnit(), null, "importedUnit", null, 0, -1,
 				PackageSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPackageSection_NoAnnexes(), getBoolean(), "noAnnexes", null, 1, 1, PackageSection.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPackageSection_NoProperties(), getBoolean(), "noProperties", null, 1, 1,
+		initEAttribute(getPackageSection_NoAnnexes(), this.getBoolean(), "noAnnexes", null, 1, 1, PackageSection.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getPackageSection_NoProperties(), this.getBoolean(), "noProperties", null, 1, 1,
 				PackageSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, !IS_ORDERED);
 
 		initEClass(packageRenameEClass, PackageRename.class, "PackageRename", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPackageRename_RenamedPackage(), getAadlPackage(), null, "renamedPackage", null, 1, 1,
+		initEReference(getPackageRename_RenamedPackage(), this.getAadlPackage(), null, "renamedPackage", null, 1, 1,
 				PackageRename.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPackageRename_RenameAll(), getBoolean(), "renameAll", null, 1, 1, PackageRename.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPackageRename_RenameAll(), this.getBoolean(), "renameAll", null, 1, 1, PackageRename.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(aadlPackageEClass, AadlPackage.class, "AadlPackage", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAadlPackage_OwnedPublicSection(), getPublicPackageSection(), null, "ownedPublicSection",
+		initEReference(getAadlPackage_OwnedPublicSection(), this.getPublicPackageSection(), null, "ownedPublicSection",
 				null, 0, 1, AadlPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAadlPackage_OwnedPrivateSection(), getPrivatePackageSection(), null, "ownedPrivateSection",
-				null, 0, 1, AadlPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAadlPackage_PublicSection(), getPublicPackageSection(), null, "publicSection", null, 0, 1,
-				AadlPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getAadlPackage_OwnedPrivateSection(), this.getPrivatePackageSection(), null,
+				"ownedPrivateSection", null, 0, 1, AadlPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAadlPackage_PublicSection(), this.getPublicPackageSection(), null, "publicSection", null, 0,
+				1, AadlPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAadlPackage_PrivateSection(), getPrivatePackageSection(), null, "privateSection", null, 0, 1,
-				AadlPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getAadlPackage_PrivateSection(), this.getPrivatePackageSection(), null, "privateSection", null,
+				0, 1, AadlPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(modelUnitEClass, ModelUnit.class, "ModelUnit", IS_ABSTRACT, !IS_INTERFACE,
@@ -11633,57 +11672,57 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(privatePackageSectionEClass, PrivatePackageSection.class, "PrivatePackageSection", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPrivatePackageSection_PublicSection(), getPublicPackageSection(),
-				getPublicPackageSection_PrivateSection(), "publicSection", null, 0, 1, PrivatePackageSection.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getPrivatePackageSection_PublicSection(), this.getPublicPackageSection(),
+				this.getPublicPackageSection_PrivateSection(), "publicSection", null, 0, 1, PrivatePackageSection.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				IS_DERIVED, !IS_ORDERED);
 
 		initEClass(componentTypeRenameEClass, ComponentTypeRename.class, "ComponentTypeRename", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getComponentTypeRename_Category(), getComponentCategory(), "category", null, 1, 1,
+		initEAttribute(getComponentTypeRename_Category(), this.getComponentCategory(), "category", null, 1, 1,
 				ComponentTypeRename.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentTypeRename_RenamedComponentType(), getComponentType(), null, "renamedComponentType",
-				null, 1, 1, ComponentTypeRename.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getComponentTypeRename_RenamedComponentType(), this.getComponentType(), null,
+				"renamedComponentType", null, 1, 1, ComponentTypeRename.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(featureGroupTypeRenameEClass, FeatureGroupTypeRename.class, "FeatureGroupTypeRename", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeatureGroupTypeRename_RenamedFeatureGroupType(), getFeatureGroupType(), null,
+		initEReference(getFeatureGroupTypeRename_RenamedFeatureGroupType(), this.getFeatureGroupType(), null,
 				"renamedFeatureGroupType", null, 1, 1, FeatureGroupTypeRename.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(componentPrototypeBindingEClass, ComponentPrototypeBinding.class, "ComponentPrototypeBinding",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComponentPrototypeBinding_Actual(), getComponentPrototypeActual(), null, "actual", null, 1,
-				-1, ComponentPrototypeBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getComponentPrototypeBinding_Actual(), this.getComponentPrototypeActual(), null, "actual", null,
+				1, -1, ComponentPrototypeBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentPrototypeActualEClass, ComponentPrototypeActual.class, "ComponentPrototypeActual",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getComponentPrototypeActual_Category(), getComponentCategory(), "category", null, 1, 1,
+		initEAttribute(getComponentPrototypeActual_Category(), this.getComponentCategory(), "category", null, 1, 1,
 				ComponentPrototypeActual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentPrototypeActual_Binding(), getPrototypeBinding(), null, "binding", null, 0, -1,
+		initEReference(getComponentPrototypeActual_Binding(), this.getPrototypeBinding(), null, "binding", null, 0, -1,
 				ComponentPrototypeActual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponentPrototypeActual_SubcomponentType(), getSubcomponentType(), null, "subcomponentType",
-				null, 1, 1, ComponentPrototypeActual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getComponentPrototypeActual_SubcomponentType(), this.getSubcomponentType(), null,
+				"subcomponentType", null, 1, 1, ComponentPrototypeActual.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(featureGroupPrototypeBindingEClass, FeatureGroupPrototypeBinding.class,
 				"FeatureGroupPrototypeBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeatureGroupPrototypeBinding_Actual(), getFeatureGroupPrototypeActual(), null, "actual",
+		initEReference(getFeatureGroupPrototypeBinding_Actual(), this.getFeatureGroupPrototypeActual(), null, "actual",
 				null, 1, 1, FeatureGroupPrototypeBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(featureGroupPrototypeActualEClass, FeatureGroupPrototypeActual.class, "FeatureGroupPrototypeActual",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeatureGroupPrototypeActual_Binding(), getPrototypeBinding(), null, "binding", null, 0, -1,
-				FeatureGroupPrototypeActual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getFeatureGroupPrototypeActual_Binding(), this.getPrototypeBinding(), null, "binding", null, 0,
+				-1, FeatureGroupPrototypeActual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeatureGroupPrototypeActual_FeatureType(), getFeatureType(), null, "featureType", null, 1, 1,
-				FeatureGroupPrototypeActual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getFeatureGroupPrototypeActual_FeatureType(), this.getFeatureType(), null, "featureType", null,
+				1, 1, FeatureGroupPrototypeActual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(featurePrototypeActualEClass, FeaturePrototypeActual.class, "FeaturePrototypeActual", IS_ABSTRACT,
@@ -11691,112 +11730,115 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(featurePrototypeBindingEClass, FeaturePrototypeBinding.class, "FeaturePrototypeBinding",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeaturePrototypeBinding_Actual(), getFeaturePrototypeActual(), null, "actual", null, 1, 1,
-				FeaturePrototypeBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getFeaturePrototypeBinding_Actual(), this.getFeaturePrototypeActual(), null, "actual", null, 1,
+				1, FeaturePrototypeBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(accessSpecificationEClass, AccessSpecification.class, "AccessSpecification", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAccessSpecification_Kind(), getAccessType(), "kind", null, 1, 1, AccessSpecification.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAccessSpecification_Category(), getAccessCategory(), "category", null, 1, 1,
+		initEAttribute(getAccessSpecification_Kind(), this.getAccessType(), "kind", null, 1, 1,
 				AccessSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAccessSpecification_Classifier(), getComponentClassifier(), null, "classifier", null, 0, 1,
-				AccessSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEAttribute(getAccessSpecification_Category(), this.getAccessCategory(), "category", null, 1, 1,
+				AccessSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAccessSpecification_Classifier(), this.getComponentClassifier(), null, "classifier", null, 0,
+				1, AccessSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAccessSpecification_ComponentPrototype(), getComponentPrototype(), null,
-				"componentPrototype", null, 0, 1, AccessSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAccessSpecification_ComponentPrototype(), this.getComponentPrototype(), null,
+				"componentPrototype", null, 0, 1, AccessSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(portSpecificationEClass, PortSpecification.class, "PortSpecification", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPortSpecification_Direction(), getDirectionType(), "direction", null, 1, 1,
+		initEAttribute(getPortSpecification_Direction(), this.getDirectionType(), "direction", null, 1, 1,
 				PortSpecification.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPortSpecification_Category(), getPortCategory(), "category", null, 1, 1,
+		initEAttribute(getPortSpecification_Category(), this.getPortCategory(), "category", null, 1, 1,
 				PortSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, !IS_ORDERED);
-		initEReference(getPortSpecification_Classifier(), getComponentClassifier(), null, "classifier", null, 0, 1,
+		initEReference(getPortSpecification_Classifier(), this.getComponentClassifier(), null, "classifier", null, 0, 1,
 				PortSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPortSpecification_ComponentPrototype(), getComponentPrototype(), null, "componentPrototype",
-				null, 0, 1, PortSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPortSpecification_In(), getBoolean(), "in", null, 1, 1, PortSpecification.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPortSpecification_Out(), getBoolean(), "out", null, 1, 1, PortSpecification.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPortSpecification_ComponentPrototype(), this.getComponentPrototype(), null,
+				"componentPrototype", null, 0, 1, PortSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPortSpecification_In(), this.getBoolean(), "in", null, 1, 1, PortSpecification.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getPortSpecification_Out(), this.getBoolean(), "out", null, 1, 1, PortSpecification.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(featurePrototypeReferenceEClass, FeaturePrototypeReference.class, "FeaturePrototypeReference",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFeaturePrototypeReference_Direction(), getDirectionType(), "direction", null, 1, 1,
+		initEAttribute(getFeaturePrototypeReference_Direction(), this.getDirectionType(), "direction", null, 1, 1,
 				FeaturePrototypeReference.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getFeaturePrototypeReference_Prototype(), getFeaturePrototype(), null, "prototype", null, 1, 1,
-				FeaturePrototypeReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getFeaturePrototypeReference_Prototype(), this.getFeaturePrototype(), null, "prototype", null, 1,
+				1, FeaturePrototypeReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFeaturePrototypeReference_In(), getBoolean(), "in", null, 1, 1,
+		initEAttribute(getFeaturePrototypeReference_In(), this.getBoolean(), "in", null, 1, 1,
 				FeaturePrototypeReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFeaturePrototypeReference_Out(), getBoolean(), "out", null, 1, 1,
+		initEAttribute(getFeaturePrototypeReference_Out(), this.getBoolean(), "out", null, 1, 1,
 				FeaturePrototypeReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(subprogramCallSequenceEClass, SubprogramCallSequence.class, "SubprogramCallSequence", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubprogramCallSequence_OwnedSubprogramCall(), getSubprogramCall(), null,
+		initEReference(getSubprogramCallSequence_OwnedSubprogramCall(), this.getSubprogramCall(), null,
 				"ownedSubprogramCall", null, 0, -1, SubprogramCallSequence.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(subprogramCallEClass, SubprogramCall.class, "SubprogramCall", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubprogramCall_CalledSubprogram(), getCalledSubprogram(), null, "calledSubprogram", null, 0,
-				1, SubprogramCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubprogramCall_Context(), getCallContext(), null, "context", null, 0, 1,
+		initEReference(getSubprogramCall_CalledSubprogram(), this.getCalledSubprogram(), null, "calledSubprogram", null,
+				0, 1, SubprogramCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSubprogramCall_Context(), this.getCallContext(), null, "context", null, 0, 1,
 				SubprogramCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(behavioredImplementationEClass, BehavioredImplementation.class, "BehavioredImplementation",
 				IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBehavioredImplementation_SubprogramCall(), getSubprogramCall(), null, "subprogramCall", null,
-				0, -1, BehavioredImplementation.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getBehavioredImplementation_SubprogramCall(), this.getSubprogramCall(), null, "subprogramCall",
+				null, 0, -1, BehavioredImplementation.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getBehavioredImplementation_OwnedSubprogramCallSequence(), getSubprogramCallSequence(), null,
-				"ownedSubprogramCallSequence", null, 0, -1, BehavioredImplementation.class, !IS_TRANSIENT,
+		initEReference(getBehavioredImplementation_OwnedSubprogramCallSequence(), this.getSubprogramCallSequence(),
+				null, "ownedSubprogramCallSequence", null, 0, -1, BehavioredImplementation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
 
-		addEOperation(behavioredImplementationEClass, getSubprogramCall(), "subprogramCalls", 0, -1, IS_UNIQUE,
+		addEOperation(behavioredImplementationEClass, this.getSubprogramCall(), "subprogramCalls", 0, -1, IS_UNIQUE,
 				!IS_ORDERED);
 
 		initEClass(abstractTypeEClass, AbstractType.class, "AbstractType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractType_OwnedBusAccess(), getBusAccess(), null, "ownedBusAccess", null, 0, -1,
+		initEReference(getAbstractType_OwnedBusAccess(), this.getBusAccess(), null, "ownedBusAccess", null, 0, -1,
 				AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractType_OwnedDataAccess(), getDataAccess(), null, "ownedDataAccess", null, 0, -1,
+		initEReference(getAbstractType_OwnedDataAccess(), this.getDataAccess(), null, "ownedDataAccess", null, 0, -1,
 				AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractType_OwnedSubprogramAccess(), getSubprogramAccess(), null, "ownedSubprogramAccess",
-				null, 0, -1, AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getAbstractType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null,
+				"ownedSubprogramAccess", null, 0, -1, AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAbstractType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
+				AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAbstractType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
+				AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAbstractType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort", null,
+				0, -1, AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
-				AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
-				AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null, 0,
-				-1, AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
+		initEReference(getAbstractType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
 				"ownedSubprogramGroupAccess", null, 0, -1, AbstractType.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(abstractClassifierEClass, AbstractClassifier.class, "AbstractClassifier", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(abstractClassifierEClass, AbstractClassifier.class, "AbstractClassifier", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(virtualProcessorSubcomponentTypeEClass, VirtualProcessorSubcomponentType.class,
 				"VirtualProcessorSubcomponentType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -11813,8 +11855,8 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		initEClass(systemSubcomponentTypeEClass, SystemSubcomponentType.class, "SystemSubcomponentType", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(processSubcomponentTypeEClass, ProcessSubcomponentType.class, "ProcessSubcomponentType",
-				IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(processSubcomponentTypeEClass, ProcessSubcomponentType.class, "ProcessSubcomponentType", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(memorySubcomponentTypeEClass, MemorySubcomponentType.class, "MemorySubcomponentType", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -11827,65 +11869,66 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(abstractImplementationEClass, AbstractImplementation.class, "AbstractImplementation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractImplementation_OwnedBusSubcomponent(), getBusSubcomponent(), null,
+		initEReference(getAbstractImplementation_OwnedBusSubcomponent(), this.getBusSubcomponent(), null,
 				"ownedBusSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedDataSubcomponent(), getDataSubcomponent(), null,
+		initEReference(getAbstractImplementation_OwnedDataSubcomponent(), this.getDataSubcomponent(), null,
 				"ownedDataSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedDeviceSubcomponent(), getDeviceSubcomponent(), null,
+		initEReference(getAbstractImplementation_OwnedDeviceSubcomponent(), this.getDeviceSubcomponent(), null,
 				"ownedDeviceSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedMemorySubcomponent(), getMemorySubcomponent(), null,
+		initEReference(getAbstractImplementation_OwnedMemorySubcomponent(), this.getMemorySubcomponent(), null,
 				"ownedMemorySubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedProcessSubcomponent(), getProcessSubcomponent(), null,
+		initEReference(getAbstractImplementation_OwnedProcessSubcomponent(), this.getProcessSubcomponent(), null,
 				"ownedProcessSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedProcessorSubcomponent(), getProcessorSubcomponent(), null,
+		initEReference(getAbstractImplementation_OwnedProcessorSubcomponent(), this.getProcessorSubcomponent(), null,
 				"ownedProcessorSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedSystemSubcomponent(), getSystemSubcomponent(), null,
+		initEReference(getAbstractImplementation_OwnedSystemSubcomponent(), this.getSystemSubcomponent(), null,
 				"ownedSystemSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedSubprogramSubcomponent(), getSubprogramSubcomponent(), null,
+		initEReference(getAbstractImplementation_OwnedSubprogramSubcomponent(), this.getSubprogramSubcomponent(), null,
 				"ownedSubprogramSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedSubprogramGroupSubcomponent(), getSubprogramGroupSubcomponent(),
-				null, "ownedSubprogramGroupSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedThreadSubcomponent(), getThreadSubcomponent(), null,
+		initEReference(getAbstractImplementation_OwnedSubprogramGroupSubcomponent(),
+				this.getSubprogramGroupSubcomponent(), null, "ownedSubprogramGroupSubcomponent", null, 0, -1,
+				AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAbstractImplementation_OwnedThreadSubcomponent(), this.getThreadSubcomponent(), null,
 				"ownedThreadSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedThreadGroupSubcomponent(), getThreadGroupSubcomponent(), null,
-				"ownedThreadGroupSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getAbstractImplementation_OwnedVirtualBusSubcomponent(), getVirtualBusSubcomponent(), null,
+		initEReference(getAbstractImplementation_OwnedThreadGroupSubcomponent(), this.getThreadGroupSubcomponent(),
+				null, "ownedThreadGroupSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEReference(getAbstractImplementation_OwnedVirtualBusSubcomponent(), this.getVirtualBusSubcomponent(), null,
 				"ownedVirtualBusSubcomponent", null, 0, -1, AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getAbstractImplementation_OwnedVirtualProcessorSubcomponent(),
-				getVirtualProcessorSubcomponent(), null, "ownedVirtualProcessorSubcomponent", null, 0, -1,
+				this.getVirtualProcessorSubcomponent(), null, "ownedVirtualProcessorSubcomponent", null, 0, -1,
 				AbstractImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(busSubcomponentEClass, BusSubcomponent.class, "BusSubcomponent", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBusSubcomponent_BusSubcomponentType(), getBusSubcomponentType(), null, "busSubcomponentType",
-				null, 0, 1, BusSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBusSubcomponent_BusSubcomponentType(), this.getBusSubcomponentType(), null,
+				"busSubcomponentType", null, 0, 1, BusSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(busEClass, Bus.class, "Bus", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dataSubcomponentEClass, DataSubcomponent.class, "DataSubcomponent", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDataSubcomponent_DataSubcomponentType(), getDataSubcomponentType(), null,
+		initEReference(getDataSubcomponent_DataSubcomponentType(), this.getDataSubcomponentType(), null,
 				"dataSubcomponentType", null, 0, 1, DataSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(deviceSubcomponentEClass, DeviceSubcomponent.class, "DeviceSubcomponent", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDeviceSubcomponent_DeviceSubcomponentType(), getDeviceSubcomponentType(), null,
+		initEReference(getDeviceSubcomponent_DeviceSubcomponentType(), this.getDeviceSubcomponentType(), null,
 				"deviceSubcomponentType", null, 0, 1, DeviceSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11893,7 +11936,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(memorySubcomponentEClass, MemorySubcomponent.class, "MemorySubcomponent", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMemorySubcomponent_MemorySubcomponentType(), getMemorySubcomponentType(), null,
+		initEReference(getMemorySubcomponent_MemorySubcomponentType(), this.getMemorySubcomponentType(), null,
 				"memorySubcomponentType", null, 0, 1, MemorySubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11901,7 +11944,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(processSubcomponentEClass, ProcessSubcomponent.class, "ProcessSubcomponent", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProcessSubcomponent_ProcessSubcomponentType(), getProcessSubcomponentType(), null,
+		initEReference(getProcessSubcomponent_ProcessSubcomponentType(), this.getProcessSubcomponentType(), null,
 				"processSubcomponentType", null, 0, 1, ProcessSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11910,7 +11953,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(processorSubcomponentEClass, ProcessorSubcomponent.class, "ProcessorSubcomponent", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProcessorSubcomponent_ProcessorSubcomponentType(), getProcessorSubcomponentType(), null,
+		initEReference(getProcessorSubcomponent_ProcessorSubcomponentType(), this.getProcessorSubcomponentType(), null,
 				"processorSubcomponentType", null, 0, 1, ProcessorSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11919,7 +11962,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(systemSubcomponentEClass, SystemSubcomponent.class, "SystemSubcomponent", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystemSubcomponent_SystemSubcomponentType(), getSystemSubcomponentType(), null,
+		initEReference(getSystemSubcomponent_SystemSubcomponentType(), this.getSystemSubcomponentType(), null,
 				"systemSubcomponentType", null, 0, 1, SystemSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11928,14 +11971,15 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(subprogramSubcomponentEClass, SubprogramSubcomponent.class, "SubprogramSubcomponent", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubprogramSubcomponent_SubprogramSubcomponentType(), getSubprogramSubcomponentType(), null,
-				"subprogramSubcomponentType", null, 0, 1, SubprogramSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSubprogramSubcomponent_SubprogramSubcomponentType(), this.getSubprogramSubcomponentType(),
+				null, "subprogramSubcomponentType", null, 0, 1, SubprogramSubcomponent.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(subprogramGroupSubcomponentEClass, SubprogramGroupSubcomponent.class, "SubprogramGroupSubcomponent",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSubprogramGroupSubcomponent_SubprogramGroupSubcomponentType(),
-				getSubprogramGroupSubcomponentType(), null, "subprogramGroupSubcomponentType", null, 0, 1,
+				this.getSubprogramGroupSubcomponentType(), null, "subprogramGroupSubcomponentType", null, 0, 1,
 				SubprogramGroupSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11944,7 +11988,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(threadSubcomponentEClass, ThreadSubcomponent.class, "ThreadSubcomponent", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getThreadSubcomponent_ThreadSubcomponentType(), getThreadSubcomponentType(), null,
+		initEReference(getThreadSubcomponent_ThreadSubcomponentType(), this.getThreadSubcomponentType(), null,
 				"threadSubcomponentType", null, 0, 1, ThreadSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11953,7 +11997,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(threadGroupSubcomponentEClass, ThreadGroupSubcomponent.class, "ThreadGroupSubcomponent",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getThreadGroupSubcomponent_ThreadGroupSubcomponentType(), getThreadGroupSubcomponentType(),
+		initEReference(getThreadGroupSubcomponent_ThreadGroupSubcomponentType(), this.getThreadGroupSubcomponentType(),
 				null, "threadGroupSubcomponentType", null, 0, 1, ThreadGroupSubcomponent.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
@@ -11963,9 +12007,10 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(virtualBusSubcomponentEClass, VirtualBusSubcomponent.class, "VirtualBusSubcomponent", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVirtualBusSubcomponent_VirtualBusSubcomponentType(), getVirtualBusSubcomponentType(), null,
-				"virtualBusSubcomponentType", null, 0, 1, VirtualBusSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getVirtualBusSubcomponent_VirtualBusSubcomponentType(), this.getVirtualBusSubcomponentType(),
+				null, "virtualBusSubcomponentType", null, 0, 1, VirtualBusSubcomponent.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(virtualBusEClass, VirtualBus.class, "VirtualBus", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -11973,7 +12018,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		initEClass(virtualProcessorSubcomponentEClass, VirtualProcessorSubcomponent.class,
 				"VirtualProcessorSubcomponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVirtualProcessorSubcomponent_VirtualProcessorSubcomponentType(),
-				getVirtualProcessorSubcomponentType(), null, "virtualProcessorSubcomponentType", null, 0, 1,
+				this.getVirtualProcessorSubcomponentType(), null, "virtualProcessorSubcomponentType", null, 0, 1,
 				VirtualProcessorSubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -11987,45 +12032,46 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(busTypeEClass, BusType.class, "BusType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBusType_OwnedBusAccess(), getBusAccess(), null, "ownedBusAccess", null, 0, -1, BusType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBusType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1, BusType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBusType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null, 0, -1,
+		initEReference(getBusType_OwnedBusAccess(), this.getBusAccess(), null, "ownedBusAccess", null, 0, -1,
 				BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBusType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1, BusType.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBusType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
+				BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBusType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort", null, 0,
+				-1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBusType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
+				BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(busImplementationEClass, BusImplementation.class, "BusImplementation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBusImplementation_OwnedVirtualBusSubcomponent(), getVirtualBusSubcomponent(), null,
+		initEReference(getBusImplementation_OwnedVirtualBusSubcomponent(), this.getVirtualBusSubcomponent(), null,
 				"ownedVirtualBusSubcomponent", null, 0, -1, BusImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(busPrototypeEClass, BusPrototype.class, "BusPrototype", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDataType_OwnedSubprogramAccess(), getSubprogramAccess(), null, "ownedSubprogramAccess", null,
-				0, -1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDataType_OwnedDataAccess(), getDataAccess(), null, "ownedDataAccess", null, 0, -1,
+		initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDataType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null, "ownedSubprogramAccess",
+				null, 0, -1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDataType_OwnedDataAccess(), this.getDataAccess(), null, "ownedDataAccess", null, 0, -1,
 				DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDataType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
+		initEReference(getDataType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
 				"ownedSubprogramGroupAccess", null, 0, -1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(dataImplementationEClass, DataImplementation.class, "DataImplementation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDataImplementation_OwnedDataSubcomponent(), getDataSubcomponent(), null,
+		initEReference(getDataImplementation_OwnedDataSubcomponent(), this.getDataSubcomponent(), null,
 				"ownedDataSubcomponent", null, 0, -1, DataImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDataImplementation_OwnedSubprogramSubcomponent(), getSubprogramSubcomponent(), null,
+		initEReference(getDataImplementation_OwnedSubprogramSubcomponent(), this.getSubprogramSubcomponent(), null,
 				"ownedSubprogramSubcomponent", null, 0, -1, DataImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12037,34 +12083,34 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(deviceTypeEClass, DeviceType.class, "DeviceType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDeviceType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
+		initEReference(getDeviceType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
 				DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDeviceType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null, 0, -1,
+		initEReference(getDeviceType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort", null, 0,
+				-1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDeviceType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
 				DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDeviceType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
+		initEReference(getDeviceType_OwnedBusAccess(), this.getBusAccess(), null, "ownedBusAccess", null, 0, -1,
 				DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDeviceType_OwnedBusAccess(), getBusAccess(), null, "ownedBusAccess", null, 0, -1,
-				DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDeviceType_OwnedSubprogramAccess(), getSubprogramAccess(), null, "ownedSubprogramAccess",
+		initEReference(getDeviceType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null, "ownedSubprogramAccess",
 				null, 0, -1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDeviceType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
-				"ownedSubprogramGroupAccess", null, 0, -1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDeviceType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
+				"ownedSubprogramGroupAccess", null, 0, -1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(deviceImplementationEClass, DeviceImplementation.class, "DeviceImplementation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDeviceImplementation_OwnedBusSubcomponent(), getBusSubcomponent(), null,
+		initEReference(getDeviceImplementation_OwnedBusSubcomponent(), this.getBusSubcomponent(), null,
 				"ownedBusSubcomponent", null, 0, -1, DeviceImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDeviceImplementation_OwnedDataSubcomponent(), getDataSubcomponent(), null,
+		initEReference(getDeviceImplementation_OwnedDataSubcomponent(), this.getDataSubcomponent(), null,
 				"ownedDataSubcomponent", null, 0, -1, DeviceImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getDeviceImplementation_OwnedVirtualBusSubcomponent(), getVirtualBusSubcomponent(), null,
+		initEReference(getDeviceImplementation_OwnedVirtualBusSubcomponent(), this.getVirtualBusSubcomponent(), null,
 				"ownedVirtualBusSubcomponent", null, 0, -1, DeviceImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12076,25 +12122,25 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(memoryTypeEClass, MemoryType.class, "MemoryType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMemoryType_OwnedBusAccess(), getBusAccess(), null, "ownedBusAccess", null, 0, -1,
+		initEReference(getMemoryType_OwnedBusAccess(), this.getBusAccess(), null, "ownedBusAccess", null, 0, -1,
 				MemoryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getMemoryType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
+		initEReference(getMemoryType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
 				MemoryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getMemoryType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null, 0, -1,
-				MemoryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getMemoryType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort", null, 0,
+				-1, MemoryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getMemoryType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
+		initEReference(getMemoryType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
 				MemoryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(memoryImplementationEClass, MemoryImplementation.class, "MemoryImplementation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMemoryImplementation_OwnedBusSubcomponent(), getBusSubcomponent(), null,
+		initEReference(getMemoryImplementation_OwnedBusSubcomponent(), this.getBusSubcomponent(), null,
 				"ownedBusSubcomponent", null, 0, -1, MemoryImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getMemoryImplementation_OwnedMemorySubcomponent(), getMemorySubcomponent(), null,
+		initEReference(getMemoryImplementation_OwnedMemorySubcomponent(), this.getMemorySubcomponent(), null,
 				"ownedMemorySubcomponent", null, 0, -1, MemoryImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12103,32 +12149,32 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(subprogramTypeEClass, SubprogramType.class, "SubprogramType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubprogramType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null, 0,
-				-1, SubprogramType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubprogramType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
-				SubprogramType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubprogramType_OwnedParameter(), getParameter(), null, "ownedParameter", null, 0, -1,
-				SubprogramType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubprogramType_OwnedDataAccess(), getDataAccess(), null, "ownedDataAccess", null, 0, -1,
-				SubprogramType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubprogramType_OwnedSubprogramAccess(), getSubprogramAccess(), null, "ownedSubprogramAccess",
+		initEReference(getSubprogramType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort",
 				null, 0, -1, SubprogramType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubprogramType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
+		initEReference(getSubprogramType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
+				SubprogramType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSubprogramType_OwnedParameter(), this.getParameter(), null, "ownedParameter", null, 0, -1,
+				SubprogramType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSubprogramType_OwnedDataAccess(), this.getDataAccess(), null, "ownedDataAccess", null, 0, -1,
+				SubprogramType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSubprogramType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null,
+				"ownedSubprogramAccess", null, 0, -1, SubprogramType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSubprogramType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
 				"ownedSubprogramGroupAccess", null, 0, -1, SubprogramType.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(subprogramImplementationEClass, SubprogramImplementation.class, "SubprogramImplementation",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubprogramImplementation_OwnedDataSubcomponent(), getDataSubcomponent(), null,
+		initEReference(getSubprogramImplementation_OwnedDataSubcomponent(), this.getDataSubcomponent(), null,
 				"ownedDataSubcomponent", null, 0, -1, SubprogramImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubprogramImplementation_OwnedSubprogramSubcomponent(), getSubprogramSubcomponent(), null,
-				"ownedSubprogramSubcomponent", null, 0, -1, SubprogramImplementation.class, !IS_TRANSIENT,
+		initEReference(getSubprogramImplementation_OwnedSubprogramSubcomponent(), this.getSubprogramSubcomponent(),
+				null, "ownedSubprogramSubcomponent", null, 0, -1, SubprogramImplementation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
 
@@ -12140,24 +12186,24 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(subprogramGroupTypeEClass, SubprogramGroupType.class, "SubprogramGroupType", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubprogramGroupType_OwnedSubprogramAccess(), getSubprogramAccess(), null,
+		initEReference(getSubprogramGroupType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null,
 				"ownedSubprogramAccess", null, 0, -1, SubprogramGroupType.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubprogramGroupType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
+		initEReference(getSubprogramGroupType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
 				"ownedSubprogramGroupAccess", null, 0, -1, SubprogramGroupType.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(subprogramGroupImplementationEClass, SubprogramGroupImplementation.class,
 				"SubprogramGroupImplementation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubprogramGroupImplementation_OwnedSubprogramSubcomponent(), getSubprogramSubcomponent(),
+		initEReference(getSubprogramGroupImplementation_OwnedSubprogramSubcomponent(), this.getSubprogramSubcomponent(),
 				null, "ownedSubprogramSubcomponent", null, 0, -1, SubprogramGroupImplementation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
 		initEReference(getSubprogramGroupImplementation_OwnedSubprogramGroupSubcomponent(),
-				getSubprogramGroupSubcomponent(), null, "ownedSubprogramGroupSubcomponent", null, 0, -1,
+				this.getSubprogramGroupSubcomponent(), null, "ownedSubprogramGroupSubcomponent", null, 0, -1,
 				SubprogramGroupImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSubprogramGroupImplementation_OwnedDataSubcomponent(), getDataSubcomponent(), null,
+		initEReference(getSubprogramGroupImplementation_OwnedDataSubcomponent(), this.getDataSubcomponent(), null,
 				"ownedDataSubcomponent", null, 0, -1, SubprogramGroupImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12169,65 +12215,65 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(systemTypeEClass, SystemType.class, "SystemType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystemType_OwnedBusAccess(), getBusAccess(), null, "ownedBusAccess", null, 0, -1,
+		initEReference(getSystemType_OwnedBusAccess(), this.getBusAccess(), null, "ownedBusAccess", null, 0, -1,
 				SystemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemType_OwnedDataAccess(), getDataAccess(), null, "ownedDataAccess", null, 0, -1,
+		initEReference(getSystemType_OwnedDataAccess(), this.getDataAccess(), null, "ownedDataAccess", null, 0, -1,
 				SystemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
+		initEReference(getSystemType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
 				SystemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
-				"ownedSubprogramGroupAccess", null, 0, -1, SystemType.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemType_OwnedSubprogramAccess(), getSubprogramAccess(), null, "ownedSubprogramAccess",
+		initEReference(getSystemType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
+				"ownedSubprogramGroupAccess", null, 0, -1, SystemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSystemType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null, "ownedSubprogramAccess",
 				null, 0, -1, SystemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
+		initEReference(getSystemType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
 				SystemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null, 0, -1,
-				SystemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getSystemType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort", null, 0,
+				-1, SystemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(systemImplementationEClass, SystemImplementation.class, "SystemImplementation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystemImplementation_OwnedBusSubcomponent(), getBusSubcomponent(), null,
+		initEReference(getSystemImplementation_OwnedBusSubcomponent(), this.getBusSubcomponent(), null,
 				"ownedBusSubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemImplementation_OwnedDataSubcomponent(), getDataSubcomponent(), null,
+		initEReference(getSystemImplementation_OwnedDataSubcomponent(), this.getDataSubcomponent(), null,
 				"ownedDataSubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemImplementation_OwnedDeviceSubcomponent(), getDeviceSubcomponent(), null,
+		initEReference(getSystemImplementation_OwnedDeviceSubcomponent(), this.getDeviceSubcomponent(), null,
 				"ownedDeviceSubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemImplementation_OwnedMemorySubcomponent(), getMemorySubcomponent(), null,
+		initEReference(getSystemImplementation_OwnedMemorySubcomponent(), this.getMemorySubcomponent(), null,
 				"ownedMemorySubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemImplementation_OwnedProcessSubcomponent(), getProcessSubcomponent(), null,
+		initEReference(getSystemImplementation_OwnedProcessSubcomponent(), this.getProcessSubcomponent(), null,
 				"ownedProcessSubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemImplementation_OwnedProcessorSubcomponent(), getProcessorSubcomponent(), null,
+		initEReference(getSystemImplementation_OwnedProcessorSubcomponent(), this.getProcessorSubcomponent(), null,
 				"ownedProcessorSubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemImplementation_OwnedSubprogramSubcomponent(), getSubprogramSubcomponent(), null,
+		initEReference(getSystemImplementation_OwnedSubprogramSubcomponent(), this.getSubprogramSubcomponent(), null,
 				"ownedSubprogramSubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemImplementation_OwnedSubprogramGroupSubcomponent(), getSubprogramGroupSubcomponent(),
-				null, "ownedSubprogramGroupSubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
-		initEReference(getSystemImplementation_OwnedSystemSubcomponent(), getSystemSubcomponent(), null,
+		initEReference(getSystemImplementation_OwnedSubprogramGroupSubcomponent(),
+				this.getSubprogramGroupSubcomponent(), null, "ownedSubprogramGroupSubcomponent", null, 0, -1,
+				SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSystemImplementation_OwnedSystemSubcomponent(), this.getSystemSubcomponent(), null,
 				"ownedSystemSubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemImplementation_OwnedVirtualBusSubcomponent(), getVirtualBusSubcomponent(), null,
+		initEReference(getSystemImplementation_OwnedVirtualBusSubcomponent(), this.getVirtualBusSubcomponent(), null,
 				"ownedVirtualBusSubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSystemImplementation_OwnedVirtualProcessorSubcomponent(), getVirtualProcessorSubcomponent(),
-				null, "ownedVirtualProcessorSubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
+		initEReference(getSystemImplementation_OwnedVirtualProcessorSubcomponent(),
+				this.getVirtualProcessorSubcomponent(), null, "ownedVirtualProcessorSubcomponent", null, 0, -1,
+				SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(systemPrototypeEClass, SystemPrototype.class, "SystemPrototype", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -12237,38 +12283,38 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(processorTypeEClass, ProcessorType.class, "ProcessorType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProcessorType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
+		initEReference(getProcessorType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
 				ProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessorType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null, 0,
-				-1, ProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessorType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
-				ProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessorType_OwnedBusAccess(), getBusAccess(), null, "ownedBusAccess", null, 0, -1,
-				ProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessorType_OwnedSubprogramAccess(), getSubprogramAccess(), null, "ownedSubprogramAccess",
-				null, 0, -1, ProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getProcessorType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort", null,
+				0, -1, ProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessorType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
+		initEReference(getProcessorType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
+				ProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getProcessorType_OwnedBusAccess(), this.getBusAccess(), null, "ownedBusAccess", null, 0, -1,
+				ProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getProcessorType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null,
+				"ownedSubprogramAccess", null, 0, -1, ProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getProcessorType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
 				"ownedSubprogramGroupAccess", null, 0, -1, ProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(processorImplementationEClass, ProcessorImplementation.class, "ProcessorImplementation",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProcessorImplementation_OwnedBusSubcomponent(), getBusSubcomponent(), null,
+		initEReference(getProcessorImplementation_OwnedBusSubcomponent(), this.getBusSubcomponent(), null,
 				"ownedBusSubcomponent", null, 0, -1, ProcessorImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessorImplementation_OwnedMemorySubcomponent(), getMemorySubcomponent(), null,
+		initEReference(getProcessorImplementation_OwnedMemorySubcomponent(), this.getMemorySubcomponent(), null,
 				"ownedMemorySubcomponent", null, 0, -1, ProcessorImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessorImplementation_OwnedVirtualBusSubcomponent(), getVirtualBusSubcomponent(), null,
+		initEReference(getProcessorImplementation_OwnedVirtualBusSubcomponent(), this.getVirtualBusSubcomponent(), null,
 				"ownedVirtualBusSubcomponent", null, 0, -1, ProcessorImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getProcessorImplementation_OwnedVirtualProcessorSubcomponent(),
-				getVirtualProcessorSubcomponent(), null, "ownedVirtualProcessorSubcomponent", null, 0, -1,
+				this.getVirtualProcessorSubcomponent(), null, "ownedVirtualProcessorSubcomponent", null, 0, -1,
 				ProcessorImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12280,41 +12326,41 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(processTypeEClass, ProcessType.class, "ProcessType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProcessType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
+		initEReference(getProcessType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
 				ProcessType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null, 0,
-				-1, ProcessType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getProcessType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort", null,
+				0, -1, ProcessType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
+		initEReference(getProcessType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
 				ProcessType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessType_OwnedDataAccess(), getDataAccess(), null, "ownedDataAccess", null, 0, -1,
+		initEReference(getProcessType_OwnedDataAccess(), this.getDataAccess(), null, "ownedDataAccess", null, 0, -1,
 				ProcessType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessType_OwnedSubprogramAccess(), getSubprogramAccess(), null, "ownedSubprogramAccess",
-				null, 0, -1, ProcessType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
+		initEReference(getProcessType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null,
+				"ownedSubprogramAccess", null, 0, -1, ProcessType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getProcessType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
 				"ownedSubprogramGroupAccess", null, 0, -1, ProcessType.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(processImplementationEClass, ProcessImplementation.class, "ProcessImplementation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProcessImplementation_OwnedDataSubcomponent(), getDataSubcomponent(), null,
+		initEReference(getProcessImplementation_OwnedDataSubcomponent(), this.getDataSubcomponent(), null,
 				"ownedDataSubcomponent", null, 0, -1, ProcessImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessImplementation_OwnedSubprogramSubcomponent(), getSubprogramSubcomponent(), null,
+		initEReference(getProcessImplementation_OwnedSubprogramSubcomponent(), this.getSubprogramSubcomponent(), null,
 				"ownedSubprogramSubcomponent", null, 0, -1, ProcessImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessImplementation_OwnedSubprogramGroupSubcomponent(), getSubprogramGroupSubcomponent(),
-				null, "ownedSubprogramGroupSubcomponent", null, 0, -1, ProcessImplementation.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
-		initEReference(getProcessImplementation_OwnedThreadSubcomponent(), getThreadSubcomponent(), null,
+		initEReference(getProcessImplementation_OwnedSubprogramGroupSubcomponent(),
+				this.getSubprogramGroupSubcomponent(), null, "ownedSubprogramGroupSubcomponent", null, 0, -1,
+				ProcessImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getProcessImplementation_OwnedThreadSubcomponent(), this.getThreadSubcomponent(), null,
 				"ownedThreadSubcomponent", null, 0, -1, ProcessImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProcessImplementation_OwnedThreadGroupSubcomponent(), getThreadGroupSubcomponent(), null,
+		initEReference(getProcessImplementation_OwnedThreadGroupSubcomponent(), this.getThreadGroupSubcomponent(), null,
 				"ownedThreadGroupSubcomponent", null, 0, -1, ProcessImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12326,35 +12372,35 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(threadTypeEClass, ThreadType.class, "ThreadType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getThreadType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
+		initEReference(getThreadType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
 				ThreadType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null, 0, -1,
+		initEReference(getThreadType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort", null, 0,
+				-1, ThreadType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getThreadType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
 				ThreadType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
+		initEReference(getThreadType_OwnedDataAccess(), this.getDataAccess(), null, "ownedDataAccess", null, 0, -1,
 				ThreadType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadType_OwnedDataAccess(), getDataAccess(), null, "ownedDataAccess", null, 0, -1,
-				ThreadType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadType_OwnedSubprogramAccess(), getSubprogramAccess(), null, "ownedSubprogramAccess",
+		initEReference(getThreadType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null, "ownedSubprogramAccess",
 				null, 0, -1, ThreadType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
-				"ownedSubprogramGroupAccess", null, 0, -1, ThreadType.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getThreadType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
+				"ownedSubprogramGroupAccess", null, 0, -1, ThreadType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(threadImplementationEClass, ThreadImplementation.class, "ThreadImplementation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getThreadImplementation_OwnedSubprogramGroupSubcomponent(), getSubprogramGroupSubcomponent(),
-				null, "ownedSubprogramGroupSubcomponent", null, 0, -1, ThreadImplementation.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
-		initEReference(getThreadImplementation_OwnedSubprogramSubcomponent(), getSubprogramSubcomponent(), null,
+		initEReference(getThreadImplementation_OwnedSubprogramGroupSubcomponent(),
+				this.getSubprogramGroupSubcomponent(), null, "ownedSubprogramGroupSubcomponent", null, 0, -1,
+				ThreadImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getThreadImplementation_OwnedSubprogramSubcomponent(), this.getSubprogramSubcomponent(), null,
 				"ownedSubprogramSubcomponent", null, 0, -1, ThreadImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadImplementation_OwnedDataSubcomponent(), getDataSubcomponent(), null,
+		initEReference(getThreadImplementation_OwnedDataSubcomponent(), this.getDataSubcomponent(), null,
 				"ownedDataSubcomponent", null, 0, -1, ThreadImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12366,43 +12412,43 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(threadGroupTypeEClass, ThreadGroupType.class, "ThreadGroupType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getThreadGroupType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
+		initEReference(getThreadGroupType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
 				ThreadGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadGroupType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null,
-				0, -1, ThreadGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getThreadGroupType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort",
+				null, 0, -1, ThreadGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadGroupType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
+		initEReference(getThreadGroupType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
 				ThreadGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadGroupType_OwnedDataAccess(), getDataAccess(), null, "ownedDataAccess", null, 0, -1,
+		initEReference(getThreadGroupType_OwnedDataAccess(), this.getDataAccess(), null, "ownedDataAccess", null, 0, -1,
 				ThreadGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadGroupType_OwnedSubprogramAccess(), getSubprogramAccess(), null,
-				"ownedSubprogramAccess", null, 0, -1, ThreadGroupType.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadGroupType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
+		initEReference(getThreadGroupType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null,
+				"ownedSubprogramAccess", null, 0, -1, ThreadGroupType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getThreadGroupType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
 				"ownedSubprogramGroupAccess", null, 0, -1, ThreadGroupType.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(threadGroupImplementationEClass, ThreadGroupImplementation.class, "ThreadGroupImplementation",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getThreadGroupImplementation_OwnedDataSubcomponent(), getDataSubcomponent(), null,
+		initEReference(getThreadGroupImplementation_OwnedDataSubcomponent(), this.getDataSubcomponent(), null,
 				"ownedDataSubcomponent", null, 0, -1, ThreadGroupImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadGroupImplementation_OwnedThreadSubcomponent(), getThreadSubcomponent(), null,
+		initEReference(getThreadGroupImplementation_OwnedThreadSubcomponent(), this.getThreadSubcomponent(), null,
 				"ownedThreadSubcomponent", null, 0, -1, ThreadGroupImplementation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getThreadGroupImplementation_OwnedThreadGroupSubcomponent(), getThreadGroupSubcomponent(), null,
-				"ownedThreadGroupSubcomponent", null, 0, -1, ThreadGroupImplementation.class, !IS_TRANSIENT,
+		initEReference(getThreadGroupImplementation_OwnedThreadGroupSubcomponent(), this.getThreadGroupSubcomponent(),
+				null, "ownedThreadGroupSubcomponent", null, 0, -1, ThreadGroupImplementation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
-		initEReference(getThreadGroupImplementation_OwnedSubprogramSubcomponent(), getSubprogramSubcomponent(), null,
-				"ownedSubprogramSubcomponent", null, 0, -1, ThreadGroupImplementation.class, !IS_TRANSIENT,
+		initEReference(getThreadGroupImplementation_OwnedSubprogramSubcomponent(), this.getSubprogramSubcomponent(),
+				null, "ownedSubprogramSubcomponent", null, 0, -1, ThreadGroupImplementation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
 		initEReference(getThreadGroupImplementation_OwnedSubprogramGroupSubcomponent(),
-				getSubprogramGroupSubcomponent(), null, "ownedSubprogramGroupSubcomponent", null, 0, -1,
+				this.getSubprogramGroupSubcomponent(), null, "ownedSubprogramGroupSubcomponent", null, 0, -1,
 				ThreadGroupImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12414,20 +12460,20 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(virtualBusTypeEClass, VirtualBusType.class, "VirtualBusType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVirtualBusType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
+		initEReference(getVirtualBusType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
 				VirtualBusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getVirtualBusType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort", null, 0,
-				-1, VirtualBusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getVirtualBusType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort",
+				null, 0, -1, VirtualBusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getVirtualBusType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
+		initEReference(getVirtualBusType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
 				VirtualBusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(virtualBusImplementationEClass, VirtualBusImplementation.class, "VirtualBusImplementation",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVirtualBusImplementation_OwnedVirtualBusSubcomponent(), getVirtualBusSubcomponent(), null,
-				"ownedVirtualBusSubcomponent", null, 0, -1, VirtualBusImplementation.class, !IS_TRANSIENT,
+		initEReference(getVirtualBusImplementation_OwnedVirtualBusSubcomponent(), this.getVirtualBusSubcomponent(),
+				null, "ownedVirtualBusSubcomponent", null, 0, -1, VirtualBusImplementation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
 
@@ -12439,30 +12485,33 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(virtualProcessorTypeEClass, VirtualProcessorType.class, "VirtualProcessorType", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVirtualProcessorType_OwnedDataPort(), getDataPort(), null, "ownedDataPort", null, 0, -1,
+		initEReference(getVirtualProcessorType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
 				VirtualProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getVirtualProcessorType_OwnedEventDataPort(), getEventDataPort(), null, "ownedEventDataPort",
-				null, 0, -1, VirtualProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getVirtualProcessorType_OwnedEventDataPort(), this.getEventDataPort(), null,
+				"ownedEventDataPort", null, 0, -1, VirtualProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getVirtualProcessorType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0,
+				-1, VirtualProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getVirtualProcessorType_OwnedEventPort(), getEventPort(), null, "ownedEventPort", null, 0, -1,
-				VirtualProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getVirtualProcessorType_OwnedSubprogramAccess(), getSubprogramAccess(), null,
+		initEReference(getVirtualProcessorType_OwnedSubprogramAccess(), this.getSubprogramAccess(), null,
 				"ownedSubprogramAccess", null, 0, -1, VirtualProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getVirtualProcessorType_OwnedSubprogramGroupAccess(), getSubprogramGroupAccess(), null,
+		initEReference(getVirtualProcessorType_OwnedSubprogramGroupAccess(), this.getSubprogramGroupAccess(), null,
 				"ownedSubprogramGroupAccess", null, 0, -1, VirtualProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getVirtualProcessorType_OwnedBusAccess(), this.getBusAccess(), null, "ownedBusAccess", null, 0,
+				-1, VirtualProcessorType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(virtualProcessorImplementationEClass, VirtualProcessorImplementation.class,
 				"VirtualProcessorImplementation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVirtualProcessorImplementation_OwnedVirtualBusSubcomponent(), getVirtualBusSubcomponent(),
-				null, "ownedVirtualBusSubcomponent", null, 0, -1, VirtualProcessorImplementation.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
+		initEReference(getVirtualProcessorImplementation_OwnedVirtualBusSubcomponent(),
+				this.getVirtualBusSubcomponent(), null, "ownedVirtualBusSubcomponent", null, 0, -1,
+				VirtualProcessorImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getVirtualProcessorImplementation_OwnedVirtualProcessorSubcomponent(),
-				getVirtualProcessorSubcomponent(), null, "ownedVirtualProcessorSubcomponent", null, 0, -1,
+				this.getVirtualProcessorSubcomponent(), null, "ownedVirtualProcessorSubcomponent", null, 0, -1,
 				VirtualProcessorImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12471,68 +12520,69 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(basicPropertyAssociationEClass, BasicPropertyAssociation.class, "BasicPropertyAssociation",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBasicPropertyAssociation_Property(), getBasicProperty(), null, "property", null, 1, 1,
+		initEReference(getBasicPropertyAssociation_Property(), this.getBasicProperty(), null, "property", null, 1, 1,
 				BasicPropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBasicPropertyAssociation_OwnedValue(), getPropertyExpression(), null, "ownedValue", null, 1,
-				1, BasicPropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getBasicPropertyAssociation_OwnedValue(), this.getPropertyExpression(), null, "ownedValue", null,
+				1, 1, BasicPropertyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(propertyConstantEClass, PropertyConstant.class, "PropertyConstant", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPropertyConstant_ReferencedPropertyType(), getPropertyType(), null, "referencedPropertyType",
-				null, 0, 1, PropertyConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPropertyConstant_OwnedPropertyType(), getPropertyType(), null, "ownedPropertyType", null, 0,
-				1, PropertyConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getPropertyConstant_ReferencedPropertyType(), this.getPropertyType(), null,
+				"referencedPropertyType", null, 0, 1, PropertyConstant.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPropertyConstant_OwnedPropertyType(), this.getPropertyType(), null, "ownedPropertyType", null,
+				0, 1, PropertyConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPropertyConstant_ConstantValue(), getPropertyExpression(), null, "constantValue", null, 0, 1,
-				PropertyConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPropertyConstant_PropertyType(), getPropertyType(), null, "propertyType", null, 1, 1,
+		initEReference(getPropertyConstant_ConstantValue(), this.getPropertyExpression(), null, "constantValue", null,
+				0, 1, PropertyConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPropertyConstant_PropertyType(), this.getPropertyType(), null, "propertyType", null, 1, 1,
 				PropertyConstant.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		initEClass(stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStringLiteral_Value(), getString(), "value", null, 1, 1, StringLiteral.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getStringLiteral_Value(), this.getString(), "value", null, 1, 1, StringLiteral.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(propertyValueEClass, PropertyValue.class, "PropertyValue", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(numberValueEClass, NumberValue.class, "NumberValue", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNumberValue_Unit(), getUnitLiteral(), null, "unit", null, 0, 1, NumberValue.class,
+		initEReference(getNumberValue_Unit(), this.getUnitLiteral(), null, "unit", null, 0, 1, NumberValue.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = addEOperation(numberValueEClass, getReal(), "getScaledValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getUnitLiteral(), "target", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = addEOperation(numberValueEClass, this.getReal(), "getScaledValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getUnitLiteral(), "target", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		addEOperation(numberValueEClass, getReal(), "getScaledValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEOperation(numberValueEClass, this.getReal(), "getScaledValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = addEOperation(numberValueEClass, getReal(), "getScaledValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getString(), "target", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = addEOperation(numberValueEClass, this.getReal(), "getScaledValue", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getString(), "target", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(unitLiteralEClass, UnitLiteral.class, "UnitLiteral", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUnitLiteral_BaseUnit(), getUnitLiteral(), null, "baseUnit", null, 0, 1, UnitLiteral.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getUnitLiteral_Factor(), getNumberValue(), null, "factor", null, 0, 1, UnitLiteral.class,
+		initEReference(getUnitLiteral_BaseUnit(), this.getUnitLiteral(), null, "baseUnit", null, 0, 1,
+				UnitLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getUnitLiteral_Factor(), this.getNumberValue(), null, "factor", null, 0, 1, UnitLiteral.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = addEOperation(unitLiteralEClass, getReal(), "getAbsoluteFactor", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, getUnitLiteral(), "target", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = addEOperation(unitLiteralEClass, this.getReal(), "getAbsoluteFactor", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getUnitLiteral(), "target", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(enumerationLiteralEClass, EnumerationLiteral.class, "EnumerationLiteral", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(classifierValueEClass, ClassifierValue.class, "ClassifierValue", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getClassifierValue_Classifier(), getClassifier(), null, "classifier", null, 1, 1,
+		initEReference(getClassifierValue_Classifier(), this.getClassifier(), null, "classifier", null, 1, 1,
 				ClassifierValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12541,88 +12591,92 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(booleanLiteralEClass, BooleanLiteral.class, "BooleanLiteral", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBooleanLiteral_Value(), getBoolean(), "value", null, 1, 1, BooleanLiteral.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBooleanLiteral_Value(), this.getBoolean(), "value", null, 1, 1, BooleanLiteral.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(rangeValueEClass, RangeValue.class, "RangeValue", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRangeValue_Minimum(), getPropertyExpression(), null, "minimum", null, 1, 1, RangeValue.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRangeValue_Maximum(), getPropertyExpression(), null, "maximum", null, 1, 1, RangeValue.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRangeValue_Delta(), getPropertyExpression(), null, "delta", null, 0, 1, RangeValue.class,
+		initEReference(getRangeValue_Minimum(), this.getPropertyExpression(), null, "minimum", null, 1, 1,
+				RangeValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRangeValue_Maximum(), this.getPropertyExpression(), null, "maximum", null, 1, 1,
+				RangeValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRangeValue_Delta(), this.getPropertyExpression(), null, "delta", null, 0, 1, RangeValue.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(integerLiteralEClass, IntegerLiteral.class, "IntegerLiteral", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIntegerLiteral_Base(), getInteger(), "base", null, 0, 1, IntegerLiteral.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getIntegerLiteral_Value(), getInteger(), "value", null, 1, 1, IntegerLiteral.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIntegerLiteral_Base(), this.getInteger(), "base", null, 0, 1, IntegerLiteral.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+		initEAttribute(getIntegerLiteral_Value(), this.getInteger(), "value", null, 1, 1, IntegerLiteral.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(realLiteralEClass, RealLiteral.class, "RealLiteral", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRealLiteral_Value(), getReal(), "value", null, 1, 1, RealLiteral.class, !IS_TRANSIENT,
+		initEAttribute(getRealLiteral_Value(), this.getReal(), "value", null, 1, 1, RealLiteral.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOperation_Op(), getOperationKind(), "op", null, 1, 1, Operation.class, !IS_TRANSIENT,
+		initEAttribute(getOperation_Op(), this.getOperationKind(), "op", null, 1, 1, Operation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getOperation_OwnedPropertyExpression(), getPropertyExpression(), null,
+		initEReference(getOperation_OwnedPropertyExpression(), this.getPropertyExpression(), null,
 				"ownedPropertyExpression", null, 1, -1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(recordValueEClass, RecordValue.class, "RecordValue", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRecordValue_OwnedFieldValue(), getBasicPropertyAssociation(), null, "ownedFieldValue", null,
-				0, -1, RecordValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getRecordValue_OwnedFieldValue(), this.getBasicPropertyAssociation(), null, "ownedFieldValue",
+				null, 0, -1, RecordValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(computedValueEClass, ComputedValue.class, "ComputedValue", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getComputedValue_Function(), getString(), "function", null, 1, 1, ComputedValue.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getComputedValue_Function(), this.getString(), "function", null, 1, 1, ComputedValue.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(listValueEClass, ListValue.class, "ListValue", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getListValue_OwnedListElement(), getPropertyExpression(), null, "ownedListElement", null, 0, -1,
-				ListValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getListValue_OwnedListElement(), this.getPropertyExpression(), null, "ownedListElement", null, 0,
+				-1, ListValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedValueEClass, NamedValue.class, "NamedValue", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNamedValue_NamedValue(), getAbstractNamedValue(), null, "namedValue", null, 1, 1,
+		initEReference(getNamedValue_NamedValue(), this.getAbstractNamedValue(), null, "namedValue", null, 1, 1,
 				NamedValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(propertySetEClass, PropertySet.class, "PropertySet", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPropertySet_OwnedPropertyType(), getPropertyType(), null, "ownedPropertyType", null, 0, -1,
-				PropertySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPropertySet_OwnedProperty(), getProperty(), null, "ownedProperty", null, 0, -1,
-				PropertySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPropertySet_OwnedPropertyConstant(), getPropertyConstant(), null, "ownedPropertyConstant",
-				null, 0, -1, PropertySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPropertySet_ImportedUnit(), getModelUnit(), null, "importedUnit", null, 0, -1,
-				PropertySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPropertySet_OwnedAnnexSubclause(), getAnnexSubclause(), null, "ownedAnnexSubclause", null, 0,
+		initEReference(getPropertySet_OwnedPropertyType(), this.getPropertyType(), null, "ownedPropertyType", null, 0,
 				-1, PropertySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPropertySet_OwnedProperty(), this.getProperty(), null, "ownedProperty", null, 0, -1,
+				PropertySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPropertySet_OwnedPropertyConstant(), this.getPropertyConstant(), null,
+				"ownedPropertyConstant", null, 0, -1, PropertySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPropertySet_ImportedUnit(), this.getModelUnit(), null, "importedUnit", null, 0, -1,
+				PropertySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPropertySet_OwnedAnnexSubclause(), this.getAnnexSubclause(), null, "ownedAnnexSubclause",
+				null, 0, -1, PropertySet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(globalNamespaceEClass, GlobalNamespace.class, "GlobalNamespace", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGlobalNamespace_Package(), getPublicPackageSection(), null, "package", null, 0, -1,
+		initEReference(getGlobalNamespace_Package(), this.getPublicPackageSection(), null, "package", null, 0, -1,
 				GlobalNamespace.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getGlobalNamespace_PropertySet(), getPropertySet(), null, "propertySet", null, 0, -1,
+		initEReference(getGlobalNamespace_PropertySet(), this.getPropertySet(), null, "propertySet", null, 0, -1,
 				GlobalNamespace.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12640,16 +12694,16 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(numberTypeEClass, NumberType.class, "NumberType", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNumberType_OwnedUnitsType(), getUnitsType(), null, "ownedUnitsType", null, 0, 1,
+		initEReference(getNumberType_OwnedUnitsType(), this.getUnitsType(), null, "ownedUnitsType", null, 0, 1,
 				NumberType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getNumberType_ReferencedUnitsType(), getUnitsType(), null, "referencedUnitsType", null, 0, 1,
-				NumberType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getNumberType_ReferencedUnitsType(), this.getUnitsType(), null, "referencedUnitsType", null, 0,
+				1, NumberType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getNumberType_Range(), getNumericRange(), null, "range", null, 0, 1, NumberType.class,
+		initEReference(getNumberType_Range(), this.getNumericRange(), null, "range", null, 0, 1, NumberType.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getNumberType_UnitsType(), getUnitsType(), null, "unitsType", null, 0, 1, NumberType.class,
+		initEReference(getNumberType_UnitsType(), this.getUnitsType(), null, "unitsType", null, 0, 1, NumberType.class,
 				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				!IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
@@ -12658,42 +12712,43 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(enumerationTypeEClass, EnumerationType.class, "EnumerationType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEnumerationType_OwnedLiteral(), getEnumerationLiteral(), null, "ownedLiteral", null, 1, -1,
-				EnumerationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getEnumerationType_OwnedLiteral(), this.getEnumerationLiteral(), null, "ownedLiteral", null, 1,
+				-1, EnumerationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(numericRangeEClass, NumericRange.class, "NumericRange", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNumericRange_UpperBound(), getPropertyExpression(), null, "upperBound", null, 1, 1,
+		initEReference(getNumericRange_UpperBound(), this.getPropertyExpression(), null, "upperBound", null, 1, 1,
 				NumericRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getNumericRange_LowerBound(), getPropertyExpression(), null, "lowerBound", null, 1, 1,
+		initEReference(getNumericRange_LowerBound(), this.getPropertyExpression(), null, "lowerBound", null, 1, 1,
 				NumericRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(aadlRealEClass, AadlReal.class, "AadlReal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(aadlRealEClass, AadlReal.class, "AadlReal", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(classifierTypeEClass, ClassifierType.class, "ClassifierType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getClassifierType_ClassifierReference(), getMetaclassReference(), null, "classifierReference",
-				null, 1, -1, ClassifierType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getClassifierType_ClassifierReference(), this.getMetaclassReference(), null,
+				"classifierReference", null, 1, -1, ClassifierType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(rangeTypeEClass, RangeType.class, "RangeType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRangeType_OwnedNumberType(), getNumberType(), null, "ownedNumberType", null, 0, 1,
+		initEReference(getRangeType_OwnedNumberType(), this.getNumberType(), null, "ownedNumberType", null, 0, 1,
 				RangeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRangeType_NumberType(), getNumberType(), null, "numberType", null, 1, 1, RangeType.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
-		initEReference(getRangeType_ReferencedNumberType(), getNumberType(), null, "referencedNumberType", null, 0, 1,
-				RangeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getRangeType_NumberType(), this.getNumberType(), null, "numberType", null, 1, 1, RangeType.class,
+				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				IS_DERIVED, !IS_ORDERED);
+		initEReference(getRangeType_ReferencedNumberType(), this.getNumberType(), null, "referencedNumberType", null, 0,
+				1, RangeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(recordTypeEClass, RecordType.class, "RecordType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRecordType_OwnedField(), getBasicProperty(), null, "ownedField", null, 0, -1,
+		initEReference(getRecordType_OwnedField(), this.getBasicProperty(), null, "ownedField", null, 0, -1,
 				RecordType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -12702,20 +12757,21 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 
 		initEClass(referenceTypeEClass, ReferenceType.class, "ReferenceType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReferenceType_NamedElementReference(), getMetaclassReference(), null,
+		initEReference(getReferenceType_NamedElementReference(), this.getMetaclassReference(), null,
 				"namedElementReference", null, 1, -1, ReferenceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(listTypeEClass, ListType.class, "ListType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getListType_OwnedElementType(), getPropertyType(), null, "ownedElementType", null, 0, 1,
+		initEClass(listTypeEClass, ListType.class, "ListType", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getListType_OwnedElementType(), this.getPropertyType(), null, "ownedElementType", null, 0, 1,
 				ListType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getListType_ReferencedElementType(), getPropertyType(), null, "referencedElementType", null, 0,
-				1, ListType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getListType_ReferencedElementType(), this.getPropertyType(), null, "referencedElementType", null,
+				0, 1, ListType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getListType_ElementType(), getPropertyType(), null, "elementType", null, 1, 1, ListType.class,
-				IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getListType_ElementType(), this.getPropertyType(), null, "elementType", null, 1, 1,
+				ListType.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(flowKindEEnum, FlowKind.class, "FlowKind");
@@ -12841,42 +12897,32 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 	 */
 	protected void createDocumentationAnnotations() {
 		String source = "http://www.topcased.org/documentation";
-		addAnnotation(getElement_OwnedElement(), source, new String[] { "documentation",
-				"The Elements owned by this element." });
-		addAnnotation(getElement_OwnedComment(), source, new String[] { "documentation",
-				"The Comments owned by this element." });
-		addAnnotation(getComment_Body(), source, new String[] { "documentation",
-				"Specifies a string that is the comment" });
-		addAnnotation(
-				stringEDataType,
-				source,
-				new String[] {
-						"documentation",
-						"A string is a sequence of characters in some suitable character set used to display information about the model. Character sets may include non-Roman alphabets and characters." });
+		addAnnotation(getElement_OwnedElement(), source,
+				new String[] { "documentation", "The Elements owned by this element." });
+		addAnnotation(getElement_OwnedComment(), source,
+				new String[] { "documentation", "The Comments owned by this element." });
+		addAnnotation(getComment_Body(), source,
+				new String[] { "documentation", "Specifies a string that is the comment" });
+		addAnnotation(stringEDataType, source, new String[] { "documentation",
+				"A string is a sequence of characters in some suitable character set used to display information about the model. Character sets may include non-Roman alphabets and characters." });
 		addAnnotation(booleanEDataType, source, new String[] { "documentation",
 				"A Boolean type is used for logical expression, consisting of the predefined values true and false." });
-		addAnnotation(getNamedElement_Name(), source, new String[] { "documentation", "The name of the NamedElement." });
-		addAnnotation(
-				getNamedElement_QualifiedName(),
-				source,
-				new String[] {
-						"documentation",
-						"A name which allows the NamedElement to be identified within a hierarchy of nested Namespaces. It is constructed from the names of the containing namespaces starting at the root of the hierarchy and ending with the name of the NamedElement itself." });
-		addAnnotation(getTypedElement_Type(), source, new String[] { "documentation", "The type of the TypedElement." });
-		addAnnotation(getNamespace_OwnedMember(), source, new String[] { "documentation",
-				"A collection of NamedElements owned by the Namespace." });
-		addAnnotation(
-				getNamespace_Member(),
-				source,
-				new String[] {
-						"documentation",
-						"A collection of NamedElements identifiable within the Namespace, either by being owned or by being introduced by importing or inheritance." });
-		addAnnotation(integerEDataType, source, new String[] { "documentation",
-				"An integer is a primitive type representing integer values." });
-		addAnnotation(realEDataType, source, new String[] { "documentation",
-				"A real is a primitive type representing real numeric values." });
-		addAnnotation(featureGroupTypeEClass, source, new String[] { "documentation",
-				"To be merged with AADLConstructs::Features::FeatureGroupType" });
+		addAnnotation(getNamedElement_Name(), source,
+				new String[] { "documentation", "The name of the NamedElement." });
+		addAnnotation(getNamedElement_QualifiedName(), source, new String[] { "documentation",
+				"A name which allows the NamedElement to be identified within a hierarchy of nested Namespaces. It is constructed from the names of the containing namespaces starting at the root of the hierarchy and ending with the name of the NamedElement itself." });
+		addAnnotation(getTypedElement_Type(), source,
+				new String[] { "documentation", "The type of the TypedElement." });
+		addAnnotation(getNamespace_OwnedMember(), source,
+				new String[] { "documentation", "A collection of NamedElements owned by the Namespace." });
+		addAnnotation(getNamespace_Member(), source, new String[] { "documentation",
+				"A collection of NamedElements identifiable within the Namespace, either by being owned or by being introduced by importing or inheritance." });
+		addAnnotation(integerEDataType, source,
+				new String[] { "documentation", "An integer is a primitive type representing integer values." });
+		addAnnotation(realEDataType, source,
+				new String[] { "documentation", "A real is a primitive type representing real numeric values." });
+		addAnnotation(featureGroupTypeEClass, source,
+				new String[] { "documentation", "To be merged with AADLConstructs::Features::FeatureGroupType" });
 	}
 
 	/**
@@ -12887,469 +12933,460 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 	 */
 	protected void createSubsetsAnnotations() {
 		String source = "subsets";
-		addAnnotation(getElement_OwnedComment(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Element/ownedElement") });
+		addAnnotation(getElement_OwnedComment(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Element/ownedElement") });
 		addAnnotation(getBasicProperty_ReferencedPropertyType(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//BasicProperty/propertyType") });
-		addAnnotation(getBasicProperty_OwnedPropertyType(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//BasicProperty/propertyType") });
-		addAnnotation(getClassifier_ClassifierFeature(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/member") });
-		addAnnotation(getClassifier_InheritedMember(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/member") });
-		addAnnotation(getClassifier_Generalization(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Element/ownedElement") });
-		addAnnotation(getClassifier_OwnedAnnexSubclause(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getClassifier_OwnedPrototype(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getBasicProperty_OwnedPropertyType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//BasicProperty/propertyType") });
+		addAnnotation(getClassifier_ClassifierFeature(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/member") });
+		addAnnotation(getClassifier_InheritedMember(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/member") });
+		addAnnotation(getClassifier_Generalization(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Element/ownedElement") });
+		addAnnotation(getClassifier_OwnedAnnexSubclause(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getClassifier_OwnedPrototype(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
 		addAnnotation(getNamespace_OwnedMember(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Element/ownedElement"),
 						URI.createURI(eNS_URI).appendFragment("//Namespace/member") });
-		addAnnotation(getGeneralization_General(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//DirectedRelationship/target") });
-		addAnnotation(getGeneralization_Specific(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//DirectedRelationship/source") });
-		addAnnotation(getDirectedRelationship_Source(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Relationship/relatedElement") });
-		addAnnotation(getDirectedRelationship_Target(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Relationship/relatedElement") });
-		addAnnotation(getPrototype_Refined(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//RefinableElement/refinedElement") });
-		addAnnotation(getComponentImplementation_Type(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Classifier/general") });
-		addAnnotation(getComponentImplementation_OwnedSubcomponent(), source, new String[] {}, new URI[] {
-				URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
-				URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getComponentImplementation_Extended(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Classifier/general") });
-		addAnnotation(getComponentImplementation_OwnedFlowImplementation(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature") });
-		addAnnotation(
-				getComponentImplementation_OwnedConnection(),
-				source,
-				new String[] {},
+		addAnnotation(getGeneralization_General(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//DirectedRelationship/target") });
+		addAnnotation(getGeneralization_Specific(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//DirectedRelationship/source") });
+		addAnnotation(getDirectedRelationship_Source(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Relationship/relatedElement") });
+		addAnnotation(getDirectedRelationship_Target(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Relationship/relatedElement") });
+		addAnnotation(getPrototype_Refined(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//RefinableElement/refinedElement") });
+		addAnnotation(getComponentImplementation_Type(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/general") });
+		addAnnotation(getComponentImplementation_OwnedSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
+						URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getComponentImplementation_Extended(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/general") });
+		addAnnotation(getComponentImplementation_OwnedFlowImplementation(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature") });
+		addAnnotation(getComponentImplementation_OwnedConnection(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
 						URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
 		addAnnotation(getComponentImplementation_OwnedExtension(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/generalization") });
-		addAnnotation(getComponentImplementation_OwnedRealization(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Classifier/generalization") });
-		addAnnotation(getComponentImplementation_OwnedEndToEndFlow(), source, new String[] {}, new URI[] {
-				URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
-				URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getComponentImplementation_OwnedAbstractSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getComponentImplementation_OwnedAccessConnection(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedConnection") });
-		addAnnotation(getComponentImplementation_OwnedParameterConnection(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedConnection") });
-		addAnnotation(getComponentImplementation_OwnedPortConnection(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedConnection") });
-		addAnnotation(getComponentImplementation_OwnedFeatureConnection(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedConnection") });
+		addAnnotation(getComponentImplementation_OwnedRealization(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/generalization") });
+		addAnnotation(getComponentImplementation_OwnedEndToEndFlow(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
+						URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getComponentImplementation_OwnedAbstractSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getComponentImplementation_OwnedAccessConnection(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedConnection") });
+		addAnnotation(getComponentImplementation_OwnedParameterConnection(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedConnection") });
+		addAnnotation(getComponentImplementation_OwnedPortConnection(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedConnection") });
+		addAnnotation(getComponentImplementation_OwnedFeatureConnection(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedConnection") });
 		addAnnotation(getComponentImplementation_OwnedFeatureGroupConnection(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedConnection") });
-		addAnnotation(getComponentImplementation_OwnedProcessorFeature(), source, new String[] {}, new URI[] {
-				URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember"),
-				URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature") });
-		addAnnotation(getComponentImplementation_OwnedInternalFeature(), source, new String[] {}, new URI[] {
-				URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember"),
-				URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature") });
-		addAnnotation(getComponentImplementation_OwnedEventSource(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedInternalFeature") });
-		addAnnotation(getComponentImplementation_OwnedEventDataSource(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedInternalFeature") });
+		addAnnotation(getComponentImplementation_OwnedProcessorFeature(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember"),
+						URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature") });
+		addAnnotation(getComponentImplementation_OwnedInternalFeature(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember"),
+						URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature") });
+		addAnnotation(getComponentImplementation_OwnedEventSource(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedInternalFeature") });
+		addAnnotation(getComponentImplementation_OwnedEventDataSource(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedInternalFeature") });
 		addAnnotation(getComponentImplementation_OwnedPortProxy(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedProcessorFeature") });
-		addAnnotation(getComponentImplementation_OwnedSubprogramProxy(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedProcessorFeature") });
-		addAnnotation(getComponentClassifier_OwnedMode(), source, new String[] {}, new URI[] {
-				URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
-				URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(
-				getComponentClassifier_OwnedModeTransition(),
-				source,
-				new String[] {},
+		addAnnotation(getComponentImplementation_OwnedSubprogramProxy(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedProcessorFeature") });
+		addAnnotation(getComponentClassifier_OwnedMode(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
 						URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getComponentType_OwnedFeature(), source, new String[] {}, new URI[] {
-				URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
-				URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getComponentType_Extended(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Classifier/general") });
-		addAnnotation(
-				getComponentType_OwnedFlowSpecification(),
-				source,
-				new String[] {},
+		addAnnotation(getComponentClassifier_OwnedModeTransition(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
 						URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getComponentType_OwnedExtension(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Classifier/generalization") });
-		addAnnotation(getComponentType_OwnedFeatureGroup(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getComponentType_OwnedFeature(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
+						URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getComponentType_Extended(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/general") });
+		addAnnotation(getComponentType_OwnedFlowSpecification(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
+						URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getComponentType_OwnedExtension(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/generalization") });
+		addAnnotation(getComponentType_OwnedFeatureGroup(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getComponentType_OwnedAbstractFeature(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getFeature_Prototype(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Feature/featureClassifier") });
+		addAnnotation(getFeature_Prototype(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
 		addAnnotation(getFeature_Refined(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//RefinableElement/refinedElement") });
-		addAnnotation(getFeature_Classifier(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Feature/featureClassifier") });
-		addAnnotation(getFlowSpecification_Refined(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//RefinableElement/refinedElement") });
-		addAnnotation(getTypeExtension_Extended(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Generalization/general") });
-		addAnnotation(getFeatureGroup_FeatureGroupType(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//FeatureGroup/featureType") });
+		addAnnotation(getFeature_Classifier(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
+		addAnnotation(getFlowSpecification_Refined(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//RefinableElement/refinedElement") });
+		addAnnotation(getTypeExtension_Extended(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Generalization/general") });
+		addAnnotation(getFeatureGroup_FeatureGroupType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroup/featureType") });
 		addAnnotation(getFeatureGroup_FeatureGroupPrototype(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroup/featureType") });
-		addAnnotation(getFeatureGroupType_OwnedFeature(), source, new String[] {}, new URI[] {
-				URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
-				URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getFeatureGroupType_Extended(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Classifier/general") });
-		addAnnotation(getFeatureGroupType_OwnedExtension(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Classifier/generalization") });
-		addAnnotation(getFeatureGroupType_OwnedBusAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//FeatureGroupType/ownedFeature") });
-		addAnnotation(getFeatureGroupType_OwnedDataAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
-		addAnnotation(getFeatureGroupType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//FeatureGroupType/ownedFeature") });
+		addAnnotation(getFeatureGroupType_OwnedFeature(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
+						URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getFeatureGroupType_Extended(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/general") });
+		addAnnotation(getFeatureGroupType_OwnedExtension(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/generalization") });
+		addAnnotation(getFeatureGroupType_OwnedBusAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
+		addAnnotation(getFeatureGroupType_OwnedDataAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
+		addAnnotation(getFeatureGroupType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
 		addAnnotation(getFeatureGroupType_OwnedEventDataPort(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
-		addAnnotation(getFeatureGroupType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//FeatureGroupType/ownedFeature") });
+		addAnnotation(getFeatureGroupType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
 		addAnnotation(getFeatureGroupType_OwnedFeatureGroup(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
-		addAnnotation(getFeatureGroupType_OwnedParameter(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//FeatureGroupType/ownedFeature") });
+		addAnnotation(getFeatureGroupType_OwnedParameter(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
 		addAnnotation(getFeatureGroupType_OwnedSubprogramAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
-		addAnnotation(getFeatureGroupType_OwnedSubprogramGroupAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
+		addAnnotation(getFeatureGroupType_OwnedSubprogramGroupAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
 		addAnnotation(getFeatureGroupType_OwnedAbstractFeature(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//FeatureGroupType/ownedFeature") });
-		addAnnotation(getGroupExtension_Extended(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Generalization/general") });
-		addAnnotation(getBusAccess_BusFeatureClassifier(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Feature/featureClassifier") });
-		addAnnotation(getDataAccess_DataFeatureClassifier(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
-		addAnnotation(getDataPort_DataFeatureClassifier(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Feature/featureClassifier") });
+		addAnnotation(getGroupExtension_Extended(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Generalization/general") });
+		addAnnotation(getBusAccess_BusFeatureClassifier(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
+		addAnnotation(getDataAccess_DataFeatureClassifier(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
+		addAnnotation(getDataPort_DataFeatureClassifier(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
 		addAnnotation(getEventDataPort_DataFeatureClassifier(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
-		addAnnotation(getParameter_DataFeatureClassifier(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Feature/featureClassifier") });
-		addAnnotation(getSubprogramAccess_SubprogramFeatureClassifier(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
+		addAnnotation(getParameter_DataFeatureClassifier(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
+		addAnnotation(getSubprogramAccess_SubprogramFeatureClassifier(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
 		addAnnotation(getSubprogramGroupAccess_SubprogramGroupFeatureClassifier(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Feature/featureClassifier") });
-		addAnnotation(getSubcomponent_Prototype(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getSubcomponent_Refined(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//RefinableElement/refinedElement") });
-		addAnnotation(getSubcomponent_Classifier(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getConnection_Refined(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//RefinableElement/refinedElement") });
-		addAnnotation(getImplementationExtension_Extended(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Generalization/general") });
-		addAnnotation(getRealization_Implemented(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Generalization/general") });
-		addAnnotation(getEndToEndFlow_Refined(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//RefinableElement/refinedElement") });
-		addAnnotation(getAbstractSubcomponent_AbstractSubcomponentType(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getSubcomponent_Prototype(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getSubcomponent_Refined(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//RefinableElement/refinedElement") });
+		addAnnotation(getSubcomponent_Classifier(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getConnection_Refined(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//RefinableElement/refinedElement") });
+		addAnnotation(getImplementationExtension_Extended(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Generalization/general") });
+		addAnnotation(getRealization_Implemented(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Generalization/general") });
+		addAnnotation(getEndToEndFlow_Refined(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//RefinableElement/refinedElement") });
+		addAnnotation(getAbstractSubcomponent_AbstractSubcomponentType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
 		addAnnotation(getPackageSection_OwnedPackageRename(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
 		addAnnotation(getPackageSection_OwnedComponentTypeRename(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getPackageSection_OwnedClassifier(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getPackageSection_OwnedFeatureGroupTypeRename(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getPackageSection_OwnedAnnexLibrary(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getAadlPackage_OwnedPublicSection(), source, new String[] {}, new URI[] {
-				URI.createURI(eNS_URI).appendFragment("//AadlPackage/publicSection"),
-				URI.createURI(eNS_URI).appendFragment("//Element/ownedElement") });
-		addAnnotation(getAadlPackage_OwnedPrivateSection(), source, new String[] {}, new URI[] {
-				URI.createURI(eNS_URI).appendFragment("//AadlPackage/privateSection"),
-				URI.createURI(eNS_URI).appendFragment("//Element/ownedElement") });
+		addAnnotation(getPackageSection_OwnedClassifier(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getPackageSection_OwnedFeatureGroupTypeRename(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getPackageSection_OwnedAnnexLibrary(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getAadlPackage_OwnedPublicSection(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//AadlPackage/publicSection"),
+						URI.createURI(eNS_URI).appendFragment("//Element/ownedElement") });
+		addAnnotation(getAadlPackage_OwnedPrivateSection(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//AadlPackage/privateSection"),
+						URI.createURI(eNS_URI).appendFragment("//Element/ownedElement") });
 		addAnnotation(getBehavioredImplementation_SubprogramCall(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/member") });
-		addAnnotation(getBehavioredImplementation_OwnedSubprogramCallSequence(), source, new String[] {}, new URI[] {
-				URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
-				URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getAbstractType_OwnedBusAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getAbstractType_OwnedDataAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getBehavioredImplementation_OwnedSubprogramCallSequence(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Classifier/classifierFeature"),
+						URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getAbstractType_OwnedBusAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getAbstractType_OwnedDataAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getAbstractType_OwnedSubprogramAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getAbstractType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getAbstractType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getAbstractType_OwnedEventDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getAbstractType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getAbstractType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getAbstractType_OwnedEventDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getAbstractType_OwnedSubprogramGroupAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getAbstractImplementation_OwnedBusSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getAbstractImplementation_OwnedDataSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getAbstractImplementation_OwnedDeviceSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getAbstractImplementation_OwnedMemorySubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getAbstractImplementation_OwnedProcessSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getAbstractImplementation_OwnedProcessorSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getAbstractImplementation_OwnedSystemSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getAbstractImplementation_OwnedSubprogramSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getAbstractImplementation_OwnedBusSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getAbstractImplementation_OwnedDataSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getAbstractImplementation_OwnedDeviceSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getAbstractImplementation_OwnedMemorySubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getAbstractImplementation_OwnedProcessSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getAbstractImplementation_OwnedProcessorSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getAbstractImplementation_OwnedSystemSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getAbstractImplementation_OwnedSubprogramSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getAbstractImplementation_OwnedSubprogramGroupSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getAbstractImplementation_OwnedThreadSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getAbstractImplementation_OwnedThreadSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getAbstractImplementation_OwnedThreadGroupSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getAbstractImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getAbstractImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getAbstractImplementation_OwnedVirtualProcessorSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getBusSubcomponent_BusSubcomponentType(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
 		addAnnotation(getDataSubcomponent_DataSubcomponentType(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getDeviceSubcomponent_DeviceSubcomponentType(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getMemorySubcomponent_MemorySubcomponentType(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getProcessSubcomponent_ProcessSubcomponentType(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getProcessorSubcomponent_ProcessorSubcomponentType(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getSystemSubcomponent_SystemSubcomponentType(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getSubprogramSubcomponent_SubprogramSubcomponentType(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getDeviceSubcomponent_DeviceSubcomponentType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getMemorySubcomponent_MemorySubcomponentType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getProcessSubcomponent_ProcessSubcomponentType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getProcessorSubcomponent_ProcessorSubcomponentType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getSystemSubcomponent_SystemSubcomponentType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getSubprogramSubcomponent_SubprogramSubcomponentType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
 		addAnnotation(getSubprogramGroupSubcomponent_SubprogramGroupSubcomponentType(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getThreadSubcomponent_ThreadSubcomponentType(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getThreadSubcomponent_ThreadSubcomponentType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
 		addAnnotation(getThreadGroupSubcomponent_ThreadGroupSubcomponentType(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getVirtualBusSubcomponent_VirtualBusSubcomponentType(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
+		addAnnotation(getVirtualBusSubcomponent_VirtualBusSubcomponentType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
 		addAnnotation(getVirtualProcessorSubcomponent_VirtualProcessorSubcomponentType(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
-		addAnnotation(getBusType_OwnedBusAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getBusType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getBusType_OwnedEventDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getBusType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getBusImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getDataType_OwnedSubprogramAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getDataType_OwnedDataAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getBusType_OwnedBusAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getBusType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getBusType_OwnedEventDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getBusType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getBusImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getDataType_OwnedSubprogramAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getDataType_OwnedDataAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getDataType_OwnedSubprogramGroupAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getDataImplementation_OwnedDataSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getDataImplementation_OwnedSubprogramSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getDeviceType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getDeviceType_OwnedEventDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getDeviceType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getDeviceType_OwnedBusAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getDeviceType_OwnedSubprogramAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getDataImplementation_OwnedDataSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getDataImplementation_OwnedSubprogramSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getDeviceType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getDeviceType_OwnedEventDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getDeviceType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getDeviceType_OwnedBusAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getDeviceType_OwnedSubprogramAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getDeviceType_OwnedSubprogramGroupAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getDeviceImplementation_OwnedBusSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getDeviceImplementation_OwnedDataSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getDeviceImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getMemoryType_OwnedBusAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getMemoryType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getMemoryType_OwnedEventDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getMemoryType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getMemoryImplementation_OwnedBusSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getMemoryImplementation_OwnedMemorySubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getDeviceImplementation_OwnedBusSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getDeviceImplementation_OwnedDataSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getDeviceImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getMemoryType_OwnedBusAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getMemoryType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getMemoryType_OwnedEventDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getMemoryType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getMemoryImplementation_OwnedBusSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getMemoryImplementation_OwnedMemorySubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getSubprogramType_OwnedEventDataPort(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSubprogramType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSubprogramType_OwnedParameter(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSubprogramType_OwnedDataAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSubprogramType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSubprogramType_OwnedParameter(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSubprogramType_OwnedDataAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getSubprogramType_OwnedSubprogramAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSubprogramType_OwnedSubprogramGroupAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSubprogramImplementation_OwnedDataSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSubprogramType_OwnedSubprogramGroupAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSubprogramImplementation_OwnedDataSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getSubprogramImplementation_OwnedSubprogramSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getSubprogramGroupType_OwnedSubprogramAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSubprogramGroupType_OwnedSubprogramGroupAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSubprogramGroupType_OwnedSubprogramAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSubprogramGroupType_OwnedSubprogramGroupAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getSubprogramGroupImplementation_OwnedSubprogramSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getSubprogramGroupImplementation_OwnedSubprogramGroupSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getSubprogramGroupImplementation_OwnedDataSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getSystemType_OwnedBusAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSystemType_OwnedDataAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSystemType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSystemType_OwnedBusAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSystemType_OwnedDataAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSystemType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getSystemType_OwnedSubprogramGroupAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSystemType_OwnedSubprogramAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSystemType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSystemType_OwnedEventDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getSystemImplementation_OwnedBusSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getSystemImplementation_OwnedDataSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getSystemImplementation_OwnedDeviceSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getSystemImplementation_OwnedMemorySubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getSystemImplementation_OwnedProcessSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getSystemImplementation_OwnedProcessorSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getSystemImplementation_OwnedSubprogramSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSystemType_OwnedSubprogramAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSystemType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSystemType_OwnedEventDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getSystemImplementation_OwnedBusSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSystemImplementation_OwnedDataSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSystemImplementation_OwnedDeviceSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSystemImplementation_OwnedMemorySubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSystemImplementation_OwnedProcessSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSystemImplementation_OwnedProcessorSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSystemImplementation_OwnedSubprogramSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getSystemImplementation_OwnedSubprogramGroupSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getSystemImplementation_OwnedSystemSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getSystemImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSystemImplementation_OwnedSystemSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSystemImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getSystemImplementation_OwnedVirtualProcessorSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getProcessorType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getProcessorType_OwnedEventDataPort(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getProcessorType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getProcessorType_OwnedBusAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getProcessorType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getProcessorType_OwnedEventDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getProcessorType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getProcessorType_OwnedBusAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getProcessorType_OwnedSubprogramAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getProcessorType_OwnedSubprogramGroupAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getProcessorImplementation_OwnedBusSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getProcessorImplementation_OwnedMemorySubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getProcessorType_OwnedSubprogramGroupAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getProcessorImplementation_OwnedBusSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getProcessorImplementation_OwnedMemorySubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getProcessorImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getProcessorImplementation_OwnedVirtualProcessorSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getProcessType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getProcessType_OwnedEventDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getProcessType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getProcessType_OwnedDataAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getProcessType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getProcessType_OwnedEventDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getProcessType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getProcessType_OwnedDataAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getProcessType_OwnedSubprogramAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getProcessType_OwnedSubprogramGroupAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getProcessImplementation_OwnedDataSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getProcessImplementation_OwnedSubprogramSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getProcessImplementation_OwnedDataSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getProcessImplementation_OwnedSubprogramSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getProcessImplementation_OwnedSubprogramGroupSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getProcessImplementation_OwnedThreadSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getProcessImplementation_OwnedThreadGroupSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getThreadType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getThreadType_OwnedEventDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getThreadType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getThreadType_OwnedDataAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getThreadType_OwnedSubprogramAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getProcessImplementation_OwnedThreadSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getProcessImplementation_OwnedThreadGroupSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getThreadType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getThreadType_OwnedEventDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getThreadType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getThreadType_OwnedDataAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getThreadType_OwnedSubprogramAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getThreadType_OwnedSubprogramGroupAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getThreadImplementation_OwnedSubprogramGroupSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getThreadImplementation_OwnedSubprogramSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getThreadImplementation_OwnedDataSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getThreadGroupType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getThreadImplementation_OwnedSubprogramSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getThreadImplementation_OwnedDataSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getThreadGroupType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getThreadGroupType_OwnedEventDataPort(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getThreadGroupType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getThreadGroupType_OwnedDataAccess(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getThreadGroupType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getThreadGroupType_OwnedDataAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getThreadGroupType_OwnedSubprogramAccess(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getThreadGroupType_OwnedSubprogramGroupAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getThreadGroupImplementation_OwnedDataSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getThreadGroupImplementation_OwnedThreadSubcomponent(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getThreadGroupType_OwnedSubprogramGroupAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getThreadGroupImplementation_OwnedDataSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getThreadGroupImplementation_OwnedThreadSubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getThreadGroupImplementation_OwnedThreadGroupSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getThreadGroupImplementation_OwnedSubprogramSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getThreadGroupImplementation_OwnedSubprogramGroupSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
-		addAnnotation(getVirtualBusType_OwnedDataPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getVirtualBusType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getVirtualBusType_OwnedEventDataPort(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getVirtualBusType_OwnedEventPort(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getVirtualBusType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getVirtualBusImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getVirtualProcessorType_OwnedDataPort(), source, new String[] {},
@@ -13358,10 +13395,12 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getVirtualProcessorType_OwnedEventPort(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getVirtualProcessorType_OwnedSubprogramAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
-		addAnnotation(getVirtualProcessorType_OwnedSubprogramGroupAccess(), source, new String[] {}, new URI[] { URI
-				.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getVirtualProcessorType_OwnedSubprogramAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getVirtualProcessorType_OwnedSubprogramGroupAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getVirtualProcessorType_OwnedBusAccess(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getVirtualProcessorImplementation_OwnedVirtualBusSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getVirtualProcessorImplementation_OwnedVirtualProcessorSubcomponent(), source, new String[] {},
@@ -13370,28 +13409,28 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//PropertyConstant/propertyType") });
 		addAnnotation(getPropertyConstant_OwnedPropertyType(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//PropertyConstant/propertyType") });
-		addAnnotation(getPropertySet_OwnedPropertyType(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getPropertySet_OwnedProperty(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getPropertySet_OwnedPropertyType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getPropertySet_OwnedProperty(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
 		addAnnotation(getPropertySet_OwnedPropertyConstant(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getGlobalNamespace_Package(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/member") });
-		addAnnotation(getGlobalNamespace_PropertySet(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/member") });
-		addAnnotation(getEnumerationType_OwnedLiteral(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getRangeType_OwnedNumberType(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//RangeType/numberType") });
-		addAnnotation(getRangeType_ReferencedNumberType(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//RangeType/numberType") });
-		addAnnotation(getRecordType_OwnedField(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//Namespace/ownedMember") });
-		addAnnotation(getListType_OwnedElementType(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ListType/elementType") });
-		addAnnotation(getListType_ReferencedElementType(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//ListType/elementType") });
+		addAnnotation(getGlobalNamespace_Package(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/member") });
+		addAnnotation(getGlobalNamespace_PropertySet(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/member") });
+		addAnnotation(getEnumerationType_OwnedLiteral(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getRangeType_OwnedNumberType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//RangeType/numberType") });
+		addAnnotation(getRangeType_ReferencedNumberType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//RangeType/numberType") });
+		addAnnotation(getRecordType_OwnedField(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Namespace/ownedMember") });
+		addAnnotation(getListType_OwnedElementType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ListType/elementType") });
+		addAnnotation(getListType_ReferencedElementType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ListType/elementType") });
 	}
 
 	/**
@@ -13402,10 +13441,10 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 	 */
 	protected void createRedefinesAnnotations() {
 		String source = "redefines";
-		addAnnotation(getBasicProperty_PropertyType(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//TypedElement/type") });
-		addAnnotation(getPropertyConstant_PropertyType(), source, new String[] {}, new URI[] { URI.createURI(eNS_URI)
-				.appendFragment("//TypedElement/type") });
+		addAnnotation(getBasicProperty_PropertyType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//TypedElement/type") });
+		addAnnotation(getPropertyConstant_PropertyType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//TypedElement/type") });
 	}
 
 	/**
@@ -13421,56 +13460,56 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		addAnnotation(packageSectionEClass, source, new String[] {});
 		addAnnotation(packageSectionEClass, new boolean[] { true }, "name", new String[] { "lowerBound", "1" });
 		addAnnotation(componentPrototypeBindingEClass, source, new String[] {});
-		addAnnotation(componentPrototypeBindingEClass, new boolean[] { true }, "formal", new String[] { "eType",
-				"aadl2::ComponentPrototype" });
+		addAnnotation(componentPrototypeBindingEClass, new boolean[] { true }, "formal",
+				new String[] { "eType", "aadl2::ComponentPrototype" });
 		addAnnotation(featureGroupPrototypeBindingEClass, source, new String[] {});
-		addAnnotation(featureGroupPrototypeBindingEClass, new boolean[] { true }, "formal", new String[] { "eType",
-				"aadl2::FeatureGroupPrototype" });
+		addAnnotation(featureGroupPrototypeBindingEClass, new boolean[] { true }, "formal",
+				new String[] { "eType", "aadl2::FeatureGroupPrototype" });
 		addAnnotation(featurePrototypeBindingEClass, source, new String[] {});
-		addAnnotation(featurePrototypeBindingEClass, new boolean[] { true }, "formal", new String[] { "eType",
-				"aadl2::FeaturePrototype" });
+		addAnnotation(featurePrototypeBindingEClass, new boolean[] { true }, "formal",
+				new String[] { "eType", "aadl2::FeaturePrototype" });
 		addAnnotation(abstractImplementationEClass, source, new String[] {});
-		addAnnotation(abstractImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::AbstractType" });
+		addAnnotation(abstractImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::AbstractType" });
 		addAnnotation(busImplementationEClass, source, new String[] {});
 		addAnnotation(busImplementationEClass, new boolean[] { true }, "type",
 				new String[] { "eType", "aadl2::BusType" });
 		addAnnotation(dataImplementationEClass, source, new String[] {});
-		addAnnotation(dataImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::DataType" });
+		addAnnotation(dataImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::DataType" });
 		addAnnotation(deviceImplementationEClass, source, new String[] {});
-		addAnnotation(deviceImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::DeviceType" });
+		addAnnotation(deviceImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::DeviceType" });
 		addAnnotation(memoryImplementationEClass, source, new String[] {});
-		addAnnotation(memoryImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::MemoryType" });
+		addAnnotation(memoryImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::MemoryType" });
 		addAnnotation(subprogramImplementationEClass, source, new String[] {});
-		addAnnotation(subprogramImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::SubprogramType" });
+		addAnnotation(subprogramImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::SubprogramType" });
 		addAnnotation(subprogramGroupImplementationEClass, source, new String[] {});
-		addAnnotation(subprogramGroupImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::SubprogramGroupType" });
+		addAnnotation(subprogramGroupImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::SubprogramGroupType" });
 		addAnnotation(systemImplementationEClass, source, new String[] {});
-		addAnnotation(systemImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::SystemType" });
+		addAnnotation(systemImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::SystemType" });
 		addAnnotation(processorImplementationEClass, source, new String[] {});
-		addAnnotation(processorImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::ProcessorType" });
+		addAnnotation(processorImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::ProcessorType" });
 		addAnnotation(processImplementationEClass, source, new String[] {});
-		addAnnotation(processImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::ProcessType" });
+		addAnnotation(processImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::ProcessType" });
 		addAnnotation(threadImplementationEClass, source, new String[] {});
-		addAnnotation(threadImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::ThreadType" });
+		addAnnotation(threadImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::ThreadType" });
 		addAnnotation(threadGroupImplementationEClass, source, new String[] {});
-		addAnnotation(threadGroupImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::ThreadGroupType" });
+		addAnnotation(threadGroupImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::ThreadGroupType" });
 		addAnnotation(virtualBusImplementationEClass, source, new String[] {});
-		addAnnotation(virtualBusImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::VirtualBusType" });
+		addAnnotation(virtualBusImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::VirtualBusType" });
 		addAnnotation(virtualProcessorImplementationEClass, source, new String[] {});
-		addAnnotation(virtualProcessorImplementationEClass, new boolean[] { true }, "type", new String[] { "eType",
-				"aadl2::VirtualProcessorType" });
+		addAnnotation(virtualProcessorImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::VirtualProcessorType" });
 		addAnnotation(unitsTypeEClass, source, new String[] {});
 	}
 

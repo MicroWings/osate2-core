@@ -52,11 +52,11 @@ import org.osate.aadl2.ThreadGroupSubcomponentType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ThreadGroupSubcomponentImpl#getSubcomponentType <em>Subcomponent Type</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ThreadGroupSubcomponentImpl#getThreadGroupSubcomponentType <em>Thread Group Subcomponent Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,8 +98,8 @@ public class ThreadGroupSubcomponentImpl extends SubcomponentImpl implements Thr
 	@Override
 	public SubcomponentType getSubcomponentType() {
 		SubcomponentType subcomponentType = basicGetSubcomponentType();
-		return subcomponentType != null && ((EObject) subcomponentType).eIsProxy() ? (SubcomponentType) eResolveProxy((InternalEObject) subcomponentType)
-				: subcomponentType;
+		return subcomponentType != null && ((EObject) subcomponentType).eIsProxy()
+				? (SubcomponentType) eResolveProxy((InternalEObject) subcomponentType) : subcomponentType;
 	}
 
 	/**
@@ -126,11 +126,10 @@ public class ThreadGroupSubcomponentImpl extends SubcomponentImpl implements Thr
 			InternalEObject oldThreadGroupSubcomponentType = (InternalEObject) threadGroupSubcomponentType;
 			threadGroupSubcomponentType = (ThreadGroupSubcomponentType) eResolveProxy(oldThreadGroupSubcomponentType);
 			if (threadGroupSubcomponentType != oldThreadGroupSubcomponentType) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.THREAD_GROUP_SUBCOMPONENT__THREAD_GROUP_SUBCOMPONENT_TYPE,
 							oldThreadGroupSubcomponentType, threadGroupSubcomponentType));
-				}
 			}
 		}
 		return threadGroupSubcomponentType;
@@ -154,11 +153,10 @@ public class ThreadGroupSubcomponentImpl extends SubcomponentImpl implements Thr
 	public void setThreadGroupSubcomponentType(ThreadGroupSubcomponentType newThreadGroupSubcomponentType) {
 		ThreadGroupSubcomponentType oldThreadGroupSubcomponentType = threadGroupSubcomponentType;
 		threadGroupSubcomponentType = newThreadGroupSubcomponentType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.THREAD_GROUP_SUBCOMPONENT__THREAD_GROUP_SUBCOMPONENT_TYPE,
 					oldThreadGroupSubcomponentType, threadGroupSubcomponentType));
-		}
 	}
 
 	/**
@@ -170,9 +168,8 @@ public class ThreadGroupSubcomponentImpl extends SubcomponentImpl implements Thr
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.THREAD_GROUP_SUBCOMPONENT__THREAD_GROUP_SUBCOMPONENT_TYPE:
-			if (resolve) {
+			if (resolve)
 				return getThreadGroupSubcomponentType();
-			}
 			return basicGetThreadGroupSubcomponentType();
 		}
 		return super.eGet(featureID, resolve, coreType);

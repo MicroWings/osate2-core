@@ -52,11 +52,11 @@ import org.osate.aadl2.SubprogramGroupSubcomponentType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.SubprogramGroupSubcomponentImpl#getSubcomponentType <em>Subcomponent Type</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.SubprogramGroupSubcomponentImpl#getSubprogramGroupSubcomponentType <em>Subprogram Group Subcomponent Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,8 +98,8 @@ public class SubprogramGroupSubcomponentImpl extends SubcomponentImpl implements
 	@Override
 	public SubcomponentType getSubcomponentType() {
 		SubcomponentType subcomponentType = basicGetSubcomponentType();
-		return subcomponentType != null && ((EObject) subcomponentType).eIsProxy() ? (SubcomponentType) eResolveProxy((InternalEObject) subcomponentType)
-				: subcomponentType;
+		return subcomponentType != null && ((EObject) subcomponentType).eIsProxy()
+				? (SubcomponentType) eResolveProxy((InternalEObject) subcomponentType) : subcomponentType;
 	}
 
 	/**
@@ -124,13 +124,13 @@ public class SubprogramGroupSubcomponentImpl extends SubcomponentImpl implements
 	public SubprogramGroupSubcomponentType getSubprogramGroupSubcomponentType() {
 		if (subprogramGroupSubcomponentType != null && ((EObject) subprogramGroupSubcomponentType).eIsProxy()) {
 			InternalEObject oldSubprogramGroupSubcomponentType = (InternalEObject) subprogramGroupSubcomponentType;
-			subprogramGroupSubcomponentType = (SubprogramGroupSubcomponentType) eResolveProxy(oldSubprogramGroupSubcomponentType);
+			subprogramGroupSubcomponentType = (SubprogramGroupSubcomponentType) eResolveProxy(
+					oldSubprogramGroupSubcomponentType);
 			if (subprogramGroupSubcomponentType != oldSubprogramGroupSubcomponentType) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.SUBPROGRAM_GROUP_SUBCOMPONENT__SUBPROGRAM_GROUP_SUBCOMPONENT_TYPE,
 							oldSubprogramGroupSubcomponentType, subprogramGroupSubcomponentType));
-				}
 			}
 		}
 		return subprogramGroupSubcomponentType;
@@ -154,11 +154,10 @@ public class SubprogramGroupSubcomponentImpl extends SubcomponentImpl implements
 	public void setSubprogramGroupSubcomponentType(SubprogramGroupSubcomponentType newSubprogramGroupSubcomponentType) {
 		SubprogramGroupSubcomponentType oldSubprogramGroupSubcomponentType = subprogramGroupSubcomponentType;
 		subprogramGroupSubcomponentType = newSubprogramGroupSubcomponentType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Aadl2Package.SUBPROGRAM_GROUP_SUBCOMPONENT__SUBPROGRAM_GROUP_SUBCOMPONENT_TYPE,
 					oldSubprogramGroupSubcomponentType, subprogramGroupSubcomponentType));
-		}
 	}
 
 	/**
@@ -170,9 +169,8 @@ public class SubprogramGroupSubcomponentImpl extends SubcomponentImpl implements
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.SUBPROGRAM_GROUP_SUBCOMPONENT__SUBPROGRAM_GROUP_SUBCOMPONENT_TYPE:
-			if (resolve) {
+			if (resolve)
 				return getSubprogramGroupSubcomponentType();
-			}
 			return basicGetSubprogramGroupSubcomponentType();
 		}
 		return super.eGet(featureID, resolve, coreType);

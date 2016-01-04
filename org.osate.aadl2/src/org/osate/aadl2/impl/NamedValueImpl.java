@@ -50,10 +50,10 @@ import org.osate.aadl2.PropertyValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.NamedValueImpl#getNamedValue <em>Named Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,10 +98,9 @@ public class NamedValueImpl extends PropertyValueImpl implements NamedValue {
 			InternalEObject oldNamedValue = (InternalEObject) namedValue;
 			namedValue = (AbstractNamedValue) eResolveProxy(oldNamedValue);
 			if (namedValue != oldNamedValue) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Aadl2Package.NAMED_VALUE__NAMED_VALUE,
 							oldNamedValue, namedValue));
-				}
 			}
 		}
 		return namedValue;
@@ -125,10 +124,9 @@ public class NamedValueImpl extends PropertyValueImpl implements NamedValue {
 	public void setNamedValue(AbstractNamedValue newNamedValue) {
 		AbstractNamedValue oldNamedValue = namedValue;
 		namedValue = newNamedValue;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.NAMED_VALUE__NAMED_VALUE, oldNamedValue,
 					namedValue));
-		}
 	}
 
 	/**
@@ -140,9 +138,8 @@ public class NamedValueImpl extends PropertyValueImpl implements NamedValue {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Aadl2Package.NAMED_VALUE__NAMED_VALUE:
-			if (resolve) {
+			if (resolve)
 				return getNamedValue();
-			}
 			return basicGetNamedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);

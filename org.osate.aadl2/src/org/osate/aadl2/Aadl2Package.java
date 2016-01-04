@@ -25325,7 +25325,8 @@ public interface Aadl2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBPROGRAM_GROUP_IMPLEMENTATION__OWNED_SUBPROGRAM_GROUP_SUBCOMPONENT = COMPONENT_IMPLEMENTATION_FEATURE_COUNT + 1;
+	int SUBPROGRAM_GROUP_IMPLEMENTATION__OWNED_SUBPROGRAM_GROUP_SUBCOMPONENT = COMPONENT_IMPLEMENTATION_FEATURE_COUNT
+			+ 1;
 
 	/**
 	 * The feature id for the '<em><b>Owned Data Subcomponent</b></em>' containment reference list.
@@ -32546,13 +32547,22 @@ public interface Aadl2Package extends EPackage {
 	int VIRTUAL_PROCESSOR_TYPE__OWNED_SUBPROGRAM_GROUP_ACCESS = COMPONENT_TYPE_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Owned Bus Access</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_PROCESSOR_TYPE__OWNED_BUS_ACCESS = COMPONENT_TYPE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Virtual Processor Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIRTUAL_PROCESSOR_TYPE_FEATURE_COUNT = COMPONENT_TYPE_FEATURE_COUNT + 5;
+	int VIRTUAL_PROCESSOR_TYPE_FEATURE_COUNT = COMPONENT_TYPE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
@@ -32975,7 +32985,8 @@ public interface Aadl2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIRTUAL_PROCESSOR_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT = COMPONENT_IMPLEMENTATION_FEATURE_COUNT + 1;
+	int VIRTUAL_PROCESSOR_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT = COMPONENT_IMPLEMENTATION_FEATURE_COUNT
+			+ 1;
 
 	/**
 	 * The number of structural features of the '<em>Virtual Processor Implementation</em>' class.
@@ -41637,6 +41648,17 @@ public interface Aadl2Package extends EPackage {
 	 * @generated
 	 */
 	EReference getVirtualProcessorType_OwnedSubprogramGroupAccess();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.osate.aadl2.VirtualProcessorType#getOwnedBusAccesses <em>Owned Bus Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Bus Access</em>'.
+	 * @see org.osate.aadl2.VirtualProcessorType#getOwnedBusAccesses()
+	 * @see #getVirtualProcessorType()
+	 * @generated
+	 */
+	EReference getVirtualProcessorType_OwnedBusAccess();
 
 	/**
 	 * Returns the meta object for class '{@link org.osate.aadl2.VirtualProcessorImplementation <em>Virtual Processor Implementation</em>}'.

@@ -61,6 +61,7 @@ import org.osate.aadl2.NamedElement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ComponentClassifierImpl#getClassifierFeatures <em>Classifier Feature</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ComponentClassifierImpl#getOwnedMembers <em>Owned Member</em>}</li>
@@ -70,7 +71,6 @@ import org.osate.aadl2.NamedElement;
  *   <li>{@link org.osate.aadl2.impl.ComponentClassifierImpl#isNoFlows <em>No Flows</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ComponentClassifierImpl#isNoModes <em>No Modes</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -312,10 +312,9 @@ public abstract class ComponentClassifierImpl extends ClassifierImpl implements 
 	public void setDerivedModes(boolean newDerivedModes) {
 		boolean oldDerivedModes = derivedModes;
 		derivedModes = newDerivedModes;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.COMPONENT_CLASSIFIER__DERIVED_MODES,
 					oldDerivedModes, derivedModes));
-		}
 	}
 
 	/**
@@ -337,10 +336,9 @@ public abstract class ComponentClassifierImpl extends ClassifierImpl implements 
 	public void setNoFlows(boolean newNoFlows) {
 		boolean oldNoFlows = noFlows;
 		noFlows = newNoFlows;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.COMPONENT_CLASSIFIER__NO_FLOWS,
 					oldNoFlows, noFlows));
-		}
 	}
 
 	/**
@@ -362,10 +360,9 @@ public abstract class ComponentClassifierImpl extends ClassifierImpl implements 
 	public void setNoModes(boolean newNoModes) {
 		boolean oldNoModes = noModes;
 		noModes = newNoModes;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.COMPONENT_CLASSIFIER__NO_MODES,
 					oldNoModes, noModes));
-		}
 	}
 
 	/**
@@ -496,9 +493,8 @@ public abstract class ComponentClassifierImpl extends ClassifierImpl implements 
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (derivedModes: ");

@@ -77,6 +77,7 @@ import org.osate.aadl2.util.NonNotifyingEObjectEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ClassifierImpl#getClassifierFeatures <em>Classifier Feature</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ClassifierImpl#getMembers <em>Member</em>}</li>
@@ -92,7 +93,6 @@ import org.osate.aadl2.util.NonNotifyingEObjectEList;
  *   <li>{@link org.osate.aadl2.impl.ClassifierImpl#isNoAnnexes <em>No Annexes</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ClassifierImpl#isNoProperties <em>No Properties</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -547,10 +547,9 @@ public abstract class ClassifierImpl extends NamespaceImpl implements Classifier
 	public void setNoProperties(boolean newNoProperties) {
 		boolean oldNoProperties = noProperties;
 		noProperties = newNoProperties;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CLASSIFIER__NO_PROPERTIES,
 					oldNoProperties, noProperties));
-		}
 	}
 
 	/**
@@ -572,10 +571,9 @@ public abstract class ClassifierImpl extends NamespaceImpl implements Classifier
 	public void setNoPrototypes(boolean newNoPrototypes) {
 		boolean oldNoPrototypes = noPrototypes;
 		noPrototypes = newNoPrototypes;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CLASSIFIER__NO_PROTOTYPES,
 					oldNoPrototypes, noPrototypes));
-		}
 	}
 
 	/**
@@ -597,10 +595,9 @@ public abstract class ClassifierImpl extends NamespaceImpl implements Classifier
 	public void setNoAnnexes(boolean newNoAnnexes) {
 		boolean oldNoAnnexes = noAnnexes;
 		noAnnexes = newNoAnnexes;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CLASSIFIER__NO_ANNEXES, oldNoAnnexes,
 					noAnnexes));
-		}
 	}
 
 	/**
@@ -872,9 +869,8 @@ public abstract class ClassifierImpl extends NamespaceImpl implements Classifier
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (noPrototypes: ");

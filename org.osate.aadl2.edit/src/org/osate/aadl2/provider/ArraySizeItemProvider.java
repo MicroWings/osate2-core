@@ -89,12 +89,13 @@ public class ArraySizeItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addSizePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ArraySize_size_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ArraySize_size_feature", "_UI_ArraySize_type"),
-				Aadl2Package.eINSTANCE.getArraySize_Size(), true, false, false,
-				ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ArraySize_size_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ArraySize_size_feature",
+								"_UI_ArraySize_type"),
+						Aadl2Package.eINSTANCE.getArraySize_Size(), true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -104,13 +105,12 @@ public class ArraySizeItemProvider extends ElementItemProvider {
 	 * @generated
 	 */
 	protected void addSizePropertyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_ArraySize_sizeProperty_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ArraySize_sizeProperty_feature",
-						"_UI_ArraySize_type"), Aadl2Package.eINSTANCE.getArraySize_SizeProperty(), true, false, true,
-				null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ArraySize_sizeProperty_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ArraySize_sizeProperty_feature",
+								"_UI_ArraySize_type"),
+						Aadl2Package.eINSTANCE.getArraySize_SizeProperty(), true, false, true, null, null, null));
 	}
 
 	/**

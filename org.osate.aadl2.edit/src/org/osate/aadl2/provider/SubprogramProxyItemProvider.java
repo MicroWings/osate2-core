@@ -84,13 +84,12 @@ public class SubprogramProxyItemProvider extends ProcessorFeatureItemProvider {
 	 * @generated
 	 */
 	protected void addSubprogramClassifierPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_SubprogramProxy_subprogramClassifier_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_SubprogramProxy_subprogramClassifier_feature",
-						"_UI_SubprogramProxy_type"), Aadl2Package.eINSTANCE.getSubprogramProxy_SubprogramClassifier(),
-				true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_SubprogramProxy_subprogramClassifier_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_SubprogramProxy_subprogramClassifier_feature", "_UI_SubprogramProxy_type"),
+				Aadl2Package.eINSTANCE.getSubprogramProxy_SubprogramClassifier(), true, false, true, null, null, null));
 	}
 
 	/**

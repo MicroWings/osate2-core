@@ -59,11 +59,11 @@ import org.osate.aadl2.Prototype;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ComponentPrototypeBindingImpl#getActuals <em>Actual</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ComponentPrototypeBindingImpl#getFormal <em>Formal</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -118,8 +118,8 @@ public class ComponentPrototypeBindingImpl extends PrototypeBindingImpl implemen
 	 */
 	@Override
 	public ComponentPrototypeActual createActual() {
-		ComponentPrototypeActual newActual = (ComponentPrototypeActual) create(Aadl2Package.eINSTANCE
-				.getComponentPrototypeActual());
+		ComponentPrototypeActual newActual = (ComponentPrototypeActual) create(
+				Aadl2Package.eINSTANCE.getComponentPrototypeActual());
 		getActuals().add(newActual);
 		return newActual;
 	}
@@ -135,10 +135,9 @@ public class ComponentPrototypeBindingImpl extends PrototypeBindingImpl implemen
 			InternalEObject oldFormal = (InternalEObject) formal;
 			formal = (Prototype) eResolveProxy(oldFormal);
 			if (formal != oldFormal) {
-				if (eNotificationRequired()) {
+				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
 							Aadl2Package.COMPONENT_PROTOTYPE_BINDING__FORMAL, oldFormal, formal));
-				}
 			}
 		}
 		return formal;

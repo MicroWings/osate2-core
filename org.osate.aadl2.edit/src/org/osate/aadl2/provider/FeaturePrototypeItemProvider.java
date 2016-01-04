@@ -91,13 +91,13 @@ public class FeaturePrototypeItemProvider extends PrototypeItemProvider {
 	 * @generated
 	 */
 	protected void addDirectionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_FeaturePrototype_direction_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototype_direction_feature",
-						"_UI_FeaturePrototype_type"), Aadl2Package.eINSTANCE.getFeaturePrototype_Direction(), true,
-				false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FeaturePrototype_direction_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototype_direction_feature",
+								"_UI_FeaturePrototype_type"),
+						Aadl2Package.eINSTANCE.getFeaturePrototype_Direction(), true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -107,13 +107,13 @@ public class FeaturePrototypeItemProvider extends PrototypeItemProvider {
 	 * @generated
 	 */
 	protected void addConstrainingClassifierPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_FeaturePrototype_constrainingClassifier_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototype_constrainingClassifier_feature",
-						"_UI_FeaturePrototype_type"), Aadl2Package.eINSTANCE
-						.getFeaturePrototype_ConstrainingClassifier(), true, false, true, null, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FeaturePrototype_constrainingClassifier_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_FeaturePrototype_constrainingClassifier_feature", "_UI_FeaturePrototype_type"),
+				Aadl2Package.eINSTANCE.getFeaturePrototype_ConstrainingClassifier(), true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -123,13 +123,13 @@ public class FeaturePrototypeItemProvider extends PrototypeItemProvider {
 	 * @generated
 	 */
 	protected void addInPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_FeaturePrototype_in_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototype_in_feature",
-						"_UI_FeaturePrototype_type"), Aadl2Package.eINSTANCE.getFeaturePrototype_In(), true, false,
-				false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FeaturePrototype_in_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototype_in_feature",
+								"_UI_FeaturePrototype_type"),
+						Aadl2Package.eINSTANCE.getFeaturePrototype_In(), true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -139,13 +139,13 @@ public class FeaturePrototypeItemProvider extends PrototypeItemProvider {
 	 * @generated
 	 */
 	protected void addOutPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-				getResourceLocator(),
-				getString("_UI_FeaturePrototype_out_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototype_out_feature",
-						"_UI_FeaturePrototype_type"), Aadl2Package.eINSTANCE.getFeaturePrototype_Out(), true, false,
-				false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FeaturePrototype_out_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FeaturePrototype_out_feature",
+								"_UI_FeaturePrototype_type"),
+						Aadl2Package.eINSTANCE.getFeaturePrototype_Out(), true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**

@@ -68,6 +68,7 @@ import org.osate.aadl2.util.Aadl2Util;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.PackageSectionImpl#getOwnedMembers <em>Owned Member</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.PackageSectionImpl#getOwnedPackageRenames <em>Owned Package Rename</em>}</li>
@@ -80,7 +81,6 @@ import org.osate.aadl2.util.Aadl2Util;
  *   <li>{@link org.osate.aadl2.impl.PackageSectionImpl#isNoProperties <em>No Properties</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.PackageSectionImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -236,8 +236,7 @@ public abstract class PackageSectionImpl extends NamespaceImpl implements Packag
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int[] OWNED_MEMBER_ESUBSETS = new int[] {
-			Aadl2Package.PACKAGE_SECTION__OWNED_PACKAGE_RENAME,
+	protected static final int[] OWNED_MEMBER_ESUBSETS = new int[] { Aadl2Package.PACKAGE_SECTION__OWNED_PACKAGE_RENAME,
 			Aadl2Package.PACKAGE_SECTION__OWNED_COMPONENT_TYPE_RENAME, Aadl2Package.PACKAGE_SECTION__OWNED_CLASSIFIER,
 			Aadl2Package.PACKAGE_SECTION__OWNED_FEATURE_GROUP_TYPE_RENAME,
 			Aadl2Package.PACKAGE_SECTION__OWNED_ANNEX_LIBRARY };
@@ -315,8 +314,8 @@ public abstract class PackageSectionImpl extends NamespaceImpl implements Packag
 	 */
 	@Override
 	public ComponentTypeRename createOwnedComponentTypeRename() {
-		ComponentTypeRename newOwnedComponentTypeRename = (ComponentTypeRename) create(Aadl2Package.eINSTANCE
-				.getComponentTypeRename());
+		ComponentTypeRename newOwnedComponentTypeRename = (ComponentTypeRename) create(
+				Aadl2Package.eINSTANCE.getComponentTypeRename());
 		getOwnedComponentTypeRenames().add(newOwnedComponentTypeRename);
 		return newOwnedComponentTypeRename;
 	}
@@ -340,10 +339,9 @@ public abstract class PackageSectionImpl extends NamespaceImpl implements Packag
 	public void setNoAnnexes(boolean newNoAnnexes) {
 		boolean oldNoAnnexes = noAnnexes;
 		noAnnexes = newNoAnnexes;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.PACKAGE_SECTION__NO_ANNEXES,
 					oldNoAnnexes, noAnnexes));
-		}
 	}
 
 	/**
@@ -365,10 +363,9 @@ public abstract class PackageSectionImpl extends NamespaceImpl implements Packag
 	public void setNoProperties(boolean newNoProperties) {
 		boolean oldNoProperties = noProperties;
 		noProperties = newNoProperties;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.PACKAGE_SECTION__NO_PROPERTIES,
 					oldNoProperties, noProperties));
-		}
 	}
 
 	/**
@@ -392,8 +389,8 @@ public abstract class PackageSectionImpl extends NamespaceImpl implements Packag
 	 */
 	@Override
 	public FeatureGroupTypeRename createOwnedFeatureGroupTypeRename() {
-		FeatureGroupTypeRename newOwnedFeatureGroupTypeRename = (FeatureGroupTypeRename) create(Aadl2Package.eINSTANCE
-				.getFeatureGroupTypeRename());
+		FeatureGroupTypeRename newOwnedFeatureGroupTypeRename = (FeatureGroupTypeRename) create(
+				Aadl2Package.eINSTANCE.getFeatureGroupTypeRename());
 		getOwnedFeatureGroupTypeRenames().add(newOwnedFeatureGroupTypeRename);
 		return newOwnedFeatureGroupTypeRename;
 	}
@@ -616,9 +613,8 @@ public abstract class PackageSectionImpl extends NamespaceImpl implements Packag
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (noAnnexes: ");

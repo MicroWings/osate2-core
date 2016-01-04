@@ -49,10 +49,10 @@ import org.osate.aadl2.PropertyValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ComputedValueImpl#getFunction <em>Function</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -115,10 +115,9 @@ public class ComputedValueImpl extends PropertyValueImpl implements ComputedValu
 	public void setFunction(String newFunction) {
 		String oldFunction = function;
 		function = newFunction;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.COMPUTED_VALUE__FUNCTION, oldFunction,
 					function));
-		}
 	}
 
 	/**
@@ -186,9 +185,8 @@ public class ComputedValueImpl extends PropertyValueImpl implements ComputedValu
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy()) {
+		if (eIsProxy())
 			return super.toString();
-		}
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (function: ");

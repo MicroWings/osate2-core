@@ -54,10 +54,10 @@ import org.osate.aadl2.RecordValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.RecordValueImpl#getOwnedFieldValues <em>Owned Field Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -112,8 +112,8 @@ public class RecordValueImpl extends PropertyValueImpl implements RecordValue {
 	 */
 	@Override
 	public BasicPropertyAssociation createOwnedFieldValue() {
-		BasicPropertyAssociation newOwnedFieldValue = (BasicPropertyAssociation) create(Aadl2Package.eINSTANCE
-				.getBasicPropertyAssociation());
+		BasicPropertyAssociation newOwnedFieldValue = (BasicPropertyAssociation) create(
+				Aadl2Package.eINSTANCE.getBasicPropertyAssociation());
 		getOwnedFieldValues().add(newOwnedFieldValue);
 		return newOwnedFieldValue;
 	}
