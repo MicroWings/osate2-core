@@ -6,6 +6,15 @@ it is also used to prototype new AADL v3 features. You will
 see a list of changes/new features brought into this branch.
 
 = Hardware Flows
+Hardware flows are the possibility to be able to specify
+flows only with hardware components. For example, a flow
+starts from a processor that pass through a bus and
+end up in a device.
 
 
 = Buses access on virtual processors
+In partitioned architectures, virtual processors (that capture
+partitions) can have access to the hardware to send/receive
+data on a bus. For that purpose, we need to capture the access
+to the physical hardware using a bus access on the partition
+runtime, which is captures by a virtual processor component.
