@@ -3668,6 +3668,98 @@ public class Aadl2ItemProviderAdapterFactory extends Aadl2AdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.osate.aadl2.VirtualMemoryType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VirtualMemoryTypeItemProvider virtualMemoryTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.osate.aadl2.VirtualMemoryType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVirtualMemoryTypeAdapter() {
+		if (virtualMemoryTypeItemProvider == null) {
+			virtualMemoryTypeItemProvider = new VirtualMemoryTypeItemProvider(this);
+		}
+
+		return virtualMemoryTypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.osate.aadl2.VirtualMemoryImplementation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VirtualMemoryImplementationItemProvider virtualMemoryImplementationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.osate.aadl2.VirtualMemoryImplementation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVirtualMemoryImplementationAdapter() {
+		if (virtualMemoryImplementationItemProvider == null) {
+			virtualMemoryImplementationItemProvider = new VirtualMemoryImplementationItemProvider(this);
+		}
+
+		return virtualMemoryImplementationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.osate.aadl2.VirtualMemoryPrototype} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VirtualMemoryPrototypeItemProvider virtualMemoryPrototypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.osate.aadl2.VirtualMemoryPrototype}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVirtualMemoryPrototypeAdapter() {
+		if (virtualMemoryPrototypeItemProvider == null) {
+			virtualMemoryPrototypeItemProvider = new VirtualMemoryPrototypeItemProvider(this);
+		}
+
+		return virtualMemoryPrototypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.osate.aadl2.VirtualMemorySubcomponent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VirtualMemorySubcomponentItemProvider virtualMemorySubcomponentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.osate.aadl2.VirtualMemorySubcomponent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVirtualMemorySubcomponentAdapter() {
+		if (virtualMemorySubcomponentItemProvider == null) {
+			virtualMemorySubcomponentItemProvider = new VirtualMemorySubcomponentItemProvider(this);
+		}
+
+		return virtualMemorySubcomponentItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4082,6 +4174,14 @@ public class Aadl2ItemProviderAdapterFactory extends Aadl2AdapterFactory
 			referenceTypeItemProvider.dispose();
 		if (listTypeItemProvider != null)
 			listTypeItemProvider.dispose();
+		if (virtualMemoryTypeItemProvider != null)
+			virtualMemoryTypeItemProvider.dispose();
+		if (virtualMemoryImplementationItemProvider != null)
+			virtualMemoryImplementationItemProvider.dispose();
+		if (virtualMemoryPrototypeItemProvider != null)
+			virtualMemoryPrototypeItemProvider.dispose();
+		if (virtualMemorySubcomponentItemProvider != null)
+			virtualMemorySubcomponentItemProvider.dispose();
 	}
 
 }

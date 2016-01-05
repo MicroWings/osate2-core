@@ -102,6 +102,7 @@ public class SystemImplementationItemProvider extends ComponentImplementationIte
 			childrenFeatures.add(Aadl2Package.eINSTANCE.getSystemImplementation_OwnedSystemSubcomponent());
 			childrenFeatures.add(Aadl2Package.eINSTANCE.getSystemImplementation_OwnedVirtualBusSubcomponent());
 			childrenFeatures.add(Aadl2Package.eINSTANCE.getSystemImplementation_OwnedVirtualProcessorSubcomponent());
+			childrenFeatures.add(Aadl2Package.eINSTANCE.getSystemImplementation_OwnedVirtualMemorySubcomponent());
 		}
 		return childrenFeatures;
 	}
@@ -166,6 +167,7 @@ public class SystemImplementationItemProvider extends ComponentImplementationIte
 		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_SYSTEM_SUBCOMPONENT:
 		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_BUS_SUBCOMPONENT:
 		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT:
+		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -226,6 +228,10 @@ public class SystemImplementationItemProvider extends ComponentImplementationIte
 		newChildDescriptors.add(
 				createChildParameter(Aadl2Package.eINSTANCE.getSystemImplementation_OwnedVirtualProcessorSubcomponent(),
 						Aadl2Factory.eINSTANCE.createVirtualProcessorSubcomponent()));
+
+		newChildDescriptors.add(
+				createChildParameter(Aadl2Package.eINSTANCE.getSystemImplementation_OwnedVirtualMemorySubcomponent(),
+						Aadl2Factory.eINSTANCE.createVirtualMemorySubcomponent()));
 	}
 
 }

@@ -62,6 +62,7 @@ import org.osate.aadl2.SystemImplementation;
 import org.osate.aadl2.SystemSubcomponent;
 import org.osate.aadl2.SystemType;
 import org.osate.aadl2.VirtualBusSubcomponent;
+import org.osate.aadl2.VirtualMemorySubcomponent;
 import org.osate.aadl2.VirtualProcessorSubcomponent;
 
 /**
@@ -84,6 +85,7 @@ import org.osate.aadl2.VirtualProcessorSubcomponent;
  *   <li>{@link org.osate.aadl2.impl.SystemImplementationImpl#getOwnedSystemSubcomponents <em>Owned System Subcomponent</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.SystemImplementationImpl#getOwnedVirtualBusSubcomponents <em>Owned Virtual Bus Subcomponent</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.SystemImplementationImpl#getOwnedVirtualProcessorSubcomponents <em>Owned Virtual Processor Subcomponent</em>}</li>
+ *   <li>{@link org.osate.aadl2.impl.SystemImplementationImpl#getOwnedVirtualMemorySubcomponents <em>Owned Virtual Memory Subcomponent</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.SystemImplementationImpl#getType <em>Type</em>}</li>
  * </ul>
  *
@@ -191,6 +193,16 @@ public class SystemImplementationImpl extends ComponentImplementationImpl implem
 	protected EList<VirtualProcessorSubcomponent> ownedVirtualProcessorSubcomponents;
 
 	/**
+	 * The cached value of the '{@link #getOwnedVirtualMemorySubcomponents() <em>Owned Virtual Memory Subcomponent</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwnedVirtualMemorySubcomponents()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VirtualMemorySubcomponent> ownedVirtualMemorySubcomponents;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -253,7 +265,8 @@ public class SystemImplementationImpl extends ComponentImplementationImpl implem
 			Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_SUBPROGRAM_GROUP_SUBCOMPONENT,
 			Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_SYSTEM_SUBCOMPONENT,
 			Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_BUS_SUBCOMPONENT,
-			Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT };
+			Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT,
+			Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT };
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -559,6 +572,34 @@ public class SystemImplementationImpl extends ComponentImplementationImpl implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<VirtualMemorySubcomponent> getOwnedVirtualMemorySubcomponents() {
+		if (ownedVirtualMemorySubcomponents == null) {
+			ownedVirtualMemorySubcomponents = new EObjectContainmentEList<VirtualMemorySubcomponent>(
+					VirtualMemorySubcomponent.class, this,
+					Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT);
+		}
+		return ownedVirtualMemorySubcomponents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VirtualMemorySubcomponent createOwnedVirtualMemorySubcomponent() {
+		VirtualMemorySubcomponent newOwnedVirtualMemorySubcomponent = (VirtualMemorySubcomponent) create(
+				Aadl2Package.eINSTANCE.getVirtualMemorySubcomponent());
+		getOwnedVirtualMemorySubcomponents().add(newOwnedVirtualMemorySubcomponent);
+		return newOwnedVirtualMemorySubcomponent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
@@ -627,6 +668,8 @@ public class SystemImplementationImpl extends ComponentImplementationImpl implem
 			return ((InternalEList<?>) getOwnedVirtualBusSubcomponents()).basicRemove(otherEnd, msgs);
 		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT:
 			return ((InternalEList<?>) getOwnedVirtualProcessorSubcomponents()).basicRemove(otherEnd, msgs);
+		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT:
+			return ((InternalEList<?>) getOwnedVirtualMemorySubcomponents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -661,6 +704,8 @@ public class SystemImplementationImpl extends ComponentImplementationImpl implem
 			return getOwnedVirtualBusSubcomponents();
 		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT:
 			return getOwnedVirtualProcessorSubcomponents();
+		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT:
+			return getOwnedVirtualMemorySubcomponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -719,6 +764,10 @@ public class SystemImplementationImpl extends ComponentImplementationImpl implem
 			getOwnedVirtualProcessorSubcomponents()
 					.addAll((Collection<? extends VirtualProcessorSubcomponent>) newValue);
 			return;
+		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT:
+			getOwnedVirtualMemorySubcomponents().clear();
+			getOwnedVirtualMemorySubcomponents().addAll((Collection<? extends VirtualMemorySubcomponent>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -764,6 +813,9 @@ public class SystemImplementationImpl extends ComponentImplementationImpl implem
 		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT:
 			getOwnedVirtualProcessorSubcomponents().clear();
 			return;
+		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT:
+			getOwnedVirtualMemorySubcomponents().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -800,6 +852,8 @@ public class SystemImplementationImpl extends ComponentImplementationImpl implem
 			return ownedVirtualBusSubcomponents != null && !ownedVirtualBusSubcomponents.isEmpty();
 		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT:
 			return ownedVirtualProcessorSubcomponents != null && !ownedVirtualProcessorSubcomponents.isEmpty();
+		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT:
+			return ownedVirtualMemorySubcomponents != null && !ownedVirtualMemorySubcomponents.isEmpty();
 		case Aadl2Package.SYSTEM_IMPLEMENTATION__TYPE:
 			return isSetType();
 		}
@@ -823,7 +877,8 @@ public class SystemImplementationImpl extends ComponentImplementationImpl implem
 				|| eIsSet(Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_SUBPROGRAM_GROUP_SUBCOMPONENT)
 				|| eIsSet(Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_SYSTEM_SUBCOMPONENT)
 				|| eIsSet(Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_BUS_SUBCOMPONENT)
-				|| eIsSet(Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT);
+				|| eIsSet(Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT)
+				|| eIsSet(Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT);
 	}
 
 	@Override

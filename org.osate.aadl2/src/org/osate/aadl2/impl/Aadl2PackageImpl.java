@@ -46,7 +46,277 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.uml2.uml.UMLPackage;
-import org.osate.aadl2.*;
+import org.osate.aadl2.Aadl2Factory;
+import org.osate.aadl2.Aadl2Package;
+import org.osate.aadl2.AadlBoolean;
+import org.osate.aadl2.AadlInteger;
+import org.osate.aadl2.AadlPackage;
+import org.osate.aadl2.AadlReal;
+import org.osate.aadl2.AadlString;
+import org.osate.aadl2.Abstract;
+import org.osate.aadl2.AbstractClassifier;
+import org.osate.aadl2.AbstractFeature;
+import org.osate.aadl2.AbstractImplementation;
+import org.osate.aadl2.AbstractNamedValue;
+import org.osate.aadl2.AbstractPrototype;
+import org.osate.aadl2.AbstractSubcomponent;
+import org.osate.aadl2.AbstractSubcomponentType;
+import org.osate.aadl2.AbstractType;
+import org.osate.aadl2.Access;
+import org.osate.aadl2.AccessCategory;
+import org.osate.aadl2.AccessConnection;
+import org.osate.aadl2.AccessConnectionEnd;
+import org.osate.aadl2.AccessSpecification;
+import org.osate.aadl2.AccessType;
+import org.osate.aadl2.AnnexLibrary;
+import org.osate.aadl2.AnnexSubclause;
+import org.osate.aadl2.ArrayDimension;
+import org.osate.aadl2.ArrayRange;
+import org.osate.aadl2.ArraySize;
+import org.osate.aadl2.ArraySizeProperty;
+import org.osate.aadl2.ArrayableElement;
+import org.osate.aadl2.BasicProperty;
+import org.osate.aadl2.BasicPropertyAssociation;
+import org.osate.aadl2.BehavioralFeature;
+import org.osate.aadl2.BehavioredImplementation;
+import org.osate.aadl2.BooleanLiteral;
+import org.osate.aadl2.Bus;
+import org.osate.aadl2.BusAccess;
+import org.osate.aadl2.BusClassifier;
+import org.osate.aadl2.BusImplementation;
+import org.osate.aadl2.BusPrototype;
+import org.osate.aadl2.BusSubcomponent;
+import org.osate.aadl2.BusSubcomponentType;
+import org.osate.aadl2.BusType;
+import org.osate.aadl2.CallContext;
+import org.osate.aadl2.CalledSubprogram;
+import org.osate.aadl2.Classifier;
+import org.osate.aadl2.ClassifierFeature;
+import org.osate.aadl2.ClassifierType;
+import org.osate.aadl2.ClassifierValue;
+import org.osate.aadl2.Comment;
+import org.osate.aadl2.ComponentCategory;
+import org.osate.aadl2.ComponentClassifier;
+import org.osate.aadl2.ComponentImplementation;
+import org.osate.aadl2.ComponentImplementationReference;
+import org.osate.aadl2.ComponentPrototype;
+import org.osate.aadl2.ComponentPrototypeActual;
+import org.osate.aadl2.ComponentPrototypeBinding;
+import org.osate.aadl2.ComponentType;
+import org.osate.aadl2.ComponentTypeRename;
+import org.osate.aadl2.ComputedValue;
+import org.osate.aadl2.ConnectedElement;
+import org.osate.aadl2.Connection;
+import org.osate.aadl2.ConnectionEnd;
+import org.osate.aadl2.ContainedNamedElement;
+import org.osate.aadl2.ContainmentPathElement;
+import org.osate.aadl2.Context;
+import org.osate.aadl2.Data;
+import org.osate.aadl2.DataAccess;
+import org.osate.aadl2.DataClassifier;
+import org.osate.aadl2.DataImplementation;
+import org.osate.aadl2.DataPort;
+import org.osate.aadl2.DataPrototype;
+import org.osate.aadl2.DataSubcomponent;
+import org.osate.aadl2.DataSubcomponentType;
+import org.osate.aadl2.DataType;
+import org.osate.aadl2.DefaultAnnexLibrary;
+import org.osate.aadl2.DefaultAnnexSubclause;
+import org.osate.aadl2.Device;
+import org.osate.aadl2.DeviceClassifier;
+import org.osate.aadl2.DeviceImplementation;
+import org.osate.aadl2.DevicePrototype;
+import org.osate.aadl2.DeviceSubcomponent;
+import org.osate.aadl2.DeviceSubcomponentType;
+import org.osate.aadl2.DeviceType;
+import org.osate.aadl2.DirectedFeature;
+import org.osate.aadl2.DirectedRelationship;
+import org.osate.aadl2.DirectionType;
+import org.osate.aadl2.Element;
+import org.osate.aadl2.EndToEndFlow;
+import org.osate.aadl2.EndToEndFlowElement;
+import org.osate.aadl2.EndToEndFlowSegment;
+import org.osate.aadl2.EnumerationLiteral;
+import org.osate.aadl2.EnumerationType;
+import org.osate.aadl2.EventDataPort;
+import org.osate.aadl2.EventDataSource;
+import org.osate.aadl2.EventPort;
+import org.osate.aadl2.EventSource;
+import org.osate.aadl2.Feature;
+import org.osate.aadl2.FeatureClassifier;
+import org.osate.aadl2.FeatureConnection;
+import org.osate.aadl2.FeatureConnectionEnd;
+import org.osate.aadl2.FeatureGroup;
+import org.osate.aadl2.FeatureGroupConnection;
+import org.osate.aadl2.FeatureGroupConnectionEnd;
+import org.osate.aadl2.FeatureGroupPrototype;
+import org.osate.aadl2.FeatureGroupPrototypeActual;
+import org.osate.aadl2.FeatureGroupPrototypeBinding;
+import org.osate.aadl2.FeatureGroupType;
+import org.osate.aadl2.FeatureGroupTypeRename;
+import org.osate.aadl2.FeaturePrototype;
+import org.osate.aadl2.FeaturePrototypeActual;
+import org.osate.aadl2.FeaturePrototypeBinding;
+import org.osate.aadl2.FeaturePrototypeReference;
+import org.osate.aadl2.FeatureType;
+import org.osate.aadl2.Flow;
+import org.osate.aadl2.FlowElement;
+import org.osate.aadl2.FlowEnd;
+import org.osate.aadl2.FlowFeature;
+import org.osate.aadl2.FlowImplementation;
+import org.osate.aadl2.FlowKind;
+import org.osate.aadl2.FlowSegment;
+import org.osate.aadl2.FlowSpecification;
+import org.osate.aadl2.Generalization;
+import org.osate.aadl2.GlobalNamespace;
+import org.osate.aadl2.GroupExtension;
+import org.osate.aadl2.ImplementationExtension;
+import org.osate.aadl2.IntegerLiteral;
+import org.osate.aadl2.InternalFeature;
+import org.osate.aadl2.ListType;
+import org.osate.aadl2.ListValue;
+import org.osate.aadl2.Memory;
+import org.osate.aadl2.MemoryClassifier;
+import org.osate.aadl2.MemoryImplementation;
+import org.osate.aadl2.MemoryPrototype;
+import org.osate.aadl2.MemorySubcomponent;
+import org.osate.aadl2.MemorySubcomponentType;
+import org.osate.aadl2.MemoryType;
+import org.osate.aadl2.MetaclassReference;
+import org.osate.aadl2.ModalElement;
+import org.osate.aadl2.ModalPath;
+import org.osate.aadl2.ModalPropertyValue;
+import org.osate.aadl2.Mode;
+import org.osate.aadl2.ModeBinding;
+import org.osate.aadl2.ModeFeature;
+import org.osate.aadl2.ModeTransition;
+import org.osate.aadl2.ModeTransitionTrigger;
+import org.osate.aadl2.ModelUnit;
+import org.osate.aadl2.NamedElement;
+import org.osate.aadl2.NamedValue;
+import org.osate.aadl2.Namespace;
+import org.osate.aadl2.NonListType;
+import org.osate.aadl2.NumberType;
+import org.osate.aadl2.NumberValue;
+import org.osate.aadl2.NumericRange;
+import org.osate.aadl2.Operation;
+import org.osate.aadl2.OperationKind;
+import org.osate.aadl2.PackageRename;
+import org.osate.aadl2.PackageSection;
+import org.osate.aadl2.Parameter;
+import org.osate.aadl2.ParameterConnection;
+import org.osate.aadl2.ParameterConnectionEnd;
+import org.osate.aadl2.Port;
+import org.osate.aadl2.PortCategory;
+import org.osate.aadl2.PortConnection;
+import org.osate.aadl2.PortConnectionEnd;
+import org.osate.aadl2.PortProxy;
+import org.osate.aadl2.PortSpecification;
+import org.osate.aadl2.PrivatePackageSection;
+import org.osate.aadl2.ProcessClassifier;
+import org.osate.aadl2.ProcessImplementation;
+import org.osate.aadl2.ProcessPrototype;
+import org.osate.aadl2.ProcessSubcomponent;
+import org.osate.aadl2.ProcessSubcomponentType;
+import org.osate.aadl2.ProcessType;
+import org.osate.aadl2.Processor;
+import org.osate.aadl2.ProcessorClassifier;
+import org.osate.aadl2.ProcessorFeature;
+import org.osate.aadl2.ProcessorImplementation;
+import org.osate.aadl2.ProcessorPrototype;
+import org.osate.aadl2.ProcessorSubcomponent;
+import org.osate.aadl2.ProcessorSubcomponentType;
+import org.osate.aadl2.ProcessorType;
+import org.osate.aadl2.Property;
+import org.osate.aadl2.PropertyAssociation;
+import org.osate.aadl2.PropertyConstant;
+import org.osate.aadl2.PropertyExpression;
+import org.osate.aadl2.PropertyOwner;
+import org.osate.aadl2.PropertySet;
+import org.osate.aadl2.PropertyType;
+import org.osate.aadl2.PropertyValue;
+import org.osate.aadl2.Prototype;
+import org.osate.aadl2.PrototypeBinding;
+import org.osate.aadl2.PublicPackageSection;
+import org.osate.aadl2.RangeType;
+import org.osate.aadl2.RangeValue;
+import org.osate.aadl2.RealLiteral;
+import org.osate.aadl2.Realization;
+import org.osate.aadl2.RecordField;
+import org.osate.aadl2.RecordType;
+import org.osate.aadl2.RecordValue;
+import org.osate.aadl2.ReferenceType;
+import org.osate.aadl2.ReferenceValue;
+import org.osate.aadl2.RefinableElement;
+import org.osate.aadl2.Relationship;
+import org.osate.aadl2.StringLiteral;
+import org.osate.aadl2.StructuralFeature;
+import org.osate.aadl2.Subcomponent;
+import org.osate.aadl2.SubcomponentType;
+import org.osate.aadl2.Subprogram;
+import org.osate.aadl2.SubprogramAccess;
+import org.osate.aadl2.SubprogramCall;
+import org.osate.aadl2.SubprogramCallSequence;
+import org.osate.aadl2.SubprogramClassifier;
+import org.osate.aadl2.SubprogramGroup;
+import org.osate.aadl2.SubprogramGroupAccess;
+import org.osate.aadl2.SubprogramGroupClassifier;
+import org.osate.aadl2.SubprogramGroupImplementation;
+import org.osate.aadl2.SubprogramGroupPrototype;
+import org.osate.aadl2.SubprogramGroupSubcomponent;
+import org.osate.aadl2.SubprogramGroupSubcomponentType;
+import org.osate.aadl2.SubprogramGroupType;
+import org.osate.aadl2.SubprogramImplementation;
+import org.osate.aadl2.SubprogramPrototype;
+import org.osate.aadl2.SubprogramProxy;
+import org.osate.aadl2.SubprogramSubcomponent;
+import org.osate.aadl2.SubprogramSubcomponentType;
+import org.osate.aadl2.SubprogramType;
+import org.osate.aadl2.SystemClassifier;
+import org.osate.aadl2.SystemImplementation;
+import org.osate.aadl2.SystemPrototype;
+import org.osate.aadl2.SystemSubcomponent;
+import org.osate.aadl2.SystemSubcomponentType;
+import org.osate.aadl2.SystemType;
+import org.osate.aadl2.ThreadClassifier;
+import org.osate.aadl2.ThreadGroupClassifier;
+import org.osate.aadl2.ThreadGroupImplementation;
+import org.osate.aadl2.ThreadGroupPrototype;
+import org.osate.aadl2.ThreadGroupSubcomponent;
+import org.osate.aadl2.ThreadGroupSubcomponentType;
+import org.osate.aadl2.ThreadGroupType;
+import org.osate.aadl2.ThreadImplementation;
+import org.osate.aadl2.ThreadPrototype;
+import org.osate.aadl2.ThreadSubcomponent;
+import org.osate.aadl2.ThreadSubcomponentType;
+import org.osate.aadl2.ThreadType;
+import org.osate.aadl2.TriggerPort;
+import org.osate.aadl2.Type;
+import org.osate.aadl2.TypeExtension;
+import org.osate.aadl2.TypedElement;
+import org.osate.aadl2.UnitLiteral;
+import org.osate.aadl2.UnitsType;
+import org.osate.aadl2.VirtualBus;
+import org.osate.aadl2.VirtualBusClassifier;
+import org.osate.aadl2.VirtualBusImplementation;
+import org.osate.aadl2.VirtualBusPrototype;
+import org.osate.aadl2.VirtualBusSubcomponent;
+import org.osate.aadl2.VirtualBusSubcomponentType;
+import org.osate.aadl2.VirtualBusType;
+import org.osate.aadl2.VirtualMemory;
+import org.osate.aadl2.VirtualMemoryClassifier;
+import org.osate.aadl2.VirtualMemoryImplementation;
+import org.osate.aadl2.VirtualMemoryPrototype;
+import org.osate.aadl2.VirtualMemorySubcomponent;
+import org.osate.aadl2.VirtualMemorySubcomponentType;
+import org.osate.aadl2.VirtualMemoryType;
+import org.osate.aadl2.VirtualProcessor;
+import org.osate.aadl2.VirtualProcessorClassifier;
+import org.osate.aadl2.VirtualProcessorImplementation;
+import org.osate.aadl2.VirtualProcessorPrototype;
+import org.osate.aadl2.VirtualProcessorSubcomponent;
+import org.osate.aadl2.VirtualProcessorSubcomponentType;
+import org.osate.aadl2.VirtualProcessorType;
 import org.osate.aadl2.util.Aadl2Validator;
 
 /**
@@ -1868,6 +2138,55 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 	 * @generated
 	 */
 	private EClass listTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass virtualMemoryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass virtualMemoryClassifierEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass virtualMemoryTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass virtualMemoryImplementationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass virtualMemoryPrototypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass virtualMemorySubcomponentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass virtualMemorySubcomponentTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -7246,6 +7565,16 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 	 * @generated
 	 */
 	@Override
+	public EReference getSystemImplementation_OwnedVirtualMemorySubcomponent() {
+		return (EReference) systemImplementationEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSystemPrototype() {
 		return systemPrototypeEClass;
 	}
@@ -8946,6 +9275,126 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 	 * @generated
 	 */
 	@Override
+	public EClass getVirtualMemory() {
+		return virtualMemoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVirtualMemoryClassifier() {
+		return virtualMemoryClassifierEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVirtualMemoryType() {
+		return virtualMemoryTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMemoryType_OwnedDataPort() {
+		return (EReference) virtualMemoryTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMemoryType_OwnedEventDataPort() {
+		return (EReference) virtualMemoryTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMemoryType_OwnedEventPort() {
+		return (EReference) virtualMemoryTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVirtualMemoryImplementation() {
+		return virtualMemoryImplementationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMemoryImplementation_OwnedVirtualMemorySubcomponent() {
+		return (EReference) virtualMemoryImplementationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVirtualMemoryPrototype() {
+		return virtualMemoryPrototypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVirtualMemorySubcomponent() {
+		return virtualMemorySubcomponentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMemorySubcomponent_VirtualMemorySubcomponentType() {
+		return (EReference) virtualMemorySubcomponentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVirtualMemorySubcomponentType() {
+		return virtualMemorySubcomponentTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getDirectionType() {
 		return directionTypeEEnum;
 	}
@@ -9815,6 +10264,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		createEReference(systemImplementationEClass, SYSTEM_IMPLEMENTATION__OWNED_SYSTEM_SUBCOMPONENT);
 		createEReference(systemImplementationEClass, SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_BUS_SUBCOMPONENT);
 		createEReference(systemImplementationEClass, SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT);
+		createEReference(systemImplementationEClass, SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT);
 
 		systemPrototypeEClass = createEClass(SYSTEM_PROTOTYPE);
 
@@ -10038,6 +10488,27 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		createEReference(listTypeEClass, LIST_TYPE__OWNED_ELEMENT_TYPE);
 		createEReference(listTypeEClass, LIST_TYPE__REFERENCED_ELEMENT_TYPE);
 		createEReference(listTypeEClass, LIST_TYPE__ELEMENT_TYPE);
+
+		virtualMemoryEClass = createEClass(VIRTUAL_MEMORY);
+
+		virtualMemoryClassifierEClass = createEClass(VIRTUAL_MEMORY_CLASSIFIER);
+
+		virtualMemoryTypeEClass = createEClass(VIRTUAL_MEMORY_TYPE);
+		createEReference(virtualMemoryTypeEClass, VIRTUAL_MEMORY_TYPE__OWNED_DATA_PORT);
+		createEReference(virtualMemoryTypeEClass, VIRTUAL_MEMORY_TYPE__OWNED_EVENT_DATA_PORT);
+		createEReference(virtualMemoryTypeEClass, VIRTUAL_MEMORY_TYPE__OWNED_EVENT_PORT);
+
+		virtualMemoryImplementationEClass = createEClass(VIRTUAL_MEMORY_IMPLEMENTATION);
+		createEReference(virtualMemoryImplementationEClass,
+				VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT);
+
+		virtualMemoryPrototypeEClass = createEClass(VIRTUAL_MEMORY_PROTOTYPE);
+
+		virtualMemorySubcomponentEClass = createEClass(VIRTUAL_MEMORY_SUBCOMPONENT);
+		createEReference(virtualMemorySubcomponentEClass,
+				VIRTUAL_MEMORY_SUBCOMPONENT__VIRTUAL_MEMORY_SUBCOMPONENT_TYPE);
+
+		virtualMemorySubcomponentTypeEClass = createEClass(VIRTUAL_MEMORY_SUBCOMPONENT_TYPE);
 
 		// Create enums
 		flowKindEEnum = createEEnum(FLOW_KIND);
@@ -10538,6 +11009,20 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		recordFieldEClass.getESuperTypes().add(this.getBasicProperty());
 		referenceTypeEClass.getESuperTypes().add(this.getNonListType());
 		listTypeEClass.getESuperTypes().add(this.getPropertyType());
+		virtualMemoryEClass.getESuperTypes().add(this.getNamedElement());
+		virtualMemoryClassifierEClass.getESuperTypes().add(this.getComponentClassifier());
+		virtualMemoryClassifierEClass.getESuperTypes().add(this.getVirtualMemory());
+		virtualMemoryClassifierEClass.getESuperTypes().add(this.getVirtualMemorySubcomponentType());
+		virtualMemoryTypeEClass.getESuperTypes().add(this.getComponentType());
+		virtualMemoryTypeEClass.getESuperTypes().add(this.getVirtualMemoryClassifier());
+		virtualMemoryImplementationEClass.getESuperTypes().add(this.getComponentImplementation());
+		virtualMemoryImplementationEClass.getESuperTypes().add(this.getVirtualMemoryClassifier());
+		virtualMemoryPrototypeEClass.getESuperTypes().add(this.getComponentPrototype());
+		virtualMemoryPrototypeEClass.getESuperTypes().add(this.getVirtualMemory());
+		virtualMemoryPrototypeEClass.getESuperTypes().add(this.getVirtualMemorySubcomponentType());
+		virtualMemorySubcomponentEClass.getESuperTypes().add(this.getSubcomponent());
+		virtualMemorySubcomponentEClass.getESuperTypes().add(this.getVirtualMemory());
+		virtualMemorySubcomponentTypeEClass.getESuperTypes().add(this.getSubcomponentType());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -12274,6 +12759,10 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 				this.getVirtualProcessorSubcomponent(), null, "ownedVirtualProcessorSubcomponent", null, 0, -1,
 				SystemImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSystemImplementation_OwnedVirtualMemorySubcomponent(), this.getVirtualMemorySubcomponent(),
+				null, "ownedVirtualMemorySubcomponent", null, 0, -1, SystemImplementation.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
 
 		initEClass(systemPrototypeEClass, SystemPrototype.class, "SystemPrototype", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -12773,6 +13262,44 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 				ListType.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
+		initEClass(virtualMemoryEClass, VirtualMemory.class, "VirtualMemory", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(virtualMemoryClassifierEClass, VirtualMemoryClassifier.class, "VirtualMemoryClassifier", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(virtualMemoryTypeEClass, VirtualMemoryType.class, "VirtualMemoryType", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVirtualMemoryType_OwnedDataPort(), this.getDataPort(), null, "ownedDataPort", null, 0, -1,
+				VirtualMemoryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getVirtualMemoryType_OwnedEventDataPort(), this.getEventDataPort(), null, "ownedEventDataPort",
+				null, 0, -1, VirtualMemoryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getVirtualMemoryType_OwnedEventPort(), this.getEventPort(), null, "ownedEventPort", null, 0, -1,
+				VirtualMemoryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(virtualMemoryImplementationEClass, VirtualMemoryImplementation.class, "VirtualMemoryImplementation",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVirtualMemoryImplementation_OwnedVirtualMemorySubcomponent(),
+				this.getVirtualMemorySubcomponent(), null, "ownedVirtualMemorySubcomponent", null, 0, -1,
+				VirtualMemoryImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(virtualMemoryPrototypeEClass, VirtualMemoryPrototype.class, "VirtualMemoryPrototype", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(virtualMemorySubcomponentEClass, VirtualMemorySubcomponent.class, "VirtualMemorySubcomponent",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVirtualMemorySubcomponent_VirtualMemorySubcomponentType(),
+				this.getVirtualMemorySubcomponentType(), null, "virtualMemorySubcomponentType", null, 0, 1,
+				VirtualMemorySubcomponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(virtualMemorySubcomponentTypeEClass, VirtualMemorySubcomponentType.class,
+				"VirtualMemorySubcomponentType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(flowKindEEnum, FlowKind.class, "FlowKind");
 		addEEnumLiteral(flowKindEEnum, FlowKind.SOURCE);
@@ -12814,6 +13341,7 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		addEEnumLiteral(componentCategoryEEnum, ComponentCategory.THREAD_GROUP);
 		addEEnumLiteral(componentCategoryEEnum, ComponentCategory.VIRTUAL_BUS);
 		addEEnumLiteral(componentCategoryEEnum, ComponentCategory.VIRTUAL_PROCESSOR);
+		addEEnumLiteral(componentCategoryEEnum, ComponentCategory.VIRTUAL_MEMORY);
 
 		initEEnum(operationKindEEnum, OperationKind.class, "OperationKind");
 		addEEnumLiteral(operationKindEEnum, OperationKind.AND);
@@ -13299,6 +13827,8 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getSystemImplementation_OwnedVirtualProcessorSubcomponent(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getSystemImplementation_OwnedVirtualMemorySubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
 		addAnnotation(getProcessorType_OwnedDataPort(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
 		addAnnotation(getProcessorType_OwnedEventDataPort(), source, new String[] {},
@@ -13431,6 +13961,16 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ListType/elementType") });
 		addAnnotation(getListType_ReferencedElementType(), source, new String[] {},
 				new URI[] { URI.createURI(eNS_URI).appendFragment("//ListType/elementType") });
+		addAnnotation(getVirtualMemoryType_OwnedDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getVirtualMemoryType_OwnedEventDataPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getVirtualMemoryType_OwnedEventPort(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentType/ownedFeature") });
+		addAnnotation(getVirtualMemoryImplementation_OwnedVirtualMemorySubcomponent(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//ComponentImplementation/ownedSubcomponent") });
+		addAnnotation(getVirtualMemorySubcomponent_VirtualMemorySubcomponentType(), source, new String[] {},
+				new URI[] { URI.createURI(eNS_URI).appendFragment("//Subcomponent/subcomponentType") });
 	}
 
 	/**
@@ -13511,6 +14051,9 @@ public class Aadl2PackageImpl extends EPackageImpl implements Aadl2Package {
 		addAnnotation(virtualProcessorImplementationEClass, new boolean[] { true }, "type",
 				new String[] { "eType", "aadl2::VirtualProcessorType" });
 		addAnnotation(unitsTypeEClass, source, new String[] {});
+		addAnnotation(virtualMemoryImplementationEClass, source, new String[] {});
+		addAnnotation(virtualMemoryImplementationEClass, new boolean[] { true }, "type",
+				new String[] { "eType", "aadl2::VirtualBusType" });
 	}
 
 	/**

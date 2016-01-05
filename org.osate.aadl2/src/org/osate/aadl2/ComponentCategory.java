@@ -192,7 +192,16 @@ public enum ComponentCategory implements Enumerator {
 	 * @generated NOT
 	 * @ordered
 	 */
-	VIRTUAL_PROCESSOR(13, "virtual processor", "virtual processor");
+	VIRTUAL_PROCESSOR(13, "virtual processor", "virtual processor"),
+	/**
+	 * The '<em><b>Virtual Memory</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #VIRTUAL_MEMORY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	VIRTUAL_MEMORY(14, "virtualMemory", "");
 
 	/**
 	 * The '<em><b>Abstract</b></em>' literal value.
@@ -405,6 +414,21 @@ public enum ComponentCategory implements Enumerator {
 	public static final int VIRTUAL_PROCESSOR_VALUE = 13;
 
 	/**
+	 * The '<em><b>Virtual Memory</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Virtual Memory</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #VIRTUAL_MEMORY
+	 * @model name="virtualMemory" literal=""
+	 * @generated
+	 * @ordered
+	 */
+	public static final int VIRTUAL_MEMORY_VALUE = 14;
+
+	/**
 	 * An array of all the '<em><b>Component Category</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -412,7 +436,7 @@ public enum ComponentCategory implements Enumerator {
 	 */
 	private static final ComponentCategory[] VALUES_ARRAY = new ComponentCategory[] { ABSTRACT, BUS, DATA, DEVICE,
 			MEMORY, PROCESS, PROCESSOR, SUBPROGRAM, SUBPROGRAM_GROUP, SYSTEM, THREAD, THREAD_GROUP, VIRTUAL_BUS,
-			VIRTUAL_PROCESSOR, };
+			VIRTUAL_PROCESSOR, VIRTUAL_MEMORY, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Component Category</b></em>' enumerators.
@@ -496,6 +520,8 @@ public enum ComponentCategory implements Enumerator {
 			return VIRTUAL_BUS;
 		case VIRTUAL_PROCESSOR_VALUE:
 			return VIRTUAL_PROCESSOR;
+		case VIRTUAL_MEMORY_VALUE:
+			return VIRTUAL_MEMORY;
 		}
 		return null;
 	}

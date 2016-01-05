@@ -1449,6 +1449,42 @@ public interface Aadl2Factory extends EFactory {
 	ListType createListType();
 
 	/**
+	 * Returns a new object of class '<em>Virtual Memory Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Virtual Memory Type</em>'.
+	 * @generated
+	 */
+	VirtualMemoryType createVirtualMemoryType();
+
+	/**
+	 * Returns a new object of class '<em>Virtual Memory Implementation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Virtual Memory Implementation</em>'.
+	 * @generated
+	 */
+	VirtualMemoryImplementation createVirtualMemoryImplementation();
+
+	/**
+	 * Returns a new object of class '<em>Virtual Memory Prototype</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Virtual Memory Prototype</em>'.
+	 * @generated
+	 */
+	VirtualMemoryPrototype createVirtualMemoryPrototype();
+
+	/**
+	 * Returns a new object of class '<em>Virtual Memory Subcomponent</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Virtual Memory Subcomponent</em>'.
+	 * @generated
+	 */
+	VirtualMemorySubcomponent createVirtualMemorySubcomponent();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

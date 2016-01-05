@@ -330,6 +330,9 @@ public class ClassifierItemProvider extends NamespaceItemProvider {
 		newChildDescriptors.add(createChildParameter(Aadl2Package.eINSTANCE.getClassifier_OwnedPrototype(),
 				Aadl2Factory.eINSTANCE.createVirtualProcessorPrototype()));
 
+		newChildDescriptors.add(createChildParameter(Aadl2Package.eINSTANCE.getClassifier_OwnedPrototype(),
+				Aadl2Factory.eINSTANCE.createVirtualMemoryPrototype()));
+
 		newChildDescriptors.add(createChildParameter(Aadl2Package.eINSTANCE.getClassifier_OwnedPrototypeBinding(),
 				Aadl2Factory.eINSTANCE.createComponentPrototypeBinding()));
 

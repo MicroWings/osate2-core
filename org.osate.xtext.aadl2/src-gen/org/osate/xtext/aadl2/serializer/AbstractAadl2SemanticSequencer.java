@@ -160,6 +160,10 @@ import org.osate.aadl2.VirtualBusImplementation;
 import org.osate.aadl2.VirtualBusPrototype;
 import org.osate.aadl2.VirtualBusSubcomponent;
 import org.osate.aadl2.VirtualBusType;
+import org.osate.aadl2.VirtualMemoryImplementation;
+import org.osate.aadl2.VirtualMemoryPrototype;
+import org.osate.aadl2.VirtualMemorySubcomponent;
+import org.osate.aadl2.VirtualMemoryType;
 import org.osate.aadl2.VirtualProcessorImplementation;
 import org.osate.aadl2.VirtualProcessorPrototype;
 import org.osate.aadl2.VirtualProcessorSubcomponent;
@@ -1002,6 +1006,18 @@ public abstract class AbstractAadl2SemanticSequencer extends PropertiesSemanticS
 				return; 
 			case Aadl2Package.VIRTUAL_BUS_TYPE:
 				sequence_VirtualBusType(context, (VirtualBusType) semanticObject); 
+				return; 
+			case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION:
+				sequence_VirtualMemoryImplementation(context, (VirtualMemoryImplementation) semanticObject); 
+				return; 
+			case Aadl2Package.VIRTUAL_MEMORY_PROTOTYPE:
+				sequence_VirtualMemoryPrototype(context, (VirtualMemoryPrototype) semanticObject); 
+				return; 
+			case Aadl2Package.VIRTUAL_MEMORY_SUBCOMPONENT:
+				sequence_VirtualMemorySubcomponent(context, (VirtualMemorySubcomponent) semanticObject); 
+				return; 
+			case Aadl2Package.VIRTUAL_MEMORY_TYPE:
+				sequence_VirtualMemoryType(context, (VirtualMemoryType) semanticObject); 
 				return; 
 			case Aadl2Package.VIRTUAL_PROCESSOR_IMPLEMENTATION:
 				sequence_VirtualProcessorImplementation(context, (VirtualProcessorImplementation) semanticObject); 
@@ -3130,6 +3146,7 @@ public abstract class AbstractAadl2SemanticSequencer extends PropertiesSemanticS
 	 *                 ownedDeviceSubcomponent+=DeviceSubcomponent | 
 	 *                 ownedBusSubcomponent+=BusSubcomponent | 
 	 *                 ownedVirtualBusSubcomponent+=VirtualBusSubcomponent | 
+	 *                 ownedVirtualMemorySubcomponent+=VirtualMemorySubcomponent | 
 	 *                 ownedDataSubcomponent+=DataSubcomponent | 
 	 *                 ownedAbstractSubcomponent+=AbstractSubcomponent
 	 *             )+ | 
@@ -3618,6 +3635,93 @@ public abstract class AbstractAadl2SemanticSequencer extends PropertiesSemanticS
 	 *     )
 	 */
 	protected void sequence_VirtualBusType(EObject context, VirtualBusType semanticObject) {
+		genericSequencer.createSequence(context, (EObject)semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         ownedRealization=Realization 
+	 *         name=INAME 
+	 *         ownedExtension=ImplementationExtension? 
+	 *         (ownedPrototypeBinding+=PrototypeBinding ownedPrototypeBinding+=PrototypeBinding*)? 
+	 *         (ownedPrototype+=Prototype+ | noPrototypes?='none')? 
+	 *         ((ownedAbstractSubcomponent+=AbstractSubcomponent | ownedVirtualMemorySubcomponent+=VirtualMemorySubcomponent)+ | noSubcomponents?='none')? 
+	 *         (ownedEventSource+=EventSource | ownedEventDataSource+=EventDataSource)* 
+	 *         (ownedPortProxy+=PortProxy | ownedSubprogramProxy+=SubprogramProxy)* 
+	 *         (
+	 *             (
+	 *                 ownedPortConnection+=PortConnection | 
+	 *                 ownedAccessConnection+=AccessConnection | 
+	 *                 ownedFeatureGroupConnection+=FeatureGroupConnection | 
+	 *                 ownedFeatureConnection+=FeatureConnection
+	 *             )+ | 
+	 *             noConnections?='none'
+	 *         )? 
+	 *         ((ownedFlowImplementation+=FlowImplementation | ownedEndToEndFlow+=EndToEndFlow)+ | noFlows?='none')? 
+	 *         ((ownedMode+=Mode | ownedModeTransition+=ModeTransition)+ | noModes?='none')? 
+	 *         (ownedPropertyAssociation+=ContainedPropertyAssociation+ | noProperties?='none')? 
+	 *         ownedAnnexSubclause+=AnnexSubclause*
+	 *     )
+	 */
+	protected void sequence_VirtualMemoryImplementation(EObject context, VirtualMemoryImplementation semanticObject) {
+		genericSequencer.createSequence(context, (EObject)semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID | refined=[ComponentPrototype|REFINEDNAME])
+	 */
+	protected void sequence_VirtualMemoryPrototype(EObject context, VirtualMemoryPrototype semanticObject) {
+		genericSequencer.createSequence(context, (EObject)semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         (name=ID | refined=[Subcomponent|REFINEDNAME]) 
+	 *         (
+	 *             virtualMemorySubcomponentType=[VirtualMemorySubcomponentType|QCREF] 
+	 *             (ownedPrototypeBinding+=PrototypeBinding ownedPrototypeBinding+=PrototypeBinding*)?
+	 *         )? 
+	 *         (
+	 *             arrayDimension+=ArrayDimension+ 
+	 *             (implementationReference+=ComponentImplementationReference implementationReference+=ComponentImplementationReference*)?
+	 *         )? 
+	 *         ownedPropertyAssociation+=ContainedPropertyAssociation* 
+	 *         (ownedModeBinding+=ModeRef ownedModeBinding+=ModeRef*)?
+	 *     )
+	 */
+	protected void sequence_VirtualMemorySubcomponent(EObject context, VirtualMemorySubcomponent semanticObject) {
+		genericSequencer.createSequence(context, (EObject)semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         (ownedExtension=TypeExtension (ownedPrototypeBinding+=PrototypeBinding ownedPrototypeBinding+=PrototypeBinding*)?)? 
+	 *         (noPrototypes?='none' | ownedPrototype+=Prototype+)? 
+	 *         (
+	 *             noFeatures?='none' | 
+	 *             (
+	 *                 ownedFeatureGroup+=FeatureGroup | 
+	 *                 ownedDataPort+=DataPort | 
+	 *                 ownedEventPort+=EventPort | 
+	 *                 ownedEventDataPort+=EventDataPort | 
+	 *                 ownedAbstractFeature+=AbstractFeature
+	 *             )+
+	 *         )? 
+	 *         ((derivedModes?='requires' ownedMode+=Mode+) | (ownedMode+=Mode | ownedModeTransition+=ModeTransition)+ | noModes?='none')? 
+	 *         (ownedPropertyAssociation+=ContainedPropertyAssociation+ | noProperties?='none')? 
+	 *         ownedAnnexSubclause+=AnnexSubclause*
+	 *     )
+	 */
+	protected void sequence_VirtualMemoryType(EObject context, VirtualMemoryType semanticObject) {
 		genericSequencer.createSequence(context, (EObject)semanticObject);
 	}
 	

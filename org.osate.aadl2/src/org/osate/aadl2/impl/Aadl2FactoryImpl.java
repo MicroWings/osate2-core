@@ -200,6 +200,10 @@ import org.osate.aadl2.VirtualBusImplementation;
 import org.osate.aadl2.VirtualBusPrototype;
 import org.osate.aadl2.VirtualBusSubcomponent;
 import org.osate.aadl2.VirtualBusType;
+import org.osate.aadl2.VirtualMemoryImplementation;
+import org.osate.aadl2.VirtualMemoryPrototype;
+import org.osate.aadl2.VirtualMemorySubcomponent;
+import org.osate.aadl2.VirtualMemoryType;
 import org.osate.aadl2.VirtualProcessorImplementation;
 import org.osate.aadl2.VirtualProcessorPrototype;
 import org.osate.aadl2.VirtualProcessorSubcomponent;
@@ -559,6 +563,14 @@ public class Aadl2FactoryImpl extends EFactoryImpl implements Aadl2Factory {
 			return createReferenceType();
 		case Aadl2Package.LIST_TYPE:
 			return createListType();
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE:
+			return createVirtualMemoryType();
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION:
+			return createVirtualMemoryImplementation();
+		case Aadl2Package.VIRTUAL_MEMORY_PROTOTYPE:
+			return createVirtualMemoryPrototype();
+		case Aadl2Package.VIRTUAL_MEMORY_SUBCOMPONENT:
+			return createVirtualMemorySubcomponent();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -2354,6 +2366,50 @@ public class Aadl2FactoryImpl extends EFactoryImpl implements Aadl2Factory {
 	public ListType createListType() {
 		ListTypeImpl listType = new ListTypeImpl();
 		return listType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VirtualMemoryType createVirtualMemoryType() {
+		VirtualMemoryTypeImpl virtualMemoryType = new VirtualMemoryTypeImpl();
+		return virtualMemoryType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VirtualMemoryImplementation createVirtualMemoryImplementation() {
+		VirtualMemoryImplementationImpl virtualMemoryImplementation = new VirtualMemoryImplementationImpl();
+		return virtualMemoryImplementation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VirtualMemoryPrototype createVirtualMemoryPrototype() {
+		VirtualMemoryPrototypeImpl virtualMemoryPrototype = new VirtualMemoryPrototypeImpl();
+		return virtualMemoryPrototype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VirtualMemorySubcomponent createVirtualMemorySubcomponent() {
+		VirtualMemorySubcomponentImpl virtualMemorySubcomponent = new VirtualMemorySubcomponentImpl();
+		return virtualMemorySubcomponent;
 	}
 
 	/**

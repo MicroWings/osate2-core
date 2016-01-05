@@ -61,6 +61,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.osate.aadl2.SystemImplementation#getOwnedSystemSubcomponents <em>Owned System Subcomponent</em>}</li>
  *   <li>{@link org.osate.aadl2.SystemImplementation#getOwnedVirtualBusSubcomponents <em>Owned Virtual Bus Subcomponent</em>}</li>
  *   <li>{@link org.osate.aadl2.SystemImplementation#getOwnedVirtualProcessorSubcomponents <em>Owned Virtual Processor Subcomponent</em>}</li>
+ *   <li>{@link org.osate.aadl2.SystemImplementation#getOwnedVirtualMemorySubcomponents <em>Owned Virtual Memory Subcomponent</em>}</li>
  * </ul>
  *
  * @see org.osate.aadl2.Aadl2Package#getSystemImplementation()
@@ -452,6 +453,37 @@ public interface SystemImplementation extends ComponentImplementation, SystemCla
 	 * @generated
 	 */
 	VirtualProcessorSubcomponent createOwnedVirtualProcessorSubcomponent();
+
+	/**
+	 * Returns the value of the '<em><b>Owned Virtual Memory Subcomponent</b></em>' containment reference list.
+	 * The list contents are of type {@link org.osate.aadl2.VirtualMemorySubcomponent}.
+	 * <p>
+	 * This feature subsets the following features:
+	 * </p>
+	 * <ul>
+	 *   <li>'{@link org.osate.aadl2.ComponentImplementation#getOwnedSubcomponents() <em>Owned Subcomponent</em>}'</li>
+	 * </ul>
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * <p>From package AADLDetails::Components::System.</p>
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Owned Virtual Memory Subcomponent</em>' containment reference list.
+	 * @see org.osate.aadl2.Aadl2Package#getSystemImplementation_OwnedVirtualMemorySubcomponent()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<VirtualMemorySubcomponent> getOwnedVirtualMemorySubcomponents();
+
+	/**
+	 * Creates a new {@link org.osate.aadl2.VirtualMemorySubcomponent} and appends it to the '<em><b>Owned Virtual Memory Subcomponent</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return The new {@link org.osate.aadl2.VirtualMemorySubcomponent}.
+	 * @see #getOwnedVirtualMemorySubcomponents()
+	 * @generated
+	 */
+	VirtualMemorySubcomponent createOwnedVirtualMemorySubcomponent();
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.

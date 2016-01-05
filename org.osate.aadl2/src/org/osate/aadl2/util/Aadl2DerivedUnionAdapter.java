@@ -39,7 +39,166 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.osate.aadl2.*;
+import org.osate.aadl2.Aadl2Package;
+import org.osate.aadl2.AadlBoolean;
+import org.osate.aadl2.AadlInteger;
+import org.osate.aadl2.AadlPackage;
+import org.osate.aadl2.AadlReal;
+import org.osate.aadl2.AadlString;
+import org.osate.aadl2.AbstractFeature;
+import org.osate.aadl2.AbstractImplementation;
+import org.osate.aadl2.AbstractPrototype;
+import org.osate.aadl2.AbstractSubcomponent;
+import org.osate.aadl2.AbstractType;
+import org.osate.aadl2.AccessConnection;
+import org.osate.aadl2.AccessSpecification;
+import org.osate.aadl2.ArrayDimension;
+import org.osate.aadl2.ArrayRange;
+import org.osate.aadl2.ArraySize;
+import org.osate.aadl2.BasicProperty;
+import org.osate.aadl2.BasicPropertyAssociation;
+import org.osate.aadl2.BooleanLiteral;
+import org.osate.aadl2.BusAccess;
+import org.osate.aadl2.BusImplementation;
+import org.osate.aadl2.BusPrototype;
+import org.osate.aadl2.BusSubcomponent;
+import org.osate.aadl2.BusType;
+import org.osate.aadl2.ClassifierType;
+import org.osate.aadl2.ClassifierValue;
+import org.osate.aadl2.Comment;
+import org.osate.aadl2.ComponentImplementationReference;
+import org.osate.aadl2.ComponentPrototypeActual;
+import org.osate.aadl2.ComponentPrototypeBinding;
+import org.osate.aadl2.ComponentTypeRename;
+import org.osate.aadl2.ComputedValue;
+import org.osate.aadl2.ConnectedElement;
+import org.osate.aadl2.ContainedNamedElement;
+import org.osate.aadl2.ContainmentPathElement;
+import org.osate.aadl2.DataAccess;
+import org.osate.aadl2.DataImplementation;
+import org.osate.aadl2.DataPort;
+import org.osate.aadl2.DataPrototype;
+import org.osate.aadl2.DataSubcomponent;
+import org.osate.aadl2.DataType;
+import org.osate.aadl2.DefaultAnnexLibrary;
+import org.osate.aadl2.DefaultAnnexSubclause;
+import org.osate.aadl2.DeviceImplementation;
+import org.osate.aadl2.DevicePrototype;
+import org.osate.aadl2.DeviceSubcomponent;
+import org.osate.aadl2.DeviceType;
+import org.osate.aadl2.EndToEndFlow;
+import org.osate.aadl2.EndToEndFlowSegment;
+import org.osate.aadl2.EnumerationLiteral;
+import org.osate.aadl2.EnumerationType;
+import org.osate.aadl2.EventDataPort;
+import org.osate.aadl2.EventDataSource;
+import org.osate.aadl2.EventPort;
+import org.osate.aadl2.EventSource;
+import org.osate.aadl2.FeatureConnection;
+import org.osate.aadl2.FeatureGroup;
+import org.osate.aadl2.FeatureGroupConnection;
+import org.osate.aadl2.FeatureGroupPrototype;
+import org.osate.aadl2.FeatureGroupPrototypeActual;
+import org.osate.aadl2.FeatureGroupPrototypeBinding;
+import org.osate.aadl2.FeatureGroupType;
+import org.osate.aadl2.FeatureGroupTypeRename;
+import org.osate.aadl2.FeaturePrototype;
+import org.osate.aadl2.FeaturePrototypeBinding;
+import org.osate.aadl2.FeaturePrototypeReference;
+import org.osate.aadl2.FlowEnd;
+import org.osate.aadl2.FlowImplementation;
+import org.osate.aadl2.FlowSegment;
+import org.osate.aadl2.FlowSpecification;
+import org.osate.aadl2.GlobalNamespace;
+import org.osate.aadl2.GroupExtension;
+import org.osate.aadl2.ImplementationExtension;
+import org.osate.aadl2.IntegerLiteral;
+import org.osate.aadl2.ListType;
+import org.osate.aadl2.ListValue;
+import org.osate.aadl2.MemoryImplementation;
+import org.osate.aadl2.MemoryPrototype;
+import org.osate.aadl2.MemorySubcomponent;
+import org.osate.aadl2.MemoryType;
+import org.osate.aadl2.MetaclassReference;
+import org.osate.aadl2.ModalElement;
+import org.osate.aadl2.ModalPropertyValue;
+import org.osate.aadl2.Mode;
+import org.osate.aadl2.ModeBinding;
+import org.osate.aadl2.ModeTransition;
+import org.osate.aadl2.ModeTransitionTrigger;
+import org.osate.aadl2.NamedValue;
+import org.osate.aadl2.NumericRange;
+import org.osate.aadl2.Operation;
+import org.osate.aadl2.PackageRename;
+import org.osate.aadl2.Parameter;
+import org.osate.aadl2.ParameterConnection;
+import org.osate.aadl2.PortConnection;
+import org.osate.aadl2.PortProxy;
+import org.osate.aadl2.PortSpecification;
+import org.osate.aadl2.PrivatePackageSection;
+import org.osate.aadl2.ProcessImplementation;
+import org.osate.aadl2.ProcessPrototype;
+import org.osate.aadl2.ProcessSubcomponent;
+import org.osate.aadl2.ProcessType;
+import org.osate.aadl2.ProcessorImplementation;
+import org.osate.aadl2.ProcessorPrototype;
+import org.osate.aadl2.ProcessorSubcomponent;
+import org.osate.aadl2.ProcessorType;
+import org.osate.aadl2.Property;
+import org.osate.aadl2.PropertyAssociation;
+import org.osate.aadl2.PropertyConstant;
+import org.osate.aadl2.PropertySet;
+import org.osate.aadl2.PublicPackageSection;
+import org.osate.aadl2.RangeType;
+import org.osate.aadl2.RangeValue;
+import org.osate.aadl2.RealLiteral;
+import org.osate.aadl2.Realization;
+import org.osate.aadl2.RecordField;
+import org.osate.aadl2.RecordType;
+import org.osate.aadl2.RecordValue;
+import org.osate.aadl2.ReferenceType;
+import org.osate.aadl2.ReferenceValue;
+import org.osate.aadl2.StringLiteral;
+import org.osate.aadl2.SubprogramAccess;
+import org.osate.aadl2.SubprogramCall;
+import org.osate.aadl2.SubprogramCallSequence;
+import org.osate.aadl2.SubprogramGroupAccess;
+import org.osate.aadl2.SubprogramGroupImplementation;
+import org.osate.aadl2.SubprogramGroupPrototype;
+import org.osate.aadl2.SubprogramGroupSubcomponent;
+import org.osate.aadl2.SubprogramGroupType;
+import org.osate.aadl2.SubprogramImplementation;
+import org.osate.aadl2.SubprogramPrototype;
+import org.osate.aadl2.SubprogramProxy;
+import org.osate.aadl2.SubprogramSubcomponent;
+import org.osate.aadl2.SubprogramType;
+import org.osate.aadl2.SystemImplementation;
+import org.osate.aadl2.SystemPrototype;
+import org.osate.aadl2.SystemSubcomponent;
+import org.osate.aadl2.SystemType;
+import org.osate.aadl2.ThreadGroupImplementation;
+import org.osate.aadl2.ThreadGroupPrototype;
+import org.osate.aadl2.ThreadGroupSubcomponent;
+import org.osate.aadl2.ThreadGroupType;
+import org.osate.aadl2.ThreadImplementation;
+import org.osate.aadl2.ThreadPrototype;
+import org.osate.aadl2.ThreadSubcomponent;
+import org.osate.aadl2.ThreadType;
+import org.osate.aadl2.TypeExtension;
+import org.osate.aadl2.UnitLiteral;
+import org.osate.aadl2.UnitsType;
+import org.osate.aadl2.VirtualBusImplementation;
+import org.osate.aadl2.VirtualBusPrototype;
+import org.osate.aadl2.VirtualBusSubcomponent;
+import org.osate.aadl2.VirtualBusType;
+import org.osate.aadl2.VirtualMemoryImplementation;
+import org.osate.aadl2.VirtualMemoryPrototype;
+import org.osate.aadl2.VirtualMemorySubcomponent;
+import org.osate.aadl2.VirtualMemoryType;
+import org.osate.aadl2.VirtualProcessorImplementation;
+import org.osate.aadl2.VirtualProcessorPrototype;
+import org.osate.aadl2.VirtualProcessorSubcomponent;
+import org.osate.aadl2.VirtualProcessorType;
 
 /**
  * <!-- begin-user-doc -->
@@ -561,6 +720,18 @@ public class Aadl2DerivedUnionAdapter extends AdapterImpl {
 			break;
 		case Aadl2Package.LIST_TYPE:
 			notifyListTypeChanged(notification, eClass);
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE:
+			notifyVirtualMemoryTypeChanged(notification, eClass);
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION:
+			notifyVirtualMemoryImplementationChanged(notification, eClass);
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_PROTOTYPE:
+			notifyVirtualMemoryPrototypeChanged(notification, eClass);
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_SUBCOMPONENT:
+			notifyVirtualMemorySubcomponentChanged(notification, eClass);
 			break;
 		}
 	}
@@ -5178,6 +5349,13 @@ public class Aadl2DerivedUnionAdapter extends AdapterImpl {
 			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
 			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
 			break;
+		case Aadl2Package.SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentImplementation_OwnedSubcomponent());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
 		}
 	}
 
@@ -7784,6 +7962,338 @@ public class Aadl2DerivedUnionAdapter extends AdapterImpl {
 		switch (notification.getFeatureID(ListType.class)) {
 		case Aadl2Package.LIST_TYPE__OWNED_COMMENT:
 			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		}
+	}
+
+	/**
+	 * Calls <code>notifyChanged</code> for each affected derived union.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param notification a description of the change.
+	 * @param eClass the Ecore class of the notifier.
+	 * @generated
+	 */
+	protected void notifyVirtualMemoryTypeChanged(Notification notification, EClass eClass) {
+		switch (notification.getFeatureID(VirtualMemoryType.class)) {
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_COMMENT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_MEMBER:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__CLASSIFIER_FEATURE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__INHERITED_MEMBER:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__GENERALIZATION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_ANNEX_SUBCLAUSE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_PROTOTYPE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_MODE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_MODE_TRANSITION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_FEATURE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__EXTENDED:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_General());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_FLOW_SPECIFICATION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_EXTENSION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_Generalization());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_FEATURE_GROUP:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentType_OwnedFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_ABSTRACT_FEATURE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentType_OwnedFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_DATA_PORT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentType_OwnedFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_EVENT_DATA_PORT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentType_OwnedFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_TYPE__OWNED_EVENT_PORT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentType_OwnedFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		}
+	}
+
+	/**
+	 * Calls <code>notifyChanged</code> for each affected derived union.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param notification a description of the change.
+	 * @param eClass the Ecore class of the notifier.
+	 * @generated
+	 */
+	protected void notifyVirtualMemoryImplementationChanged(Notification notification, EClass eClass) {
+		switch (notification.getFeatureID(VirtualMemoryImplementation.class)) {
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_COMMENT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_MEMBER:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__CLASSIFIER_FEATURE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__INHERITED_MEMBER:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__GENERALIZATION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_ANNEX_SUBCLAUSE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PROTOTYPE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_MODE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_MODE_TRANSITION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__TYPE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_General());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_SUBCOMPONENT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__EXTENDED:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_General());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_FLOW_IMPLEMENTATION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_CONNECTION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_EXTENSION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_Generalization());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_REALIZATION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_Generalization());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_END_TO_END_FLOW:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_ABSTRACT_SUBCOMPONENT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentImplementation_OwnedSubcomponent());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_ACCESS_CONNECTION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentImplementation_OwnedConnection());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PARAMETER_CONNECTION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentImplementation_OwnedConnection());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PORT_CONNECTION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentImplementation_OwnedConnection());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_FEATURE_CONNECTION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentImplementation_OwnedConnection());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_FEATURE_GROUP_CONNECTION:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentImplementation_OwnedConnection());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PROCESSOR_FEATURE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_INTERNAL_FEATURE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_EVENT_SOURCE:
+			notifyChanged(notification, eClass,
+					Aadl2Package.eINSTANCE.getComponentImplementation_OwnedInternalFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_EVENT_DATA_SOURCE:
+			notifyChanged(notification, eClass,
+					Aadl2Package.eINSTANCE.getComponentImplementation_OwnedInternalFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PORT_PROXY:
+			notifyChanged(notification, eClass,
+					Aadl2Package.eINSTANCE.getComponentImplementation_OwnedProcessorFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_SUBPROGRAM_PROXY:
+			notifyChanged(notification, eClass,
+					Aadl2Package.eINSTANCE.getComponentImplementation_OwnedProcessorFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getComponentImplementation_OwnedSubcomponent());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getClassifier_ClassifierFeature());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_Member());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getNamespace_OwnedMember());
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		}
+	}
+
+	/**
+	 * Calls <code>notifyChanged</code> for each affected derived union.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param notification a description of the change.
+	 * @param eClass the Ecore class of the notifier.
+	 * @generated
+	 */
+	protected void notifyVirtualMemoryPrototypeChanged(Notification notification, EClass eClass) {
+		switch (notification.getFeatureID(VirtualMemoryPrototype.class)) {
+		case Aadl2Package.VIRTUAL_MEMORY_PROTOTYPE__OWNED_COMMENT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_PROTOTYPE__REFINED:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getRefinableElement_RefinedElement());
+			break;
+		}
+	}
+
+	/**
+	 * Calls <code>notifyChanged</code> for each affected derived union.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param notification a description of the change.
+	 * @param eClass the Ecore class of the notifier.
+	 * @generated
+	 */
+	protected void notifyVirtualMemorySubcomponentChanged(Notification notification, EClass eClass) {
+		switch (notification.getFeatureID(VirtualMemorySubcomponent.class)) {
+		case Aadl2Package.VIRTUAL_MEMORY_SUBCOMPONENT__OWNED_COMMENT:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getElement_OwnedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_SUBCOMPONENT__PROTOTYPE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getSubcomponent_SubcomponentType());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_SUBCOMPONENT__REFINED:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getRefinableElement_RefinedElement());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_SUBCOMPONENT__CLASSIFIER:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getSubcomponent_SubcomponentType());
+			break;
+		case Aadl2Package.VIRTUAL_MEMORY_SUBCOMPONENT__VIRTUAL_MEMORY_SUBCOMPONENT_TYPE:
+			notifyChanged(notification, eClass, Aadl2Package.eINSTANCE.getSubcomponent_SubcomponentType());
 			break;
 		}
 	}

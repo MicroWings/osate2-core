@@ -18,3 +18,8 @@ partitions) can have access to the hardware to send/receive
 data on a bus. For that purpose, we need to capture the access
 to the physical hardware using a bus access on the partition
 runtime, which is captures by a virtual processor component.
+
+= Virtual memory
+Introduction of the virtual memory component. Very basic
+for now, enough to support our modeling patterns for the 
+AASPE case study.

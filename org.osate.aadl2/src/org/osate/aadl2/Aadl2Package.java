@@ -26499,13 +26499,22 @@ public interface Aadl2Package extends EPackage {
 	int SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_PROCESSOR_SUBCOMPONENT = COMPONENT_IMPLEMENTATION_FEATURE_COUNT + 10;
 
 	/**
+	 * The feature id for the '<em><b>Owned Virtual Memory Subcomponent</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT = COMPONENT_IMPLEMENTATION_FEATURE_COUNT + 11;
+
+	/**
 	 * The number of structural features of the '<em>System Implementation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_IMPLEMENTATION_FEATURE_COUNT = COMPONENT_IMPLEMENTATION_FEATURE_COUNT + 11;
+	int SYSTEM_IMPLEMENTATION_FEATURE_COUNT = COMPONENT_IMPLEMENTATION_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
@@ -35569,6 +35578,1399 @@ public interface Aadl2Package extends EPackage {
 	int LIST_TYPE_FEATURE_COUNT = PROPERTY_TYPE_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link org.osate.aadl2.impl.VirtualMemoryImpl <em>Virtual Memory</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.osate.aadl2.impl.VirtualMemoryImpl
+	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getVirtualMemory()
+	 * @generated
+	 */
+	int VIRTUAL_MEMORY = 259;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY__OWNED_ELEMENT = NAMED_ELEMENT__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY__OWNED_COMMENT = NAMED_ELEMENT__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY__QUALIFIED_NAME = NAMED_ELEMENT__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Property Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY__OWNED_PROPERTY_ASSOCIATION = NAMED_ELEMENT__OWNED_PROPERTY_ASSOCIATION;
+
+	/**
+	 * The number of structural features of the '<em>Virtual Memory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.osate.aadl2.impl.VirtualMemoryClassifierImpl <em>Virtual Memory Classifier</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.osate.aadl2.impl.VirtualMemoryClassifierImpl
+	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getVirtualMemoryClassifier()
+	 * @generated
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER = 260;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__OWNED_ELEMENT = COMPONENT_CLASSIFIER__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__OWNED_COMMENT = COMPONENT_CLASSIFIER__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__NAME = COMPONENT_CLASSIFIER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__QUALIFIED_NAME = COMPONENT_CLASSIFIER__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Property Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__OWNED_PROPERTY_ASSOCIATION = COMPONENT_CLASSIFIER__OWNED_PROPERTY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__OWNED_MEMBER = COMPONENT_CLASSIFIER__OWNED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__MEMBER = COMPONENT_CLASSIFIER__MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Classifier Feature</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__CLASSIFIER_FEATURE = COMPONENT_CLASSIFIER__CLASSIFIER_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Inherited Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__INHERITED_MEMBER = COMPONENT_CLASSIFIER__INHERITED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Generalization</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__GENERALIZATION = COMPONENT_CLASSIFIER__GENERALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>General</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__GENERAL = COMPONENT_CLASSIFIER__GENERAL;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annex Subclause</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__OWNED_ANNEX_SUBCLAUSE = COMPONENT_CLASSIFIER__OWNED_ANNEX_SUBCLAUSE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Prototype</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__OWNED_PROTOTYPE = COMPONENT_CLASSIFIER__OWNED_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Prototype Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__OWNED_PROTOTYPE_BINDING = COMPONENT_CLASSIFIER__OWNED_PROTOTYPE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>No Prototypes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__NO_PROTOTYPES = COMPONENT_CLASSIFIER__NO_PROTOTYPES;
+
+	/**
+	 * The feature id for the '<em><b>No Annexes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__NO_ANNEXES = COMPONENT_CLASSIFIER__NO_ANNEXES;
+
+	/**
+	 * The feature id for the '<em><b>No Properties</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__NO_PROPERTIES = COMPONENT_CLASSIFIER__NO_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Owned Mode</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__OWNED_MODE = COMPONENT_CLASSIFIER__OWNED_MODE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Mode Transition</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__OWNED_MODE_TRANSITION = COMPONENT_CLASSIFIER__OWNED_MODE_TRANSITION;
+
+	/**
+	 * The feature id for the '<em><b>Derived Modes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__DERIVED_MODES = COMPONENT_CLASSIFIER__DERIVED_MODES;
+
+	/**
+	 * The feature id for the '<em><b>No Flows</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__NO_FLOWS = COMPONENT_CLASSIFIER__NO_FLOWS;
+
+	/**
+	 * The feature id for the '<em><b>No Modes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER__NO_MODES = COMPONENT_CLASSIFIER__NO_MODES;
+
+	/**
+	 * The number of structural features of the '<em>Virtual Memory Classifier</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_CLASSIFIER_FEATURE_COUNT = COMPONENT_CLASSIFIER_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.osate.aadl2.impl.VirtualMemoryTypeImpl <em>Virtual Memory Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.osate.aadl2.impl.VirtualMemoryTypeImpl
+	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getVirtualMemoryType()
+	 * @generated
+	 */
+	int VIRTUAL_MEMORY_TYPE = 261;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_ELEMENT = COMPONENT_TYPE__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_COMMENT = COMPONENT_TYPE__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__NAME = COMPONENT_TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__QUALIFIED_NAME = COMPONENT_TYPE__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Property Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_PROPERTY_ASSOCIATION = COMPONENT_TYPE__OWNED_PROPERTY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_MEMBER = COMPONENT_TYPE__OWNED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__MEMBER = COMPONENT_TYPE__MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Classifier Feature</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__CLASSIFIER_FEATURE = COMPONENT_TYPE__CLASSIFIER_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Inherited Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__INHERITED_MEMBER = COMPONENT_TYPE__INHERITED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Generalization</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__GENERALIZATION = COMPONENT_TYPE__GENERALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>General</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__GENERAL = COMPONENT_TYPE__GENERAL;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annex Subclause</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_ANNEX_SUBCLAUSE = COMPONENT_TYPE__OWNED_ANNEX_SUBCLAUSE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Prototype</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_PROTOTYPE = COMPONENT_TYPE__OWNED_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Prototype Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_PROTOTYPE_BINDING = COMPONENT_TYPE__OWNED_PROTOTYPE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>No Prototypes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__NO_PROTOTYPES = COMPONENT_TYPE__NO_PROTOTYPES;
+
+	/**
+	 * The feature id for the '<em><b>No Annexes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__NO_ANNEXES = COMPONENT_TYPE__NO_ANNEXES;
+
+	/**
+	 * The feature id for the '<em><b>No Properties</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__NO_PROPERTIES = COMPONENT_TYPE__NO_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Owned Mode</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_MODE = COMPONENT_TYPE__OWNED_MODE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Mode Transition</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_MODE_TRANSITION = COMPONENT_TYPE__OWNED_MODE_TRANSITION;
+
+	/**
+	 * The feature id for the '<em><b>Derived Modes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__DERIVED_MODES = COMPONENT_TYPE__DERIVED_MODES;
+
+	/**
+	 * The feature id for the '<em><b>No Flows</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__NO_FLOWS = COMPONENT_TYPE__NO_FLOWS;
+
+	/**
+	 * The feature id for the '<em><b>No Modes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__NO_MODES = COMPONENT_TYPE__NO_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Owned Feature</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_FEATURE = COMPONENT_TYPE__OWNED_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Extended</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__EXTENDED = COMPONENT_TYPE__EXTENDED;
+
+	/**
+	 * The feature id for the '<em><b>Owned Flow Specification</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_FLOW_SPECIFICATION = COMPONENT_TYPE__OWNED_FLOW_SPECIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extension</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_EXTENSION = COMPONENT_TYPE__OWNED_EXTENSION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Feature Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_FEATURE_GROUP = COMPONENT_TYPE__OWNED_FEATURE_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Owned Abstract Feature</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_ABSTRACT_FEATURE = COMPONENT_TYPE__OWNED_ABSTRACT_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>No Features</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__NO_FEATURES = COMPONENT_TYPE__NO_FEATURES;
+
+	/**
+	 * The feature id for the '<em><b>Owned Data Port</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_DATA_PORT = COMPONENT_TYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Owned Event Data Port</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_EVENT_DATA_PORT = COMPONENT_TYPE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Owned Event Port</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE__OWNED_EVENT_PORT = COMPONENT_TYPE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Virtual Memory Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_TYPE_FEATURE_COUNT = COMPONENT_TYPE_FEATURE_COUNT + 3;
+
+	/**
+	 * The meta object id for the '{@link org.osate.aadl2.impl.VirtualMemoryImplementationImpl <em>Virtual Memory Implementation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.osate.aadl2.impl.VirtualMemoryImplementationImpl
+	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getVirtualMemoryImplementation()
+	 * @generated
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION = 262;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_ELEMENT = COMPONENT_IMPLEMENTATION__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_COMMENT = COMPONENT_IMPLEMENTATION__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__NAME = COMPONENT_IMPLEMENTATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__QUALIFIED_NAME = COMPONENT_IMPLEMENTATION__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Property Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PROPERTY_ASSOCIATION = COMPONENT_IMPLEMENTATION__OWNED_PROPERTY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_MEMBER = COMPONENT_IMPLEMENTATION__OWNED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__MEMBER = COMPONENT_IMPLEMENTATION__MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Classifier Feature</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__CLASSIFIER_FEATURE = COMPONENT_IMPLEMENTATION__CLASSIFIER_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Inherited Member</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__INHERITED_MEMBER = COMPONENT_IMPLEMENTATION__INHERITED_MEMBER;
+
+	/**
+	 * The feature id for the '<em><b>Generalization</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__GENERALIZATION = COMPONENT_IMPLEMENTATION__GENERALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>General</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__GENERAL = COMPONENT_IMPLEMENTATION__GENERAL;
+
+	/**
+	 * The feature id for the '<em><b>Owned Annex Subclause</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_ANNEX_SUBCLAUSE = COMPONENT_IMPLEMENTATION__OWNED_ANNEX_SUBCLAUSE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Prototype</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PROTOTYPE = COMPONENT_IMPLEMENTATION__OWNED_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Prototype Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PROTOTYPE_BINDING = COMPONENT_IMPLEMENTATION__OWNED_PROTOTYPE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>No Prototypes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__NO_PROTOTYPES = COMPONENT_IMPLEMENTATION__NO_PROTOTYPES;
+
+	/**
+	 * The feature id for the '<em><b>No Annexes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__NO_ANNEXES = COMPONENT_IMPLEMENTATION__NO_ANNEXES;
+
+	/**
+	 * The feature id for the '<em><b>No Properties</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__NO_PROPERTIES = COMPONENT_IMPLEMENTATION__NO_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Owned Mode</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_MODE = COMPONENT_IMPLEMENTATION__OWNED_MODE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Mode Transition</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_MODE_TRANSITION = COMPONENT_IMPLEMENTATION__OWNED_MODE_TRANSITION;
+
+	/**
+	 * The feature id for the '<em><b>Derived Modes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__DERIVED_MODES = COMPONENT_IMPLEMENTATION__DERIVED_MODES;
+
+	/**
+	 * The feature id for the '<em><b>No Flows</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__NO_FLOWS = COMPONENT_IMPLEMENTATION__NO_FLOWS;
+
+	/**
+	 * The feature id for the '<em><b>No Modes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__NO_MODES = COMPONENT_IMPLEMENTATION__NO_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__TYPE = COMPONENT_IMPLEMENTATION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Subcomponent</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_SUBCOMPONENT = COMPONENT_IMPLEMENTATION__OWNED_SUBCOMPONENT;
+
+	/**
+	 * The feature id for the '<em><b>Extended</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__EXTENDED = COMPONENT_IMPLEMENTATION__EXTENDED;
+
+	/**
+	 * The feature id for the '<em><b>Owned Flow Implementation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_FLOW_IMPLEMENTATION = COMPONENT_IMPLEMENTATION__OWNED_FLOW_IMPLEMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Connection</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_CONNECTION = COMPONENT_IMPLEMENTATION__OWNED_CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Extension</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_EXTENSION = COMPONENT_IMPLEMENTATION__OWNED_EXTENSION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Realization</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_REALIZATION = COMPONENT_IMPLEMENTATION__OWNED_REALIZATION;
+
+	/**
+	 * The feature id for the '<em><b>Owned End To End Flow</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_END_TO_END_FLOW = COMPONENT_IMPLEMENTATION__OWNED_END_TO_END_FLOW;
+
+	/**
+	 * The feature id for the '<em><b>Owned Abstract Subcomponent</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_ABSTRACT_SUBCOMPONENT = COMPONENT_IMPLEMENTATION__OWNED_ABSTRACT_SUBCOMPONENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Access Connection</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_ACCESS_CONNECTION = COMPONENT_IMPLEMENTATION__OWNED_ACCESS_CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Parameter Connection</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PARAMETER_CONNECTION = COMPONENT_IMPLEMENTATION__OWNED_PARAMETER_CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Port Connection</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PORT_CONNECTION = COMPONENT_IMPLEMENTATION__OWNED_PORT_CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Feature Connection</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_FEATURE_CONNECTION = COMPONENT_IMPLEMENTATION__OWNED_FEATURE_CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Owned Feature Group Connection</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_FEATURE_GROUP_CONNECTION = COMPONENT_IMPLEMENTATION__OWNED_FEATURE_GROUP_CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>No Subcomponents</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__NO_SUBCOMPONENTS = COMPONENT_IMPLEMENTATION__NO_SUBCOMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>No Connections</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__NO_CONNECTIONS = COMPONENT_IMPLEMENTATION__NO_CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>No Calls</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__NO_CALLS = COMPONENT_IMPLEMENTATION__NO_CALLS;
+
+	/**
+	 * The feature id for the '<em><b>Owned Processor Feature</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PROCESSOR_FEATURE = COMPONENT_IMPLEMENTATION__OWNED_PROCESSOR_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Internal Feature</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_INTERNAL_FEATURE = COMPONENT_IMPLEMENTATION__OWNED_INTERNAL_FEATURE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Event Source</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_EVENT_SOURCE = COMPONENT_IMPLEMENTATION__OWNED_EVENT_SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Event Data Source</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_EVENT_DATA_SOURCE = COMPONENT_IMPLEMENTATION__OWNED_EVENT_DATA_SOURCE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Port Proxy</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_PORT_PROXY = COMPONENT_IMPLEMENTATION__OWNED_PORT_PROXY;
+
+	/**
+	 * The feature id for the '<em><b>Owned Subprogram Proxy</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_SUBPROGRAM_PROXY = COMPONENT_IMPLEMENTATION__OWNED_SUBPROGRAM_PROXY;
+
+	/**
+	 * The feature id for the '<em><b>Owned Virtual Memory Subcomponent</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION__OWNED_VIRTUAL_MEMORY_SUBCOMPONENT = COMPONENT_IMPLEMENTATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Virtual Memory Implementation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_IMPLEMENTATION_FEATURE_COUNT = COMPONENT_IMPLEMENTATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.osate.aadl2.impl.VirtualMemoryPrototypeImpl <em>Virtual Memory Prototype</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.osate.aadl2.impl.VirtualMemoryPrototypeImpl
+	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getVirtualMemoryPrototype()
+	 * @generated
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE = 263;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__OWNED_ELEMENT = COMPONENT_PROTOTYPE__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__OWNED_COMMENT = COMPONENT_PROTOTYPE__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__NAME = COMPONENT_PROTOTYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__QUALIFIED_NAME = COMPONENT_PROTOTYPE__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Property Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__OWNED_PROPERTY_ASSOCIATION = COMPONENT_PROTOTYPE__OWNED_PROPERTY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Refinement Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__REFINEMENT_CONTEXT = COMPONENT_PROTOTYPE__REFINEMENT_CONTEXT;
+
+	/**
+	 * The feature id for the '<em><b>Refined Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__REFINED_ELEMENT = COMPONENT_PROTOTYPE__REFINED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Featuring Classifier</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__FEATURING_CLASSIFIER = COMPONENT_PROTOTYPE__FEATURING_CLASSIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Refined</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__REFINED = COMPONENT_PROTOTYPE__REFINED;
+
+	/**
+	 * The feature id for the '<em><b>Array</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__ARRAY = COMPONENT_PROTOTYPE__ARRAY;
+
+	/**
+	 * The feature id for the '<em><b>Constraining Classifier</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE__CONSTRAINING_CLASSIFIER = COMPONENT_PROTOTYPE__CONSTRAINING_CLASSIFIER;
+
+	/**
+	 * The number of structural features of the '<em>Virtual Memory Prototype</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_PROTOTYPE_FEATURE_COUNT = COMPONENT_PROTOTYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.osate.aadl2.impl.VirtualMemorySubcomponentImpl <em>Virtual Memory Subcomponent</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.osate.aadl2.impl.VirtualMemorySubcomponentImpl
+	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getVirtualMemorySubcomponent()
+	 * @generated
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT = 264;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__OWNED_ELEMENT = SUBCOMPONENT__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__OWNED_COMMENT = SUBCOMPONENT__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__NAME = SUBCOMPONENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__QUALIFIED_NAME = SUBCOMPONENT__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Property Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__OWNED_PROPERTY_ASSOCIATION = SUBCOMPONENT__OWNED_PROPERTY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Refinement Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__REFINEMENT_CONTEXT = SUBCOMPONENT__REFINEMENT_CONTEXT;
+
+	/**
+	 * The feature id for the '<em><b>Refined Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__REFINED_ELEMENT = SUBCOMPONENT__REFINED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Featuring Classifier</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__FEATURING_CLASSIFIER = SUBCOMPONENT__FEATURING_CLASSIFIER;
+
+	/**
+	 * The feature id for the '<em><b>In Mode</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__IN_MODE = SUBCOMPONENT__IN_MODE;
+
+	/**
+	 * The feature id for the '<em><b>Array Dimension</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__ARRAY_DIMENSION = SUBCOMPONENT__ARRAY_DIMENSION;
+
+	/**
+	 * The feature id for the '<em><b>Subcomponent Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__SUBCOMPONENT_TYPE = SUBCOMPONENT__SUBCOMPONENT_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Prototype Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__OWNED_PROTOTYPE_BINDING = SUBCOMPONENT__OWNED_PROTOTYPE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>Prototype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__PROTOTYPE = SUBCOMPONENT__PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Owned Mode Binding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__OWNED_MODE_BINDING = SUBCOMPONENT__OWNED_MODE_BINDING;
+
+	/**
+	 * The feature id for the '<em><b>All Modes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__ALL_MODES = SUBCOMPONENT__ALL_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Implementation Reference</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__IMPLEMENTATION_REFERENCE = SUBCOMPONENT__IMPLEMENTATION_REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Refined</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__REFINED = SUBCOMPONENT__REFINED;
+
+	/**
+	 * The feature id for the '<em><b>Classifier</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__CLASSIFIER = SUBCOMPONENT__CLASSIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Virtual Memory Subcomponent Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT__VIRTUAL_MEMORY_SUBCOMPONENT_TYPE = SUBCOMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Virtual Memory Subcomponent</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT_FEATURE_COUNT = SUBCOMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.osate.aadl2.impl.VirtualMemorySubcomponentTypeImpl <em>Virtual Memory Subcomponent Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.osate.aadl2.impl.VirtualMemorySubcomponentTypeImpl
+	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getVirtualMemorySubcomponentType()
+	 * @generated
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT_TYPE = 265;
+
+	/**
+	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT_TYPE__OWNED_ELEMENT = SUBCOMPONENT_TYPE__OWNED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT_TYPE__OWNED_COMMENT = SUBCOMPONENT_TYPE__OWNED_COMMENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT_TYPE__NAME = SUBCOMPONENT_TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT_TYPE__QUALIFIED_NAME = SUBCOMPONENT_TYPE__QUALIFIED_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Property Association</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT_TYPE__OWNED_PROPERTY_ASSOCIATION = SUBCOMPONENT_TYPE__OWNED_PROPERTY_ASSOCIATION;
+
+	/**
+	 * The number of structural features of the '<em>Virtual Memory Subcomponent Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIRTUAL_MEMORY_SUBCOMPONENT_TYPE_FEATURE_COUNT = SUBCOMPONENT_TYPE_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.osate.aadl2.DirectionType <em>Direction Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -35576,7 +36978,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getDirectionType()
 	 * @generated
 	 */
-	int DIRECTION_TYPE = 260;
+	int DIRECTION_TYPE = 267;
 
 	/**
 	 * The meta object id for the '{@link org.osate.aadl2.PortCategory <em>Port Category</em>}' enum.
@@ -35586,7 +36988,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getPortCategory()
 	 * @generated
 	 */
-	int PORT_CATEGORY = 263;
+	int PORT_CATEGORY = 270;
 
 	/**
 	 * The meta object id for the '{@link org.osate.aadl2.FlowKind <em>Flow Kind</em>}' enum.
@@ -35596,7 +36998,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getFlowKind()
 	 * @generated
 	 */
-	int FLOW_KIND = 259;
+	int FLOW_KIND = 266;
 
 	/**
 	 * The meta object id for the '{@link org.osate.aadl2.AccessType <em>Access Type</em>}' enum.
@@ -35606,7 +37008,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getAccessType()
 	 * @generated
 	 */
-	int ACCESS_TYPE = 261;
+	int ACCESS_TYPE = 268;
 
 	/**
 	 * The meta object id for the '{@link org.osate.aadl2.AccessCategory <em>Access Category</em>}' enum.
@@ -35616,7 +37018,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getAccessCategory()
 	 * @generated
 	 */
-	int ACCESS_CATEGORY = 262;
+	int ACCESS_CATEGORY = 269;
 
 	/**
 	 * The meta object id for the '{@link org.osate.aadl2.ComponentCategory <em>Component Category</em>}' enum.
@@ -35626,7 +37028,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getComponentCategory()
 	 * @generated
 	 */
-	int COMPONENT_CATEGORY = 264;
+	int COMPONENT_CATEGORY = 271;
 
 	/**
 	 * The meta object id for the '{@link org.osate.aadl2.OperationKind <em>Operation Kind</em>}' enum.
@@ -35636,7 +37038,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getOperationKind()
 	 * @generated
 	 */
-	int OPERATION_KIND = 265;
+	int OPERATION_KIND = 272;
 
 	/**
 	 * The meta object id for the '<em>String</em>' data type.
@@ -35646,7 +37048,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getString()
 	 * @generated
 	 */
-	int STRING = 266;
+	int STRING = 273;
 
 	/**
 	 * The meta object id for the '<em>Boolean</em>' data type.
@@ -35655,7 +37057,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getBoolean()
 	 * @generated
 	 */
-	int BOOLEAN = 267;
+	int BOOLEAN = 274;
 
 	/**
 	 * The meta object id for the '<em>Integer</em>' data type.
@@ -35664,7 +37066,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getInteger()
 	 * @generated
 	 */
-	int INTEGER = 268;
+	int INTEGER = 275;
 
 	/**
 	 * The meta object id for the '<em>Real</em>' data type.
@@ -35673,7 +37075,7 @@ public interface Aadl2Package extends EPackage {
 	 * @see org.osate.aadl2.impl.Aadl2PackageImpl#getReal()
 	 * @generated
 	 */
-	int REAL = 269;
+	int REAL = 276;
 
 	/**
 	 * Returns the meta object for class '{@link org.osate.aadl2.Element <em>Element</em>}'.
@@ -41221,6 +42623,17 @@ public interface Aadl2Package extends EPackage {
 	EReference getSystemImplementation_OwnedVirtualProcessorSubcomponent();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.osate.aadl2.SystemImplementation#getOwnedVirtualMemorySubcomponents <em>Owned Virtual Memory Subcomponent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Virtual Memory Subcomponent</em>'.
+	 * @see org.osate.aadl2.SystemImplementation#getOwnedVirtualMemorySubcomponents()
+	 * @see #getSystemImplementation()
+	 * @generated
+	 */
+	EReference getSystemImplementation_OwnedVirtualMemorySubcomponent();
+
+	/**
 	 * Returns the meta object for class '{@link org.osate.aadl2.SystemPrototype <em>System Prototype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -43027,6 +44440,131 @@ public interface Aadl2Package extends EPackage {
 	 * @generated
 	 */
 	EReference getListType_ElementType();
+
+	/**
+	 * Returns the meta object for class '{@link org.osate.aadl2.VirtualMemory <em>Virtual Memory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Virtual Memory</em>'.
+	 * @see org.osate.aadl2.VirtualMemory
+	 * @generated
+	 */
+	EClass getVirtualMemory();
+
+	/**
+	 * Returns the meta object for class '{@link org.osate.aadl2.VirtualMemoryClassifier <em>Virtual Memory Classifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Virtual Memory Classifier</em>'.
+	 * @see org.osate.aadl2.VirtualMemoryClassifier
+	 * @generated
+	 */
+	EClass getVirtualMemoryClassifier();
+
+	/**
+	 * Returns the meta object for class '{@link org.osate.aadl2.VirtualMemoryType <em>Virtual Memory Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Virtual Memory Type</em>'.
+	 * @see org.osate.aadl2.VirtualMemoryType
+	 * @generated
+	 */
+	EClass getVirtualMemoryType();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.osate.aadl2.VirtualMemoryType#getOwnedDataPorts <em>Owned Data Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Data Port</em>'.
+	 * @see org.osate.aadl2.VirtualMemoryType#getOwnedDataPorts()
+	 * @see #getVirtualMemoryType()
+	 * @generated
+	 */
+	EReference getVirtualMemoryType_OwnedDataPort();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.osate.aadl2.VirtualMemoryType#getOwnedEventDataPorts <em>Owned Event Data Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Event Data Port</em>'.
+	 * @see org.osate.aadl2.VirtualMemoryType#getOwnedEventDataPorts()
+	 * @see #getVirtualMemoryType()
+	 * @generated
+	 */
+	EReference getVirtualMemoryType_OwnedEventDataPort();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.osate.aadl2.VirtualMemoryType#getOwnedEventPorts <em>Owned Event Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Event Port</em>'.
+	 * @see org.osate.aadl2.VirtualMemoryType#getOwnedEventPorts()
+	 * @see #getVirtualMemoryType()
+	 * @generated
+	 */
+	EReference getVirtualMemoryType_OwnedEventPort();
+
+	/**
+	 * Returns the meta object for class '{@link org.osate.aadl2.VirtualMemoryImplementation <em>Virtual Memory Implementation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Virtual Memory Implementation</em>'.
+	 * @see org.osate.aadl2.VirtualMemoryImplementation
+	 * @generated
+	 */
+	EClass getVirtualMemoryImplementation();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.osate.aadl2.VirtualMemoryImplementation#getOwnedVirtualMemorySubcomponents <em>Owned Virtual Memory Subcomponent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Virtual Memory Subcomponent</em>'.
+	 * @see org.osate.aadl2.VirtualMemoryImplementation#getOwnedVirtualMemorySubcomponents()
+	 * @see #getVirtualMemoryImplementation()
+	 * @generated
+	 */
+	EReference getVirtualMemoryImplementation_OwnedVirtualMemorySubcomponent();
+
+	/**
+	 * Returns the meta object for class '{@link org.osate.aadl2.VirtualMemoryPrototype <em>Virtual Memory Prototype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Virtual Memory Prototype</em>'.
+	 * @see org.osate.aadl2.VirtualMemoryPrototype
+	 * @generated
+	 */
+	EClass getVirtualMemoryPrototype();
+
+	/**
+	 * Returns the meta object for class '{@link org.osate.aadl2.VirtualMemorySubcomponent <em>Virtual Memory Subcomponent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Virtual Memory Subcomponent</em>'.
+	 * @see org.osate.aadl2.VirtualMemorySubcomponent
+	 * @generated
+	 */
+	EClass getVirtualMemorySubcomponent();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.osate.aadl2.VirtualMemorySubcomponent#getVirtualMemorySubcomponentType <em>Virtual Memory Subcomponent Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Virtual Memory Subcomponent Type</em>'.
+	 * @see org.osate.aadl2.VirtualMemorySubcomponent#getVirtualMemorySubcomponentType()
+	 * @see #getVirtualMemorySubcomponent()
+	 * @generated
+	 */
+	EReference getVirtualMemorySubcomponent_VirtualMemorySubcomponentType();
+
+	/**
+	 * Returns the meta object for class '{@link org.osate.aadl2.VirtualMemorySubcomponentType <em>Virtual Memory Subcomponent Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Virtual Memory Subcomponent Type</em>'.
+	 * @see org.osate.aadl2.VirtualMemorySubcomponentType
+	 * @generated
+	 */
+	EClass getVirtualMemorySubcomponentType();
 
 	/**
 	 * Returns the meta object for enum '{@link org.osate.aadl2.DirectionType <em>Direction Type</em>}'.

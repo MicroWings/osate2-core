@@ -151,7 +151,7 @@ public class PropertyUtils {
 		if (pd == null) {
 			return defaultVal;
 		}
-		try {
+		try {	
 			final PropertyExpression pv = getSimplePropertyValue(ph, pd);
 			return ((RealLiteral) pv).getValue();
 		} catch (PropertyLookupException e) {
@@ -866,6 +866,7 @@ public class PropertyUtils {
 		if (pd == null) {
 			throw new PropertyNotPresentException(ph, pd, "Property not defined for " + ph.getQualifiedName());
 		}
+		
 		PropertyExpression res = ph.getSimplePropertyValue(pd);
 		if (res instanceof NamedValue) {
 			AbstractNamedValue nv = ((NamedValue) res).getNamedValue();

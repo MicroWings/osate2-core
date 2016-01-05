@@ -2357,6 +2357,7 @@
     <eLiterals name="threadGroup" value="11"/>
     <eLiterals name="virtualBus" value="12"/>
     <eLiterals name="virtualProcessor" value="13"/>
+    <eLiterals name="virtualMemory" value="14" literal=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AnnexLibrary" abstract="true" eSuperTypes="#//NamedElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -3895,6 +3896,13 @@
         <details key="documentation" value="&lt;p>From package AADLDetails::Components::System.&lt;/p>"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedVirtualMemorySubcomponent"
+        ordered="false" upperBound="-1" eType="#//VirtualMemorySubcomponent" containment="true">
+      <eAnnotations source="subsets" references="#//ComponentImplementation/ownedSubcomponent"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>From package AADLDetails::Components::System.&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SystemPrototype" eSuperTypes="#//ComponentPrototype #//System #//SystemSubcomponentType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -4991,5 +4999,90 @@
         <details key="documentation" value="&lt;p>From package AADLProperties::Types.&lt;/p>"/>
       </eAnnotations>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMemory" abstract="true" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMemoryClassifier" abstract="true"
+      eSuperTypes="#//ComponentClassifier #//VirtualMemory #//VirtualMemorySubcomponentType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMemoryType" eSuperTypes="#//ComponentType #//VirtualMemoryClassifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedDataPort" ordered="false"
+        upperBound="-1" eType="#//DataPort" containment="true">
+      <eAnnotations source="subsets" references="#//ComponentType/ownedFeature"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedEventDataPort" ordered="false"
+        upperBound="-1" eType="#//EventDataPort" containment="true">
+      <eAnnotations source="subsets" references="#//ComponentType/ownedFeature"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedEventPort" ordered="false"
+        upperBound="-1" eType="#//EventPort" containment="true">
+      <eAnnotations source="subsets" references="#//ComponentType/ownedFeature"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMemoryImplementation" eSuperTypes="#//ComponentImplementation #//VirtualMemoryClassifier">
+    <eAnnotations source="duplicates">
+      <eAnnotations source="type">
+        <details key="eType" value="aadl2::VirtualBusType"/>
+      </eAnnotations>
+      <contents xsi:type="ecore:EReference" name="type" ordered="false" unique="false"
+          lowerBound="1" eType="#//ComponentType" volatile="true" transient="true"
+          derived="true">
+        <eAnnotations source="redefines" references="#//ComponentImplementation/type"/>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+        </eAnnotations>
+      </contents>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedVirtualMemorySubcomponent"
+        ordered="false" upperBound="-1" eType="#//VirtualMemorySubcomponent" containment="true">
+      <eAnnotations source="subsets" references="#//ComponentImplementation/ownedSubcomponent"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMemoryPrototype" eSuperTypes="#//ComponentPrototype #//VirtualMemory #//VirtualMemorySubcomponentType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMemorySubcomponent" eSuperTypes="#//Subcomponent #//VirtualMemory">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualMemorySubcomponentType"
+        ordered="false" eType="#//VirtualMemorySubcomponentType">
+      <eAnnotations source="subsets" references="#//Subcomponent/subcomponentType"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMemorySubcomponentType" abstract="true"
+      eSuperTypes="#//SubcomponentType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>From package AADLDetails::Components::VirtualBus.&lt;/p>"/>
+    </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>

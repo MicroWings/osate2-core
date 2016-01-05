@@ -310,6 +310,12 @@ public class PackageSectionItemProvider extends NamespaceItemProvider {
 		newChildDescriptors.add(createChildParameter(Aadl2Package.eINSTANCE.getPackageSection_OwnedClassifier(),
 				Aadl2Factory.eINSTANCE.createVirtualProcessorImplementation()));
 
+		newChildDescriptors.add(createChildParameter(Aadl2Package.eINSTANCE.getPackageSection_OwnedClassifier(),
+				Aadl2Factory.eINSTANCE.createVirtualMemoryType()));
+
+		newChildDescriptors.add(createChildParameter(Aadl2Package.eINSTANCE.getPackageSection_OwnedClassifier(),
+				Aadl2Factory.eINSTANCE.createVirtualMemoryImplementation()));
+
 		newChildDescriptors
 				.add(createChildParameter(Aadl2Package.eINSTANCE.getPackageSection_OwnedFeatureGroupTypeRename(),
 						Aadl2Factory.eINSTANCE.createFeatureGroupTypeRename()));
