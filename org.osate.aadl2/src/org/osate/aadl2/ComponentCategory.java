@@ -201,7 +201,7 @@ public enum ComponentCategory implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	VIRTUAL_MEMORY(14, "virtualMemory", "");
+	VIRTUAL_MEMORY(14, "virtual memory", "virtual memory");
 
 	/**
 	 * The '<em><b>Abstract</b></em>' literal value.
