@@ -794,6 +794,8 @@ public class ComponentInstanceImpl extends ConnectionInstanceEndImpl implements 
 					catLitteral = "virtual processor";
 				} else if (catLitteral.equals("virtualbus")) {
 					catLitteral = "virtual bus";
+				} else if (catLitteral.equals("virtualmemory")) {
+					catLitteral = "virtual memory";
 				} else if (catLitteral.equals("subprogramgroup")) {
 					catLitteral = "subprogram group";
 				} else if (catLitteral.equals("threadgroup")) {
