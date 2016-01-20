@@ -76,7 +76,6 @@ import org.osate.aadl2.util.NonNotifyingEObjectEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.osate.aadl2.impl.ConnectionImpl#getInModes <em>In Mode</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ConnectionImpl#getInModeOrTransitions <em>In Mode Or Transition</em>}</li>
@@ -86,6 +85,7 @@ import org.osate.aadl2.util.NonNotifyingEObjectEList;
  *   <li>{@link org.osate.aadl2.impl.ConnectionImpl#isBidirectional <em>Bidirectional</em>}</li>
  *   <li>{@link org.osate.aadl2.impl.ConnectionImpl#getRefined <em>Refined</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -330,12 +330,14 @@ public abstract class ConnectionImpl extends StructuralFeatureImpl implements Co
 	public void setDestination(ConnectedElement newDestination) {
 		if (newDestination != destination) {
 			NotificationChain msgs = null;
-			if (destination != null)
+			if (destination != null) {
 				msgs = ((InternalEObject) destination).eInverseRemove(this,
 						EOPPOSITE_FEATURE_BASE - Aadl2Package.CONNECTION__DESTINATION, null, msgs);
-			if (newDestination != null)
+			}
+			if (newDestination != null) {
 				msgs = ((InternalEObject) newDestination).eInverseAdd(this,
 						EOPPOSITE_FEATURE_BASE - Aadl2Package.CONNECTION__DESTINATION, null, msgs);
+			}
 			msgs = basicSetDestination(newDestination, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -394,18 +396,21 @@ public abstract class ConnectionImpl extends StructuralFeatureImpl implements Co
 	public void setSource(ConnectedElement newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
-			if (source != null)
+			if (source != null) {
 				msgs = ((InternalEObject) source).eInverseRemove(this,
 						EOPPOSITE_FEATURE_BASE - Aadl2Package.CONNECTION__SOURCE, null, msgs);
-			if (newSource != null)
+			}
+			if (newSource != null) {
 				msgs = ((InternalEObject) newSource).eInverseAdd(this,
 						EOPPOSITE_FEATURE_BASE - Aadl2Package.CONNECTION__SOURCE, null, msgs);
+			}
 			msgs = basicSetSource(newSource, msgs);
 			if (msgs != null)
 				msgs.dispatch();
-		} else if (eNotificationRequired())
+		} else if (eNotificationRequired()) {
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CONNECTION__SOURCE, newSource,
 					newSource));
+		}
 	}
 
 	/**
@@ -481,9 +486,10 @@ public abstract class ConnectionImpl extends StructuralFeatureImpl implements Co
 	public void setRefined(Connection newRefined) {
 		Connection oldRefined = refined;
 		refined = newRefined;
-		if (eNotificationRequired())
+		if (eNotificationRequired()) {
 			eNotify(new ENotificationImpl(this, Notification.SET, Aadl2Package.CONNECTION__REFINED, oldRefined,
 					refined));
+		}
 	}
 
 	/**
@@ -863,6 +869,11 @@ public abstract class ConnectionImpl extends StructuralFeatureImpl implements Co
 			return conn.getContainingComponentImpl();
 		}
 		return dcxt;
+	}
+
+	@Override
+	public boolean isAllBidirectional() {
+		return getRootConnection().isBidirectional();
 	}
 
 } // ConnectionImpl

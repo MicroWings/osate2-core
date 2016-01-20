@@ -83,6 +83,10 @@ import org.osate.aadl2.AbstractFeature;
 import org.osate.aadl2.Access;
 import org.osate.aadl2.AnnexLibrary;
 import org.osate.aadl2.AnnexSubclause;
+import org.osate.aadl2.ArrayDimension;
+import org.osate.aadl2.ArraySize;
+import org.osate.aadl2.ArraySizeProperty;
+import org.osate.aadl2.ArrayableElement;
 import org.osate.aadl2.Classifier;
 import org.osate.aadl2.ComponentCategory;
 import org.osate.aadl2.ComponentClassifier;
@@ -110,6 +114,7 @@ import org.osate.aadl2.FlowEnd;
 import org.osate.aadl2.FlowImplementation;
 import org.osate.aadl2.FlowSegment;
 import org.osate.aadl2.FlowSpecification;
+import org.osate.aadl2.IntegerLiteral;
 import org.osate.aadl2.ListType;
 import org.osate.aadl2.ModalElement;
 import org.osate.aadl2.Mode;
@@ -124,6 +129,8 @@ import org.osate.aadl2.ProcessSubcomponent;
 import org.osate.aadl2.ProcessorSubcomponent;
 import org.osate.aadl2.Property;
 import org.osate.aadl2.PropertyAssociation;
+import org.osate.aadl2.PropertyConstant;
+import org.osate.aadl2.PropertyExpression;
 import org.osate.aadl2.PropertySet;
 import org.osate.aadl2.PropertyType;
 import org.osate.aadl2.Realization;
@@ -347,8 +354,8 @@ public final class AadlUtil {
 		 * more than one modeless declaration, or we have a modeless declaration
 		 * and explicit declarations for all the possible modes.
 		 */
-		return !(!AadlUtil.findDoubleNamedElementsInList(modeset).isEmpty() || noModeSet > 1 || (noModeSet > 0
-				&& !allModes.isEmpty() && modeset.containsAll(allModes)));
+		return !(!AadlUtil.findDoubleNamedElementsInList(modeset).isEmpty() || noModeSet > 1
+				|| (noModeSet > 0 && !allModes.isEmpty() && modeset.containsAll(allModes)));
 
 		// return AadlUtil.findDoubleNamedElementsInList(modeset).isEmpty() &&
 		// noModeSet <2;
@@ -655,8 +662,8 @@ public final class AadlUtil {
 		String implName = fi.eClass().getName();
 		String specName = fs.eClass().getName();
 
-		return implName.substring(0, implName.length() - "Implementation".length()).equals(
-				specName.substring(0, specName.length() - "Specification".length()));
+		return implName.substring(0, implName.length() - "Implementation".length())
+				.equals(specName.substring(0, specName.length() - "Specification".length()));
 	}
 
 	/**
@@ -671,8 +678,8 @@ public final class AadlUtil {
 		String implName = impl.eClass().getName();
 		String typeName = type.eClass().getName();
 
-		return implName.substring(0, implName.length() - "Implementation".length()).equals(
-				typeName.substring(0, typeName.length() - "Type".length()));
+		return implName.substring(0, implName.length() - "Implementation".length())
+				.equals(typeName.substring(0, typeName.length() - "Type".length()));
 	}
 
 	/**
@@ -686,9 +693,8 @@ public final class AadlUtil {
 		String subName = sub.eClass().getName();
 		String cName = c.eClass().getName();
 
-		return subName.substring(0, subName.length() - "Subcomponent".length()).equals(
-				cName.substring(0,
-						cName.length() - (c instanceof ComponentImplementation ? "Implementation" : "Type").length()));
+		return subName.substring(0, subName.length() - "Subcomponent".length()).equals(cName.substring(0,
+				cName.length() - (c instanceof ComponentImplementation ? "Implementation" : "Type").length()));
 	}
 
 	// TODO: [NAMESPACE] Rewrite with the new namespace scheme.
@@ -1356,7 +1362,7 @@ public final class AadlUtil {
 			}
 		}
 		if (object instanceof IAdaptable) {
-			theElement = (Element) ((IAdaptable) object).getAdapter(Element.class);
+			theElement = ((IAdaptable) object).getAdapter(Element.class);
 			if (theElement != null) {
 				return theElement;
 			}
@@ -1579,7 +1585,8 @@ public final class AadlUtil {
 			for (NamedElement o : el) {
 				if (o instanceof Connection) {
 					Connection conn = (Connection) o;
-					if ((conn.getAllSourceContext() instanceof Subcomponent && conn.getAllDestinationContext() instanceof Subcomponent)
+					if ((conn.getAllSourceContext() instanceof Subcomponent
+							&& conn.getAllDestinationContext() instanceof Subcomponent)
 							|| (conn.getAllSourceContext() == null || conn.getAllDestinationContext() == null)) {
 						target = conn;
 						break;
@@ -1723,14 +1730,13 @@ public final class AadlUtil {
 		List<Feature> features = local.getAllFeatureRefinements();
 		EList<Connection> cimplconns = cimpl.getAllConnections();
 		for (Connection conn : cimplconns) {
-			if (features.contains(conn.getAllSource())
-					&& !(conn.getAllSourceContext() instanceof Subcomponent)
-					|| (conn.isBidirectional() && features.contains(conn.getAllDestination()) && !(conn
-							.getAllDestinationContext() instanceof Subcomponent))) {
+			if (features.contains(conn.getAllSource()) && !(conn.getAllSourceContext() instanceof Subcomponent)
+					|| (conn.isAllBidirectional() && features.contains(conn.getAllDestination())
+							&& !(conn.getAllDestinationContext() instanceof Subcomponent))) {
 				result.add(conn);
 			}
-			if ((features.contains(conn.getAllSourceContext()) || (conn.isBidirectional() && features.contains(conn
-					.getAllDestinationContext())))) {
+			if ((features.contains(conn.getAllSourceContext())
+					|| (conn.isAllBidirectional() && features.contains(conn.getAllDestinationContext())))) {
 				result.add(conn);
 			}
 		}
@@ -1778,8 +1784,7 @@ public final class AadlUtil {
 	 * @return boolean true if outgoing
 	 */
 	public static boolean isOutgoingFeature(Feature f) {
-		return (f instanceof Port && ((Port) f).getDirection().outgoing())
-				|| (f instanceof Access)// && ((Access) f).getKind() == AccessType.REQUIRED)
+		return (f instanceof Port && ((Port) f).getDirection().outgoing()) || (f instanceof Access)// && ((Access) f).getKind() == AccessType.REQUIRED)
 				|| (f instanceof FeatureGroup)
 				|| (f instanceof AbstractFeature && ((AbstractFeature) f).getDirection().outgoing());
 	}
@@ -1791,8 +1796,7 @@ public final class AadlUtil {
 	 * @return boolean true if incoming
 	 */
 	public static boolean isIncomingFeature(Feature f) {
-		return (f instanceof Port && ((Port) f).getDirection().incoming())
-				|| (f instanceof Access)// && ((Access) f).getKind() == AccessType.REQUIRED)
+		return (f instanceof Port && ((Port) f).getDirection().incoming()) || (f instanceof Access)// && ((Access) f).getKind() == AccessType.REQUIRED)
 				|| (f instanceof FeatureGroup)
 				|| (f instanceof AbstractFeature && ((AbstractFeature) f).getDirection().incoming());
 	}
@@ -2080,7 +2084,7 @@ public final class AadlUtil {
 	 */
 	public static AadlPackage findImportedPackage(String name, Namespace context) {
 		EList<ModelUnit> imports;
-		if (name == null) {
+		if (name == null || context == null) {
 			return null;
 		}
 		if (context instanceof PropertySet) {
@@ -2195,10 +2199,9 @@ public final class AadlUtil {
 		}
 
 		for (ModelUnit importedPropertySet : importedPropertySets) {
-			if (importedPropertySet instanceof PropertySet
-					&& !importedPropertySet.eIsProxy()
-					&& (importedPropertySet == ps || (ps.getQualifiedName().equalsIgnoreCase(importedPropertySet
-							.getQualifiedName())))) {
+			if (importedPropertySet instanceof PropertySet && !importedPropertySet.eIsProxy()
+					&& (importedPropertySet == ps
+							|| (ps.getQualifiedName().equalsIgnoreCase(importedPropertySet.getQualifiedName())))) {
 				return true;
 			}
 		}
@@ -2307,4 +2310,94 @@ public final class AadlUtil {
 		}
 		return null;
 	}
+
+	/*
+	 * return the size of an arrayed named element.
+	 * Find the array dimensions in the element or the element it refines.
+	 */
+	public static long getMultiplicity(NamedElement el) {
+		if (!(el instanceof ArrayableElement))
+			return 1;
+		ArrayableElement ae = (ArrayableElement) el;
+		EList<ArrayDimension> dims = ae.getArrayDimensions();
+		if (!dims.isEmpty()) {
+			return calcSize(dims);
+		} else {
+			if (el instanceof Subcomponent) {
+				Subcomponent sub = (Subcomponent) el;
+				EList<Subcomponent> subs = sub.getAllSubcomponentRefinements();
+				for (Subcomponent subcomponent : subs) {
+					dims = subcomponent.getArrayDimensions();
+					if (!dims.isEmpty()) {
+						return calcSize(dims);
+					}
+				}
+			} else if (el instanceof Feature) {
+				Feature fe = (Feature) el;
+				EList<Feature> feas = fe.getAllFeatureRefinements();
+				for (Feature feature : feas) {
+					dims = feature.getArrayDimensions();
+					if (!dims.isEmpty()) {
+						return calcSize(dims);
+					}
+				}
+			}
+		}
+		return 1;
+	}
+
+	/*
+	 * compute the size of the specified array
+	 */
+	public static long calcSize(EList<ArrayDimension> dims) {
+		long size = 1;
+		for (ArrayDimension dim : dims) {
+			ArraySize asize = dim.getSize();
+			size = size * getElementCount(asize);
+		}
+		return size;
+	}
+
+	public static long getElementCount(ArraySize as, ComponentInstance ci) {
+		return getElementCount(as);
+	}
+
+	public static long getElementCount(ArraySize as) {
+		long result = 0L;
+		if (as == null) {
+			return result;
+		}
+		if (as.getSizeProperty() == null) {
+			result = as.getSize();
+		} else {
+			ArraySizeProperty asp = as.getSizeProperty();
+			if (asp instanceof PropertyConstant) {
+				PropertyConstant pc = (PropertyConstant) asp;
+				PropertyExpression cv = pc.getConstantValue();
+				if (cv instanceof IntegerLiteral) {
+					result = ((IntegerLiteral) cv).getValue();
+				}
+// ** we do not support arrays via properties
+//			} else if (asp instanceof Property) {
+//				Property pd = (Property) asp;
+//				result = getArraySizeValue(ci, pd);
+			}
+		}
+		return result;
+	}
+
+//	private static long getArraySizeValue(ComponentInstance ci, Property pd) {
+////		PropertyExpression res = ci.getSimplePropertyValue(pd);
+//		Subcomponent sub = ci.getSubcomponent();
+//		for (PropertyAssociation pa : sub.getOwnedPropertyAssociations()) {
+//			if (pa.getProperty().getName().equalsIgnoreCase(pd.getName())) {
+//				PropertyExpression pe = pa.getOwnedValues().get(0).getOwnedValue();
+//				if (pe instanceof IntegerLiteral) {
+//					return ((IntegerLiteral) pe).getValue();
+//				}
+//			}
+//		}
+//		return 0;
+//	}
+
 }
