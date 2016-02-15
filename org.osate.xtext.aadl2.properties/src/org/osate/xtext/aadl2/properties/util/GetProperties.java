@@ -55,6 +55,7 @@ import org.osate.aadl2.EnumerationType;
 import org.osate.aadl2.Feature;
 import org.osate.aadl2.FeatureGroupType;
 import org.osate.aadl2.IntegerLiteral;
+import org.osate.aadl2.ModalPropertyValue;
 import org.osate.aadl2.NamedElement;
 import org.osate.aadl2.NamedValue;
 import org.osate.aadl2.NumberValue;
@@ -65,6 +66,7 @@ import org.osate.aadl2.PropertyExpression;
 import org.osate.aadl2.PropertyType;
 import org.osate.aadl2.RangeValue;
 import org.osate.aadl2.RecordValue;
+import org.osate.aadl2.StringLiteral;
 import org.osate.aadl2.Subcomponent;
 import org.osate.aadl2.UnitLiteral;
 import org.osate.aadl2.UnitsType;
@@ -1112,6 +1114,30 @@ public class GetProperties {
 			for (PropertyExpression propertyExpression : propertyValues) {
 				return ((EnumerationLiteral) ((NamedValue) propertyExpression).getNamedValue()).getName();
 			}
+			return null;
+		} catch (PropertyLookupException e) {
+			return null;
+		}
+	}
+	
+	public static String getSourceName (final NamedElement ne)
+	{
+		try {
+			Property sn = lookupPropertyDefinition(ne, ProgrammingProperties._NAME,
+					ProgrammingProperties.SOURCE_NAME);
+			
+
+			PropertyAcc pacc = ne.getPropertyValue(sn);
+			if (pacc.getAssociations().size()>0)
+			{
+				ModalPropertyValue mdv = (ModalPropertyValue) pacc.getAssociations().get(0).getOwnedValues().get(0);
+				PropertyExpression pe = mdv.getOwnedValue();
+//				System.out.println("pe=" + pe);
+				StringLiteral sl = (StringLiteral) pe;
+				return sl.getValue();
+
+			}
+//			System.out.println("pacc" + pacc.getAssociations().get(0).getOwnedValues().get(0));
 			return null;
 		} catch (PropertyLookupException e) {
 			return null;

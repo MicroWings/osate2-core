@@ -38,4 +38,6 @@ public final class ProgrammingProperties {
 	}
 
 	public static final String _NAME = "Programming_Properties";
+	
+	public static final String SOURCE_NAME = "Source_Name";
 }
