@@ -1155,7 +1155,7 @@ public class GetProperties {
 				StringLiteral sl = (StringLiteral) propertyExpression;
 				res.add(sl.getValue());
 			}
-			return null;
+			return res;
 
 		} catch (PropertyLookupException e) {
 			return null;
