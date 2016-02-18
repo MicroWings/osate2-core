@@ -1162,6 +1162,27 @@ public class GetProperties {
 		}
 	}
 
+	public static List<String> getDataEnumerators (final NamedElement ne)
+	{
+		List<String> res;
+		res = new ArrayList<String>();
+		try {
+			Property st = lookupPropertyDefinition(ne, DataModel._NAME,
+					DataModel.Enumerators);
+
+			List<? extends PropertyExpression> propertyValues = ne.getPropertyValueList(st);
+			for (PropertyExpression propertyExpression : propertyValues) {
+//				System.out.println("pe=" + propertyExpression);
+				StringLiteral sl = (StringLiteral) propertyExpression;
+				res.add(sl.getValue());
+			}
+			return res;
+
+		} catch (PropertyLookupException e) {
+			return null;
+		}
+	}
+
 	public static String getConcurrencyControlProtocol(final NamedElement ne) {
 		try {
 			Property concurrencyControlProtocol = lookupPropertyDefinition(ne, ThreadProperties._NAME,
