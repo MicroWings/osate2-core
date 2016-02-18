@@ -1141,6 +1141,29 @@ public class GetProperties {
 	}
 
 
+	public static String getPlatform (final NamedElement ne)
+	{
+		try {
+			Property sn = lookupPropertyDefinition(ne, SEI._NAME,
+					SEI.PLATFORM);
+
+
+			PropertyAcc pacc = ne.getPropertyValue(sn);
+			if (pacc.getAssociations().size()>0)
+			{
+				ModalPropertyValue mdv = pacc.getAssociations().get(0).getOwnedValues().get(0);
+				PropertyExpression pe = mdv.getOwnedValue();
+				StringLiteral sl = (StringLiteral) pe;
+				return sl.getValue();
+
+			}
+			return null;
+		} catch (PropertyLookupException e) {
+			return null;
+		}
+	}
+
+
 	public static List<String> getSourceText (final NamedElement ne)
 	{
 		List<String> res;
