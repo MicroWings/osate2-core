@@ -2386,18 +2386,14 @@ public final class AadlUtil {
 		return result;
 	}
 
-//	private static long getArraySizeValue(ComponentInstance ci, Property pd) {
-////		PropertyExpression res = ci.getSimplePropertyValue(pd);
-//		Subcomponent sub = ci.getSubcomponent();
-//		for (PropertyAssociation pa : sub.getOwnedPropertyAssociations()) {
-//			if (pa.getProperty().getName().equalsIgnoreCase(pd.getName())) {
-//				PropertyExpression pe = pa.getOwnedValues().get(0).getOwnedValue();
-//				if (pe instanceof IntegerLiteral) {
-//					return ((IntegerLiteral) pe).getValue();
-//				}
-//			}
-//		}
-//		return 0;
-//	}
+	public static boolean isOutgoingConnection(Connection conn) {
+		return conn.getAllSourceContext() instanceof Subcomponent
+				&& !(conn.getAllDestinationContext() instanceof Subcomponent);
+	}
+
+	public static boolean isIncomingConnection(Connection conn) {
+		return !(conn.getAllSourceContext() instanceof Subcomponent)
+				&& (conn.getAllDestinationContext() instanceof Subcomponent);
+	}
 
 }
